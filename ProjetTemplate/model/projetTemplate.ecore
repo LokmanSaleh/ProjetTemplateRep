@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="projetTemplate" nsURI="http://www.example.org/projetTemplate"
+    nsPrefix="projetTemplate">
+  <eClassifiers xsi:type="ecore:EClass" name="DomainProblem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DomainRequirementValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="explanation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="domainProblem" upperBound="-1"
+        eType="#//DomainProblem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requirementtype" upperBound="-1"
+        eType="#//RequirementType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RequirementType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requirementmapping" lowerBound="1"
+        eType="#//RequirementMapping"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scope" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MLProject">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="author" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataanalysisproblem" lowerBound="1"
+        eType="#//DataAnalysisProblem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="domainproblem" lowerBound="1"
+        eType="#//DomainProblem"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="database" upperBound="-1"
+        eType="#//Database"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataAnalysisProblem">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="author" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataanalysisproblemtype"
+        lowerBound="1" eType="#//DataAnalysisProblemType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="computationalrequirementvalue"
+        upperBound="-1" eType="#//ComputationalRequirementValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processingchain" lowerBound="1"
+        eType="#//ProcessingChain"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComputationalRequirementValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rationale" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requirementtype" upperBound="-1"
+        eType="#//RequirementType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Database">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="credentias" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="schema" lowerBound="1"
+        eType="#//Schema"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="data" lowerBound="1" eType="#//Data"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Schema">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="technology" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modelelement" lowerBound="1"
+        eType="#//ModelElement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Data">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="credentias" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RequirementMapping">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="restrictions" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rationale" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requirementtype" lowerBound="1"
+        eType="#//RequirementType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datapropertyvalueset" lowerBound="1"
+        eType="#//DataPropertyValueSet"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModelElement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datapropertyvalue" lowerBound="1"
+        eType="#//DataPropertyValue"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataPropertyValueSet">
+    <eOperations name="evaluate"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="setType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datapropertyvalue" upperBound="-1"
+        eType="#//DataPropertyValue" eOpposite="#//DataPropertyValue/datapropertyvalueset"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mlalgorithmsolutionpattern"
+        upperBound="-1" eType="#//MLAlgorithmSolutionPattern" eOpposite="#//MLAlgorithmSolutionPattern/datapropertyvalueset"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataPropertyValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datapropertyvalueset" upperBound="-1"
+        eType="#//DataPropertyValueSet" eOpposite="#//DataPropertyValueSet/datapropertyvalue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datapropertytype" lowerBound="1"
+        eType="#//DataPropertyType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataPropertyType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DataAnalysisProblemType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mlprocchainsolutionpattern"
+        lowerBound="1" upperBound="-1" eType="#//MLProcChainSolutionPattern" eOpposite="#//MLProcChainSolutionPattern/dataanalysisproblemtype"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mlalgorithmsolutionpattern"
+        upperBound="-1" eType="#//MLAlgorithmSolutionPattern"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessingChain">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="author" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extendedbpmnmodel" lowerBound="1"
+        eType="#//ExtendedBPMNModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mlalgorithm" lowerBound="1"
+        upperBound="-1" eType="#//MLAlgorithm" eOpposite="#//MLAlgorithm/processingchain"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processingchaintemplate"
+        eType="#//ProcessingChainTemplate" eOpposite="#//ProcessingChainTemplate/processingchain"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MLProcChainSolutionPattern">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="explanation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataanalysisproblemtype"
+        lowerBound="1" upperBound="-1" eType="#//DataAnalysisProblemType" eOpposite="#//DataAnalysisProblemType/mlprocchainsolutionpattern"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datapropertyvalueset" upperBound="-1"
+        eType="#//DataPropertyValueSet"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processingchaintemplate"
+        lowerBound="1" upperBound="-1" eType="#//ProcessingChainTemplate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcessingChainTemplate">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="author" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extendedbpmnmodel" lowerBound="1"
+        eType="#//ExtendedBPMNModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processingchain" upperBound="-1"
+        eType="#//ProcessingChain" eOpposite="#//ProcessingChain/processingchaintemplate"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MLAlgorithmSolutionPattern">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="explanation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processingchaintemplate"
+        lowerBound="1" eType="#//ProcessingChainTemplate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datapropertyvalueset" lowerBound="1"
+        upperBound="-1" eType="#//DataPropertyValueSet" eOpposite="#//DataPropertyValueSet/mlalgorithmsolutionpattern"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mlalgorithm" lowerBound="1"
+        upperBound="-1" eType="#//MLAlgorithm"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MLAlgorithm">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectioncriterionvalueset"
+        eType="#//SelectionCriterionValueSet"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectioncriterionvalue"
+        upperBound="-1" eType="#//SelectionCriterionValue"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processingchain" eType="#//ProcessingChain"
+        eOpposite="#//ProcessingChain/mlalgorithm"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SelectionCriterionValueSet">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="setType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectioncriterion" upperBound="-1"
+        eType="#//SelectionCriterion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectioncriterionvalue"
+        lowerBound="1" upperBound="-1" eType="#//SelectionCriterionValue" eOpposite="#//SelectionCriterionValue/selectioncriterionvalueset"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SelectionCriterionValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="values" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectioncriterion" upperBound="-1"
+        eType="#//SelectionCriterion"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectioncriterionvalueset"
+        upperBound="-1" eType="#//SelectionCriterionValueSet" eOpposite="#//SelectionCriterionValueSet/selectioncriterionvalue"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SelectionCriterion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="valueType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ExtendedBPMNModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="author" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>
