@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated projetTemplate -->
+      <package
+            uri="http://www.example.org/projetTemplate"
+            class="projetTemplate.ProjetTemplatePackage"
+            genModel="model/projetTemplate.genmodel"/>
+   </extension>
+
+</plugin>

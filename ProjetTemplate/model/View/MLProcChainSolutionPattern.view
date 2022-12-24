@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/1180" xmi:id="_IzJDMILtEe2sn-ea3VaFLw" name="MLProcChainSolutionPattern">
+  <rootEClass href="http://www.example.org/projetTemplate#//MLProcChainSolutionPattern"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_IzK4YILtEe2sn-ea3VaFLw" name="Control name">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_IzK4YYLtEe2sn-ea3VaFLw">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.example.org/projetTemplate#//MLProcChainSolutionPattern/name"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_IzK4YoLtEe2sn-ea3VaFLw" name="Control explanation">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_IzK4Y4LtEe2sn-ea3VaFLw">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.example.org/projetTemplate#//MLProcChainSolutionPattern/explanation"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_IzK4ZILtEe2sn-ea3VaFLw" name="Control dataanalysisproblemtype">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_IzK4ZYLtEe2sn-ea3VaFLw">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://www.example.org/projetTemplate#//MLProcChainSolutionPattern/dataanalysisproblemtype"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_IzK4ZoLtEe2sn-ea3VaFLw" name="Control datapropertyvalueset">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_IzK4Z4LtEe2sn-ea3VaFLw">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://www.example.org/projetTemplate#//MLProcChainSolutionPattern/datapropertyvalueset"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_IzK4aILtEe2sn-ea3VaFLw" name="Control processingchaintemplate">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_IzK4aYLtEe2sn-ea3VaFLw">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://www.example.org/projetTemplate#//MLProcChainSolutionPattern/processingchaintemplate"/>
+    </domainModelReference>
+  </children>
+  <ecorePaths>/ProjetTemplate/model/projetTemplate.ecore</ecorePaths>
+</org.eclipse.emf.ecp.view.model:View>

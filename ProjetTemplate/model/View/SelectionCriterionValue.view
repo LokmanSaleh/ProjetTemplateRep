@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/1180" xmi:id="_JON1oILtEe2sn-ea3VaFLw" name="SelectionCriterionValue">
+  <rootEClass href="http://www.example.org/projetTemplate#//SelectionCriterionValue"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_JOOcsILtEe2sn-ea3VaFLw" name="Control values">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_JOOcsYLtEe2sn-ea3VaFLw">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.example.org/projetTemplate#//SelectionCriterionValue/values"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_JOOcsoLtEe2sn-ea3VaFLw" name="Control selectioncriterion">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_JOOcs4LtEe2sn-ea3VaFLw">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://www.example.org/projetTemplate#//SelectionCriterionValue/selectioncriterion"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_JOOctILtEe2sn-ea3VaFLw" name="Control selectioncriterionvalueset">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_JOOctYLtEe2sn-ea3VaFLw">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://www.example.org/projetTemplate#//SelectionCriterionValue/selectioncriterionvalueset"/>
+    </domainModelReference>
+  </children>
+  <ecorePaths>/ProjetTemplate/model/projetTemplate.ecore</ecorePaths>
+</org.eclipse.emf.ecp.view.model:View>

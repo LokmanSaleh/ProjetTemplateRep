@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/1180" xmi:id="_I5TVkILtEe2sn-ea3VaFLw" name="ProcessingChainTemplate">
+  <rootEClass href="http://www.example.org/projetTemplate#//ProcessingChainTemplate"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_I5VKwILtEe2sn-ea3VaFLw" name="Control name">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_I5VKwYLtEe2sn-ea3VaFLw">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.example.org/projetTemplate#//ProcessingChainTemplate/name"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_I5VKwoLtEe2sn-ea3VaFLw" name="Control author">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_I5VKw4LtEe2sn-ea3VaFLw">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.example.org/projetTemplate#//ProcessingChainTemplate/author"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_I5VKxILtEe2sn-ea3VaFLw" name="Control extendedbpmnmodel">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_I5VKxYLtEe2sn-ea3VaFLw">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://www.example.org/projetTemplate#//ProcessingChainTemplate/extendedbpmnmodel"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_I5VKxoLtEe2sn-ea3VaFLw" name="Control processingchain">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_I5VKx4LtEe2sn-ea3VaFLw">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://www.example.org/projetTemplate#//ProcessingChainTemplate/processingchain"/>
+    </domainModelReference>
+  </children>
+  <ecorePaths>/ProjetTemplate/model/projetTemplate.ecore</ecorePaths>
+</org.eclipse.emf.ecp.view.model:View>

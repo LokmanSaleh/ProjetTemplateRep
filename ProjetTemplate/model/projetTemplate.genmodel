@@ -11,12 +11,11 @@
   <genPackages prefix="ProjetTemplate" disposableProviderFactory="true" ecorePackage="projetTemplate.ecore#/">
     <genClasses ecoreClass="projetTemplate.ecore#//DomainProblem">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//DomainProblem/text"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//DomainProblem/domainrequirementvalue"/>
     </genClasses>
     <genClasses ecoreClass="projetTemplate.ecore#//DomainRequirementValue">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//DomainRequirementValue/value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//DomainRequirementValue/explanation"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//DomainRequirementValue/domainProblem"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//DomainRequirementValue/requirementtype"/>
     </genClasses>
     <genClasses ecoreClass="projetTemplate.ecore#//RequirementType">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//RequirementType/requirementmapping"/>
@@ -24,6 +23,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//RequirementType/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//RequirementType/valueType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//RequirementType/scope"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//RequirementType/domainrequirementvalue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//RequirementType/computationalrequirementvalue"/>
     </genClasses>
     <genClasses ecoreClass="projetTemplate.ecore#//MLProject">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//MLProject/name"/>
@@ -51,6 +52,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//Database/credentias"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//Database/schema"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//Database/data"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//Database/mlproject"/>
     </genClasses>
     <genClasses ecoreClass="projetTemplate.ecore#//Schema">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//Schema/technology"/>
@@ -75,6 +77,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//DataPropertyValueSet/values"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//DataPropertyValueSet/datapropertyvalue"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//DataPropertyValueSet/mlalgorithmsolutionpattern"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//DataPropertyValueSet/mlprocchainsolutionpattern"/>
       <genOperations ecoreOperation="projetTemplate.ecore#//DataPropertyValueSet/evaluate"/>
     </genClasses>
     <genClasses ecoreClass="projetTemplate.ecore#//DataPropertyValue">
@@ -103,19 +106,20 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//MLProcChainSolutionPattern/explanation"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//MLProcChainSolutionPattern/dataanalysisproblemtype"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//MLProcChainSolutionPattern/datapropertyvalueset"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//MLProcChainSolutionPattern/processingchaintemplate"/>
     </genClasses>
     <genClasses ecoreClass="projetTemplate.ecore#//ProcessingChainTemplate">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//ProcessingChainTemplate/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//ProcessingChainTemplate/author"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//ProcessingChainTemplate/extendedbpmnmodel"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//ProcessingChainTemplate/processingchain"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//ProcessingChainTemplate/mlprocchainsolutionpattern"/>
     </genClasses>
     <genClasses ecoreClass="projetTemplate.ecore#//MLAlgorithmSolutionPattern">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//MLAlgorithmSolutionPattern/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//MLAlgorithmSolutionPattern/explanation"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//MLAlgorithmSolutionPattern/processingchaintemplate"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//MLAlgorithmSolutionPattern/datapropertyvalueset"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//MLAlgorithmSolutionPattern/dataanalysisproblemtype"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//MLAlgorithmSolutionPattern/mlalgorithm"/>
     </genClasses>
     <genClasses ecoreClass="projetTemplate.ecore#//MLAlgorithm">
@@ -123,22 +127,25 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//MLAlgorithm/selectioncriterionvalueset"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//MLAlgorithm/selectioncriterionvalue"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//MLAlgorithm/processingchain"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//MLAlgorithm/mlalgorithmsolutionpattern"/>
     </genClasses>
     <genClasses ecoreClass="projetTemplate.ecore#//SelectionCriterionValueSet">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//SelectionCriterionValueSet/setType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//SelectionCriterionValueSet/values"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//SelectionCriterionValueSet/selectioncriterion"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//SelectionCriterionValueSet/selectioncriterionvalue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//SelectionCriterionValueSet/selectioncriterion"/>
     </genClasses>
     <genClasses ecoreClass="projetTemplate.ecore#//SelectionCriterionValue">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//SelectionCriterionValue/values"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//SelectionCriterionValue/selectioncriterion"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//SelectionCriterionValue/selectioncriterionvalueset"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//SelectionCriterionValue/selectioncriterion"/>
     </genClasses>
     <genClasses ecoreClass="projetTemplate.ecore#//SelectionCriterion">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//SelectionCriterion/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//SelectionCriterion/valueType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//SelectionCriterion/description"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//SelectionCriterion/selectioncriterionvalueset"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//SelectionCriterion/selectioncriterionvalue"/>
     </genClasses>
     <genClasses ecoreClass="projetTemplate.ecore#//ExtendedBPMNModel">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//ExtendedBPMNModel/name"/>
