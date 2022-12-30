@@ -2,6 +2,8 @@
  */
 package projetTemplate.impl;
 
+import java.sql.SQLException;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -185,7 +187,13 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 	 * @generated
 	 */
 	public Schema createSchema() {
-		SchemaImpl schema = new SchemaImpl();
+		SchemaImpl schema = null;
+		try {
+			schema = new SchemaImpl();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return schema;
 	}
 

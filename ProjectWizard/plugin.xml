@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="ProjectWizard.category1"
+            name="MyProjects">
+      </category>
+      <wizard
+            category="ProjectWizard.category1"
+            class="projectwizard.MyWizard"
+            id="ProjectWizard.wizard1"
+            name="CustomProject">
+      </wizard>
+   </extension>
+
+</plugin>

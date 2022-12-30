@@ -9,5 +9,21 @@
             class="projetTemplate.ProjetTemplatePackage"
             genModel="model/projetTemplate.genmodel"/>
    </extension>
+   <extension
+         id="product1"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.eclipse.ant.core.antRunner"
+            name="MakeItHappen Sample e4 Product">
+         <property
+               name="windowImages"
+               value="platform:/plugin/org.eclipse.emf.ecp.makeithappen.application.sample.e4/icons/logo_256.png">
+         </property>
+         <property
+               name="appName"
+               value="MakeItHappen Sample e4 Product">
+         </property>
+      </product>
+   </extension>
 
 </plugin>

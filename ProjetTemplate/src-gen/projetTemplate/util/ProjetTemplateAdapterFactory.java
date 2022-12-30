@@ -2,12 +2,16 @@
  */
 package projetTemplate.util;
 
+import javax.swing.JOptionPane;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.util.EContentAdapter;
+import org.eclipse.emf.common.notify.Notification;
 
 import projetTemplate.*;
 
@@ -311,10 +315,24 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
 	 * @see projetTemplate.Schema
-	 * @generated
+	 * 
 	 */
-	public Adapter createSchemaAdapter() {
-		return null;
+	public Adapter createSchemaAdapter() { 
+		
+		EAttribute s= ProjetTemplateAdapterFactory.modelPackage.getData_Credentias();
+		
+        EContentAdapter adapter = new EContentAdapter() {
+        	
+            public void notifyChanged(Notification notification) {
+                super.notifyChanged(notification);
+                
+                System.out .println("Notfication received from the data model. Data model has changed!!!");
+                JOptionPane.showInputDialog("CONNECTED");
+
+            }
+        };
+        
+		return adapter;
 	}
 
 	/**

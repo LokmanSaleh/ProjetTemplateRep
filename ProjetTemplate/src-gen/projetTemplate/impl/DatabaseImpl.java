@@ -14,6 +14,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
+import com.automl.datarepresentation.view.ConnectionInterface;
+
 import projetTemplate.Data;
 import projetTemplate.Database;
 import projetTemplate.MLProject;
@@ -181,6 +184,8 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 			InternalEObject oldSchema = (InternalEObject) schema;
 			schema = (Schema) eResolveProxy(oldSchema);
 			if (schema != oldSchema) {
+
+ 
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProjetTemplatePackage.DATABASE__SCHEMA,
 							oldSchema, schema));
@@ -201,7 +206,7 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 *  
 	 */
 	public void setSchema(Schema newSchema) {
 		Schema oldSchema = schema;
@@ -209,6 +214,13 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ProjetTemplatePackage.DATABASE__SCHEMA, oldSchema,
 					schema));
+		
+		
+		ConnectionInterface conInter = new ConnectionInterface();
+		conInter.setTitle("Connection Data base");
+		conInter.setVisible(true);
+		
+		
 	}
 
 	/**
