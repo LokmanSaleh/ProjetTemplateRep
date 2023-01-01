@@ -23,7 +23,8 @@
    </extension>
 
    <extension point="org.eclipse.ui.editors">
-      <!-- @generated projetTemplate -->
+      <!--@generated projetTemplate 
+      You can allow this editor also, in this case, the open with precise which one we will use. -->
       <editor
             id="projetTemplate.presentation.ProjetTemplateEditorID"
             name="%_UI_ProjetTemplateEditor_label"
@@ -32,6 +33,15 @@
             class="projetTemplate.presentation.ProjetTemplateEditor"
             contributorClass="projetTemplate.presentation.ProjetTemplateActionBarContributor">
       </editor>
-   </extension>
-
-</plugin>
+      
+	<editor
+		class="org.eclipse.emfforms.spi.editor.GenericEditor" 
+		default="true" 
+		extensions="task" 
+		icon="icons/full/obj16/ProjetTemplateModelFile.gif" 
+		id="yourID" 
+		name="Your editor name"> 
+	</editor>
+       
+    </extension>
+ </plugin>

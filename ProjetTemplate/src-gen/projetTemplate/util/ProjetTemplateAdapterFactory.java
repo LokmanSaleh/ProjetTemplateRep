@@ -317,21 +317,21 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 	 * @see projetTemplate.Schema
 	 * 
 	 */
-	public Adapter createSchemaAdapter() { 
-		
-		EAttribute s= ProjetTemplateAdapterFactory.modelPackage.getData_Credentias();
-		
-        EContentAdapter adapter = new EContentAdapter() {
-        	
-            public void notifyChanged(Notification notification) {
-                super.notifyChanged(notification);
-                
-                System.out .println("Notfication received from the data model. Data model has changed!!!");
-                JOptionPane.showInputDialog("CONNECTED");
+	public Adapter createSchemaAdapter() {
 
-            }
-        };
-        
+		EAttribute s = ProjetTemplateAdapterFactory.modelPackage.getData_Credentias();
+
+		EContentAdapter adapter = new EContentAdapter() {
+
+			public void notifyChanged(Notification notification) {
+				super.notifyChanged(notification);
+
+				System.out.println("Notfication received from the data model. Data model has changed!!!");
+				JOptionPane.showInputDialog("CONNECTED");
+
+			}
+		};
+
 		return adapter;
 	}
 

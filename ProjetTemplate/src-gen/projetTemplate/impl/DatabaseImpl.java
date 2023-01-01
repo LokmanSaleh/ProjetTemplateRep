@@ -184,8 +184,6 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 			InternalEObject oldSchema = (InternalEObject) schema;
 			schema = (Schema) eResolveProxy(oldSchema);
 			if (schema != oldSchema) {
-
- 
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ProjetTemplatePackage.DATABASE__SCHEMA,
 							oldSchema, schema));
@@ -214,13 +212,11 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ProjetTemplatePackage.DATABASE__SCHEMA, oldSchema,
 					schema));
-		
-		
-		ConnectionInterface conInter = new ConnectionInterface();
-		conInter.setTitle("Connection Data base");
-		conInter.setVisible(true);
-		
-		
+
+//		ConnectionInterface conInter = new ConnectionInterface();
+//		conInter.setTitle("Connection Data base");
+//		conInter.setVisible(true);
+
 	}
 
 	/**

@@ -40,188 +40,163 @@ import projetTemplate.SelectionCriterionValueSet;
 /**
  * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!--
  * end-user-doc -->
- * 
  * @generated
  */
 public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTemplatePackage {
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass domainProblemEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass domainRequirementValueEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass requirementTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass mlProjectEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass dataAnalysisProblemEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass computationalRequirementValueEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass databaseEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass schemaEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass dataEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass requirementMappingEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass modelElementEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass dataPropertyValueSetEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass dataPropertyValueEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass dataPropertyTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass dataAnalysisProblemTypeEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass processingChainEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass mlProcChainSolutionPatternEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass processingChainTemplateEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass mlAlgorithmSolutionPatternEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass mlAlgorithmEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass selectionCriterionValueSetEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass selectionCriterionValueEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass selectionCriterionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private EClass extendedBPMNModelEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
-	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the
-	 * package package URI value.
-	 * <p>
-	 * Note: the correct way to create the package is via the static factory method
-	 * {@link #init init()}, which also performs initialization of the package, or
-	 * returns the registered package, if one already exists. <!-- begin-user-doc
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * package URI value.
+	 * <p>Note: the correct way to create the package is via the static
+	 * factory method {@link #init init()}, which also performs
+	 * initialization of the package, or returns the registered package,
+	 * if one already exists.
+	 * <!-- begin-user-doc
 	 * --> <!-- end-user-doc -->
-	 * 
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
 	 * @see projetTemplate.ProjetTemplatePackage#eNS_URI
 	 * @see #init()
@@ -233,7 +208,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private static boolean isInited = false;
@@ -281,7 +255,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getDomainProblem() {
@@ -290,7 +263,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getDomainProblem_Text() {
@@ -299,7 +271,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getDomainProblem_Domainrequirementvalue() {
@@ -308,7 +279,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getDomainRequirementValue() {
@@ -317,7 +287,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getDomainRequirementValue_Value() {
@@ -326,7 +295,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getDomainRequirementValue_Explanation() {
@@ -335,7 +303,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getRequirementType() {
@@ -344,7 +311,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getRequirementType_Requirementmapping() {
@@ -353,7 +319,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getRequirementType_Name() {
@@ -362,7 +327,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getRequirementType_Description() {
@@ -371,7 +335,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getRequirementType_ValueType() {
@@ -380,7 +343,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getRequirementType_Scope() {
@@ -389,7 +351,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getRequirementType_Domainrequirementvalue() {
@@ -398,7 +359,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getRequirementType_Computationalrequirementvalue() {
@@ -407,7 +367,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getMLProject() {
@@ -416,7 +375,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getMLProject_Name() {
@@ -425,7 +383,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getMLProject_Date() {
@@ -434,7 +391,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getMLProject_Author() {
@@ -443,7 +399,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getMLProject_Dataanalysisproblem() {
@@ -452,7 +407,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getMLProject_Domainproblem() {
@@ -461,7 +415,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getMLProject_Database() {
@@ -470,7 +423,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getDataAnalysisProblem() {
@@ -479,7 +431,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getDataAnalysisProblem_Name() {
@@ -488,7 +439,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getDataAnalysisProblem_Date() {
@@ -497,7 +447,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getDataAnalysisProblem_Author() {
@@ -506,7 +455,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getDataAnalysisProblem_Dataanalysisproblemtype() {
@@ -515,7 +463,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getDataAnalysisProblem_Computationalrequirementvalue() {
@@ -524,7 +471,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getDataAnalysisProblem_Processingchain() {
@@ -533,7 +479,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getComputationalRequirementValue() {
@@ -542,7 +487,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getComputationalRequirementValue_Value() {
@@ -551,7 +495,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getComputationalRequirementValue_Rationale() {
@@ -560,7 +503,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getComputationalRequirementValue_Requirementtype() {
@@ -569,7 +511,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getDatabase() {
@@ -578,7 +519,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getDatabase_Value() {
@@ -587,7 +527,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getDatabase_Credentias() {
@@ -596,7 +535,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getDatabase_Schema() {
@@ -605,7 +543,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getDatabase_Data() {
@@ -614,7 +551,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getDatabase_Mlproject() {
@@ -623,7 +559,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getSchema() {
@@ -632,7 +567,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getSchema_Technology() {
@@ -641,7 +575,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getSchema_Modelelement() {
@@ -650,7 +583,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getData() {
@@ -659,7 +591,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getData_Value() {
@@ -668,7 +599,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getData_Credentias() {
@@ -677,7 +607,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getRequirementMapping() {
@@ -686,7 +615,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getRequirementMapping_Restrictions() {
@@ -695,7 +623,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getRequirementMapping_Rationale() {
@@ -704,7 +631,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getRequirementMapping_Requirementtype() {
@@ -713,7 +639,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getRequirementMapping_Datapropertyvalueset() {
@@ -722,7 +647,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getModelElement() {
@@ -731,7 +655,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getModelElement_Name() {
@@ -740,7 +663,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getModelElement_Datapropertyvalue() {
@@ -749,7 +671,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getDataPropertyValueSet() {
@@ -758,7 +679,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getDataPropertyValueSet_SetType() {
@@ -767,7 +687,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getDataPropertyValueSet_Values() {
@@ -776,7 +695,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getDataPropertyValueSet_Datapropertyvalue() {
@@ -785,7 +703,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getDataPropertyValueSet_Mlalgorithmsolutionpattern() {
@@ -794,7 +711,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getDataPropertyValueSet_Mlprocchainsolutionpattern() {
@@ -803,7 +719,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EOperation getDataPropertyValueSet__Evaluate() {
@@ -812,7 +727,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getDataPropertyValue() {
@@ -821,7 +735,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getDataPropertyValue_Name() {
@@ -830,7 +743,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getDataPropertyValue_Datapropertyvalueset() {
@@ -839,7 +751,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getDataPropertyValue_Datapropertytype() {
@@ -848,7 +759,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getDataPropertyType() {
@@ -857,7 +767,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getDataPropertyType_Name() {
@@ -866,7 +775,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getDataPropertyType_Type() {
@@ -875,7 +783,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getDataAnalysisProblemType() {
@@ -884,7 +791,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getDataAnalysisProblemType_Name() {
@@ -893,7 +799,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getDataAnalysisProblemType_Mlprocchainsolutionpattern() {
@@ -902,7 +807,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getDataAnalysisProblemType_Mlalgorithmsolutionpattern() {
@@ -911,7 +815,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getProcessingChain() {
@@ -920,7 +823,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getProcessingChain_Date() {
@@ -929,7 +831,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getProcessingChain_Author() {
@@ -938,7 +839,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getProcessingChain_Extendedbpmnmodel() {
@@ -947,7 +847,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getProcessingChain_Mlalgorithm() {
@@ -956,7 +855,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getProcessingChain_Processingchaintemplate() {
@@ -965,7 +863,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getMLProcChainSolutionPattern() {
@@ -974,7 +871,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getMLProcChainSolutionPattern_Name() {
@@ -983,7 +879,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getMLProcChainSolutionPattern_Explanation() {
@@ -992,7 +887,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getMLProcChainSolutionPattern_Dataanalysisproblemtype() {
@@ -1001,7 +895,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getMLProcChainSolutionPattern_Datapropertyvalueset() {
@@ -1010,7 +903,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getProcessingChainTemplate() {
@@ -1019,7 +911,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getProcessingChainTemplate_Name() {
@@ -1028,7 +919,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getProcessingChainTemplate_Author() {
@@ -1037,7 +927,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getProcessingChainTemplate_Extendedbpmnmodel() {
@@ -1046,7 +935,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getProcessingChainTemplate_Processingchain() {
@@ -1055,7 +943,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getProcessingChainTemplate_Mlprocchainsolutionpattern() {
@@ -1064,7 +951,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getMLAlgorithmSolutionPattern() {
@@ -1073,7 +959,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getMLAlgorithmSolutionPattern_Name() {
@@ -1082,7 +967,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getMLAlgorithmSolutionPattern_Explanation() {
@@ -1091,7 +975,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getMLAlgorithmSolutionPattern_Processingchaintemplate() {
@@ -1100,7 +983,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getMLAlgorithmSolutionPattern_Datapropertyvalueset() {
@@ -1109,7 +991,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getMLAlgorithmSolutionPattern_Dataanalysisproblemtype() {
@@ -1118,7 +999,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getMLAlgorithmSolutionPattern_Mlalgorithm() {
@@ -1127,7 +1007,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getMLAlgorithm() {
@@ -1136,7 +1015,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getMLAlgorithm_Name() {
@@ -1145,7 +1023,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getMLAlgorithm_Selectioncriterionvalueset() {
@@ -1154,7 +1031,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getMLAlgorithm_Selectioncriterionvalue() {
@@ -1163,7 +1039,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getMLAlgorithm_Processingchain() {
@@ -1172,7 +1047,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getMLAlgorithm_Mlalgorithmsolutionpattern() {
@@ -1181,7 +1055,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getSelectionCriterionValueSet() {
@@ -1190,7 +1063,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getSelectionCriterionValueSet_SetType() {
@@ -1199,7 +1071,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getSelectionCriterionValueSet_Values() {
@@ -1208,7 +1079,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getSelectionCriterionValueSet_Selectioncriterion() {
@@ -1217,7 +1087,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getSelectionCriterionValueSet_Selectioncriterionvalue() {
@@ -1226,7 +1095,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getSelectionCriterionValue() {
@@ -1235,7 +1103,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getSelectionCriterionValue_Values() {
@@ -1244,7 +1111,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getSelectionCriterionValue_Selectioncriterion() {
@@ -1253,7 +1119,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getSelectionCriterionValue_Selectioncriterionvalueset() {
@@ -1262,7 +1127,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getSelectionCriterion() {
@@ -1271,7 +1135,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getSelectionCriterion_Name() {
@@ -1280,7 +1143,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getSelectionCriterion_ValueType() {
@@ -1289,7 +1151,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getSelectionCriterion_Description() {
@@ -1298,7 +1159,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getSelectionCriterion_Selectioncriterionvalueset() {
@@ -1307,7 +1167,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EReference getSelectionCriterion_Selectioncriterionvalue() {
@@ -1316,7 +1175,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EClass getExtendedBPMNModel() {
@@ -1325,7 +1183,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getExtendedBPMNModel_Name() {
@@ -1334,7 +1191,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public EAttribute getExtendedBPMNModel_Author() {
@@ -1343,7 +1199,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public ProjetTemplateFactory getProjetTemplateFactory() {
@@ -1352,16 +1207,15 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private boolean isCreated = false;
 
 	/**
-	 * Creates the meta-model objects for the package. This method is guarded to
-	 * have no affect on any invocation but its first. <!-- begin-user-doc --> <!--
+	 * Creates the meta-model objects for the package.  This method is
+	 * guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc --> <!--
 	 * end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public void createPackageContents() {
@@ -1515,7 +1369,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	private boolean isInitialized = false;

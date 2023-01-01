@@ -15,5 +15,6 @@ Require-Bundle: org.eclipse.core.runtime,
  ProjetTemplate.edit;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
- org.eclipse.ui.ide;visibility:=reexport
+ org.eclipse.ui.ide;visibility:=reexport,
+ org.eclipse.emfforms.editor;bundle-version="1.26.2"
 Bundle-ActivationPolicy: lazy

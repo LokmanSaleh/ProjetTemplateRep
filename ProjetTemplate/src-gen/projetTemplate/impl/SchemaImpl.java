@@ -2,13 +2,7 @@
  */
 package projetTemplate.impl;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
-
-import javax.swing.JOptionPane;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -69,19 +63,19 @@ public class SchemaImpl extends MinimalEObjectImpl.Container implements Schema {
 	 * <!-- end-user-doc --> 
 	 * 
 	 */
-	protected SchemaImpl() throws SQLException {
+	protected SchemaImpl() {
 		super();
-//		//    	ConnectionInterface conInter = new ConnectionInterface();
-//		//    	conInter.setTitle("Connection Data base");
-//		//      conInter.setVisible(true); 
-//
-//		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "");
-//
-//		Statement stmt = con.createStatement();
-//
-//		stmt.executeQuery("SELECT 1");
-//
-//		JOptionPane.showInputDialog("CONNECTED");
+		//		//    	ConnectionInterface conInter = new ConnectionInterface();
+		//		//    	conInter.setTitle("Connection Data base");
+		//		//      conInter.setVisible(true); 
+		//
+		//		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "");
+		//
+		//		Statement stmt = con.createStatement();
+		//
+		//		stmt.executeQuery("SELECT 1");
+		//
+		//		JOptionPane.showInputDialog("CONNECTED");
 	}
 
 	/**

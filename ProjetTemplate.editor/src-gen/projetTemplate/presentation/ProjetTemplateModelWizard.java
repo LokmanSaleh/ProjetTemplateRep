@@ -228,7 +228,6 @@ public class ProjetTemplateModelWizard extends Wizard implements INewWizard {
 			// Do the work within an operation.
 			//
 			WorkspaceModifyOperation operation = new WorkspaceModifyOperation() {
-				
 				@Override
 				protected void execute(IProgressMonitor progressMonitor) {
 					try {
