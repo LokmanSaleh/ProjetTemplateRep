@@ -44,7 +44,7 @@ public class MyWizard extends Wizard implements INewWizard {
         IProjectDescription description = null;
         
         try {
-          String PROJECT_PATH = "C:\\Users\\lookm\\eclipse-workSpace-ForModeling\\CreatProjectFromWizard";
+          String PROJECT_PATH = "C:\\Users\\lookm\\git\\ProjetTemplateRep\\ProjectTemplateML";
           description = ResourcesPlugin.getWorkspace().loadProjectDescription(new Path(PROJECT_PATH + "/.project")); //$NON-NLS-1$ 
           IProject project = ResourcesPlugin.getWorkspace().getRoot().getProject(one.getText1());
           project.create(description, null);

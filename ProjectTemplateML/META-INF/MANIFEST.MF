@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ProjectTemplateML
+Bundle-SymbolicName: ProjectTemplateML
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-18
+Automatic-Module-Name: ProjectTemplateML
+Export-Package: com.ProjectTemplateML,
+ com.utiles
+Require-Bundle: datarepresentation;bundle-version="1.0.0"
