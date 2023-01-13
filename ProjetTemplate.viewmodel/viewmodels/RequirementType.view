@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/1180" xmi:id="_iPUCoIkvEe22MOkvEr10wA" name="RequirementType">
+  <rootEClass href="http://www.example.org/projetTemplate#//RequirementType"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_iPWe4IkvEe22MOkvEr10wA" name="Control requirementmapping">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_iPWe4YkvEe22MOkvEr10wA">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://www.example.org/projetTemplate#//RequirementType/requirementmapping"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_iPWe4okvEe22MOkvEr10wA" name="Control name">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_iPWe44kvEe22MOkvEr10wA">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.example.org/projetTemplate#//RequirementType/name"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_iPWe5IkvEe22MOkvEr10wA" name="Control description">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_iPWe5YkvEe22MOkvEr10wA">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.example.org/projetTemplate#//RequirementType/description"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_iPWe5okvEe22MOkvEr10wA" name="Control valueType">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_iPWe54kvEe22MOkvEr10wA">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.example.org/projetTemplate#//RequirementType/valueType"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_iPWe6IkvEe22MOkvEr10wA" name="Control scope">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_iPWe6YkvEe22MOkvEr10wA">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.example.org/projetTemplate#//RequirementType/scope"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_iPWe6okvEe22MOkvEr10wA" name="Control domainrequirementvalue">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_iPWe64kvEe22MOkvEr10wA">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://www.example.org/projetTemplate#//RequirementType/domainrequirementvalue"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_iPWe7IkvEe22MOkvEr10wA" name="Control computationalrequirementvalue">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_iPWe7YkvEe22MOkvEr10wA">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://www.example.org/projetTemplate#//RequirementType/computationalrequirementvalue"/>
+    </domainModelReference>
+  </children>
+  <ecorePaths>/ProjetTemplate/model/projetTemplate.ecore</ecorePaths>
+</org.eclipse.emf.ecp.view.model:View>
