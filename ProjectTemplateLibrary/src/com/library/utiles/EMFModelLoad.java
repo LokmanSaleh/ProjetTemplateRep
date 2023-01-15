@@ -1,4 +1,4 @@
-package com.utiles;
+package com.library.utiles;
  
 import java.io.File;
 import java.util.Map;
@@ -14,12 +14,11 @@ import projetTemplate.ProjetTemplatePackage;
 
 public class EMFModelLoad {
 	
-    public static MLProject load() {
+    public static MLProject load(String FILE_LOCATION) {
         // Initialize the model
     	ProjetTemplatePackage.eINSTANCE.eClass();
 
-        // Register the XMI resource factory for the .website extension
-
+        // Register the XMI resource factory for the .website extension 
         Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
         Map<String, Object> m = reg.getExtensionToFactoryMap();
         m.put("projettemplate", new XMIResourceFactoryImpl());
@@ -29,7 +28,7 @@ public class EMFModelLoad {
 
         // Get the resource
         Resource resource = resSet.getResource(URI
-                .createFileURI(new File("C:\\Users\\lookm\\git\\ProjetTemplateRep\\ProjectTemplateML\\src\\main\\java\\com\\ProjectTemplateML\\MLTemplate.projettemplate").getAbsolutePath()), true);
+                .createFileURI(new File(FILE_LOCATION).getAbsolutePath()), true);
         // Get the first model element and cast it to the right type, in my
         // example everything is hierarchical included in this first node
         MLProject myWeb = (MLProject) resource.getContents().get(0);
@@ -37,7 +36,8 @@ public class EMFModelLoad {
     }
 
     
-    public static void main (String [] agrgs ) {
-    	 load();
+    public static void main (String [] agrs ) {
+    	String FileLocation =  "C:\\Users\\lookm\\git\\ProjetTemplateRep\\ProjectTemplateML\\src\\main\\java\\com\\ProjectTemplateML\\MLTemplate.projettemplate";
+    	load(FileLocation);
     }
 }
