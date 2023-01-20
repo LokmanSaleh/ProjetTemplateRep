@@ -19,8 +19,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link projetTemplate.RequirementType#getDescription <em>Description</em>}</li>
  *   <li>{@link projetTemplate.RequirementType#getValueType <em>Value Type</em>}</li>
  *   <li>{@link projetTemplate.RequirementType#getScope <em>Scope</em>}</li>
- *   <li>{@link projetTemplate.RequirementType#getDomainrequirementvalue <em>Domainrequirementvalue</em>}</li>
  *   <li>{@link projetTemplate.RequirementType#getComputationalrequirementvalue <em>Computationalrequirementvalue</em>}</li>
+ *   <li>{@link projetTemplate.RequirementType#getDomainrequirementvalue <em>Domainrequirementvalue</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getRequirementType()
@@ -139,18 +139,6 @@ public interface RequirementType extends EObject {
 	void setScope(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Domainrequirementvalue</b></em>' reference list.
-	 * The list contents are of type {@link projetTemplate.DomainRequirementValue}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Domainrequirementvalue</em>' reference list.
-	 * @see projetTemplate.ProjetTemplatePackage#getRequirementType_Domainrequirementvalue()
-	 * @model
-	 * @generated
-	 */
-	EList<DomainRequirementValue> getDomainrequirementvalue();
-
-	/**
 	 * Returns the value of the '<em><b>Computationalrequirementvalue</b></em>' reference list.
 	 * The list contents are of type {@link projetTemplate.ComputationalRequirementValue}.
 	 * It is bidirectional and its opposite is '{@link projetTemplate.ComputationalRequirementValue#getRequirementtype <em>Requirementtype</em>}'.
@@ -163,5 +151,19 @@ public interface RequirementType extends EObject {
 	 * @generated
 	 */
 	EList<ComputationalRequirementValue> getComputationalrequirementvalue();
+
+	/**
+	 * Returns the value of the '<em><b>Domainrequirementvalue</b></em>' reference list.
+	 * The list contents are of type {@link projetTemplate.DomainRequirementValue}.
+	 * It is bidirectional and its opposite is '{@link projetTemplate.DomainRequirementValue#getRequirementtype <em>Requirementtype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Domainrequirementvalue</em>' reference list.
+	 * @see projetTemplate.ProjetTemplatePackage#getRequirementType_Domainrequirementvalue()
+	 * @see projetTemplate.DomainRequirementValue#getRequirementtype
+	 * @model opposite="requirementtype"
+	 * @generated
+	 */
+	EList<DomainRequirementValue> getDomainrequirementvalue();
 
 } // RequirementType

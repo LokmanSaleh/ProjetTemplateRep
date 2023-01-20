@@ -3,12 +3,15 @@
 package projetTemplate.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import projetTemplate.DomainRequirementValue;
 import projetTemplate.ProjetTemplatePackage;
+import projetTemplate.RequirementType;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,6 +23,8 @@ import projetTemplate.ProjetTemplatePackage;
  * <ul>
  *   <li>{@link projetTemplate.impl.DomainRequirementValueImpl#getValue <em>Value</em>}</li>
  *   <li>{@link projetTemplate.impl.DomainRequirementValueImpl#getExplanation <em>Explanation</em>}</li>
+ *   <li>{@link projetTemplate.impl.DomainRequirementValueImpl#getRequirementtype <em>Requirementtype</em>}</li>
+ *   <li>{@link projetTemplate.impl.DomainRequirementValueImpl#getHy <em>Hy</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,6 +69,36 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 	 * @ordered
 	 */
 	protected String explanation = EXPLANATION_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getRequirementtype() <em>Requirementtype</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRequirementtype()
+	 * @generated
+	 * @ordered
+	 */
+	protected RequirementType requirementtype;
+
+	/**
+	 * The default value of the '{@link #getHy() <em>Hy</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHy()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String HY_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getHy() <em>Hy</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getHy()
+	 * @generated
+	 * @ordered
+	 */
+	protected String hy = HY_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -133,6 +168,130 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public RequirementType getRequirementtype() {
+		if (requirementtype != null && requirementtype.eIsProxy()) {
+			InternalEObject oldRequirementtype = (InternalEObject) requirementtype;
+			requirementtype = (RequirementType) eResolveProxy(oldRequirementtype);
+			if (requirementtype != oldRequirementtype) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE, oldRequirementtype,
+							requirementtype));
+			}
+		}
+		return requirementtype;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RequirementType basicGetRequirementtype() {
+		return requirementtype;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetRequirementtype(RequirementType newRequirementtype, NotificationChain msgs) {
+		RequirementType oldRequirementtype = requirementtype;
+		requirementtype = newRequirementtype;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE, oldRequirementtype,
+					newRequirementtype);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRequirementtype(RequirementType newRequirementtype) {
+		if (newRequirementtype != requirementtype) {
+			NotificationChain msgs = null;
+			if (requirementtype != null)
+				msgs = ((InternalEObject) requirementtype).eInverseRemove(this,
+						ProjetTemplatePackage.REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE, RequirementType.class, msgs);
+			if (newRequirementtype != null)
+				msgs = ((InternalEObject) newRequirementtype).eInverseAdd(this,
+						ProjetTemplatePackage.REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE, RequirementType.class, msgs);
+			msgs = basicSetRequirementtype(newRequirementtype, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE, newRequirementtype,
+					newRequirementtype));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getHy() {
+		return hy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setHy(String newHy) {
+		String oldHy = hy;
+		hy = newHy;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__HY,
+					oldHy, hy));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE:
+			if (requirementtype != null)
+				msgs = ((InternalEObject) requirementtype).eInverseRemove(this,
+						ProjetTemplatePackage.REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE, RequirementType.class, msgs);
+			return basicSetRequirementtype((RequirementType) otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE:
+			return basicSetRequirementtype(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -140,6 +299,12 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 			return getValue();
 		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__EXPLANATION:
 			return getExplanation();
+		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE:
+			if (resolve)
+				return getRequirementtype();
+			return basicGetRequirementtype();
+		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__HY:
+			return getHy();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -159,6 +324,12 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__EXPLANATION:
 			setExplanation((String) newValue);
 			return;
+		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE:
+			setRequirementtype((RequirementType) newValue);
+			return;
+		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__HY:
+			setHy((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -177,6 +348,12 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__EXPLANATION:
 			setExplanation(EXPLANATION_EDEFAULT);
 			return;
+		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE:
+			setRequirementtype((RequirementType) null);
+			return;
+		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__HY:
+			setHy(HY_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -193,6 +370,10 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__EXPLANATION:
 			return EXPLANATION_EDEFAULT == null ? explanation != null : !EXPLANATION_EDEFAULT.equals(explanation);
+		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE:
+			return requirementtype != null;
+		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__HY:
+			return HY_EDEFAULT == null ? hy != null : !HY_EDEFAULT.equals(hy);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -212,6 +393,8 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 		result.append(value);
 		result.append(", explanation: ");
 		result.append(explanation);
+		result.append(", hy: ");
+		result.append(hy);
 		result.append(')');
 		return result.toString();
 	}

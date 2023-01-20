@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/1180" xmi:id="_iP-xAIkvEe22MOkvEr10wA" name="Database">
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/1180" xmi:id="_9M-IsJchEe2eDIBA0aI39w" name="Database">
   <rootEClass href="http://www.example.org/projetTemplate#//Database"/>
-  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_iQBNQIkvEe22MOkvEr10wA" name="Control value">
-    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_iQBNQYkvEe22MOkvEr10wA">
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_9M_94JchEe2eDIBA0aI39w" name="Control value">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_9M_94ZchEe2eDIBA0aI39w">
       <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.example.org/projetTemplate#//Database/value"/>
     </domainModelReference>
   </children>
-  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_iQBNQokvEe22MOkvEr10wA" name="Control credentias">
-    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_iQBNQ4kvEe22MOkvEr10wA">
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_9M_94pchEe2eDIBA0aI39w" name="Control credentias">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_9M_945chEe2eDIBA0aI39w">
       <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.example.org/projetTemplate#//Database/credentias"/>
     </domainModelReference>
   </children>
-  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_iQBNRIkvEe22MOkvEr10wA" name="Control schema">
-    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_iQBNRYkvEe22MOkvEr10wA">
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_9M_95JchEe2eDIBA0aI39w" name="Control schema">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_9M_95ZchEe2eDIBA0aI39w">
       <domainModelEFeature xsi:type="ecore:EReference" href="http://www.example.org/projetTemplate#//Database/schema"/>
     </domainModelReference>
   </children>
-  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_iQB0UIkvEe22MOkvEr10wA" name="Control data">
-    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_iQB0UYkvEe22MOkvEr10wA">
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_9M_95pchEe2eDIBA0aI39w" name="Control data">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_9M_955chEe2eDIBA0aI39w">
       <domainModelEFeature xsi:type="ecore:EReference" href="http://www.example.org/projetTemplate#//Database/data"/>
     </domainModelReference>
   </children>
-  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_iQB0UokvEe22MOkvEr10wA" name="Control mlproject">
-    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_iQB0U4kvEe22MOkvEr10wA">
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_9M_96JchEe2eDIBA0aI39w" name="Control mlproject">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_9M_96ZchEe2eDIBA0aI39w">
       <domainModelEFeature xsi:type="ecore:EReference" href="http://www.example.org/projetTemplate#//Database/mlproject"/>
     </domainModelReference>
   </children>

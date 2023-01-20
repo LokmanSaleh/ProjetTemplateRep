@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/1180" xmi:id="_iRFkQIkvEe22MOkvEr10wA" name="DataPropertyValue">
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/1180" xmi:id="_9NiwcJchEe2eDIBA0aI39w" name="DataPropertyValue">
   <rootEClass href="http://www.example.org/projetTemplate#//DataPropertyValue"/>
-  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_iRIAgIkvEe22MOkvEr10wA" name="Control name">
-    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_iRIAgYkvEe22MOkvEr10wA">
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_9NkloJchEe2eDIBA0aI39w" name="Control name">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_9NkloZchEe2eDIBA0aI39w">
       <domainModelEFeature xsi:type="ecore:EAttribute" href="http://www.example.org/projetTemplate#//DataPropertyValue/name"/>
     </domainModelReference>
   </children>
-  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_iRIAgokvEe22MOkvEr10wA" name="Control datapropertyvalueset">
-    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_iRIAg4kvEe22MOkvEr10wA">
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_9NklopchEe2eDIBA0aI39w" name="Control datapropertyvalueset">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_9Nklo5chEe2eDIBA0aI39w">
       <domainModelEFeature xsi:type="ecore:EReference" href="http://www.example.org/projetTemplate#//DataPropertyValue/datapropertyvalueset"/>
     </domainModelReference>
   </children>
-  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_iRIAhIkvEe22MOkvEr10wA" name="Control datapropertytype">
-    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_iRIAhYkvEe22MOkvEr10wA">
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_9NklpJchEe2eDIBA0aI39w" name="Control datapropertytype">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_9NklpZchEe2eDIBA0aI39w">
       <domainModelEFeature xsi:type="ecore:EReference" href="http://www.example.org/projetTemplate#//DataPropertyValue/datapropertytype"/>
     </domainModelReference>
   </children>

@@ -132,13 +132,31 @@ public interface ProjetTemplatePackage extends EPackage {
 	int DOMAIN_REQUIREMENT_VALUE__EXPLANATION = 1;
 
 	/**
+	 * The feature id for the '<em><b>Requirementtype</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Hy</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_REQUIREMENT_VALUE__HY = 3;
+
+	/**
 	 * The number of structural features of the '<em>Domain Requirement Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_REQUIREMENT_VALUE_FEATURE_COUNT = 2;
+	int DOMAIN_REQUIREMENT_VALUE_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Domain Requirement Value</em>' class.
@@ -205,22 +223,22 @@ public interface ProjetTemplatePackage extends EPackage {
 	int REQUIREMENT_TYPE__SCOPE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Domainrequirementvalue</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE = 5;
-
-	/**
 	 * The feature id for the '<em><b>Computationalrequirementvalue</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REQUIREMENT_TYPE__COMPUTATIONALREQUIREMENTVALUE = 6;
+	int REQUIREMENT_TYPE__COMPUTATIONALREQUIREMENTVALUE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Domainrequirementvalue</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE = 6;
 
 	/**
 	 * The number of structural features of the '<em>Requirement Type</em>' class.
@@ -1640,6 +1658,28 @@ public interface ProjetTemplatePackage extends EPackage {
 	EAttribute getDomainRequirementValue_Explanation();
 
 	/**
+	 * Returns the meta object for the reference '{@link projetTemplate.DomainRequirementValue#getRequirementtype <em>Requirementtype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Requirementtype</em>'.
+	 * @see projetTemplate.DomainRequirementValue#getRequirementtype()
+	 * @see #getDomainRequirementValue()
+	 * @generated
+	 */
+	EReference getDomainRequirementValue_Requirementtype();
+
+	/**
+	 * Returns the meta object for the attribute '{@link projetTemplate.DomainRequirementValue#getHy <em>Hy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Hy</em>'.
+	 * @see projetTemplate.DomainRequirementValue#getHy()
+	 * @see #getDomainRequirementValue()
+	 * @generated
+	 */
+	EAttribute getDomainRequirementValue_Hy();
+
+	/**
 	 * Returns the meta object for class '{@link projetTemplate.RequirementType <em>Requirement Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1705,17 +1745,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	EAttribute getRequirementType_Scope();
 
 	/**
-	 * Returns the meta object for the reference list '{@link projetTemplate.RequirementType#getDomainrequirementvalue <em>Domainrequirementvalue</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Domainrequirementvalue</em>'.
-	 * @see projetTemplate.RequirementType#getDomainrequirementvalue()
-	 * @see #getRequirementType()
-	 * @generated
-	 */
-	EReference getRequirementType_Domainrequirementvalue();
-
-	/**
 	 * Returns the meta object for the reference list '{@link projetTemplate.RequirementType#getComputationalrequirementvalue <em>Computationalrequirementvalue</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1725,6 +1754,17 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getRequirementType_Computationalrequirementvalue();
+
+	/**
+	 * Returns the meta object for the reference list '{@link projetTemplate.RequirementType#getDomainrequirementvalue <em>Domainrequirementvalue</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Domainrequirementvalue</em>'.
+	 * @see projetTemplate.RequirementType#getDomainrequirementvalue()
+	 * @see #getRequirementType()
+	 * @generated
+	 */
+	EReference getRequirementType_Domainrequirementvalue();
 
 	/**
 	 * Returns the meta object for class '{@link projetTemplate.MLProject <em>ML Project</em>}'.
@@ -2924,6 +2964,22 @@ public interface ProjetTemplatePackage extends EPackage {
 		EAttribute DOMAIN_REQUIREMENT_VALUE__EXPLANATION = eINSTANCE.getDomainRequirementValue_Explanation();
 
 		/**
+		 * The meta object literal for the '<em><b>Requirementtype</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE = eINSTANCE.getDomainRequirementValue_Requirementtype();
+
+		/**
+		 * The meta object literal for the '<em><b>Hy</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DOMAIN_REQUIREMENT_VALUE__HY = eINSTANCE.getDomainRequirementValue_Hy();
+
+		/**
 		 * The meta object literal for the '{@link projetTemplate.impl.RequirementTypeImpl <em>Requirement Type</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2974,14 +3030,6 @@ public interface ProjetTemplatePackage extends EPackage {
 		EAttribute REQUIREMENT_TYPE__SCOPE = eINSTANCE.getRequirementType_Scope();
 
 		/**
-		 * The meta object literal for the '<em><b>Domainrequirementvalue</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE = eINSTANCE.getRequirementType_Domainrequirementvalue();
-
-		/**
 		 * The meta object literal for the '<em><b>Computationalrequirementvalue</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2989,6 +3037,14 @@ public interface ProjetTemplatePackage extends EPackage {
 		 */
 		EReference REQUIREMENT_TYPE__COMPUTATIONALREQUIREMENTVALUE = eINSTANCE
 				.getRequirementType_Computationalrequirementvalue();
+
+		/**
+		 * The meta object literal for the '<em><b>Domainrequirementvalue</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE = eINSTANCE.getRequirementType_Domainrequirementvalue();
 
 		/**
 		 * The meta object literal for the '{@link projetTemplate.impl.MLProjectImpl <em>ML Project</em>}' class.

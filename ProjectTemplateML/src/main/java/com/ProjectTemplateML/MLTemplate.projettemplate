@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:projetTemplate="http://www.example.org/projetTemplate">
-  <projetTemplate:MLProject name="Lokman" date="11-12-2022" author="lokman" dataanalysisproblem="/1" domainproblem="/6" database="/2"/>
-  <projetTemplate:DataAnalysisProblem dataanalysisproblemtype="/9" processingchain="/12"/>
-  <projetTemplate:Database schema="/3" data="/5" mlproject="/0"/>
+  <projetTemplate:MLProject name="Lokman" date="11-12-2022" author="lokman" dataanalysisproblem="/1" domainproblem="/6" database="/23"/>
+  <projetTemplate:DataAnalysisProblem dataanalysisproblemtype="/9" processingchain="/17"/>
+  <projetTemplate:Database schema="/3" data="/5"/>
   <projetTemplate:Schema modelelement="/4"/>
   <projetTemplate:ModelElement/>
   <projetTemplate:Data/>
-  <projetTemplate:DomainProblem domainrequirementvalue="/7 /8"/>
-  <projetTemplate:DomainRequirementValue/>
-  <projetTemplate:DomainRequirementValue/>
+  <projetTemplate:DomainProblem text="Trouver Les clients Fideles" domainrequirementvalue="/7 /8"/>
+  <projetTemplate:DomainRequirementValue value="High (AJOUTER SELECTION)" explanation="Parceque etc.. (Correction INVERSER LES LIENS)" requirementtype="/22"/>
+  <projetTemplate:DomainRequirementValue value="Moderate" requirementtype="/21"/>
   <projetTemplate:DataAnalysisProblemType Name="Classification" mlprocchainsolutionpattern="/10"/>
-  <projetTemplate:MLProcChainSolutionPattern dataanalysisproblemtype="/9"/>
+  <projetTemplate:MLProcChainSolutionPattern dataanalysisproblemtype="/9" datapropertyvalueset="/16"/>
   <projetTemplate:DataAnalysisProblemType/>
   <projetTemplate:ProcessingChain extendedbpmnmodel="/13" mlalgorithm="/15" processingchaintemplate="/14"/>
   <projetTemplate:ExtendedBPMNModel/>
   <projetTemplate:ProcessingChainTemplate processingchain="/12"/>
   <projetTemplate:MLAlgorithm processingchain="/12"/>
+  <projetTemplate:DataPropertyValueSet mlprocchainsolutionpattern="/10"/>
+  <projetTemplate:ProcessingChain/>
+  <projetTemplate:RequirementType/>
+  <projetTemplate:RequirementType requirementmapping="/20" name="Classification"/>
+  <projetTemplate:RequirementMapping/>
+  <projetTemplate:RequirementType name="Classification" domainrequirementvalue="/8"/>
+  <projetTemplate:RequirementType domainrequirementvalue="/7"/>
+  <projetTemplate:Database mlproject="/0"/>
 </xmi:XMI>

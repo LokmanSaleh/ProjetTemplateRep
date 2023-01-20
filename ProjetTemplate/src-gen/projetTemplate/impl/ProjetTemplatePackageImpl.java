@@ -302,6 +302,24 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDomainRequirementValue_Requirementtype() {
+		return (EReference) domainRequirementValueEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDomainRequirementValue_Hy() {
+		return (EAttribute) domainRequirementValueEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
@@ -353,15 +371,16 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- begin-user-doc --> <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRequirementType_Domainrequirementvalue() {
+	public EReference getRequirementType_Computationalrequirementvalue() {
 		return (EReference) requirementTypeEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRequirementType_Computationalrequirementvalue() {
+	public EReference getRequirementType_Domainrequirementvalue() {
 		return (EReference) requirementTypeEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -1231,6 +1250,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		domainRequirementValueEClass = createEClass(DOMAIN_REQUIREMENT_VALUE);
 		createEAttribute(domainRequirementValueEClass, DOMAIN_REQUIREMENT_VALUE__VALUE);
 		createEAttribute(domainRequirementValueEClass, DOMAIN_REQUIREMENT_VALUE__EXPLANATION);
+		createEReference(domainRequirementValueEClass, DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE);
+		createEAttribute(domainRequirementValueEClass, DOMAIN_REQUIREMENT_VALUE__HY);
 
 		requirementTypeEClass = createEClass(REQUIREMENT_TYPE);
 		createEReference(requirementTypeEClass, REQUIREMENT_TYPE__REQUIREMENTMAPPING);
@@ -1238,8 +1259,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		createEAttribute(requirementTypeEClass, REQUIREMENT_TYPE__DESCRIPTION);
 		createEAttribute(requirementTypeEClass, REQUIREMENT_TYPE__VALUE_TYPE);
 		createEAttribute(requirementTypeEClass, REQUIREMENT_TYPE__SCOPE);
-		createEReference(requirementTypeEClass, REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE);
 		createEReference(requirementTypeEClass, REQUIREMENT_TYPE__COMPUTATIONALREQUIREMENTVALUE);
+		createEReference(requirementTypeEClass, REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE);
 
 		mlProjectEClass = createEClass(ML_PROJECT);
 		createEAttribute(mlProjectEClass, ML_PROJECT__NAME);
@@ -1413,6 +1434,13 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEAttribute(getDomainRequirementValue_Explanation(), ecorePackage.getEString(), "explanation", null, 0, 1,
 				DomainRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomainRequirementValue_Requirementtype(), this.getRequirementType(),
+				this.getRequirementType_Domainrequirementvalue(), "requirementtype", null, 1, 1,
+				DomainRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDomainRequirementValue_Hy(), ecorePackage.getEString(), "hy", null, 0, 1,
+				DomainRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(requirementTypeEClass, RequirementType.class, "RequirementType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1430,11 +1458,12 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEAttribute(getRequirementType_Scope(), ecorePackage.getEString(), "scope", null, 0, 1,
 				RequirementType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEReference(getRequirementType_Domainrequirementvalue(), this.getDomainRequirementValue(), null,
-				"domainrequirementvalue", null, 0, -1, RequirementType.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRequirementType_Computationalrequirementvalue(), this.getComputationalRequirementValue(),
 				this.getComputationalRequirementValue_Requirementtype(), "computationalrequirementvalue", null, 0, -1,
+				RequirementType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRequirementType_Domainrequirementvalue(), this.getDomainRequirementValue(),
+				this.getDomainRequirementValue_Requirementtype(), "domainrequirementvalue", null, 0, -1,
 				RequirementType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

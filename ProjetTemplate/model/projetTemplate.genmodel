@@ -16,6 +16,8 @@
     <genClasses ecoreClass="projetTemplate.ecore#//DomainRequirementValue">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//DomainRequirementValue/value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//DomainRequirementValue/explanation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//DomainRequirementValue/requirementtype"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//DomainRequirementValue/hy"/>
     </genClasses>
     <genClasses ecoreClass="projetTemplate.ecore#//RequirementType">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//RequirementType/requirementmapping"/>
@@ -23,8 +25,8 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//RequirementType/description"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//RequirementType/valueType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//RequirementType/scope"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//RequirementType/domainrequirementvalue"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//RequirementType/computationalrequirementvalue"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//RequirementType/domainrequirementvalue"/>
     </genClasses>
     <genClasses ecoreClass="projetTemplate.ecore#//MLProject">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//MLProject/name"/>

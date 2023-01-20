@@ -12,8 +12,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import projetTemplate.ComputationalRequirementValue;
@@ -35,8 +33,8 @@ import projetTemplate.RequirementType;
  *   <li>{@link projetTemplate.impl.RequirementTypeImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link projetTemplate.impl.RequirementTypeImpl#getValueType <em>Value Type</em>}</li>
  *   <li>{@link projetTemplate.impl.RequirementTypeImpl#getScope <em>Scope</em>}</li>
- *   <li>{@link projetTemplate.impl.RequirementTypeImpl#getDomainrequirementvalue <em>Domainrequirementvalue</em>}</li>
  *   <li>{@link projetTemplate.impl.RequirementTypeImpl#getComputationalrequirementvalue <em>Computationalrequirementvalue</em>}</li>
+ *   <li>{@link projetTemplate.impl.RequirementTypeImpl#getDomainrequirementvalue <em>Domainrequirementvalue</em>}</li>
  * </ul>
  *
  * @generated
@@ -133,16 +131,6 @@ public class RequirementTypeImpl extends MinimalEObjectImpl.Container implements
 	protected String scope = SCOPE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getDomainrequirementvalue() <em>Domainrequirementvalue</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDomainrequirementvalue()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DomainRequirementValue> domainrequirementvalue;
-
-	/**
 	 * The cached value of the '{@link #getComputationalrequirementvalue() <em>Computationalrequirementvalue</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -151,6 +139,16 @@ public class RequirementTypeImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected EList<ComputationalRequirementValue> computationalrequirementvalue;
+
+	/**
+	 * The cached value of the '{@link #getDomainrequirementvalue() <em>Domainrequirementvalue</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDomainrequirementvalue()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DomainRequirementValue> domainrequirementvalue;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -306,19 +304,6 @@ public class RequirementTypeImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DomainRequirementValue> getDomainrequirementvalue() {
-		if (domainrequirementvalue == null) {
-			domainrequirementvalue = new EObjectResolvingEList<DomainRequirementValue>(DomainRequirementValue.class,
-					this, ProjetTemplatePackage.REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE);
-		}
-		return domainrequirementvalue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<ComputationalRequirementValue> getComputationalrequirementvalue() {
 		if (computationalrequirementvalue == null) {
 			computationalrequirementvalue = new EObjectWithInverseResolvingEList<ComputationalRequirementValue>(
@@ -334,6 +319,20 @@ public class RequirementTypeImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<DomainRequirementValue> getDomainrequirementvalue() {
+		if (domainrequirementvalue == null) {
+			domainrequirementvalue = new EObjectWithInverseResolvingEList<DomainRequirementValue>(
+					DomainRequirementValue.class, this, ProjetTemplatePackage.REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE,
+					ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE);
+		}
+		return domainrequirementvalue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -341,6 +340,9 @@ public class RequirementTypeImpl extends MinimalEObjectImpl.Container implements
 		case ProjetTemplatePackage.REQUIREMENT_TYPE__COMPUTATIONALREQUIREMENTVALUE:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getComputationalrequirementvalue())
 					.basicAdd(otherEnd, msgs);
+		case ProjetTemplatePackage.REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE:
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getDomainrequirementvalue()).basicAdd(otherEnd,
+					msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -355,6 +357,8 @@ public class RequirementTypeImpl extends MinimalEObjectImpl.Container implements
 		switch (featureID) {
 		case ProjetTemplatePackage.REQUIREMENT_TYPE__COMPUTATIONALREQUIREMENTVALUE:
 			return ((InternalEList<?>) getComputationalrequirementvalue()).basicRemove(otherEnd, msgs);
+		case ProjetTemplatePackage.REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE:
+			return ((InternalEList<?>) getDomainrequirementvalue()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -379,10 +383,10 @@ public class RequirementTypeImpl extends MinimalEObjectImpl.Container implements
 			return getValueType();
 		case ProjetTemplatePackage.REQUIREMENT_TYPE__SCOPE:
 			return getScope();
-		case ProjetTemplatePackage.REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE:
-			return getDomainrequirementvalue();
 		case ProjetTemplatePackage.REQUIREMENT_TYPE__COMPUTATIONALREQUIREMENTVALUE:
 			return getComputationalrequirementvalue();
+		case ProjetTemplatePackage.REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE:
+			return getDomainrequirementvalue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -411,13 +415,13 @@ public class RequirementTypeImpl extends MinimalEObjectImpl.Container implements
 		case ProjetTemplatePackage.REQUIREMENT_TYPE__SCOPE:
 			setScope((String) newValue);
 			return;
-		case ProjetTemplatePackage.REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE:
-			getDomainrequirementvalue().clear();
-			getDomainrequirementvalue().addAll((Collection<? extends DomainRequirementValue>) newValue);
-			return;
 		case ProjetTemplatePackage.REQUIREMENT_TYPE__COMPUTATIONALREQUIREMENTVALUE:
 			getComputationalrequirementvalue().clear();
 			getComputationalrequirementvalue().addAll((Collection<? extends ComputationalRequirementValue>) newValue);
+			return;
+		case ProjetTemplatePackage.REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE:
+			getDomainrequirementvalue().clear();
+			getDomainrequirementvalue().addAll((Collection<? extends DomainRequirementValue>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -446,11 +450,11 @@ public class RequirementTypeImpl extends MinimalEObjectImpl.Container implements
 		case ProjetTemplatePackage.REQUIREMENT_TYPE__SCOPE:
 			setScope(SCOPE_EDEFAULT);
 			return;
-		case ProjetTemplatePackage.REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE:
-			getDomainrequirementvalue().clear();
-			return;
 		case ProjetTemplatePackage.REQUIREMENT_TYPE__COMPUTATIONALREQUIREMENTVALUE:
 			getComputationalrequirementvalue().clear();
+			return;
+		case ProjetTemplatePackage.REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE:
+			getDomainrequirementvalue().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -474,10 +478,10 @@ public class RequirementTypeImpl extends MinimalEObjectImpl.Container implements
 			return VALUE_TYPE_EDEFAULT == null ? valueType != null : !VALUE_TYPE_EDEFAULT.equals(valueType);
 		case ProjetTemplatePackage.REQUIREMENT_TYPE__SCOPE:
 			return SCOPE_EDEFAULT == null ? scope != null : !SCOPE_EDEFAULT.equals(scope);
-		case ProjetTemplatePackage.REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE:
-			return domainrequirementvalue != null && !domainrequirementvalue.isEmpty();
 		case ProjetTemplatePackage.REQUIREMENT_TYPE__COMPUTATIONALREQUIREMENTVALUE:
 			return computationalrequirementvalue != null && !computationalrequirementvalue.isEmpty();
+		case ProjetTemplatePackage.REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE:
+			return domainrequirementvalue != null && !domainrequirementvalue.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

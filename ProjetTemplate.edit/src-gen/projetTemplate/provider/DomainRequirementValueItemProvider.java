@@ -55,6 +55,8 @@ public class DomainRequirementValueItemProvider extends ItemProviderAdapter impl
 
 			addValuePropertyDescriptor(object);
 			addExplanationPropertyDescriptor(object);
+			addRequirementtypePropertyDescriptor(object);
+			addHyPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -89,6 +91,38 @@ public class DomainRequirementValueItemProvider extends ItemProviderAdapter impl
 								"_UI_DomainRequirementValue_explanation_feature", "_UI_DomainRequirementValue_type"),
 						ProjetTemplatePackage.Literals.DOMAIN_REQUIREMENT_VALUE__EXPLANATION, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Requirementtype feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addRequirementtypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_DomainRequirementValue_requirementtype_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_DomainRequirementValue_requirementtype_feature",
+						"_UI_DomainRequirementValue_type"),
+				ProjetTemplatePackage.Literals.DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE, true, false, true, null, null,
+				null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Hy feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addHyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_DomainRequirementValue_hy_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_DomainRequirementValue_hy_feature",
+						"_UI_DomainRequirementValue_type"),
+				ProjetTemplatePackage.Literals.DOMAIN_REQUIREMENT_VALUE__HY, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -139,6 +173,7 @@ public class DomainRequirementValueItemProvider extends ItemProviderAdapter impl
 		switch (notification.getFeatureID(DomainRequirementValue.class)) {
 		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__VALUE:
 		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__EXPLANATION:
+		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__HY:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

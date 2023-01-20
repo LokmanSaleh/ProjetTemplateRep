@@ -58,8 +58,8 @@ public class RequirementTypeItemProvider extends ItemProviderAdapter implements 
 			addDescriptionPropertyDescriptor(object);
 			addValueTypePropertyDescriptor(object);
 			addScopePropertyDescriptor(object);
-			addDomainrequirementvaluePropertyDescriptor(object);
 			addComputationalrequirementvaluePropertyDescriptor(object);
+			addDomainrequirementvaluePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -145,22 +145,6 @@ public class RequirementTypeItemProvider extends ItemProviderAdapter implements 
 	}
 
 	/**
-	 * This adds a property descriptor for the Domainrequirementvalue feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDomainrequirementvaluePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_RequirementType_domainrequirementvalue_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_RequirementType_domainrequirementvalue_feature", "_UI_RequirementType_type"),
-						ProjetTemplatePackage.Literals.REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE, true, false, true,
-						null, null, null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Computationalrequirementvalue feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -174,6 +158,22 @@ public class RequirementTypeItemProvider extends ItemProviderAdapter implements 
 						"_UI_RequirementType_computationalrequirementvalue_feature", "_UI_RequirementType_type"),
 				ProjetTemplatePackage.Literals.REQUIREMENT_TYPE__COMPUTATIONALREQUIREMENTVALUE, true, false, true, null,
 				null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Domainrequirementvalue feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDomainrequirementvaluePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_RequirementType_domainrequirementvalue_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_RequirementType_domainrequirementvalue_feature", "_UI_RequirementType_type"),
+						ProjetTemplatePackage.Literals.REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE, true, false, true,
+						null, null, null));
 	}
 
 	/**
