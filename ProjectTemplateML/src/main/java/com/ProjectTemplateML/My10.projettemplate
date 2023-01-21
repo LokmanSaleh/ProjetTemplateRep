@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:projetTemplate="http://www.example.org/projetTemplate">
+  <projetTemplate:MLProject dataanalysisproblem="/1" domainproblem="/2"/>
+  <projetTemplate:DataAnalysisProblem dataanalysisproblemtype="/15"/>
+  <projetTemplate:DomainProblem text="I have a set of ..." DomainRequirementValue="/3 /9"/>
+  <projetTemplate:DomainRequirementValue requirementtype="/4" accuracy="/8"/>
+  <projetTemplate:RequirementType requirementmapping="/5" valueType="Accuracy"/>
+  <projetTemplate:RequirementMapping requirementtype="/6"/>
+  <projetTemplate:RequirementType valueType="Accuracy"/>
+  <projetTemplate:Explainability/>
+  <projetTemplate:Accuracy/>
+  <projetTemplate:DomainRequirementValue requirementtype="/12" explainability="/11"/>
+  <projetTemplate:Accuracy/>
+  <projetTemplate:Explainability/>
+  <projetTemplate:RequirementType requirementmapping="/13"/>
+  <projetTemplate:RequirementMapping requirementtype="/14"/>
+  <projetTemplate:RequirementType/>
+  <projetTemplate:DataAnalysisProblemType/>
+</xmi:XMI>

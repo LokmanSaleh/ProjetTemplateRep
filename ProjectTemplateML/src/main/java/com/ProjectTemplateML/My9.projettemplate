@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:projetTemplate="http://www.example.org/projetTemplate">
+  <projetTemplate:MLProject domainproblem="/1"/>
+  <projetTemplate:DomainProblem DomainRequirementValue="/2"/>
+  <projetTemplate:DomainRequirementValue requirementtype="/5" accuracy="/3"/>
+  <projetTemplate:Accuracy/>
+  <projetTemplate:Explainability/>
+  <projetTemplate:RequirementType/>
+</xmi:XMI>
