@@ -5,7 +5,6 @@ package projetTemplate.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -14,8 +13,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import projetTemplate.ProjetTemplatePackage;
 import projetTemplate.SelectionCriterion;
@@ -167,6 +166,19 @@ public class SelectionCriterionValueSetImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<SelectionCriterionValue> getSelectioncriterionvalue() {
+		if (selectioncriterionvalue == null) {
+			selectioncriterionvalue = new EObjectResolvingEList<SelectionCriterionValue>(SelectionCriterionValue.class,
+					this, ProjetTemplatePackage.SELECTION_CRITERION_VALUE_SET__SELECTIONCRITERIONVALUE);
+		}
+		return selectioncriterionvalue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public SelectionCriterion getSelectioncriterion() {
 		if (selectioncriterion != null && selectioncriterion.eIsProxy()) {
 			InternalEObject oldSelectioncriterion = (InternalEObject) selectioncriterion;
@@ -195,98 +207,13 @@ public class SelectionCriterionValueSetImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSelectioncriterion(SelectionCriterion newSelectioncriterion,
-			NotificationChain msgs) {
+	public void setSelectioncriterion(SelectionCriterion newSelectioncriterion) {
 		SelectionCriterion oldSelectioncriterion = selectioncriterion;
 		selectioncriterion = newSelectioncriterion;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.SELECTION_CRITERION_VALUE_SET__SELECTIONCRITERION, oldSelectioncriterion,
-					newSelectioncriterion);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSelectioncriterion(SelectionCriterion newSelectioncriterion) {
-		if (newSelectioncriterion != selectioncriterion) {
-			NotificationChain msgs = null;
-			if (selectioncriterion != null)
-				msgs = ((InternalEObject) selectioncriterion).eInverseRemove(this,
-						ProjetTemplatePackage.SELECTION_CRITERION__SELECTIONCRITERIONVALUESET, SelectionCriterion.class,
-						msgs);
-			if (newSelectioncriterion != null)
-				msgs = ((InternalEObject) newSelectioncriterion).eInverseAdd(this,
-						ProjetTemplatePackage.SELECTION_CRITERION__SELECTIONCRITERIONVALUESET, SelectionCriterion.class,
-						msgs);
-			msgs = basicSetSelectioncriterion(newSelectioncriterion, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.SELECTION_CRITERION_VALUE_SET__SELECTIONCRITERION, newSelectioncriterion,
-					newSelectioncriterion));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<SelectionCriterionValue> getSelectioncriterionvalue() {
-		if (selectioncriterionvalue == null) {
-			selectioncriterionvalue = new EObjectWithInverseResolvingEList.ManyInverse<SelectionCriterionValue>(
-					SelectionCriterionValue.class, this,
-					ProjetTemplatePackage.SELECTION_CRITERION_VALUE_SET__SELECTIONCRITERIONVALUE,
-					ProjetTemplatePackage.SELECTION_CRITERION_VALUE__SELECTIONCRITERIONVALUESET);
-		}
-		return selectioncriterionvalue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ProjetTemplatePackage.SELECTION_CRITERION_VALUE_SET__SELECTIONCRITERIONVALUE:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getSelectioncriterionvalue()).basicAdd(otherEnd,
-					msgs);
-		case ProjetTemplatePackage.SELECTION_CRITERION_VALUE_SET__SELECTIONCRITERION:
-			if (selectioncriterion != null)
-				msgs = ((InternalEObject) selectioncriterion).eInverseRemove(this,
-						ProjetTemplatePackage.SELECTION_CRITERION__SELECTIONCRITERIONVALUESET, SelectionCriterion.class,
-						msgs);
-			return basicSetSelectioncriterion((SelectionCriterion) otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ProjetTemplatePackage.SELECTION_CRITERION_VALUE_SET__SELECTIONCRITERIONVALUE:
-			return ((InternalEList<?>) getSelectioncriterionvalue()).basicRemove(otherEnd, msgs);
-		case ProjetTemplatePackage.SELECTION_CRITERION_VALUE_SET__SELECTIONCRITERION:
-			return basicSetSelectioncriterion(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+					ProjetTemplatePackage.SELECTION_CRITERION_VALUE_SET__SELECTIONCRITERION, oldSelectioncriterion,
+					selectioncriterion));
 	}
 
 	/**

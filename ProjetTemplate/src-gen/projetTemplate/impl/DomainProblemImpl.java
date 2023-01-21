@@ -3,15 +3,18 @@
 package projetTemplate.impl;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+
 import projetTemplate.DomainProblem;
 import projetTemplate.DomainRequirementValue;
 import projetTemplate.ProjetTemplatePackage;
@@ -25,7 +28,7 @@ import projetTemplate.ProjetTemplatePackage;
  * </p>
  * <ul>
  *   <li>{@link projetTemplate.impl.DomainProblemImpl#getText <em>Text</em>}</li>
- *   <li>{@link projetTemplate.impl.DomainProblemImpl#getDomainrequirementvalue <em>Domainrequirementvalue</em>}</li>
+ *   <li>{@link projetTemplate.impl.DomainProblemImpl#getDomainRequirementValue <em>Domain Requirement Value</em>}</li>
  * </ul>
  *
  * @generated
@@ -52,14 +55,14 @@ public class DomainProblemImpl extends MinimalEObjectImpl.Container implements D
 	protected String text = TEXT_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getDomainrequirementvalue() <em>Domainrequirementvalue</em>}' reference list.
+	 * The cached value of the '{@link #getDomainRequirementValue() <em>Domain Requirement Value</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDomainrequirementvalue()
+	 * @see #getDomainRequirementValue()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DomainRequirementValue> domainrequirementvalue;
+	protected EList<DomainRequirementValue> domainRequirementValue;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -107,12 +110,12 @@ public class DomainProblemImpl extends MinimalEObjectImpl.Container implements D
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DomainRequirementValue> getDomainrequirementvalue() {
-		if (domainrequirementvalue == null) {
-			domainrequirementvalue = new EObjectResolvingEList<DomainRequirementValue>(DomainRequirementValue.class,
-					this, ProjetTemplatePackage.DOMAIN_PROBLEM__DOMAINREQUIREMENTVALUE);
+	public EList<DomainRequirementValue> getDomainRequirementValue() {
+		if (domainRequirementValue == null) {
+			domainRequirementValue = new EObjectResolvingEList<DomainRequirementValue>(DomainRequirementValue.class,
+					this, ProjetTemplatePackage.DOMAIN_PROBLEM__DOMAIN_REQUIREMENT_VALUE);
 		}
-		return domainrequirementvalue;
+		return domainRequirementValue;
 	}
 
 	/**
@@ -125,8 +128,8 @@ public class DomainProblemImpl extends MinimalEObjectImpl.Container implements D
 		switch (featureID) {
 		case ProjetTemplatePackage.DOMAIN_PROBLEM__TEXT:
 			return getText();
-		case ProjetTemplatePackage.DOMAIN_PROBLEM__DOMAINREQUIREMENTVALUE:
-			return getDomainrequirementvalue();
+		case ProjetTemplatePackage.DOMAIN_PROBLEM__DOMAIN_REQUIREMENT_VALUE:
+			return getDomainRequirementValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -143,9 +146,9 @@ public class DomainProblemImpl extends MinimalEObjectImpl.Container implements D
 		case ProjetTemplatePackage.DOMAIN_PROBLEM__TEXT:
 			setText((String) newValue);
 			return;
-		case ProjetTemplatePackage.DOMAIN_PROBLEM__DOMAINREQUIREMENTVALUE:
-			getDomainrequirementvalue().clear();
-			getDomainrequirementvalue().addAll((Collection<? extends DomainRequirementValue>) newValue);
+		case ProjetTemplatePackage.DOMAIN_PROBLEM__DOMAIN_REQUIREMENT_VALUE:
+			getDomainRequirementValue().clear();
+			getDomainRequirementValue().addAll((Collection<? extends DomainRequirementValue>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -162,8 +165,8 @@ public class DomainProblemImpl extends MinimalEObjectImpl.Container implements D
 		case ProjetTemplatePackage.DOMAIN_PROBLEM__TEXT:
 			setText(TEXT_EDEFAULT);
 			return;
-		case ProjetTemplatePackage.DOMAIN_PROBLEM__DOMAINREQUIREMENTVALUE:
-			getDomainrequirementvalue().clear();
+		case ProjetTemplatePackage.DOMAIN_PROBLEM__DOMAIN_REQUIREMENT_VALUE:
+			getDomainRequirementValue().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -179,8 +182,8 @@ public class DomainProblemImpl extends MinimalEObjectImpl.Container implements D
 		switch (featureID) {
 		case ProjetTemplatePackage.DOMAIN_PROBLEM__TEXT:
 			return TEXT_EDEFAULT == null ? text != null : !TEXT_EDEFAULT.equals(text);
-		case ProjetTemplatePackage.DOMAIN_PROBLEM__DOMAINREQUIREMENTVALUE:
-			return domainrequirementvalue != null && !domainrequirementvalue.isEmpty();
+		case ProjetTemplatePackage.DOMAIN_PROBLEM__DOMAIN_REQUIREMENT_VALUE:
+			return domainRequirementValue != null && !domainRequirementValue.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -5,7 +5,6 @@ package projetTemplate.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -16,12 +15,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 import projetTemplate.ExtendedBPMNModel;
 import projetTemplate.MLProcChainSolutionPattern;
-import projetTemplate.ProcessingChain;
 import projetTemplate.ProcessingChainTemplate;
 import projetTemplate.ProjetTemplatePackage;
 
@@ -36,7 +32,6 @@ import projetTemplate.ProjetTemplatePackage;
  *   <li>{@link projetTemplate.impl.ProcessingChainTemplateImpl#getName <em>Name</em>}</li>
  *   <li>{@link projetTemplate.impl.ProcessingChainTemplateImpl#getAuthor <em>Author</em>}</li>
  *   <li>{@link projetTemplate.impl.ProcessingChainTemplateImpl#getExtendedbpmnmodel <em>Extendedbpmnmodel</em>}</li>
- *   <li>{@link projetTemplate.impl.ProcessingChainTemplateImpl#getProcessingchain <em>Processingchain</em>}</li>
  *   <li>{@link projetTemplate.impl.ProcessingChainTemplateImpl#getMlprocchainsolutionpattern <em>Mlprocchainsolutionpattern</em>}</li>
  * </ul>
  *
@@ -92,16 +87,6 @@ public class ProcessingChainTemplateImpl extends MinimalEObjectImpl.Container im
 	 * @ordered
 	 */
 	protected ExtendedBPMNModel extendedbpmnmodel;
-
-	/**
-	 * The cached value of the '{@link #getProcessingchain() <em>Processingchain</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProcessingchain()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ProcessingChain> processingchain;
 
 	/**
 	 * The cached value of the '{@link #getMlprocchainsolutionpattern() <em>Mlprocchainsolutionpattern</em>}' reference list.
@@ -223,20 +208,6 @@ public class ProcessingChainTemplateImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ProcessingChain> getProcessingchain() {
-		if (processingchain == null) {
-			processingchain = new EObjectWithInverseResolvingEList<ProcessingChain>(ProcessingChain.class, this,
-					ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__PROCESSINGCHAIN,
-					ProjetTemplatePackage.PROCESSING_CHAIN__PROCESSINGCHAINTEMPLATE);
-		}
-		return processingchain;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<MLProcChainSolutionPattern> getMlprocchainsolutionpattern() {
 		if (mlprocchainsolutionpattern == null) {
 			mlprocchainsolutionpattern = new EObjectResolvingEList<MLProcChainSolutionPattern>(
@@ -244,35 +215,6 @@ public class ProcessingChainTemplateImpl extends MinimalEObjectImpl.Container im
 					ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__MLPROCCHAINSOLUTIONPATTERN);
 		}
 		return mlprocchainsolutionpattern;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__PROCESSINGCHAIN:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getProcessingchain()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__PROCESSINGCHAIN:
-			return ((InternalEList<?>) getProcessingchain()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -291,8 +233,6 @@ public class ProcessingChainTemplateImpl extends MinimalEObjectImpl.Container im
 			if (resolve)
 				return getExtendedbpmnmodel();
 			return basicGetExtendedbpmnmodel();
-		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__PROCESSINGCHAIN:
-			return getProcessingchain();
 		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__MLPROCCHAINSOLUTIONPATTERN:
 			return getMlprocchainsolutionpattern();
 		}
@@ -316,10 +256,6 @@ public class ProcessingChainTemplateImpl extends MinimalEObjectImpl.Container im
 			return;
 		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__EXTENDEDBPMNMODEL:
 			setExtendedbpmnmodel((ExtendedBPMNModel) newValue);
-			return;
-		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__PROCESSINGCHAIN:
-			getProcessingchain().clear();
-			getProcessingchain().addAll((Collection<? extends ProcessingChain>) newValue);
 			return;
 		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__MLPROCCHAINSOLUTIONPATTERN:
 			getMlprocchainsolutionpattern().clear();
@@ -346,9 +282,6 @@ public class ProcessingChainTemplateImpl extends MinimalEObjectImpl.Container im
 		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__EXTENDEDBPMNMODEL:
 			setExtendedbpmnmodel((ExtendedBPMNModel) null);
 			return;
-		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__PROCESSINGCHAIN:
-			getProcessingchain().clear();
-			return;
 		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__MLPROCCHAINSOLUTIONPATTERN:
 			getMlprocchainsolutionpattern().clear();
 			return;
@@ -370,8 +303,6 @@ public class ProcessingChainTemplateImpl extends MinimalEObjectImpl.Container im
 			return AUTHOR_EDEFAULT == null ? author != null : !AUTHOR_EDEFAULT.equals(author);
 		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__EXTENDEDBPMNMODEL:
 			return extendedbpmnmodel != null;
-		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__PROCESSINGCHAIN:
-			return processingchain != null && !processingchain.isEmpty();
 		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__MLPROCCHAINSOLUTIONPATTERN:
 			return mlprocchainsolutionpattern != null && !mlprocchainsolutionpattern.isEmpty();
 		}

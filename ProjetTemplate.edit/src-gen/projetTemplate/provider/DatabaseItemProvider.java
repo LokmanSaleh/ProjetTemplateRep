@@ -57,7 +57,6 @@ public class DatabaseItemProvider extends ItemProviderAdapter implements IEditin
 			addCredentiasPropertyDescriptor(object);
 			addSchemaPropertyDescriptor(object);
 			addDataPropertyDescriptor(object);
-			addMlprojectPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -122,21 +121,6 @@ public class DatabaseItemProvider extends ItemProviderAdapter implements IEditin
 						getString("_UI_PropertyDescriptor_description", "_UI_Database_data_feature",
 								"_UI_Database_type"),
 						ProjetTemplatePackage.Literals.DATABASE__DATA, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Mlproject feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMlprojectPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Database_mlproject_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Database_mlproject_feature",
-								"_UI_Database_type"),
-						ProjetTemplatePackage.Literals.DATABASE__MLPROJECT, true, false, true, null, null, null));
 	}
 
 	/**

@@ -56,9 +56,8 @@ public class MLAlgorithmSolutionPatternItemProvider extends ItemProviderAdapter 
 			addNamePropertyDescriptor(object);
 			addExplanationPropertyDescriptor(object);
 			addProcessingchaintemplatePropertyDescriptor(object);
-			addDatapropertyvaluesetPropertyDescriptor(object);
-			addDataanalysisproblemtypePropertyDescriptor(object);
 			addMlalgorithmPropertyDescriptor(object);
+			addDatapropertyvaluesetPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -113,6 +112,22 @@ public class MLAlgorithmSolutionPatternItemProvider extends ItemProviderAdapter 
 	}
 
 	/**
+	 * This adds a property descriptor for the Mlalgorithm feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addMlalgorithmPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_MLAlgorithmSolutionPattern_mlalgorithm_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_MLAlgorithmSolutionPattern_mlalgorithm_feature",
+						"_UI_MLAlgorithmSolutionPattern_type"),
+				ProjetTemplatePackage.Literals.ML_ALGORITHM_SOLUTION_PATTERN__MLALGORITHM, true, false, true, null,
+				null, null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Datapropertyvalueset feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -127,39 +142,6 @@ public class MLAlgorithmSolutionPatternItemProvider extends ItemProviderAdapter 
 								"_UI_MLAlgorithmSolutionPattern_type"),
 						ProjetTemplatePackage.Literals.ML_ALGORITHM_SOLUTION_PATTERN__DATAPROPERTYVALUESET, true, false,
 						true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Dataanalysisproblemtype feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDataanalysisproblemtypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_MLAlgorithmSolutionPattern_dataanalysisproblemtype_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_MLAlgorithmSolutionPattern_dataanalysisproblemtype_feature",
-						"_UI_MLAlgorithmSolutionPattern_type"),
-				ProjetTemplatePackage.Literals.ML_ALGORITHM_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE, true, false,
-				true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Mlalgorithm feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMlalgorithmPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_MLAlgorithmSolutionPattern_mlalgorithm_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_MLAlgorithmSolutionPattern_mlalgorithm_feature",
-						"_UI_MLAlgorithmSolutionPattern_type"),
-				ProjetTemplatePackage.Literals.ML_ALGORITHM_SOLUTION_PATTERN__MLALGORITHM, true, false, true, null,
-				null, null));
 	}
 
 	/**

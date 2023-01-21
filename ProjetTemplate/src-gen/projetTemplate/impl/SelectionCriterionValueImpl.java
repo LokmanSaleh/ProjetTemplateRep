@@ -2,25 +2,17 @@
  */
 package projetTemplate.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 import projetTemplate.ProjetTemplatePackage;
 import projetTemplate.SelectionCriterion;
 import projetTemplate.SelectionCriterionValue;
-import projetTemplate.SelectionCriterionValueSet;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +23,6 @@ import projetTemplate.SelectionCriterionValueSet;
  * </p>
  * <ul>
  *   <li>{@link projetTemplate.impl.SelectionCriterionValueImpl#getValues <em>Values</em>}</li>
- *   <li>{@link projetTemplate.impl.SelectionCriterionValueImpl#getSelectioncriterionvalueset <em>Selectioncriterionvalueset</em>}</li>
  *   <li>{@link projetTemplate.impl.SelectionCriterionValueImpl#getSelectioncriterion <em>Selectioncriterion</em>}</li>
  * </ul>
  *
@@ -57,16 +48,6 @@ public class SelectionCriterionValueImpl extends MinimalEObjectImpl.Container im
 	 * @ordered
 	 */
 	protected String values = VALUES_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getSelectioncriterionvalueset() <em>Selectioncriterionvalueset</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSelectioncriterionvalueset()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<SelectionCriterionValueSet> selectioncriterionvalueset;
 
 	/**
 	 * The cached value of the '{@link #getSelectioncriterion() <em>Selectioncriterion</em>}' reference.
@@ -152,98 +133,13 @@ public class SelectionCriterionValueImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSelectioncriterion(SelectionCriterion newSelectioncriterion,
-			NotificationChain msgs) {
+	public void setSelectioncriterion(SelectionCriterion newSelectioncriterion) {
 		SelectionCriterion oldSelectioncriterion = selectioncriterion;
 		selectioncriterion = newSelectioncriterion;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.SELECTION_CRITERION_VALUE__SELECTIONCRITERION, oldSelectioncriterion,
-					newSelectioncriterion);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSelectioncriterion(SelectionCriterion newSelectioncriterion) {
-		if (newSelectioncriterion != selectioncriterion) {
-			NotificationChain msgs = null;
-			if (selectioncriterion != null)
-				msgs = ((InternalEObject) selectioncriterion).eInverseRemove(this,
-						ProjetTemplatePackage.SELECTION_CRITERION__SELECTIONCRITERIONVALUE, SelectionCriterion.class,
-						msgs);
-			if (newSelectioncriterion != null)
-				msgs = ((InternalEObject) newSelectioncriterion).eInverseAdd(this,
-						ProjetTemplatePackage.SELECTION_CRITERION__SELECTIONCRITERIONVALUE, SelectionCriterion.class,
-						msgs);
-			msgs = basicSetSelectioncriterion(newSelectioncriterion, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.SELECTION_CRITERION_VALUE__SELECTIONCRITERION, newSelectioncriterion,
-					newSelectioncriterion));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<SelectionCriterionValueSet> getSelectioncriterionvalueset() {
-		if (selectioncriterionvalueset == null) {
-			selectioncriterionvalueset = new EObjectWithInverseResolvingEList.ManyInverse<SelectionCriterionValueSet>(
-					SelectionCriterionValueSet.class, this,
-					ProjetTemplatePackage.SELECTION_CRITERION_VALUE__SELECTIONCRITERIONVALUESET,
-					ProjetTemplatePackage.SELECTION_CRITERION_VALUE_SET__SELECTIONCRITERIONVALUE);
-		}
-		return selectioncriterionvalueset;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ProjetTemplatePackage.SELECTION_CRITERION_VALUE__SELECTIONCRITERIONVALUESET:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getSelectioncriterionvalueset())
-					.basicAdd(otherEnd, msgs);
-		case ProjetTemplatePackage.SELECTION_CRITERION_VALUE__SELECTIONCRITERION:
-			if (selectioncriterion != null)
-				msgs = ((InternalEObject) selectioncriterion).eInverseRemove(this,
-						ProjetTemplatePackage.SELECTION_CRITERION__SELECTIONCRITERIONVALUE, SelectionCriterion.class,
-						msgs);
-			return basicSetSelectioncriterion((SelectionCriterion) otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ProjetTemplatePackage.SELECTION_CRITERION_VALUE__SELECTIONCRITERIONVALUESET:
-			return ((InternalEList<?>) getSelectioncriterionvalueset()).basicRemove(otherEnd, msgs);
-		case ProjetTemplatePackage.SELECTION_CRITERION_VALUE__SELECTIONCRITERION:
-			return basicSetSelectioncriterion(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+					ProjetTemplatePackage.SELECTION_CRITERION_VALUE__SELECTIONCRITERION, oldSelectioncriterion,
+					selectioncriterion));
 	}
 
 	/**
@@ -256,8 +152,6 @@ public class SelectionCriterionValueImpl extends MinimalEObjectImpl.Container im
 		switch (featureID) {
 		case ProjetTemplatePackage.SELECTION_CRITERION_VALUE__VALUES:
 			return getValues();
-		case ProjetTemplatePackage.SELECTION_CRITERION_VALUE__SELECTIONCRITERIONVALUESET:
-			return getSelectioncriterionvalueset();
 		case ProjetTemplatePackage.SELECTION_CRITERION_VALUE__SELECTIONCRITERION:
 			if (resolve)
 				return getSelectioncriterion();
@@ -271,16 +165,11 @@ public class SelectionCriterionValueImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case ProjetTemplatePackage.SELECTION_CRITERION_VALUE__VALUES:
 			setValues((String) newValue);
-			return;
-		case ProjetTemplatePackage.SELECTION_CRITERION_VALUE__SELECTIONCRITERIONVALUESET:
-			getSelectioncriterionvalueset().clear();
-			getSelectioncriterionvalueset().addAll((Collection<? extends SelectionCriterionValueSet>) newValue);
 			return;
 		case ProjetTemplatePackage.SELECTION_CRITERION_VALUE__SELECTIONCRITERION:
 			setSelectioncriterion((SelectionCriterion) newValue);
@@ -300,9 +189,6 @@ public class SelectionCriterionValueImpl extends MinimalEObjectImpl.Container im
 		case ProjetTemplatePackage.SELECTION_CRITERION_VALUE__VALUES:
 			setValues(VALUES_EDEFAULT);
 			return;
-		case ProjetTemplatePackage.SELECTION_CRITERION_VALUE__SELECTIONCRITERIONVALUESET:
-			getSelectioncriterionvalueset().clear();
-			return;
 		case ProjetTemplatePackage.SELECTION_CRITERION_VALUE__SELECTIONCRITERION:
 			setSelectioncriterion((SelectionCriterion) null);
 			return;
@@ -320,8 +206,6 @@ public class SelectionCriterionValueImpl extends MinimalEObjectImpl.Container im
 		switch (featureID) {
 		case ProjetTemplatePackage.SELECTION_CRITERION_VALUE__VALUES:
 			return VALUES_EDEFAULT == null ? values != null : !VALUES_EDEFAULT.equals(values);
-		case ProjetTemplatePackage.SELECTION_CRITERION_VALUE__SELECTIONCRITERIONVALUESET:
-			return selectioncriterionvalueset != null && !selectioncriterionvalueset.isEmpty();
 		case ProjetTemplatePackage.SELECTION_CRITERION_VALUE__SELECTIONCRITERION:
 			return selectioncriterion != null;
 		}

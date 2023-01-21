@@ -138,14 +138,12 @@ public interface MLProject extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Database</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.Database#getMlproject <em>Mlproject</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Database</em>' reference.
 	 * @see #setDatabase(Database)
 	 * @see projetTemplate.ProjetTemplatePackage#getMLProject_Database()
-	 * @see projetTemplate.Database#getMlproject
-	 * @model opposite="mlproject" required="true"
+	 * @model
 	 * @generated
 	 */
 	Database getDatabase();

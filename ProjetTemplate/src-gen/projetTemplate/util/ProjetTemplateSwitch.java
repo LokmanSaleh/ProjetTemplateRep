@@ -234,6 +234,20 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case ProjetTemplatePackage.EXPLAINABILITY: {
+			Explainability explainability = (Explainability) theEObject;
+			T result = caseExplainability(explainability);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjetTemplatePackage.ACCURACY: {
+			Accuracy accuracy = (Accuracy) theEObject;
+			T result = caseAccuracy(accuracy);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -596,6 +610,36 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseExtendedBPMNModel(ExtendedBPMNModel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Explainability</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Explainability</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseExplainability(Explainability object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Accuracy</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Accuracy</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAccuracy(Accuracy object) {
 		return null;
 	}
 

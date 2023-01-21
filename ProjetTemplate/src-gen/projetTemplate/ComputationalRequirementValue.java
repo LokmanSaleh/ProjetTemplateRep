@@ -69,14 +69,12 @@ public interface ComputationalRequirementValue extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Requirementtype</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.RequirementType#getComputationalrequirementvalue <em>Computationalrequirementvalue</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Requirementtype</em>' reference.
 	 * @see #setRequirementtype(RequirementType)
 	 * @see projetTemplate.ProjetTemplatePackage#getComputationalRequirementValue_Requirementtype()
-	 * @see projetTemplate.RequirementType#getComputationalrequirementvalue
-	 * @model opposite="computationalrequirementvalue" required="true"
+	 * @model
 	 * @generated
 	 */
 	RequirementType getRequirementtype();

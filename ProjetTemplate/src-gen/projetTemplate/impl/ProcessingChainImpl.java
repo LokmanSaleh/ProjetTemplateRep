@@ -5,7 +5,6 @@ package projetTemplate.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -15,8 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import projetTemplate.ExtendedBPMNModel;
 import projetTemplate.MLAlgorithm;
@@ -224,9 +222,8 @@ public class ProcessingChainImpl extends MinimalEObjectImpl.Container implements
 	 */
 	public EList<MLAlgorithm> getMlalgorithm() {
 		if (mlalgorithm == null) {
-			mlalgorithm = new EObjectWithInverseResolvingEList<MLAlgorithm>(MLAlgorithm.class, this,
-					ProjetTemplatePackage.PROCESSING_CHAIN__MLALGORITHM,
-					ProjetTemplatePackage.ML_ALGORITHM__PROCESSINGCHAIN);
+			mlalgorithm = new EObjectResolvingEList<MLAlgorithm>(MLAlgorithm.class, this,
+					ProjetTemplatePackage.PROCESSING_CHAIN__MLALGORITHM);
 		}
 		return mlalgorithm;
 	}
@@ -264,82 +261,13 @@ public class ProcessingChainImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetProcessingchaintemplate(ProcessingChainTemplate newProcessingchaintemplate,
-			NotificationChain msgs) {
+	public void setProcessingchaintemplate(ProcessingChainTemplate newProcessingchaintemplate) {
 		ProcessingChainTemplate oldProcessingchaintemplate = processingchaintemplate;
 		processingchaintemplate = newProcessingchaintemplate;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.PROCESSING_CHAIN__PROCESSINGCHAINTEMPLATE, oldProcessingchaintemplate,
-					newProcessingchaintemplate);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setProcessingchaintemplate(ProcessingChainTemplate newProcessingchaintemplate) {
-		if (newProcessingchaintemplate != processingchaintemplate) {
-			NotificationChain msgs = null;
-			if (processingchaintemplate != null)
-				msgs = ((InternalEObject) processingchaintemplate).eInverseRemove(this,
-						ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__PROCESSINGCHAIN, ProcessingChainTemplate.class,
-						msgs);
-			if (newProcessingchaintemplate != null)
-				msgs = ((InternalEObject) newProcessingchaintemplate).eInverseAdd(this,
-						ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__PROCESSINGCHAIN, ProcessingChainTemplate.class,
-						msgs);
-			msgs = basicSetProcessingchaintemplate(newProcessingchaintemplate, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.PROCESSING_CHAIN__PROCESSINGCHAINTEMPLATE, newProcessingchaintemplate,
-					newProcessingchaintemplate));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ProjetTemplatePackage.PROCESSING_CHAIN__MLALGORITHM:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getMlalgorithm()).basicAdd(otherEnd, msgs);
-		case ProjetTemplatePackage.PROCESSING_CHAIN__PROCESSINGCHAINTEMPLATE:
-			if (processingchaintemplate != null)
-				msgs = ((InternalEObject) processingchaintemplate).eInverseRemove(this,
-						ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__PROCESSINGCHAIN, ProcessingChainTemplate.class,
-						msgs);
-			return basicSetProcessingchaintemplate((ProcessingChainTemplate) otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ProjetTemplatePackage.PROCESSING_CHAIN__MLALGORITHM:
-			return ((InternalEList<?>) getMlalgorithm()).basicRemove(otherEnd, msgs);
-		case ProjetTemplatePackage.PROCESSING_CHAIN__PROCESSINGCHAINTEMPLATE:
-			return basicSetProcessingchaintemplate(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+					ProjetTemplatePackage.PROCESSING_CHAIN__PROCESSINGCHAINTEMPLATE, oldProcessingchaintemplate,
+					processingchaintemplate));
 	}
 
 	/**

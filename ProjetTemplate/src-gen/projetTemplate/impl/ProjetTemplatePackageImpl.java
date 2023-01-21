@@ -4,12 +4,14 @@ package projetTemplate.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import projetTemplate.Accuracy;
 import projetTemplate.ComputationalRequirementValue;
 import projetTemplate.Data;
 import projetTemplate.DataAnalysisProblem;
@@ -20,6 +22,7 @@ import projetTemplate.DataPropertyValueSet;
 import projetTemplate.Database;
 import projetTemplate.DomainProblem;
 import projetTemplate.DomainRequirementValue;
+import projetTemplate.Explainability;
 import projetTemplate.ExtendedBPMNModel;
 import projetTemplate.MLAlgorithm;
 import projetTemplate.MLAlgorithmSolutionPattern;
@@ -32,160 +35,223 @@ import projetTemplate.ProjetTemplateFactory;
 import projetTemplate.ProjetTemplatePackage;
 import projetTemplate.RequirementMapping;
 import projetTemplate.RequirementType;
+import projetTemplate.RequirementTypeValues;
 import projetTemplate.Schema;
 import projetTemplate.SelectionCriterion;
 import projetTemplate.SelectionCriterionValue;
 import projetTemplate.SelectionCriterionValueSet;
+import projetTemplate.Values1;
+import projetTemplate.Values2;
 
 /**
- * <!-- begin-user-doc --> An implementation of the model <b>Package</b>. <!--
- * end-user-doc -->
+ * <!-- begin-user-doc -->
+ * An implementation of the model <b>Package</b>.
+ * <!-- end-user-doc -->
  * @generated
  */
 public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTemplatePackage {
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass domainProblemEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass domainRequirementValueEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass requirementTypeEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass mlProjectEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass dataAnalysisProblemEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass computationalRequirementValueEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass databaseEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass schemaEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass dataEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass requirementMappingEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass modelElementEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass dataPropertyValueSetEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass dataPropertyValueEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass dataPropertyTypeEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass dataAnalysisProblemTypeEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass processingChainEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass mlProcChainSolutionPatternEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass processingChainTemplateEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass mlAlgorithmSolutionPatternEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass mlAlgorithmEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass selectionCriterionValueSetEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass selectionCriterionValueEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass selectionCriterionEClass = null;
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private EClass extendedBPMNModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass explainabilityEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass accuracyEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum values1EEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum values2EEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum requirementTypeValuesEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -195,8 +261,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * factory method {@link #init init()}, which also performs
 	 * initialization of the package, or returns the registered package,
 	 * if one already exists.
-	 * <!-- begin-user-doc
-	 * --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
 	 * @see projetTemplate.ProjetTemplatePackage#eNS_URI
 	 * @see #init()
@@ -207,21 +273,19 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private static boolean isInited = false;
 
 	/**
-	 * Creates, registers, and initializes the <b>Package</b> for this model, and
-	 * for any others upon which it depends.
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 *
-	 * <p>
-	 * This method is used to initialize {@link ProjetTemplatePackage#eINSTANCE}
-	 * when that field is accessed. Clients should not invoke it directly. Instead,
-	 * they should simply access that field to obtain the package. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * <p>This method is used to initialize {@link ProjetTemplatePackage#eINSTANCE} when that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @see #eNS_URI
 	 * @see #createPackageContents()
 	 * @see #initializePackageContents()
@@ -254,7 +318,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getDomainProblem() {
@@ -262,7 +327,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getDomainProblem_Text() {
@@ -270,15 +336,17 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDomainProblem_Domainrequirementvalue() {
+	public EReference getDomainProblem_DomainRequirementValue() {
 		return (EReference) domainProblemEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getDomainRequirementValue() {
@@ -286,19 +354,12 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getDomainRequirementValue_Value() {
-		return (EAttribute) domainRequirementValueEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getDomainRequirementValue_Explanation() {
-		return (EAttribute) domainRequirementValueEClass.getEStructuralFeatures().get(1);
+		return (EAttribute) domainRequirementValueEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -307,6 +368,15 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * @generated
 	 */
 	public EReference getDomainRequirementValue_Requirementtype() {
+		return (EReference) domainRequirementValueEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDomainRequirementValue_Explainability() {
 		return (EReference) domainRequirementValueEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -315,64 +385,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDomainRequirementValue_Hy() {
-		return (EAttribute) domainRequirementValueEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getRequirementType() {
-		return requirementTypeEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRequirementType_Requirementmapping() {
-		return (EReference) requirementTypeEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRequirementType_Name() {
-		return (EAttribute) requirementTypeEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRequirementType_Description() {
-		return (EAttribute) requirementTypeEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRequirementType_ValueType() {
-		return (EAttribute) requirementTypeEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getRequirementType_Scope() {
-		return (EAttribute) requirementTypeEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getRequirementType_Computationalrequirementvalue() {
-		return (EReference) requirementTypeEClass.getEStructuralFeatures().get(5);
+	public EReference getDomainRequirementValue_Accuracy() {
+		return (EReference) domainRequirementValueEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -380,12 +394,58 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getRequirementType_Domainrequirementvalue() {
-		return (EReference) requirementTypeEClass.getEStructuralFeatures().get(6);
+	public EClass getRequirementType() {
+		return requirementTypeEClass;
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRequirementType_Requirementmapping() {
+		return (EReference) requirementTypeEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRequirementType_Name() {
+		return (EAttribute) requirementTypeEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRequirementType_Description() {
+		return (EAttribute) requirementTypeEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRequirementType_ValueType() {
+		return (EAttribute) requirementTypeEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRequirementType_Scope() {
+		return (EAttribute) requirementTypeEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getMLProject() {
@@ -393,7 +453,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getMLProject_Name() {
@@ -401,7 +462,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getMLProject_Date() {
@@ -409,7 +471,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getMLProject_Author() {
@@ -417,7 +480,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getMLProject_Dataanalysisproblem() {
@@ -425,7 +489,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getMLProject_Domainproblem() {
@@ -433,7 +498,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getMLProject_Database() {
@@ -441,7 +507,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getDataAnalysisProblem() {
@@ -449,7 +516,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getDataAnalysisProblem_Name() {
@@ -457,7 +525,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getDataAnalysisProblem_Date() {
@@ -465,7 +534,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getDataAnalysisProblem_Author() {
@@ -473,7 +543,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getDataAnalysisProblem_Dataanalysisproblemtype() {
@@ -481,7 +552,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getDataAnalysisProblem_Computationalrequirementvalue() {
@@ -489,7 +561,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getDataAnalysisProblem_Processingchain() {
@@ -497,7 +570,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getComputationalRequirementValue() {
@@ -505,7 +579,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getComputationalRequirementValue_Value() {
@@ -513,7 +588,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getComputationalRequirementValue_Rationale() {
@@ -521,7 +597,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getComputationalRequirementValue_Requirementtype() {
@@ -529,7 +606,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getDatabase() {
@@ -537,7 +615,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getDatabase_Value() {
@@ -545,7 +624,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getDatabase_Credentias() {
@@ -553,7 +633,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getDatabase_Schema() {
@@ -561,7 +642,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getDatabase_Data() {
@@ -569,15 +651,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDatabase_Mlproject() {
-		return (EReference) databaseEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getSchema() {
@@ -585,7 +660,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getSchema_Technology() {
@@ -593,7 +669,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getSchema_Modelelement() {
@@ -601,7 +678,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getData() {
@@ -609,7 +687,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getData_Value() {
@@ -617,7 +696,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getData_Credentias() {
@@ -625,7 +705,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getRequirementMapping() {
@@ -633,7 +714,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getRequirementMapping_Restrictions() {
@@ -641,7 +723,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getRequirementMapping_Rationale() {
@@ -649,7 +732,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getRequirementMapping_Requirementtype() {
@@ -657,7 +741,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getRequirementMapping_Datapropertyvalueset() {
@@ -665,7 +750,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getModelElement() {
@@ -673,7 +759,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getModelElement_Name() {
@@ -681,7 +768,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getModelElement_Datapropertyvalue() {
@@ -689,7 +777,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getDataPropertyValueSet() {
@@ -697,7 +786,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getDataPropertyValueSet_SetType() {
@@ -705,7 +795,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getDataPropertyValueSet_Values() {
@@ -713,7 +804,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getDataPropertyValueSet_Datapropertyvalue() {
@@ -721,23 +813,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDataPropertyValueSet_Mlalgorithmsolutionpattern() {
-		return (EReference) dataPropertyValueSetEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDataPropertyValueSet_Mlprocchainsolutionpattern() {
-		return (EReference) dataPropertyValueSetEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EOperation getDataPropertyValueSet__Evaluate() {
@@ -745,7 +822,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getDataPropertyValue() {
@@ -753,7 +831,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getDataPropertyValue_Name() {
@@ -761,23 +840,17 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDataPropertyValue_Datapropertyvalueset() {
+	public EReference getDataPropertyValue_Datapropertytype() {
 		return (EReference) dataPropertyValueEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDataPropertyValue_Datapropertytype() {
-		return (EReference) dataPropertyValueEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getDataPropertyType() {
@@ -785,7 +858,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getDataPropertyType_Name() {
@@ -793,7 +867,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getDataPropertyType_Type() {
@@ -801,7 +876,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getDataAnalysisProblemType() {
@@ -809,7 +885,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getDataAnalysisProblemType_Name() {
@@ -817,23 +894,17 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDataAnalysisProblemType_Mlprocchainsolutionpattern() {
+	public EReference getDataAnalysisProblemType_Mlalgorithmsolutionpattern() {
 		return (EReference) dataAnalysisProblemTypeEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDataAnalysisProblemType_Mlalgorithmsolutionpattern() {
-		return (EReference) dataAnalysisProblemTypeEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getProcessingChain() {
@@ -841,7 +912,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getProcessingChain_Date() {
@@ -849,7 +921,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getProcessingChain_Author() {
@@ -857,7 +930,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getProcessingChain_Extendedbpmnmodel() {
@@ -865,7 +939,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getProcessingChain_Mlalgorithm() {
@@ -873,7 +948,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getProcessingChain_Processingchaintemplate() {
@@ -881,7 +957,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getMLProcChainSolutionPattern() {
@@ -889,7 +966,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getMLProcChainSolutionPattern_Name() {
@@ -897,7 +975,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getMLProcChainSolutionPattern_Explanation() {
@@ -905,23 +984,26 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMLProcChainSolutionPattern_Dataanalysisproblemtype() {
+	public EReference getMLProcChainSolutionPattern_Datapropertyvalueset() {
 		return (EReference) mlProcChainSolutionPatternEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMLProcChainSolutionPattern_Datapropertyvalueset() {
+	public EReference getMLProcChainSolutionPattern_Dataanalysisproblemtype() {
 		return (EReference) mlProcChainSolutionPatternEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getProcessingChainTemplate() {
@@ -929,7 +1011,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getProcessingChainTemplate_Name() {
@@ -937,7 +1020,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getProcessingChainTemplate_Author() {
@@ -945,7 +1029,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getProcessingChainTemplate_Extendedbpmnmodel() {
@@ -953,23 +1038,17 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProcessingChainTemplate_Processingchain() {
+	public EReference getProcessingChainTemplate_Mlprocchainsolutionpattern() {
 		return (EReference) processingChainTemplateEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getProcessingChainTemplate_Mlprocchainsolutionpattern() {
-		return (EReference) processingChainTemplateEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getMLAlgorithmSolutionPattern() {
@@ -977,7 +1056,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getMLAlgorithmSolutionPattern_Name() {
@@ -985,7 +1065,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getMLAlgorithmSolutionPattern_Explanation() {
@@ -993,7 +1074,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getMLAlgorithmSolutionPattern_Processingchaintemplate() {
@@ -1001,31 +1083,26 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMLAlgorithmSolutionPattern_Datapropertyvalueset() {
+	public EReference getMLAlgorithmSolutionPattern_Mlalgorithm() {
 		return (EReference) mlAlgorithmSolutionPatternEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMLAlgorithmSolutionPattern_Dataanalysisproblemtype() {
+	public EReference getMLAlgorithmSolutionPattern_Datapropertyvalueset() {
 		return (EReference) mlAlgorithmSolutionPatternEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMLAlgorithmSolutionPattern_Mlalgorithm() {
-		return (EReference) mlAlgorithmSolutionPatternEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getMLAlgorithm() {
@@ -1033,7 +1110,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getMLAlgorithm_Name() {
@@ -1041,7 +1119,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getMLAlgorithm_Selectioncriterionvalueset() {
@@ -1049,7 +1128,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getMLAlgorithm_Selectioncriterionvalue() {
@@ -1057,23 +1137,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMLAlgorithm_Processingchain() {
-		return (EReference) mlAlgorithmEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMLAlgorithm_Mlalgorithmsolutionpattern() {
-		return (EReference) mlAlgorithmEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getSelectionCriterionValueSet() {
@@ -1081,7 +1146,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getSelectionCriterionValueSet_SetType() {
@@ -1089,7 +1155,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getSelectionCriterionValueSet_Values() {
@@ -1097,15 +1164,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSelectionCriterionValueSet_Selectioncriterion() {
-		return (EReference) selectionCriterionValueSetEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getSelectionCriterionValueSet_Selectioncriterionvalue() {
@@ -1113,7 +1173,17 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getSelectionCriterionValueSet_Selectioncriterion() {
+		return (EReference) selectionCriterionValueSetEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getSelectionCriterionValue() {
@@ -1121,7 +1191,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getSelectionCriterionValue_Values() {
@@ -1129,23 +1200,17 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EReference getSelectionCriterionValue_Selectioncriterion() {
-		return (EReference) selectionCriterionValueEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSelectionCriterionValue_Selectioncriterionvalueset() {
 		return (EReference) selectionCriterionValueEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getSelectionCriterion() {
@@ -1153,7 +1218,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getSelectionCriterion_Name() {
@@ -1161,7 +1227,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getSelectionCriterion_ValueType() {
@@ -1169,7 +1236,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getSelectionCriterion_Description() {
@@ -1177,23 +1245,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSelectionCriterion_Selectioncriterionvalueset() {
-		return (EReference) selectionCriterionEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSelectionCriterion_Selectioncriterionvalue() {
-		return (EReference) selectionCriterionEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EClass getExtendedBPMNModel() {
@@ -1201,7 +1254,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getExtendedBPMNModel_Name() {
@@ -1209,7 +1263,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public EAttribute getExtendedBPMNModel_Author() {
@@ -1217,7 +1272,71 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getExplainability() {
+		return explainabilityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExplainability_Value() {
+		return (EAttribute) explainabilityEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getAccuracy() {
+		return accuracyEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getAccuracy_Value() {
+		return (EAttribute) accuracyEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getValues1() {
+		return values1EEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getValues2() {
+		return values2EEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getRequirementTypeValues() {
+		return requirementTypeValuesEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public ProjetTemplateFactory getProjetTemplateFactory() {
@@ -1225,7 +1344,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private boolean isCreated = false;
@@ -1233,8 +1353,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	/**
 	 * Creates the meta-model objects for the package.  This method is
 	 * guarded to have no affect on any invocation but its first.
-	 * <!-- begin-user-doc --> <!--
-	 * end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void createPackageContents() {
@@ -1245,13 +1365,13 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		// Create classes and their features
 		domainProblemEClass = createEClass(DOMAIN_PROBLEM);
 		createEAttribute(domainProblemEClass, DOMAIN_PROBLEM__TEXT);
-		createEReference(domainProblemEClass, DOMAIN_PROBLEM__DOMAINREQUIREMENTVALUE);
+		createEReference(domainProblemEClass, DOMAIN_PROBLEM__DOMAIN_REQUIREMENT_VALUE);
 
 		domainRequirementValueEClass = createEClass(DOMAIN_REQUIREMENT_VALUE);
-		createEAttribute(domainRequirementValueEClass, DOMAIN_REQUIREMENT_VALUE__VALUE);
 		createEAttribute(domainRequirementValueEClass, DOMAIN_REQUIREMENT_VALUE__EXPLANATION);
 		createEReference(domainRequirementValueEClass, DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE);
-		createEAttribute(domainRequirementValueEClass, DOMAIN_REQUIREMENT_VALUE__HY);
+		createEReference(domainRequirementValueEClass, DOMAIN_REQUIREMENT_VALUE__EXPLAINABILITY);
+		createEReference(domainRequirementValueEClass, DOMAIN_REQUIREMENT_VALUE__ACCURACY);
 
 		requirementTypeEClass = createEClass(REQUIREMENT_TYPE);
 		createEReference(requirementTypeEClass, REQUIREMENT_TYPE__REQUIREMENTMAPPING);
@@ -1259,8 +1379,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		createEAttribute(requirementTypeEClass, REQUIREMENT_TYPE__DESCRIPTION);
 		createEAttribute(requirementTypeEClass, REQUIREMENT_TYPE__VALUE_TYPE);
 		createEAttribute(requirementTypeEClass, REQUIREMENT_TYPE__SCOPE);
-		createEReference(requirementTypeEClass, REQUIREMENT_TYPE__COMPUTATIONALREQUIREMENTVALUE);
-		createEReference(requirementTypeEClass, REQUIREMENT_TYPE__DOMAINREQUIREMENTVALUE);
 
 		mlProjectEClass = createEClass(ML_PROJECT);
 		createEAttribute(mlProjectEClass, ML_PROJECT__NAME);
@@ -1288,7 +1406,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		createEAttribute(databaseEClass, DATABASE__CREDENTIAS);
 		createEReference(databaseEClass, DATABASE__SCHEMA);
 		createEReference(databaseEClass, DATABASE__DATA);
-		createEReference(databaseEClass, DATABASE__MLPROJECT);
 
 		schemaEClass = createEClass(SCHEMA);
 		createEAttribute(schemaEClass, SCHEMA__TECHNOLOGY);
@@ -1312,13 +1429,10 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		createEAttribute(dataPropertyValueSetEClass, DATA_PROPERTY_VALUE_SET__SET_TYPE);
 		createEAttribute(dataPropertyValueSetEClass, DATA_PROPERTY_VALUE_SET__VALUES);
 		createEReference(dataPropertyValueSetEClass, DATA_PROPERTY_VALUE_SET__DATAPROPERTYVALUE);
-		createEReference(dataPropertyValueSetEClass, DATA_PROPERTY_VALUE_SET__MLALGORITHMSOLUTIONPATTERN);
-		createEReference(dataPropertyValueSetEClass, DATA_PROPERTY_VALUE_SET__MLPROCCHAINSOLUTIONPATTERN);
 		createEOperation(dataPropertyValueSetEClass, DATA_PROPERTY_VALUE_SET___EVALUATE);
 
 		dataPropertyValueEClass = createEClass(DATA_PROPERTY_VALUE);
 		createEAttribute(dataPropertyValueEClass, DATA_PROPERTY_VALUE__NAME);
-		createEReference(dataPropertyValueEClass, DATA_PROPERTY_VALUE__DATAPROPERTYVALUESET);
 		createEReference(dataPropertyValueEClass, DATA_PROPERTY_VALUE__DATAPROPERTYTYPE);
 
 		dataPropertyTypeEClass = createEClass(DATA_PROPERTY_TYPE);
@@ -1327,7 +1441,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 		dataAnalysisProblemTypeEClass = createEClass(DATA_ANALYSIS_PROBLEM_TYPE);
 		createEAttribute(dataAnalysisProblemTypeEClass, DATA_ANALYSIS_PROBLEM_TYPE__NAME);
-		createEReference(dataAnalysisProblemTypeEClass, DATA_ANALYSIS_PROBLEM_TYPE__MLPROCCHAINSOLUTIONPATTERN);
 		createEReference(dataAnalysisProblemTypeEClass, DATA_ANALYSIS_PROBLEM_TYPE__MLALGORITHMSOLUTIONPATTERN);
 
 		processingChainEClass = createEClass(PROCESSING_CHAIN);
@@ -1340,30 +1453,26 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		mlProcChainSolutionPatternEClass = createEClass(ML_PROC_CHAIN_SOLUTION_PATTERN);
 		createEAttribute(mlProcChainSolutionPatternEClass, ML_PROC_CHAIN_SOLUTION_PATTERN__NAME);
 		createEAttribute(mlProcChainSolutionPatternEClass, ML_PROC_CHAIN_SOLUTION_PATTERN__EXPLANATION);
-		createEReference(mlProcChainSolutionPatternEClass, ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE);
 		createEReference(mlProcChainSolutionPatternEClass, ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET);
+		createEReference(mlProcChainSolutionPatternEClass, ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE);
 
 		processingChainTemplateEClass = createEClass(PROCESSING_CHAIN_TEMPLATE);
 		createEAttribute(processingChainTemplateEClass, PROCESSING_CHAIN_TEMPLATE__NAME);
 		createEAttribute(processingChainTemplateEClass, PROCESSING_CHAIN_TEMPLATE__AUTHOR);
 		createEReference(processingChainTemplateEClass, PROCESSING_CHAIN_TEMPLATE__EXTENDEDBPMNMODEL);
-		createEReference(processingChainTemplateEClass, PROCESSING_CHAIN_TEMPLATE__PROCESSINGCHAIN);
 		createEReference(processingChainTemplateEClass, PROCESSING_CHAIN_TEMPLATE__MLPROCCHAINSOLUTIONPATTERN);
 
 		mlAlgorithmSolutionPatternEClass = createEClass(ML_ALGORITHM_SOLUTION_PATTERN);
 		createEAttribute(mlAlgorithmSolutionPatternEClass, ML_ALGORITHM_SOLUTION_PATTERN__NAME);
 		createEAttribute(mlAlgorithmSolutionPatternEClass, ML_ALGORITHM_SOLUTION_PATTERN__EXPLANATION);
 		createEReference(mlAlgorithmSolutionPatternEClass, ML_ALGORITHM_SOLUTION_PATTERN__PROCESSINGCHAINTEMPLATE);
-		createEReference(mlAlgorithmSolutionPatternEClass, ML_ALGORITHM_SOLUTION_PATTERN__DATAPROPERTYVALUESET);
-		createEReference(mlAlgorithmSolutionPatternEClass, ML_ALGORITHM_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE);
 		createEReference(mlAlgorithmSolutionPatternEClass, ML_ALGORITHM_SOLUTION_PATTERN__MLALGORITHM);
+		createEReference(mlAlgorithmSolutionPatternEClass, ML_ALGORITHM_SOLUTION_PATTERN__DATAPROPERTYVALUESET);
 
 		mlAlgorithmEClass = createEClass(ML_ALGORITHM);
 		createEAttribute(mlAlgorithmEClass, ML_ALGORITHM__NAME);
 		createEReference(mlAlgorithmEClass, ML_ALGORITHM__SELECTIONCRITERIONVALUESET);
 		createEReference(mlAlgorithmEClass, ML_ALGORITHM__SELECTIONCRITERIONVALUE);
-		createEReference(mlAlgorithmEClass, ML_ALGORITHM__PROCESSINGCHAIN);
-		createEReference(mlAlgorithmEClass, ML_ALGORITHM__MLALGORITHMSOLUTIONPATTERN);
 
 		selectionCriterionValueSetEClass = createEClass(SELECTION_CRITERION_VALUE_SET);
 		createEAttribute(selectionCriterionValueSetEClass, SELECTION_CRITERION_VALUE_SET__SET_TYPE);
@@ -1373,32 +1482,41 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 		selectionCriterionValueEClass = createEClass(SELECTION_CRITERION_VALUE);
 		createEAttribute(selectionCriterionValueEClass, SELECTION_CRITERION_VALUE__VALUES);
-		createEReference(selectionCriterionValueEClass, SELECTION_CRITERION_VALUE__SELECTIONCRITERIONVALUESET);
 		createEReference(selectionCriterionValueEClass, SELECTION_CRITERION_VALUE__SELECTIONCRITERION);
 
 		selectionCriterionEClass = createEClass(SELECTION_CRITERION);
 		createEAttribute(selectionCriterionEClass, SELECTION_CRITERION__NAME);
 		createEAttribute(selectionCriterionEClass, SELECTION_CRITERION__VALUE_TYPE);
 		createEAttribute(selectionCriterionEClass, SELECTION_CRITERION__DESCRIPTION);
-		createEReference(selectionCriterionEClass, SELECTION_CRITERION__SELECTIONCRITERIONVALUESET);
-		createEReference(selectionCriterionEClass, SELECTION_CRITERION__SELECTIONCRITERIONVALUE);
 
 		extendedBPMNModelEClass = createEClass(EXTENDED_BPMN_MODEL);
 		createEAttribute(extendedBPMNModelEClass, EXTENDED_BPMN_MODEL__NAME);
 		createEAttribute(extendedBPMNModelEClass, EXTENDED_BPMN_MODEL__AUTHOR);
+
+		explainabilityEClass = createEClass(EXPLAINABILITY);
+		createEAttribute(explainabilityEClass, EXPLAINABILITY__VALUE);
+
+		accuracyEClass = createEClass(ACCURACY);
+		createEAttribute(accuracyEClass, ACCURACY__VALUE);
+
+		// Create enums
+		values1EEnum = createEEnum(VALUES1);
+		values2EEnum = createEEnum(VALUES2);
+		requirementTypeValuesEEnum = createEEnum(REQUIREMENT_TYPE_VALUES);
 	}
 
 	/**
-	 * <!-- begin-user-doc --> <!-- end-user-doc -->
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	private boolean isInitialized = false;
 
 	/**
-	 * Complete the initialization of the package and its meta-model. This method is
-	 * guarded to have no affect on any invocation but its first. <!--
-	 * begin-user-doc --> <!-- end-user-doc -->
-	 * 
+	 * Complete the initialization of the package and its meta-model.  This
+	 * method is guarded to have no affect on any invocation but its first.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	public void initializePackageContents() {
@@ -1422,25 +1540,24 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getDomainProblem_Text(), ecorePackage.getEString(), "text", null, 0, 1, DomainProblem.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomainProblem_Domainrequirementvalue(), this.getDomainRequirementValue(), null,
-				"domainrequirementvalue", null, 0, -1, DomainProblem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+		initEReference(getDomainProblem_DomainRequirementValue(), this.getDomainRequirementValue(), null,
+				"DomainRequirementValue", null, 0, -1, DomainProblem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(domainRequirementValueEClass, DomainRequirementValue.class, "DomainRequirementValue", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDomainRequirementValue_Value(), ecorePackage.getEString(), "value", null, 0, 1,
-				DomainRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getDomainRequirementValue_Explanation(), ecorePackage.getEString(), "explanation", null, 0, 1,
 				DomainRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomainRequirementValue_Requirementtype(), this.getRequirementType(),
-				this.getRequirementType_Domainrequirementvalue(), "requirementtype", null, 1, 1,
+		initEReference(getDomainRequirementValue_Requirementtype(), this.getRequirementType(), null, "requirementtype",
+				null, 1, 1, DomainRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomainRequirementValue_Explainability(), this.getExplainability(), null, "explainability",
+				null, 0, 1, DomainRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomainRequirementValue_Accuracy(), this.getAccuracy(), null, "accuracy", null, 0, 1,
 				DomainRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDomainRequirementValue_Hy(), ecorePackage.getEString(), "hy", null, 0, 1,
-				DomainRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(requirementTypeEClass, RequirementType.class, "RequirementType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1452,20 +1569,12 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEAttribute(getRequirementType_Description(), ecorePackage.getEString(), "description", null, 0, 1,
 				RequirementType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRequirementType_ValueType(), ecorePackage.getEString(), "valueType", null, 0, 1,
+		initEAttribute(getRequirementType_ValueType(), this.getRequirementTypeValues(), "valueType", null, 0, 1,
 				RequirementType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRequirementType_Scope(), ecorePackage.getEString(), "scope", null, 0, 1,
 				RequirementType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEReference(getRequirementType_Computationalrequirementvalue(), this.getComputationalRequirementValue(),
-				this.getComputationalRequirementValue_Requirementtype(), "computationalrequirementvalue", null, 0, -1,
-				RequirementType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRequirementType_Domainrequirementvalue(), this.getDomainRequirementValue(),
-				this.getDomainRequirementValue_Requirementtype(), "domainrequirementvalue", null, 0, -1,
-				RequirementType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mlProjectEClass, MLProject.class, "MLProject", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1481,9 +1590,9 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEReference(getMLProject_Domainproblem(), this.getDomainProblem(), null, "domainproblem", null, 1, 1,
 				MLProject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMLProject_Database(), this.getDatabase(), this.getDatabase_Mlproject(), "database", null, 1,
-				1, MLProject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMLProject_Database(), this.getDatabase(), null, "database", null, 0, 1, MLProject.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dataAnalysisProblemEClass, DataAnalysisProblem.class, "DataAnalysisProblem", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1515,10 +1624,9 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEAttribute(getComputationalRequirementValue_Rationale(), ecorePackage.getEString(), "rationale", null, 0, 1,
 				ComputationalRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComputationalRequirementValue_Requirementtype(), this.getRequirementType(),
-				this.getRequirementType_Computationalrequirementvalue(), "requirementtype", null, 1, 1,
-				ComputationalRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComputationalRequirementValue_Requirementtype(), this.getRequirementType(), null,
+				"requirementtype", null, 0, 1, ComputationalRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(databaseEClass, Database.class, "Database", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1532,9 +1640,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEReference(getDatabase_Data(), this.getData(), null, "data", null, 1, 1, Database.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getDatabase_Mlproject(), this.getMLProject(), this.getMLProject_Database(), "mlproject", null, 0,
-				-1, Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(schemaEClass, Schema.class, "Schema", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSchema_Technology(), ecorePackage.getEString(), "technology", null, 0, 1, Schema.class,
@@ -1580,18 +1685,9 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEAttribute(getDataPropertyValueSet_Values(), ecorePackage.getEString(), "values", null, 0, 1,
 				DataPropertyValueSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDataPropertyValueSet_Datapropertyvalue(), this.getDataPropertyValue(),
-				this.getDataPropertyValue_Datapropertyvalueset(), "datapropertyvalue", null, 0, -1,
-				DataPropertyValueSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDataPropertyValueSet_Mlalgorithmsolutionpattern(), this.getMLAlgorithmSolutionPattern(),
-				this.getMLAlgorithmSolutionPattern_Datapropertyvalueset(), "mlalgorithmsolutionpattern", null, 0, -1,
-				DataPropertyValueSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDataPropertyValueSet_Mlprocchainsolutionpattern(), this.getMLProcChainSolutionPattern(),
-				this.getMLProcChainSolutionPattern_Datapropertyvalueset(), "mlprocchainsolutionpattern", null, 0, -1,
-				DataPropertyValueSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDataPropertyValueSet_Datapropertyvalue(), this.getDataPropertyValue(), null,
+				"datapropertyvalue", null, 0, -1, DataPropertyValueSet.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getDataPropertyValueSet__Evaluate(), null, "evaluate", 0, 1, IS_UNIQUE, IS_ORDERED);
 
@@ -1600,10 +1696,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEAttribute(getDataPropertyValue_Name(), ecorePackage.getEString(), "name", null, 0, 1,
 				DataPropertyValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEReference(getDataPropertyValue_Datapropertyvalueset(), this.getDataPropertyValueSet(),
-				this.getDataPropertyValueSet_Datapropertyvalue(), "datapropertyvalueset", null, 0, -1,
-				DataPropertyValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataPropertyValue_Datapropertytype(), this.getDataPropertyType(), null, "datapropertytype",
 				null, 1, 1, DataPropertyValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1622,14 +1714,10 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEAttribute(getDataAnalysisProblemType_Name(), ecorePackage.getEString(), "Name", null, 0, 1,
 				DataAnalysisProblemType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDataAnalysisProblemType_Mlprocchainsolutionpattern(), this.getMLProcChainSolutionPattern(),
-				this.getMLProcChainSolutionPattern_Dataanalysisproblemtype(), "mlprocchainsolutionpattern", null, 1, -1,
-				DataAnalysisProblemType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getDataAnalysisProblemType_Mlalgorithmsolutionpattern(), this.getMLAlgorithmSolutionPattern(),
-				this.getMLAlgorithmSolutionPattern_Dataanalysisproblemtype(), "mlalgorithmsolutionpattern", null, 0, -1,
-				DataAnalysisProblemType.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+				null, "mlalgorithmsolutionpattern", null, 0, -1, DataAnalysisProblemType.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(processingChainEClass, ProcessingChain.class, "ProcessingChain", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1641,13 +1729,12 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEReference(getProcessingChain_Extendedbpmnmodel(), this.getExtendedBPMNModel(), null, "extendedbpmnmodel",
 				null, 1, 1, ProcessingChain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProcessingChain_Mlalgorithm(), this.getMLAlgorithm(), this.getMLAlgorithm_Processingchain(),
-				"mlalgorithm", null, 1, -1, ProcessingChain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProcessingChain_Processingchaintemplate(), this.getProcessingChainTemplate(),
-				this.getProcessingChainTemplate_Processingchain(), "processingchaintemplate", null, 0, 1,
+		initEReference(getProcessingChain_Mlalgorithm(), this.getMLAlgorithm(), null, "mlalgorithm", null, 1, -1,
 				ProcessingChain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProcessingChain_Processingchaintemplate(), this.getProcessingChainTemplate(), null,
+				"processingchaintemplate", null, 0, 1, ProcessingChain.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mlProcChainSolutionPatternEClass, MLProcChainSolutionPattern.class, "MLProcChainSolutionPattern",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1657,14 +1744,12 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEAttribute(getMLProcChainSolutionPattern_Explanation(), ecorePackage.getEString(), "explanation", null, 0,
 				1, MLProcChainSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMLProcChainSolutionPattern_Dataanalysisproblemtype(), this.getDataAnalysisProblemType(),
-				this.getDataAnalysisProblemType_Mlprocchainsolutionpattern(), "dataanalysisproblemtype", null, 1, -1,
-				MLProcChainSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMLProcChainSolutionPattern_Datapropertyvalueset(), this.getDataPropertyValueSet(),
-				this.getDataPropertyValueSet_Mlprocchainsolutionpattern(), "datapropertyvalueset", null, 1, -1,
-				MLProcChainSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMLProcChainSolutionPattern_Datapropertyvalueset(), this.getDataPropertyValueSet(), null,
+				"datapropertyvalueset", null, 1, -1, MLProcChainSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMLProcChainSolutionPattern_Dataanalysisproblemtype(), this.getDataAnalysisProblemType(), null,
+				"dataanalysisproblemtype", null, 1, -1, MLProcChainSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(processingChainTemplateEClass, ProcessingChainTemplate.class, "ProcessingChainTemplate",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1677,10 +1762,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEReference(getProcessingChainTemplate_Extendedbpmnmodel(), this.getExtendedBPMNModel(), null,
 				"extendedbpmnmodel", null, 1, 1, ProcessingChainTemplate.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProcessingChainTemplate_Processingchain(), this.getProcessingChain(),
-				this.getProcessingChain_Processingchaintemplate(), "processingchain", null, 0, -1,
-				ProcessingChainTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getProcessingChainTemplate_Mlprocchainsolutionpattern(), this.getMLProcChainSolutionPattern(),
 				null, "mlprocchainsolutionpattern", null, 1, -1, ProcessingChainTemplate.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
@@ -1697,18 +1778,12 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEReference(getMLAlgorithmSolutionPattern_Processingchaintemplate(), this.getProcessingChainTemplate(), null,
 				"processingchaintemplate", null, 1, 1, MLAlgorithmSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMLAlgorithmSolutionPattern_Datapropertyvalueset(), this.getDataPropertyValueSet(),
-				this.getDataPropertyValueSet_Mlalgorithmsolutionpattern(), "datapropertyvalueset", null, 1, -1,
-				MLAlgorithmSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+		initEReference(getMLAlgorithmSolutionPattern_Mlalgorithm(), this.getMLAlgorithm(), null, "mlalgorithm", null, 1,
+				1, MLAlgorithmSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMLAlgorithmSolutionPattern_Dataanalysisproblemtype(), this.getDataAnalysisProblemType(),
-				this.getDataAnalysisProblemType_Mlalgorithmsolutionpattern(), "dataanalysisproblemtype", null, 1, 1,
-				MLAlgorithmSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMLAlgorithmSolutionPattern_Mlalgorithm(), this.getMLAlgorithm(),
-				this.getMLAlgorithm_Mlalgorithmsolutionpattern(), "mlalgorithm", null, 1, 1,
-				MLAlgorithmSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMLAlgorithmSolutionPattern_Datapropertyvalueset(), this.getDataPropertyValueSet(), null,
+				"datapropertyvalueset", null, 1, -1, MLAlgorithmSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mlAlgorithmEClass, MLAlgorithm.class, "MLAlgorithm", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1720,14 +1795,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEReference(getMLAlgorithm_Selectioncriterionvalue(), this.getSelectionCriterionValue(), null,
 				"selectioncriterionvalue", null, 0, -1, MLAlgorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMLAlgorithm_Processingchain(), this.getProcessingChain(),
-				this.getProcessingChain_Mlalgorithm(), "processingchain", null, 0, 1, MLAlgorithm.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEReference(getMLAlgorithm_Mlalgorithmsolutionpattern(), this.getMLAlgorithmSolutionPattern(),
-				this.getMLAlgorithmSolutionPattern_Mlalgorithm(), "mlalgorithmsolutionpattern", null, 1, -1,
-				MLAlgorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(selectionCriterionValueSetEClass, SelectionCriterionValueSet.class, "SelectionCriterionValueSet",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1737,28 +1804,21 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEAttribute(getSelectionCriterionValueSet_Values(), ecorePackage.getEString(), "values", null, 0, 1,
 				SelectionCriterionValueSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSelectionCriterionValueSet_Selectioncriterionvalue(), this.getSelectionCriterionValue(),
-				this.getSelectionCriterionValue_Selectioncriterionvalueset(), "selectioncriterionvalue", null, 1, -1,
-				SelectionCriterionValueSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSelectionCriterionValueSet_Selectioncriterion(), this.getSelectionCriterion(),
-				this.getSelectionCriterion_Selectioncriterionvalueset(), "selectioncriterion", null, 1, 1,
-				SelectionCriterionValueSet.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSelectionCriterionValueSet_Selectioncriterionvalue(), this.getSelectionCriterionValue(), null,
+				"selectioncriterionvalue", null, 1, -1, SelectionCriterionValueSet.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSelectionCriterionValueSet_Selectioncriterion(), this.getSelectionCriterion(), null,
+				"selectioncriterion", null, 1, 1, SelectionCriterionValueSet.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(selectionCriterionValueEClass, SelectionCriterionValue.class, "SelectionCriterionValue",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSelectionCriterionValue_Values(), ecorePackage.getEString(), "values", null, 0, 1,
 				SelectionCriterionValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSelectionCriterionValue_Selectioncriterionvalueset(), this.getSelectionCriterionValueSet(),
-				this.getSelectionCriterionValueSet_Selectioncriterionvalue(), "selectioncriterionvalueset", null, 0, -1,
-				SelectionCriterionValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSelectionCriterionValue_Selectioncriterion(), this.getSelectionCriterion(),
-				this.getSelectionCriterion_Selectioncriterionvalue(), "selectioncriterion", null, 1, 1,
-				SelectionCriterionValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getSelectionCriterionValue_Selectioncriterion(), this.getSelectionCriterion(), null,
+				"selectioncriterion", null, 1, 1, SelectionCriterionValue.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(selectionCriterionEClass, SelectionCriterion.class, "SelectionCriterion", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1771,14 +1831,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEAttribute(getSelectionCriterion_Description(), ecorePackage.getEString(), "description", null, 0, 1,
 				SelectionCriterion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
-		initEReference(getSelectionCriterion_Selectioncriterionvalueset(), this.getSelectionCriterionValueSet(),
-				this.getSelectionCriterionValueSet_Selectioncriterion(), "selectioncriterionvalueset", null, 0, -1,
-				SelectionCriterion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getSelectionCriterion_Selectioncriterionvalue(), this.getSelectionCriterionValue(),
-				this.getSelectionCriterionValue_Selectioncriterion(), "selectioncriterionvalue", null, 0, -1,
-				SelectionCriterion.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(extendedBPMNModelEClass, ExtendedBPMNModel.class, "ExtendedBPMNModel", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -1789,8 +1841,32 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 				ExtendedBPMNModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
+		initEClass(explainabilityEClass, Explainability.class, "Explainability", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getExplainability_Value(), this.getValues1(), "value", null, 0, 1, Explainability.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(accuracyEClass, Accuracy.class, "Accuracy", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAccuracy_Value(), this.getValues2(), "value", null, 0, 1, Accuracy.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		// Initialize enums and add enum literals
+		initEEnum(values1EEnum, Values1.class, "Values1");
+		addEEnumLiteral(values1EEnum, Values1.YES);
+		addEEnumLiteral(values1EEnum, Values1.NO);
+
+		initEEnum(values2EEnum, Values2.class, "Values2");
+		addEEnumLiteral(values2EEnum, Values2.HIGH);
+		addEEnumLiteral(values2EEnum, Values2.MODERATE);
+		addEEnumLiteral(values2EEnum, Values2.LOW);
+
+		initEEnum(requirementTypeValuesEEnum, RequirementTypeValues.class, "RequirementTypeValues");
+		addEEnumLiteral(requirementTypeValuesEEnum, RequirementTypeValues.EXPLINABILITY);
+		addEEnumLiteral(requirementTypeValuesEEnum, RequirementTypeValues.ACCURACY);
+
 		// Create resource
 		createResource(eNS_URI);
 	}
 
-} // ProjetTemplatePackageImpl
+} //ProjetTemplatePackageImpl

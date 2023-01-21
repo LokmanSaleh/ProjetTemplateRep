@@ -3,11 +3,13 @@
 package projetTemplate.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import projetTemplate.ModelElement;
 import projetTemplate.ProjetTemplatePackage;
 import projetTemplate.Schema;
@@ -59,22 +61,11 @@ public class SchemaImpl extends MinimalEObjectImpl.Container implements Schema {
 
 	/**
 	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc --> 
-	 * 
+	 * <!-- end-user-doc -->
+	 * @generated
 	 */
 	protected SchemaImpl() {
 		super();
-		//		//    	ConnectionInterface conInter = new ConnectionInterface();
-		//		//    	conInter.setTitle("Connection Data base");
-		//		//      conInter.setVisible(true); 
-		//
-		//		Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/mydb", "root", "");
-		//
-		//		Statement stmt = con.createStatement();
-		//
-		//		stmt.executeQuery("SELECT 1");
-		//
-		//		JOptionPane.showInputDialog("CONNECTED");
 	}
 
 	/**

@@ -55,8 +55,8 @@ public class MLProcChainSolutionPatternItemProvider extends ItemProviderAdapter 
 
 			addNamePropertyDescriptor(object);
 			addExplanationPropertyDescriptor(object);
-			addDataanalysisproblemtypePropertyDescriptor(object);
 			addDatapropertyvaluesetPropertyDescriptor(object);
+			addDataanalysisproblemtypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -94,23 +94,6 @@ public class MLProcChainSolutionPatternItemProvider extends ItemProviderAdapter 
 	}
 
 	/**
-	 * This adds a property descriptor for the Dataanalysisproblemtype feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDataanalysisproblemtypePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_MLProcChainSolutionPattern_dataanalysisproblemtype_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_MLProcChainSolutionPattern_dataanalysisproblemtype_feature",
-						"_UI_MLProcChainSolutionPattern_type"),
-				ProjetTemplatePackage.Literals.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE, true, false,
-				true, null, null, null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Datapropertyvalueset feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -125,6 +108,23 @@ public class MLProcChainSolutionPatternItemProvider extends ItemProviderAdapter 
 								"_UI_MLProcChainSolutionPattern_type"),
 						ProjetTemplatePackage.Literals.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET, true,
 						false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Dataanalysisproblemtype feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addDataanalysisproblemtypePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_MLProcChainSolutionPattern_dataanalysisproblemtype_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_MLProcChainSolutionPattern_dataanalysisproblemtype_feature",
+						"_UI_MLProcChainSolutionPattern_type"),
+				ProjetTemplatePackage.Literals.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE, true, false,
+				true, null, null, null));
 	}
 
 	/**

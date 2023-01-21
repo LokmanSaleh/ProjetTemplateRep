@@ -2,16 +2,12 @@
  */
 package projetTemplate.util;
 
-import javax.swing.JOptionPane;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-import org.eclipse.emf.ecore.EAttribute;
+
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.emf.ecore.util.EContentAdapter;
-import org.eclipse.emf.common.notify.Notification;
 
 import projetTemplate.*;
 
@@ -191,6 +187,16 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseExplainability(Explainability object) {
+			return createExplainabilityAdapter();
+		}
+
+		@Override
+		public Adapter caseAccuracy(Accuracy object) {
+			return createAccuracyAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -315,24 +321,10 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
 	 * @see projetTemplate.Schema
-	 * 
+	 * @generated
 	 */
 	public Adapter createSchemaAdapter() {
-
-		EAttribute s = ProjetTemplateAdapterFactory.modelPackage.getData_Credentias();
-
-		EContentAdapter adapter = new EContentAdapter() {
-
-			public void notifyChanged(Notification notification) {
-				super.notifyChanged(notification);
-
-				System.out.println("Notfication received from the data model. Data model has changed!!!");
-				JOptionPane.showInputDialog("CONNECTED");
-
-			}
-		};
-
-		return adapter;
+		return null;
 	}
 
 	/**
@@ -556,6 +548,34 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createExtendedBPMNModelAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.Explainability <em>Explainability</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.Explainability
+	 * @generated
+	 */
+	public Adapter createExplainabilityAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.Accuracy <em>Accuracy</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.Accuracy
+	 * @generated
+	 */
+	public Adapter createAccuracyAdapter() {
 		return null;
 	}
 

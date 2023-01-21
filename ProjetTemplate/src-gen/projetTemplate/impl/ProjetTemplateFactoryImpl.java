@@ -3,6 +3,7 @@
 package projetTemplate.impl;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -104,8 +105,50 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 			return createSelectionCriterion();
 		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL:
 			return createExtendedBPMNModel();
+		case ProjetTemplatePackage.EXPLAINABILITY:
+			return createExplainability();
+		case ProjetTemplatePackage.ACCURACY:
+			return createAccuracy();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+		case ProjetTemplatePackage.VALUES1:
+			return createValues1FromString(eDataType, initialValue);
+		case ProjetTemplatePackage.VALUES2:
+			return createValues2FromString(eDataType, initialValue);
+		case ProjetTemplatePackage.REQUIREMENT_TYPE_VALUES:
+			return createRequirementTypeValuesFromString(eDataType, initialValue);
+		default:
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+		case ProjetTemplatePackage.VALUES1:
+			return convertValues1ToString(eDataType, instanceValue);
+		case ProjetTemplatePackage.VALUES2:
+			return convertValues2ToString(eDataType, instanceValue);
+		case ProjetTemplatePackage.REQUIREMENT_TYPE_VALUES:
+			return convertRequirementTypeValuesToString(eDataType, instanceValue);
+		default:
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -347,6 +390,92 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 	public ExtendedBPMNModel createExtendedBPMNModel() {
 		ExtendedBPMNModelImpl extendedBPMNModel = new ExtendedBPMNModelImpl();
 		return extendedBPMNModel;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Explainability createExplainability() {
+		ExplainabilityImpl explainability = new ExplainabilityImpl();
+		return explainability;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Accuracy createAccuracy() {
+		AccuracyImpl accuracy = new AccuracyImpl();
+		return accuracy;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Values1 createValues1FromString(EDataType eDataType, String initialValue) {
+		Values1 result = Values1.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertValues1ToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Values2 createValues2FromString(EDataType eDataType, String initialValue) {
+		Values2 result = Values2.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertValues2ToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RequirementTypeValues createRequirementTypeValuesFromString(EDataType eDataType, String initialValue) {
+		RequirementTypeValues result = RequirementTypeValues.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertRequirementTypeValuesToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

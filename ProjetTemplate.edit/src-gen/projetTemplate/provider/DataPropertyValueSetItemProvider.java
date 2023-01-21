@@ -56,8 +56,6 @@ public class DataPropertyValueSetItemProvider extends ItemProviderAdapter implem
 			addSetTypePropertyDescriptor(object);
 			addValuesPropertyDescriptor(object);
 			addDatapropertyvaluePropertyDescriptor(object);
-			addMlalgorithmsolutionpatternPropertyDescriptor(object);
-			addMlprocchainsolutionpatternPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -108,38 +106,6 @@ public class DataPropertyValueSetItemProvider extends ItemProviderAdapter implem
 								"_UI_DataPropertyValueSet_datapropertyvalue_feature", "_UI_DataPropertyValueSet_type"),
 						ProjetTemplatePackage.Literals.DATA_PROPERTY_VALUE_SET__DATAPROPERTYVALUE, true, false, true,
 						null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Mlalgorithmsolutionpattern feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMlalgorithmsolutionpatternPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_DataPropertyValueSet_mlalgorithmsolutionpattern_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_DataPropertyValueSet_mlalgorithmsolutionpattern_feature", "_UI_DataPropertyValueSet_type"),
-				ProjetTemplatePackage.Literals.DATA_PROPERTY_VALUE_SET__MLALGORITHMSOLUTIONPATTERN, true, false, true,
-				null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Mlprocchainsolutionpattern feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMlprocchainsolutionpatternPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_DataPropertyValueSet_mlprocchainsolutionpattern_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_DataPropertyValueSet_mlprocchainsolutionpattern_feature", "_UI_DataPropertyValueSet_type"),
-				ProjetTemplatePackage.Literals.DATA_PROPERTY_VALUE_SET__MLPROCCHAINSOLUTIONPATTERN, true, false, true,
-				null, null, null));
 	}
 
 	/**

@@ -625,6 +625,52 @@ public class ProjetTemplateItemProviderAdapterFactory extends ProjetTemplateAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.Explainability} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ExplainabilityItemProvider explainabilityItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.Explainability}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createExplainabilityAdapter() {
+		if (explainabilityItemProvider == null) {
+			explainabilityItemProvider = new ExplainabilityItemProvider(this);
+		}
+
+		return explainabilityItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.Accuracy} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AccuracyItemProvider accuracyItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.Accuracy}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAccuracyAdapter() {
+		if (accuracyItemProvider == null) {
+			accuracyItemProvider = new AccuracyItemProvider(this);
+		}
+
+		return accuracyItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -771,6 +817,10 @@ public class ProjetTemplateItemProviderAdapterFactory extends ProjetTemplateAdap
 			selectionCriterionItemProvider.dispose();
 		if (extendedBPMNModelItemProvider != null)
 			extendedBPMNModelItemProvider.dispose();
+		if (explainabilityItemProvider != null)
+			explainabilityItemProvider.dispose();
+		if (accuracyItemProvider != null)
+			accuracyItemProvider.dispose();
 	}
 
 }

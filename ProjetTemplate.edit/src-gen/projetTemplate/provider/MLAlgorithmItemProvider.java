@@ -56,8 +56,6 @@ public class MLAlgorithmItemProvider extends ItemProviderAdapter implements IEdi
 			addNamePropertyDescriptor(object);
 			addSelectioncriterionvaluesetPropertyDescriptor(object);
 			addSelectioncriterionvaluePropertyDescriptor(object);
-			addProcessingchainPropertyDescriptor(object);
-			addMlalgorithmsolutionpatternPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -108,38 +106,6 @@ public class MLAlgorithmItemProvider extends ItemProviderAdapter implements IEdi
 						"_UI_MLAlgorithm_type"),
 				ProjetTemplatePackage.Literals.ML_ALGORITHM__SELECTIONCRITERIONVALUE, true, false, true, null, null,
 				null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Processingchain feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addProcessingchainPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_MLAlgorithm_processingchain_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_MLAlgorithm_processingchain_feature",
-								"_UI_MLAlgorithm_type"),
-						ProjetTemplatePackage.Literals.ML_ALGORITHM__PROCESSINGCHAIN, true, false, true, null, null,
-						null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Mlalgorithmsolutionpattern feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addMlalgorithmsolutionpatternPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_MLAlgorithm_mlalgorithmsolutionpattern_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_MLAlgorithm_mlalgorithmsolutionpattern_feature", "_UI_MLAlgorithm_type"),
-						ProjetTemplatePackage.Literals.ML_ALGORITHM__MLALGORITHMSOLUTIONPATTERN, true, false, true,
-						null, null, null));
 	}
 
 	/**

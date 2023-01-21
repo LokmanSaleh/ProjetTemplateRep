@@ -56,7 +56,6 @@ public class ProcessingChainTemplateItemProvider extends ItemProviderAdapter imp
 			addNamePropertyDescriptor(object);
 			addAuthorPropertyDescriptor(object);
 			addExtendedbpmnmodelPropertyDescriptor(object);
-			addProcessingchainPropertyDescriptor(object);
 			addMlprocchainsolutionpatternPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -107,22 +106,6 @@ public class ProcessingChainTemplateItemProvider extends ItemProviderAdapter imp
 				getString("_UI_PropertyDescriptor_description", "_UI_ProcessingChainTemplate_extendedbpmnmodel_feature",
 						"_UI_ProcessingChainTemplate_type"),
 				ProjetTemplatePackage.Literals.PROCESSING_CHAIN_TEMPLATE__EXTENDEDBPMNMODEL, true, false, true, null,
-				null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Processingchain feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addProcessingchainPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_ProcessingChainTemplate_processingchain_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ProcessingChainTemplate_processingchain_feature",
-						"_UI_ProcessingChainTemplate_type"),
-				ProjetTemplatePackage.Literals.PROCESSING_CHAIN_TEMPLATE__PROCESSINGCHAIN, true, false, true, null,
 				null, null));
 	}
 

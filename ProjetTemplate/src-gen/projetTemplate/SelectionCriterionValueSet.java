@@ -71,15 +71,25 @@ public interface SelectionCriterionValueSet extends EObject {
 	void setValues(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Selectioncriterionvalue</b></em>' reference list.
+	 * The list contents are of type {@link projetTemplate.SelectionCriterionValue}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Selectioncriterionvalue</em>' reference list.
+	 * @see projetTemplate.ProjetTemplatePackage#getSelectionCriterionValueSet_Selectioncriterionvalue()
+	 * @model required="true"
+	 * @generated
+	 */
+	EList<SelectionCriterionValue> getSelectioncriterionvalue();
+
+	/**
 	 * Returns the value of the '<em><b>Selectioncriterion</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.SelectionCriterion#getSelectioncriterionvalueset <em>Selectioncriterionvalueset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Selectioncriterion</em>' reference.
 	 * @see #setSelectioncriterion(SelectionCriterion)
 	 * @see projetTemplate.ProjetTemplatePackage#getSelectionCriterionValueSet_Selectioncriterion()
-	 * @see projetTemplate.SelectionCriterion#getSelectioncriterionvalueset
-	 * @model opposite="selectioncriterionvalueset" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	SelectionCriterion getSelectioncriterion();
@@ -93,19 +103,5 @@ public interface SelectionCriterionValueSet extends EObject {
 	 * @generated
 	 */
 	void setSelectioncriterion(SelectionCriterion value);
-
-	/**
-	 * Returns the value of the '<em><b>Selectioncriterionvalue</b></em>' reference list.
-	 * The list contents are of type {@link projetTemplate.SelectionCriterionValue}.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.SelectionCriterionValue#getSelectioncriterionvalueset <em>Selectioncriterionvalueset</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Selectioncriterionvalue</em>' reference list.
-	 * @see projetTemplate.ProjetTemplatePackage#getSelectionCriterionValueSet_Selectioncriterionvalue()
-	 * @see projetTemplate.SelectionCriterionValue#getSelectioncriterionvalueset
-	 * @model opposite="selectioncriterionvalueset" required="true"
-	 * @generated
-	 */
-	EList<SelectionCriterionValue> getSelectioncriterionvalue();
 
 } // SelectionCriterionValueSet

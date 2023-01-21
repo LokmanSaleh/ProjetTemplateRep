@@ -5,17 +5,15 @@ package projetTemplate.impl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import projetTemplate.DataAnalysisProblemType;
 import projetTemplate.DataPropertyValueSet;
@@ -32,8 +30,8 @@ import projetTemplate.ProjetTemplatePackage;
  * <ul>
  *   <li>{@link projetTemplate.impl.MLProcChainSolutionPatternImpl#getName <em>Name</em>}</li>
  *   <li>{@link projetTemplate.impl.MLProcChainSolutionPatternImpl#getExplanation <em>Explanation</em>}</li>
- *   <li>{@link projetTemplate.impl.MLProcChainSolutionPatternImpl#getDataanalysisproblemtype <em>Dataanalysisproblemtype</em>}</li>
  *   <li>{@link projetTemplate.impl.MLProcChainSolutionPatternImpl#getDatapropertyvalueset <em>Datapropertyvalueset</em>}</li>
+ *   <li>{@link projetTemplate.impl.MLProcChainSolutionPatternImpl#getDataanalysisproblemtype <em>Dataanalysisproblemtype</em>}</li>
  * </ul>
  *
  * @generated
@@ -80,16 +78,6 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 	protected String explanation = EXPLANATION_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getDataanalysisproblemtype() <em>Dataanalysisproblemtype</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDataanalysisproblemtype()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DataAnalysisProblemType> dataanalysisproblemtype;
-
-	/**
 	 * The cached value of the '{@link #getDatapropertyvalueset() <em>Datapropertyvalueset</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -98,6 +86,16 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected EList<DataPropertyValueSet> datapropertyvalueset;
+
+	/**
+	 * The cached value of the '{@link #getDataanalysisproblemtype() <em>Dataanalysisproblemtype</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDataanalysisproblemtype()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DataAnalysisProblemType> dataanalysisproblemtype;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -167,27 +165,10 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DataAnalysisProblemType> getDataanalysisproblemtype() {
-		if (dataanalysisproblemtype == null) {
-			dataanalysisproblemtype = new EObjectWithInverseResolvingEList.ManyInverse<DataAnalysisProblemType>(
-					DataAnalysisProblemType.class, this,
-					ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE,
-					ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM_TYPE__MLPROCCHAINSOLUTIONPATTERN);
-		}
-		return dataanalysisproblemtype;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<DataPropertyValueSet> getDatapropertyvalueset() {
 		if (datapropertyvalueset == null) {
-			datapropertyvalueset = new EObjectWithInverseResolvingEList.ManyInverse<DataPropertyValueSet>(
-					DataPropertyValueSet.class, this,
-					ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET,
-					ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__MLPROCCHAINSOLUTIONPATTERN);
+			datapropertyvalueset = new EObjectResolvingEList<DataPropertyValueSet>(DataPropertyValueSet.class, this,
+					ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET);
 		}
 		return datapropertyvalueset;
 	}
@@ -197,34 +178,12 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getDataanalysisproblemtype()).basicAdd(otherEnd,
-					msgs);
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getDatapropertyvalueset()).basicAdd(otherEnd,
-					msgs);
+	public EList<DataAnalysisProblemType> getDataanalysisproblemtype() {
+		if (dataanalysisproblemtype == null) {
+			dataanalysisproblemtype = new EObjectResolvingEList<DataAnalysisProblemType>(DataAnalysisProblemType.class,
+					this, ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE);
 		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE:
-			return ((InternalEList<?>) getDataanalysisproblemtype()).basicRemove(otherEnd, msgs);
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET:
-			return ((InternalEList<?>) getDatapropertyvalueset()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+		return dataanalysisproblemtype;
 	}
 
 	/**
@@ -239,10 +198,10 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 			return getName();
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__EXPLANATION:
 			return getExplanation();
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE:
-			return getDataanalysisproblemtype();
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET:
 			return getDatapropertyvalueset();
+		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE:
+			return getDataanalysisproblemtype();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -262,13 +221,13 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__EXPLANATION:
 			setExplanation((String) newValue);
 			return;
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE:
-			getDataanalysisproblemtype().clear();
-			getDataanalysisproblemtype().addAll((Collection<? extends DataAnalysisProblemType>) newValue);
-			return;
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET:
 			getDatapropertyvalueset().clear();
 			getDatapropertyvalueset().addAll((Collection<? extends DataPropertyValueSet>) newValue);
+			return;
+		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE:
+			getDataanalysisproblemtype().clear();
+			getDataanalysisproblemtype().addAll((Collection<? extends DataAnalysisProblemType>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -288,11 +247,11 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__EXPLANATION:
 			setExplanation(EXPLANATION_EDEFAULT);
 			return;
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE:
-			getDataanalysisproblemtype().clear();
-			return;
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET:
 			getDatapropertyvalueset().clear();
+			return;
+		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE:
+			getDataanalysisproblemtype().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -310,10 +269,10 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__EXPLANATION:
 			return EXPLANATION_EDEFAULT == null ? explanation != null : !EXPLANATION_EDEFAULT.equals(explanation);
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE:
-			return dataanalysisproblemtype != null && !dataanalysisproblemtype.isEmpty();
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET:
 			return datapropertyvalueset != null && !datapropertyvalueset.isEmpty();
+		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE:
+			return dataanalysisproblemtype != null && !dataanalysisproblemtype.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

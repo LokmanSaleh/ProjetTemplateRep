@@ -238,6 +238,24 @@ public interface ProjetTemplateFactory extends EFactory {
 	ExtendedBPMNModel createExtendedBPMNModel();
 
 	/**
+	 * Returns a new object of class '<em>Explainability</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Explainability</em>'.
+	 * @generated
+	 */
+	Explainability createExplainability();
+
+	/**
+	 * Returns a new object of class '<em>Accuracy</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Accuracy</em>'.
+	 * @generated
+	 */
+	Accuracy createAccuracy();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

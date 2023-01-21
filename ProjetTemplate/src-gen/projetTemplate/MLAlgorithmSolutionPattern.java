@@ -18,9 +18,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link projetTemplate.MLAlgorithmSolutionPattern#getName <em>Name</em>}</li>
  *   <li>{@link projetTemplate.MLAlgorithmSolutionPattern#getExplanation <em>Explanation</em>}</li>
  *   <li>{@link projetTemplate.MLAlgorithmSolutionPattern#getProcessingchaintemplate <em>Processingchaintemplate</em>}</li>
- *   <li>{@link projetTemplate.MLAlgorithmSolutionPattern#getDatapropertyvalueset <em>Datapropertyvalueset</em>}</li>
- *   <li>{@link projetTemplate.MLAlgorithmSolutionPattern#getDataanalysisproblemtype <em>Dataanalysisproblemtype</em>}</li>
  *   <li>{@link projetTemplate.MLAlgorithmSolutionPattern#getMlalgorithm <em>Mlalgorithm</em>}</li>
+ *   <li>{@link projetTemplate.MLAlgorithmSolutionPattern#getDatapropertyvalueset <em>Datapropertyvalueset</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithmSolutionPattern()
@@ -95,53 +94,13 @@ public interface MLAlgorithmSolutionPattern extends EObject {
 	void setProcessingchaintemplate(ProcessingChainTemplate value);
 
 	/**
-	 * Returns the value of the '<em><b>Datapropertyvalueset</b></em>' reference list.
-	 * The list contents are of type {@link projetTemplate.DataPropertyValueSet}.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.DataPropertyValueSet#getMlalgorithmsolutionpattern <em>Mlalgorithmsolutionpattern</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Datapropertyvalueset</em>' reference list.
-	 * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithmSolutionPattern_Datapropertyvalueset()
-	 * @see projetTemplate.DataPropertyValueSet#getMlalgorithmsolutionpattern
-	 * @model opposite="mlalgorithmsolutionpattern" required="true"
-	 * @generated
-	 */
-	EList<DataPropertyValueSet> getDatapropertyvalueset();
-
-	/**
-	 * Returns the value of the '<em><b>Dataanalysisproblemtype</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.DataAnalysisProblemType#getMlalgorithmsolutionpattern <em>Mlalgorithmsolutionpattern</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dataanalysisproblemtype</em>' reference.
-	 * @see #setDataanalysisproblemtype(DataAnalysisProblemType)
-	 * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithmSolutionPattern_Dataanalysisproblemtype()
-	 * @see projetTemplate.DataAnalysisProblemType#getMlalgorithmsolutionpattern
-	 * @model opposite="mlalgorithmsolutionpattern" required="true"
-	 * @generated
-	 */
-	DataAnalysisProblemType getDataanalysisproblemtype();
-
-	/**
-	 * Sets the value of the '{@link projetTemplate.MLAlgorithmSolutionPattern#getDataanalysisproblemtype <em>Dataanalysisproblemtype</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Dataanalysisproblemtype</em>' reference.
-	 * @see #getDataanalysisproblemtype()
-	 * @generated
-	 */
-	void setDataanalysisproblemtype(DataAnalysisProblemType value);
-
-	/**
 	 * Returns the value of the '<em><b>Mlalgorithm</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.MLAlgorithm#getMlalgorithmsolutionpattern <em>Mlalgorithmsolutionpattern</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mlalgorithm</em>' reference.
 	 * @see #setMlalgorithm(MLAlgorithm)
 	 * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithmSolutionPattern_Mlalgorithm()
-	 * @see projetTemplate.MLAlgorithm#getMlalgorithmsolutionpattern
-	 * @model opposite="mlalgorithmsolutionpattern" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	MLAlgorithm getMlalgorithm();
@@ -155,5 +114,17 @@ public interface MLAlgorithmSolutionPattern extends EObject {
 	 * @generated
 	 */
 	void setMlalgorithm(MLAlgorithm value);
+
+	/**
+	 * Returns the value of the '<em><b>Datapropertyvalueset</b></em>' reference list.
+	 * The list contents are of type {@link projetTemplate.DataPropertyValueSet}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Datapropertyvalueset</em>' reference list.
+	 * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithmSolutionPattern_Datapropertyvalueset()
+	 * @model required="true"
+	 * @generated
+	 */
+	EList<DataPropertyValueSet> getDatapropertyvalueset();
 
 } // MLAlgorithmSolutionPattern

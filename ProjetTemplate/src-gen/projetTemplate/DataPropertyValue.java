@@ -2,8 +2,6 @@
  */
 package projetTemplate;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link projetTemplate.DataPropertyValue#getName <em>Name</em>}</li>
- *   <li>{@link projetTemplate.DataPropertyValue#getDatapropertyvalueset <em>Datapropertyvalueset</em>}</li>
  *   <li>{@link projetTemplate.DataPropertyValue#getDatapropertytype <em>Datapropertytype</em>}</li>
  * </ul>
  *
@@ -46,20 +43,6 @@ public interface DataPropertyValue extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Datapropertyvalueset</b></em>' reference list.
-	 * The list contents are of type {@link projetTemplate.DataPropertyValueSet}.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.DataPropertyValueSet#getDatapropertyvalue <em>Datapropertyvalue</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Datapropertyvalueset</em>' reference list.
-	 * @see projetTemplate.ProjetTemplatePackage#getDataPropertyValue_Datapropertyvalueset()
-	 * @see projetTemplate.DataPropertyValueSet#getDatapropertyvalue
-	 * @model opposite="datapropertyvalue"
-	 * @generated
-	 */
-	EList<DataPropertyValueSet> getDatapropertyvalueset();
 
 	/**
 	 * Returns the value of the '<em><b>Datapropertytype</b></em>' reference.

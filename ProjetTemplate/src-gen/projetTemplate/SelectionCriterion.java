@@ -2,7 +2,6 @@
  */
 package projetTemplate;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -17,8 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link projetTemplate.SelectionCriterion#getName <em>Name</em>}</li>
  *   <li>{@link projetTemplate.SelectionCriterion#getValueType <em>Value Type</em>}</li>
  *   <li>{@link projetTemplate.SelectionCriterion#getDescription <em>Description</em>}</li>
- *   <li>{@link projetTemplate.SelectionCriterion#getSelectioncriterionvalueset <em>Selectioncriterionvalueset</em>}</li>
- *   <li>{@link projetTemplate.SelectionCriterion#getSelectioncriterionvalue <em>Selectioncriterionvalue</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getSelectionCriterion()
@@ -91,33 +88,5 @@ public interface SelectionCriterion extends EObject {
 	 * @generated
 	 */
 	void setDescription(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Selectioncriterionvalueset</b></em>' reference list.
-	 * The list contents are of type {@link projetTemplate.SelectionCriterionValueSet}.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.SelectionCriterionValueSet#getSelectioncriterion <em>Selectioncriterion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Selectioncriterionvalueset</em>' reference list.
-	 * @see projetTemplate.ProjetTemplatePackage#getSelectionCriterion_Selectioncriterionvalueset()
-	 * @see projetTemplate.SelectionCriterionValueSet#getSelectioncriterion
-	 * @model opposite="selectioncriterion"
-	 * @generated
-	 */
-	EList<SelectionCriterionValueSet> getSelectioncriterionvalueset();
-
-	/**
-	 * Returns the value of the '<em><b>Selectioncriterionvalue</b></em>' reference list.
-	 * The list contents are of type {@link projetTemplate.SelectionCriterionValue}.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.SelectionCriterionValue#getSelectioncriterion <em>Selectioncriterion</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Selectioncriterionvalue</em>' reference list.
-	 * @see projetTemplate.ProjetTemplatePackage#getSelectionCriterion_Selectioncriterionvalue()
-	 * @see projetTemplate.SelectionCriterionValue#getSelectioncriterion
-	 * @model opposite="selectioncriterion"
-	 * @generated
-	 */
-	EList<SelectionCriterionValue> getSelectioncriterionvalue();
 
 } // SelectionCriterion

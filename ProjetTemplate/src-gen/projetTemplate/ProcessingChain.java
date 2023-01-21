@@ -96,27 +96,23 @@ public interface ProcessingChain extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Mlalgorithm</b></em>' reference list.
 	 * The list contents are of type {@link projetTemplate.MLAlgorithm}.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.MLAlgorithm#getProcessingchain <em>Processingchain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mlalgorithm</em>' reference list.
 	 * @see projetTemplate.ProjetTemplatePackage#getProcessingChain_Mlalgorithm()
-	 * @see projetTemplate.MLAlgorithm#getProcessingchain
-	 * @model opposite="processingchain" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	EList<MLAlgorithm> getMlalgorithm();
 
 	/**
 	 * Returns the value of the '<em><b>Processingchaintemplate</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.ProcessingChainTemplate#getProcessingchain <em>Processingchain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Processingchaintemplate</em>' reference.
 	 * @see #setProcessingchaintemplate(ProcessingChainTemplate)
 	 * @see projetTemplate.ProjetTemplatePackage#getProcessingChain_Processingchaintemplate()
-	 * @see projetTemplate.ProcessingChainTemplate#getProcessingchain
-	 * @model opposite="processingchain"
+	 * @model
 	 * @generated
 	 */
 	ProcessingChainTemplate getProcessingchaintemplate();

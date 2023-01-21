@@ -3,6 +3,7 @@
 package projetTemplate;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link projetTemplate.DomainProblem#getText <em>Text</em>}</li>
- *   <li>{@link projetTemplate.DomainProblem#getDomainrequirementvalue <em>Domainrequirementvalue</em>}</li>
+ *   <li>{@link projetTemplate.DomainProblem#getDomainRequirementValue <em>Domain Requirement Value</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getDomainProblem()
@@ -46,15 +47,15 @@ public interface DomainProblem extends EObject {
 	void setText(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Domainrequirementvalue</b></em>' reference list.
+	 * Returns the value of the '<em><b>Domain Requirement Value</b></em>' reference list.
 	 * The list contents are of type {@link projetTemplate.DomainRequirementValue}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Domainrequirementvalue</em>' reference list.
-	 * @see projetTemplate.ProjetTemplatePackage#getDomainProblem_Domainrequirementvalue()
+	 * @return the value of the '<em>Domain Requirement Value</em>' reference list.
+	 * @see projetTemplate.ProjetTemplatePackage#getDomainProblem_DomainRequirementValue()
 	 * @model
 	 * @generated
 	 */
-	EList<DomainRequirementValue> getDomainrequirementvalue();
+	EList<DomainRequirementValue> getDomainRequirementValue();
 
 } // DomainProblem

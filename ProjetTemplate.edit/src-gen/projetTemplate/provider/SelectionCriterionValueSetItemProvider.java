@@ -94,23 +94,6 @@ public class SelectionCriterionValueSetItemProvider extends ItemProviderAdapter 
 	}
 
 	/**
-	 * This adds a property descriptor for the Selectioncriterion feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSelectioncriterionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_SelectionCriterionValueSet_selectioncriterion_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_SelectionCriterionValueSet_selectioncriterion_feature",
-								"_UI_SelectionCriterionValueSet_type"),
-						ProjetTemplatePackage.Literals.SELECTION_CRITERION_VALUE_SET__SELECTIONCRITERION, true, false,
-						true, null, null, null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Selectioncriterionvalue feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -125,6 +108,23 @@ public class SelectionCriterionValueSetItemProvider extends ItemProviderAdapter 
 						"_UI_SelectionCriterionValueSet_type"),
 				ProjetTemplatePackage.Literals.SELECTION_CRITERION_VALUE_SET__SELECTIONCRITERIONVALUE, true, false,
 				true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Selectioncriterion feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSelectioncriterionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_SelectionCriterionValueSet_selectioncriterion_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_SelectionCriterionValueSet_selectioncriterion_feature",
+								"_UI_SelectionCriterionValueSet_type"),
+						ProjetTemplatePackage.Literals.SELECTION_CRITERION_VALUE_SET__SELECTIONCRITERION, true, false,
+						true, null, null, null));
 	}
 
 	/**

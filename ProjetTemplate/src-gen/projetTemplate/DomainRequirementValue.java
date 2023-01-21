@@ -13,10 +13,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link projetTemplate.DomainRequirementValue#getValue <em>Value</em>}</li>
  *   <li>{@link projetTemplate.DomainRequirementValue#getExplanation <em>Explanation</em>}</li>
  *   <li>{@link projetTemplate.DomainRequirementValue#getRequirementtype <em>Requirementtype</em>}</li>
- *   <li>{@link projetTemplate.DomainRequirementValue#getHy <em>Hy</em>}</li>
+ *   <li>{@link projetTemplate.DomainRequirementValue#getExplainability <em>Explainability</em>}</li>
+ *   <li>{@link projetTemplate.DomainRequirementValue#getAccuracy <em>Accuracy</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getDomainRequirementValue()
@@ -24,28 +24,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface DomainRequirementValue extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see #setValue(String)
-	 * @see projetTemplate.ProjetTemplatePackage#getDomainRequirementValue_Value()
-	 * @model
-	 * @generated
-	 */
-	String getValue();
-
-	/**
-	 * Sets the value of the '{@link projetTemplate.DomainRequirementValue#getValue <em>Value</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Value</em>' attribute.
-	 * @see #getValue()
-	 * @generated
-	 */
-	void setValue(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Explanation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -70,14 +48,12 @@ public interface DomainRequirementValue extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Requirementtype</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.RequirementType#getDomainrequirementvalue <em>Domainrequirementvalue</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Requirementtype</em>' reference.
 	 * @see #setRequirementtype(RequirementType)
 	 * @see projetTemplate.ProjetTemplatePackage#getDomainRequirementValue_Requirementtype()
-	 * @see projetTemplate.RequirementType#getDomainrequirementvalue
-	 * @model opposite="domainrequirementvalue" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	RequirementType getRequirementtype();
@@ -93,25 +69,47 @@ public interface DomainRequirementValue extends EObject {
 	void setRequirementtype(RequirementType value);
 
 	/**
-	 * Returns the value of the '<em><b>Hy</b></em>' attribute.
+	 * Returns the value of the '<em><b>Explainability</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Hy</em>' attribute.
-	 * @see #setHy(String)
-	 * @see projetTemplate.ProjetTemplatePackage#getDomainRequirementValue_Hy()
+	 * @return the value of the '<em>Explainability</em>' reference.
+	 * @see #setExplainability(Explainability)
+	 * @see projetTemplate.ProjetTemplatePackage#getDomainRequirementValue_Explainability()
 	 * @model
 	 * @generated
 	 */
-	String getHy();
+	Explainability getExplainability();
 
 	/**
-	 * Sets the value of the '{@link projetTemplate.DomainRequirementValue#getHy <em>Hy</em>}' attribute.
+	 * Sets the value of the '{@link projetTemplate.DomainRequirementValue#getExplainability <em>Explainability</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Hy</em>' attribute.
-	 * @see #getHy()
+	 * @param value the new value of the '<em>Explainability</em>' reference.
+	 * @see #getExplainability()
 	 * @generated
 	 */
-	void setHy(String value);
+	void setExplainability(Explainability value);
+
+	/**
+	 * Returns the value of the '<em><b>Accuracy</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Accuracy</em>' reference.
+	 * @see #setAccuracy(Accuracy)
+	 * @see projetTemplate.ProjetTemplatePackage#getDomainRequirementValue_Accuracy()
+	 * @model
+	 * @generated
+	 */
+	Accuracy getAccuracy();
+
+	/**
+	 * Sets the value of the '{@link projetTemplate.DomainRequirementValue#getAccuracy <em>Accuracy</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Accuracy</em>' reference.
+	 * @see #getAccuracy()
+	 * @generated
+	 */
+	void setAccuracy(Accuracy value);
 
 } // DomainRequirementValue

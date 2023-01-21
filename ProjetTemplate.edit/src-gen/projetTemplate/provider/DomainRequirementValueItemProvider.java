@@ -53,28 +53,12 @@ public class DomainRequirementValueItemProvider extends ItemProviderAdapter impl
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addValuePropertyDescriptor(object);
 			addExplanationPropertyDescriptor(object);
 			addRequirementtypePropertyDescriptor(object);
-			addHyPropertyDescriptor(object);
+			addExplainabilityPropertyDescriptor(object);
+			addAccuracyPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Value feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addValuePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DomainRequirementValue_value_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_DomainRequirementValue_value_feature",
-								"_UI_DomainRequirementValue_type"),
-						ProjetTemplatePackage.Literals.DOMAIN_REQUIREMENT_VALUE__VALUE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -89,7 +73,7 @@ public class DomainRequirementValueItemProvider extends ItemProviderAdapter impl
 						getResourceLocator(), getString("_UI_DomainRequirementValue_explanation_feature"),
 						getString("_UI_PropertyDescriptor_description",
 								"_UI_DomainRequirementValue_explanation_feature", "_UI_DomainRequirementValue_type"),
-						ProjetTemplatePackage.Literals.DOMAIN_REQUIREMENT_VALUE__EXPLANATION, true, false, false,
+						ProjetTemplatePackage.Literals.DOMAIN_REQUIREMENT_VALUE__EXPLANATION, true, true, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -110,19 +94,35 @@ public class DomainRequirementValueItemProvider extends ItemProviderAdapter impl
 	}
 
 	/**
-	 * This adds a property descriptor for the Hy feature.
+	 * This adds a property descriptor for the Explainability feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addHyPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_DomainRequirementValue_hy_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_DomainRequirementValue_hy_feature",
-						"_UI_DomainRequirementValue_type"),
-				ProjetTemplatePackage.Literals.DOMAIN_REQUIREMENT_VALUE__HY, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	protected void addExplainabilityPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DomainRequirementValue_explainability_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_DomainRequirementValue_explainability_feature", "_UI_DomainRequirementValue_type"),
+						ProjetTemplatePackage.Literals.DOMAIN_REQUIREMENT_VALUE__EXPLAINABILITY, true, false, true,
+						null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Accuracy feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addAccuracyPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_DomainRequirementValue_accuracy_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_DomainRequirementValue_accuracy_feature",
+								"_UI_DomainRequirementValue_type"),
+						ProjetTemplatePackage.Literals.DOMAIN_REQUIREMENT_VALUE__ACCURACY, true, false, true, null,
+						null, null));
 	}
 
 	/**
@@ -154,7 +154,7 @@ public class DomainRequirementValueItemProvider extends ItemProviderAdapter impl
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((DomainRequirementValue) object).getValue();
+		String label = crop(((DomainRequirementValue) object).getExplanation());
 		return label == null || label.length() == 0 ? getString("_UI_DomainRequirementValue_type")
 				: getString("_UI_DomainRequirementValue_type") + " " + label;
 	}
@@ -171,9 +171,7 @@ public class DomainRequirementValueItemProvider extends ItemProviderAdapter impl
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(DomainRequirementValue.class)) {
-		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__VALUE:
 		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__EXPLANATION:
-		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__HY:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

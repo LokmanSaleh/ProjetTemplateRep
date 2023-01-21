@@ -3,12 +3,13 @@
 package projetTemplate.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import projetTemplate.ComputationalRequirementValue;
 import projetTemplate.ProjetTemplatePackage;
 import projetTemplate.RequirementType;
@@ -176,76 +177,13 @@ public class ComputationalRequirementValueImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetRequirementtype(RequirementType newRequirementtype, NotificationChain msgs) {
+	public void setRequirementtype(RequirementType newRequirementtype) {
 		RequirementType oldRequirementtype = requirementtype;
 		requirementtype = newRequirementtype;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.COMPUTATIONAL_REQUIREMENT_VALUE__REQUIREMENTTYPE, oldRequirementtype,
-					newRequirementtype);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRequirementtype(RequirementType newRequirementtype) {
-		if (newRequirementtype != requirementtype) {
-			NotificationChain msgs = null;
-			if (requirementtype != null)
-				msgs = ((InternalEObject) requirementtype).eInverseRemove(this,
-						ProjetTemplatePackage.REQUIREMENT_TYPE__COMPUTATIONALREQUIREMENTVALUE, RequirementType.class,
-						msgs);
-			if (newRequirementtype != null)
-				msgs = ((InternalEObject) newRequirementtype).eInverseAdd(this,
-						ProjetTemplatePackage.REQUIREMENT_TYPE__COMPUTATIONALREQUIREMENTVALUE, RequirementType.class,
-						msgs);
-			msgs = basicSetRequirementtype(newRequirementtype, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.COMPUTATIONAL_REQUIREMENT_VALUE__REQUIREMENTTYPE, newRequirementtype,
-					newRequirementtype));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ProjetTemplatePackage.COMPUTATIONAL_REQUIREMENT_VALUE__REQUIREMENTTYPE:
-			if (requirementtype != null)
-				msgs = ((InternalEObject) requirementtype).eInverseRemove(this,
-						ProjetTemplatePackage.REQUIREMENT_TYPE__COMPUTATIONALREQUIREMENTVALUE, RequirementType.class,
-						msgs);
-			return basicSetRequirementtype((RequirementType) otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ProjetTemplatePackage.COMPUTATIONAL_REQUIREMENT_VALUE__REQUIREMENTTYPE:
-			return basicSetRequirementtype(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+					ProjetTemplatePackage.COMPUTATIONAL_REQUIREMENT_VALUE__REQUIREMENTTYPE, oldRequirementtype,
+					requirementtype));
 	}
 
 	/**
@@ -273,7 +211,6 @@ public class ComputationalRequirementValueImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {

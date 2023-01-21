@@ -2,7 +2,6 @@
  */
 package projetTemplate;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -18,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link projetTemplate.Database#getCredentias <em>Credentias</em>}</li>
  *   <li>{@link projetTemplate.Database#getSchema <em>Schema</em>}</li>
  *   <li>{@link projetTemplate.Database#getData <em>Data</em>}</li>
- *   <li>{@link projetTemplate.Database#getMlproject <em>Mlproject</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getDatabase()
@@ -113,19 +111,5 @@ public interface Database extends EObject {
 	 * @generated
 	 */
 	void setData(Data value);
-
-	/**
-	 * Returns the value of the '<em><b>Mlproject</b></em>' reference list.
-	 * The list contents are of type {@link projetTemplate.MLProject}.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.MLProject#getDatabase <em>Database</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mlproject</em>' reference list.
-	 * @see projetTemplate.ProjetTemplatePackage#getDatabase_Mlproject()
-	 * @see projetTemplate.MLProject#getDatabase
-	 * @model opposite="database"
-	 * @generated
-	 */
-	EList<MLProject> getMlproject();
 
 } // Database

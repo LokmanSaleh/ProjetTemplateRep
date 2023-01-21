@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link projetTemplate.DataAnalysisProblemType#getName <em>Name</em>}</li>
- *   <li>{@link projetTemplate.DataAnalysisProblemType#getMlprocchainsolutionpattern <em>Mlprocchainsolutionpattern</em>}</li>
  *   <li>{@link projetTemplate.DataAnalysisProblemType#getMlalgorithmsolutionpattern <em>Mlalgorithmsolutionpattern</em>}</li>
  * </ul>
  *
@@ -48,29 +47,13 @@ public interface DataAnalysisProblemType extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Mlprocchainsolutionpattern</b></em>' reference list.
-	 * The list contents are of type {@link projetTemplate.MLProcChainSolutionPattern}.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.MLProcChainSolutionPattern#getDataanalysisproblemtype <em>Dataanalysisproblemtype</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mlprocchainsolutionpattern</em>' reference list.
-	 * @see projetTemplate.ProjetTemplatePackage#getDataAnalysisProblemType_Mlprocchainsolutionpattern()
-	 * @see projetTemplate.MLProcChainSolutionPattern#getDataanalysisproblemtype
-	 * @model opposite="dataanalysisproblemtype" required="true"
-	 * @generated
-	 */
-	EList<MLProcChainSolutionPattern> getMlprocchainsolutionpattern();
-
-	/**
-	 * Returns the value of the '<em><b>Mlalgorithmsolutionpattern</b></em>' reference list.
+	 * Returns the value of the '<em><b>Mlalgorithmsolutionpattern</b></em>' containment reference list.
 	 * The list contents are of type {@link projetTemplate.MLAlgorithmSolutionPattern}.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.MLAlgorithmSolutionPattern#getDataanalysisproblemtype <em>Dataanalysisproblemtype</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mlalgorithmsolutionpattern</em>' reference list.
+	 * @return the value of the '<em>Mlalgorithmsolutionpattern</em>' containment reference list.
 	 * @see projetTemplate.ProjetTemplatePackage#getDataAnalysisProblemType_Mlalgorithmsolutionpattern()
-	 * @see projetTemplate.MLAlgorithmSolutionPattern#getDataanalysisproblemtype
-	 * @model opposite="dataanalysisproblemtype"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<MLAlgorithmSolutionPattern> getMlalgorithmsolutionpattern();

@@ -54,7 +54,6 @@ public class DataPropertyValueItemProvider extends ItemProviderAdapter implement
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addDatapropertyvaluesetPropertyDescriptor(object);
 			addDatapropertytypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -74,22 +73,6 @@ public class DataPropertyValueItemProvider extends ItemProviderAdapter implement
 								"_UI_DataPropertyValue_type"),
 						ProjetTemplatePackage.Literals.DATA_PROPERTY_VALUE__NAME, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Datapropertyvalueset feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDatapropertyvaluesetPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DataPropertyValue_datapropertyvalueset_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_DataPropertyValue_datapropertyvalueset_feature", "_UI_DataPropertyValue_type"),
-						ProjetTemplatePackage.Literals.DATA_PROPERTY_VALUE__DATAPROPERTYVALUESET, true, false, true,
-						null, null, null));
 	}
 
 	/**

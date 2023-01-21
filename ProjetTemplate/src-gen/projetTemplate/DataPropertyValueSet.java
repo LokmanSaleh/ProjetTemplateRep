@@ -18,8 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link projetTemplate.DataPropertyValueSet#getSetType <em>Set Type</em>}</li>
  *   <li>{@link projetTemplate.DataPropertyValueSet#getValues <em>Values</em>}</li>
  *   <li>{@link projetTemplate.DataPropertyValueSet#getDatapropertyvalue <em>Datapropertyvalue</em>}</li>
- *   <li>{@link projetTemplate.DataPropertyValueSet#getMlalgorithmsolutionpattern <em>Mlalgorithmsolutionpattern</em>}</li>
- *   <li>{@link projetTemplate.DataPropertyValueSet#getMlprocchainsolutionpattern <em>Mlprocchainsolutionpattern</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getDataPropertyValueSet()
@@ -74,44 +72,14 @@ public interface DataPropertyValueSet extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Datapropertyvalue</b></em>' reference list.
 	 * The list contents are of type {@link projetTemplate.DataPropertyValue}.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.DataPropertyValue#getDatapropertyvalueset <em>Datapropertyvalueset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Datapropertyvalue</em>' reference list.
 	 * @see projetTemplate.ProjetTemplatePackage#getDataPropertyValueSet_Datapropertyvalue()
-	 * @see projetTemplate.DataPropertyValue#getDatapropertyvalueset
-	 * @model opposite="datapropertyvalueset"
+	 * @model
 	 * @generated
 	 */
 	EList<DataPropertyValue> getDatapropertyvalue();
-
-	/**
-	 * Returns the value of the '<em><b>Mlalgorithmsolutionpattern</b></em>' reference list.
-	 * The list contents are of type {@link projetTemplate.MLAlgorithmSolutionPattern}.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.MLAlgorithmSolutionPattern#getDatapropertyvalueset <em>Datapropertyvalueset</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mlalgorithmsolutionpattern</em>' reference list.
-	 * @see projetTemplate.ProjetTemplatePackage#getDataPropertyValueSet_Mlalgorithmsolutionpattern()
-	 * @see projetTemplate.MLAlgorithmSolutionPattern#getDatapropertyvalueset
-	 * @model opposite="datapropertyvalueset"
-	 * @generated
-	 */
-	EList<MLAlgorithmSolutionPattern> getMlalgorithmsolutionpattern();
-
-	/**
-	 * Returns the value of the '<em><b>Mlprocchainsolutionpattern</b></em>' reference list.
-	 * The list contents are of type {@link projetTemplate.MLProcChainSolutionPattern}.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.MLProcChainSolutionPattern#getDatapropertyvalueset <em>Datapropertyvalueset</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mlprocchainsolutionpattern</em>' reference list.
-	 * @see projetTemplate.ProjetTemplatePackage#getDataPropertyValueSet_Mlprocchainsolutionpattern()
-	 * @see projetTemplate.MLProcChainSolutionPattern#getDatapropertyvalueset
-	 * @model opposite="datapropertyvalueset"
-	 * @generated
-	 */
-	EList<MLProcChainSolutionPattern> getMlprocchainsolutionpattern();
 
 	/**
 	 * <!-- begin-user-doc -->

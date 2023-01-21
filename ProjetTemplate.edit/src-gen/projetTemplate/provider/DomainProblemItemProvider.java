@@ -54,7 +54,7 @@ public class DomainProblemItemProvider extends ItemProviderAdapter implements IE
 			super.getPropertyDescriptors(object);
 
 			addTextPropertyDescriptor(object);
-			addDomainrequirementvaluePropertyDescriptor(object);
+			addDomainRequirementValuePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -71,24 +71,24 @@ public class DomainProblemItemProvider extends ItemProviderAdapter implements IE
 						getResourceLocator(), getString("_UI_DomainProblem_text_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_DomainProblem_text_feature",
 								"_UI_DomainProblem_type"),
-						ProjetTemplatePackage.Literals.DOMAIN_PROBLEM__TEXT, true, false, false,
+						ProjetTemplatePackage.Literals.DOMAIN_PROBLEM__TEXT, true, true, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Domainrequirementvalue feature.
+	 * This adds a property descriptor for the Domain Requirement Value feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDomainrequirementvaluePropertyDescriptor(Object object) {
+	protected void addDomainRequirementValuePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DomainProblem_domainrequirementvalue_feature"),
+						getResourceLocator(), getString("_UI_DomainProblem_DomainRequirementValue_feature"),
 						getString("_UI_PropertyDescriptor_description",
-								"_UI_DomainProblem_domainrequirementvalue_feature", "_UI_DomainProblem_type"),
-						ProjetTemplatePackage.Literals.DOMAIN_PROBLEM__DOMAINREQUIREMENTVALUE, true, false, true, null,
-						null, null));
+								"_UI_DomainProblem_DomainRequirementValue_feature", "_UI_DomainProblem_type"),
+						ProjetTemplatePackage.Literals.DOMAIN_PROBLEM__DOMAIN_REQUIREMENT_VALUE, true, false, true,
+						null, null, null));
 	}
 
 	/**
@@ -120,7 +120,7 @@ public class DomainProblemItemProvider extends ItemProviderAdapter implements IE
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((DomainProblem) object).getText();
+		String label = crop(((DomainProblem) object).getText());
 		return label == null || label.length() == 0 ? getString("_UI_DomainProblem_type")
 				: getString("_UI_DomainProblem_type") + " " + label;
 	}

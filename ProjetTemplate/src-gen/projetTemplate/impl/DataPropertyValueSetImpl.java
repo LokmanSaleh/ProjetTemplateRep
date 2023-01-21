@@ -7,23 +7,18 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import projetTemplate.DataPropertyValue;
 import projetTemplate.DataPropertyValueSet;
-import projetTemplate.MLAlgorithmSolutionPattern;
-import projetTemplate.MLProcChainSolutionPattern;
 import projetTemplate.ProjetTemplatePackage;
 
 /**
@@ -37,8 +32,6 @@ import projetTemplate.ProjetTemplatePackage;
  *   <li>{@link projetTemplate.impl.DataPropertyValueSetImpl#getSetType <em>Set Type</em>}</li>
  *   <li>{@link projetTemplate.impl.DataPropertyValueSetImpl#getValues <em>Values</em>}</li>
  *   <li>{@link projetTemplate.impl.DataPropertyValueSetImpl#getDatapropertyvalue <em>Datapropertyvalue</em>}</li>
- *   <li>{@link projetTemplate.impl.DataPropertyValueSetImpl#getMlalgorithmsolutionpattern <em>Mlalgorithmsolutionpattern</em>}</li>
- *   <li>{@link projetTemplate.impl.DataPropertyValueSetImpl#getMlprocchainsolutionpattern <em>Mlprocchainsolutionpattern</em>}</li>
  * </ul>
  *
  * @generated
@@ -93,26 +86,6 @@ public class DataPropertyValueSetImpl extends MinimalEObjectImpl.Container imple
 	 * @ordered
 	 */
 	protected EList<DataPropertyValue> datapropertyvalue;
-
-	/**
-	 * The cached value of the '{@link #getMlalgorithmsolutionpattern() <em>Mlalgorithmsolutionpattern</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMlalgorithmsolutionpattern()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<MLAlgorithmSolutionPattern> mlalgorithmsolutionpattern;
-
-	/**
-	 * The cached value of the '{@link #getMlprocchainsolutionpattern() <em>Mlprocchainsolutionpattern</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMlprocchainsolutionpattern()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<MLProcChainSolutionPattern> mlprocchainsolutionpattern;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -184,41 +157,10 @@ public class DataPropertyValueSetImpl extends MinimalEObjectImpl.Container imple
 	 */
 	public EList<DataPropertyValue> getDatapropertyvalue() {
 		if (datapropertyvalue == null) {
-			datapropertyvalue = new EObjectWithInverseResolvingEList.ManyInverse<DataPropertyValue>(
-					DataPropertyValue.class, this, ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__DATAPROPERTYVALUE,
-					ProjetTemplatePackage.DATA_PROPERTY_VALUE__DATAPROPERTYVALUESET);
+			datapropertyvalue = new EObjectResolvingEList<DataPropertyValue>(DataPropertyValue.class, this,
+					ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__DATAPROPERTYVALUE);
 		}
 		return datapropertyvalue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<MLAlgorithmSolutionPattern> getMlalgorithmsolutionpattern() {
-		if (mlalgorithmsolutionpattern == null) {
-			mlalgorithmsolutionpattern = new EObjectWithInverseResolvingEList.ManyInverse<MLAlgorithmSolutionPattern>(
-					MLAlgorithmSolutionPattern.class, this,
-					ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__MLALGORITHMSOLUTIONPATTERN,
-					ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__DATAPROPERTYVALUESET);
-		}
-		return mlalgorithmsolutionpattern;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<MLProcChainSolutionPattern> getMlprocchainsolutionpattern() {
-		if (mlprocchainsolutionpattern == null) {
-			mlprocchainsolutionpattern = new EObjectWithInverseResolvingEList.ManyInverse<MLProcChainSolutionPattern>(
-					MLProcChainSolutionPattern.class, this,
-					ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__MLPROCCHAINSOLUTIONPATTERN,
-					ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET);
-		}
-		return mlprocchainsolutionpattern;
 	}
 
 	/**
@@ -237,46 +179,6 @@ public class DataPropertyValueSetImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__DATAPROPERTYVALUE:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getDatapropertyvalue()).basicAdd(otherEnd,
-					msgs);
-		case ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__MLALGORITHMSOLUTIONPATTERN:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getMlalgorithmsolutionpattern())
-					.basicAdd(otherEnd, msgs);
-		case ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__MLPROCCHAINSOLUTIONPATTERN:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getMlprocchainsolutionpattern())
-					.basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__DATAPROPERTYVALUE:
-			return ((InternalEList<?>) getDatapropertyvalue()).basicRemove(otherEnd, msgs);
-		case ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__MLALGORITHMSOLUTIONPATTERN:
-			return ((InternalEList<?>) getMlalgorithmsolutionpattern()).basicRemove(otherEnd, msgs);
-		case ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__MLPROCCHAINSOLUTIONPATTERN:
-			return ((InternalEList<?>) getMlprocchainsolutionpattern()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -286,10 +188,6 @@ public class DataPropertyValueSetImpl extends MinimalEObjectImpl.Container imple
 			return getValues();
 		case ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__DATAPROPERTYVALUE:
 			return getDatapropertyvalue();
-		case ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__MLALGORITHMSOLUTIONPATTERN:
-			return getMlalgorithmsolutionpattern();
-		case ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__MLPROCCHAINSOLUTIONPATTERN:
-			return getMlprocchainsolutionpattern();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -313,14 +211,6 @@ public class DataPropertyValueSetImpl extends MinimalEObjectImpl.Container imple
 			getDatapropertyvalue().clear();
 			getDatapropertyvalue().addAll((Collection<? extends DataPropertyValue>) newValue);
 			return;
-		case ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__MLALGORITHMSOLUTIONPATTERN:
-			getMlalgorithmsolutionpattern().clear();
-			getMlalgorithmsolutionpattern().addAll((Collection<? extends MLAlgorithmSolutionPattern>) newValue);
-			return;
-		case ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__MLPROCCHAINSOLUTIONPATTERN:
-			getMlprocchainsolutionpattern().clear();
-			getMlprocchainsolutionpattern().addAll((Collection<? extends MLProcChainSolutionPattern>) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -342,12 +232,6 @@ public class DataPropertyValueSetImpl extends MinimalEObjectImpl.Container imple
 		case ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__DATAPROPERTYVALUE:
 			getDatapropertyvalue().clear();
 			return;
-		case ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__MLALGORITHMSOLUTIONPATTERN:
-			getMlalgorithmsolutionpattern().clear();
-			return;
-		case ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__MLPROCCHAINSOLUTIONPATTERN:
-			getMlprocchainsolutionpattern().clear();
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -366,10 +250,6 @@ public class DataPropertyValueSetImpl extends MinimalEObjectImpl.Container imple
 			return VALUES_EDEFAULT == null ? values != null : !VALUES_EDEFAULT.equals(values);
 		case ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__DATAPROPERTYVALUE:
 			return datapropertyvalue != null && !datapropertyvalue.isEmpty();
-		case ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__MLALGORITHMSOLUTIONPATTERN:
-			return mlalgorithmsolutionpattern != null && !mlalgorithmsolutionpattern.isEmpty();
-		case ProjetTemplatePackage.DATA_PROPERTY_VALUE_SET__MLPROCCHAINSOLUTIONPATTERN:
-			return mlprocchainsolutionpattern != null && !mlprocchainsolutionpattern.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

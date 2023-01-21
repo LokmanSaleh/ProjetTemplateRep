@@ -17,8 +17,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link projetTemplate.MLProcChainSolutionPattern#getName <em>Name</em>}</li>
  *   <li>{@link projetTemplate.MLProcChainSolutionPattern#getExplanation <em>Explanation</em>}</li>
- *   <li>{@link projetTemplate.MLProcChainSolutionPattern#getDataanalysisproblemtype <em>Dataanalysisproblemtype</em>}</li>
  *   <li>{@link projetTemplate.MLProcChainSolutionPattern#getDatapropertyvalueset <em>Datapropertyvalueset</em>}</li>
+ *   <li>{@link projetTemplate.MLProcChainSolutionPattern#getDataanalysisproblemtype <em>Dataanalysisproblemtype</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getMLProcChainSolutionPattern()
@@ -71,31 +71,27 @@ public interface MLProcChainSolutionPattern extends EObject {
 	void setExplanation(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Dataanalysisproblemtype</b></em>' reference list.
-	 * The list contents are of type {@link projetTemplate.DataAnalysisProblemType}.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.DataAnalysisProblemType#getMlprocchainsolutionpattern <em>Mlprocchainsolutionpattern</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Dataanalysisproblemtype</em>' reference list.
-	 * @see projetTemplate.ProjetTemplatePackage#getMLProcChainSolutionPattern_Dataanalysisproblemtype()
-	 * @see projetTemplate.DataAnalysisProblemType#getMlprocchainsolutionpattern
-	 * @model opposite="mlprocchainsolutionpattern" required="true"
-	 * @generated
-	 */
-	EList<DataAnalysisProblemType> getDataanalysisproblemtype();
-
-	/**
 	 * Returns the value of the '<em><b>Datapropertyvalueset</b></em>' reference list.
 	 * The list contents are of type {@link projetTemplate.DataPropertyValueSet}.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.DataPropertyValueSet#getMlprocchainsolutionpattern <em>Mlprocchainsolutionpattern</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Datapropertyvalueset</em>' reference list.
 	 * @see projetTemplate.ProjetTemplatePackage#getMLProcChainSolutionPattern_Datapropertyvalueset()
-	 * @see projetTemplate.DataPropertyValueSet#getMlprocchainsolutionpattern
-	 * @model opposite="mlprocchainsolutionpattern" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	EList<DataPropertyValueSet> getDatapropertyvalueset();
+
+	/**
+	 * Returns the value of the '<em><b>Dataanalysisproblemtype</b></em>' reference list.
+	 * The list contents are of type {@link projetTemplate.DataAnalysisProblemType}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Dataanalysisproblemtype</em>' reference list.
+	 * @see projetTemplate.ProjetTemplatePackage#getMLProcChainSolutionPattern_Dataanalysisproblemtype()
+	 * @model required="true"
+	 * @generated
+	 */
+	EList<DataAnalysisProblemType> getDataanalysisproblemtype();
 
 } // MLProcChainSolutionPattern

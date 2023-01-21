@@ -18,8 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link projetTemplate.MLAlgorithm#getName <em>Name</em>}</li>
  *   <li>{@link projetTemplate.MLAlgorithm#getSelectioncriterionvalueset <em>Selectioncriterionvalueset</em>}</li>
  *   <li>{@link projetTemplate.MLAlgorithm#getSelectioncriterionvalue <em>Selectioncriterionvalue</em>}</li>
- *   <li>{@link projetTemplate.MLAlgorithm#getProcessingchain <em>Processingchain</em>}</li>
- *   <li>{@link projetTemplate.MLAlgorithm#getMlalgorithmsolutionpattern <em>Mlalgorithmsolutionpattern</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithm()
@@ -82,43 +80,5 @@ public interface MLAlgorithm extends EObject {
 	 * @generated
 	 */
 	EList<SelectionCriterionValue> getSelectioncriterionvalue();
-
-	/**
-	 * Returns the value of the '<em><b>Processingchain</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.ProcessingChain#getMlalgorithm <em>Mlalgorithm</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Processingchain</em>' reference.
-	 * @see #setProcessingchain(ProcessingChain)
-	 * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithm_Processingchain()
-	 * @see projetTemplate.ProcessingChain#getMlalgorithm
-	 * @model opposite="mlalgorithm"
-	 * @generated
-	 */
-	ProcessingChain getProcessingchain();
-
-	/**
-	 * Sets the value of the '{@link projetTemplate.MLAlgorithm#getProcessingchain <em>Processingchain</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Processingchain</em>' reference.
-	 * @see #getProcessingchain()
-	 * @generated
-	 */
-	void setProcessingchain(ProcessingChain value);
-
-	/**
-	 * Returns the value of the '<em><b>Mlalgorithmsolutionpattern</b></em>' reference list.
-	 * The list contents are of type {@link projetTemplate.MLAlgorithmSolutionPattern}.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.MLAlgorithmSolutionPattern#getMlalgorithm <em>Mlalgorithm</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mlalgorithmsolutionpattern</em>' reference list.
-	 * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithm_Mlalgorithmsolutionpattern()
-	 * @see projetTemplate.MLAlgorithmSolutionPattern#getMlalgorithm
-	 * @model opposite="mlalgorithm" required="true"
-	 * @generated
-	 */
-	EList<MLAlgorithmSolutionPattern> getMlalgorithmsolutionpattern();
 
 } // MLAlgorithm

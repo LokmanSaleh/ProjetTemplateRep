@@ -2,8 +2,6 @@
  */
 package projetTemplate;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link projetTemplate.SelectionCriterionValue#getValues <em>Values</em>}</li>
- *   <li>{@link projetTemplate.SelectionCriterionValue#getSelectioncriterionvalueset <em>Selectioncriterionvalueset</em>}</li>
  *   <li>{@link projetTemplate.SelectionCriterionValue#getSelectioncriterion <em>Selectioncriterion</em>}</li>
  * </ul>
  *
@@ -49,14 +46,12 @@ public interface SelectionCriterionValue extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Selectioncriterion</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.SelectionCriterion#getSelectioncriterionvalue <em>Selectioncriterionvalue</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Selectioncriterion</em>' reference.
 	 * @see #setSelectioncriterion(SelectionCriterion)
 	 * @see projetTemplate.ProjetTemplatePackage#getSelectionCriterionValue_Selectioncriterion()
-	 * @see projetTemplate.SelectionCriterion#getSelectioncriterionvalue
-	 * @model opposite="selectioncriterionvalue" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	SelectionCriterion getSelectioncriterion();
@@ -70,19 +65,5 @@ public interface SelectionCriterionValue extends EObject {
 	 * @generated
 	 */
 	void setSelectioncriterion(SelectionCriterion value);
-
-	/**
-	 * Returns the value of the '<em><b>Selectioncriterionvalueset</b></em>' reference list.
-	 * The list contents are of type {@link projetTemplate.SelectionCriterionValueSet}.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.SelectionCriterionValueSet#getSelectioncriterionvalue <em>Selectioncriterionvalue</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Selectioncriterionvalueset</em>' reference list.
-	 * @see projetTemplate.ProjetTemplatePackage#getSelectionCriterionValue_Selectioncriterionvalueset()
-	 * @see projetTemplate.SelectionCriterionValueSet#getSelectioncriterionvalue
-	 * @model opposite="selectioncriterionvalue"
-	 * @generated
-	 */
-	EList<SelectionCriterionValueSet> getSelectioncriterionvalueset();
 
 } // SelectionCriterionValue

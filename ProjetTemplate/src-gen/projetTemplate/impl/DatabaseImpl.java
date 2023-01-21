@@ -2,21 +2,16 @@
  */
 package projetTemplate.impl;
 
-import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+
 import projetTemplate.Data;
 import projetTemplate.Database;
-import projetTemplate.MLProject;
 import projetTemplate.ProjetTemplatePackage;
 import projetTemplate.Schema;
 
@@ -32,7 +27,6 @@ import projetTemplate.Schema;
  *   <li>{@link projetTemplate.impl.DatabaseImpl#getCredentias <em>Credentias</em>}</li>
  *   <li>{@link projetTemplate.impl.DatabaseImpl#getSchema <em>Schema</em>}</li>
  *   <li>{@link projetTemplate.impl.DatabaseImpl#getData <em>Data</em>}</li>
- *   <li>{@link projetTemplate.impl.DatabaseImpl#getMlproject <em>Mlproject</em>}</li>
  * </ul>
  *
  * @generated
@@ -97,16 +91,6 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 	 * @ordered
 	 */
 	protected Data data;
-
-	/**
-	 * The cached value of the '{@link #getMlproject() <em>Mlproject</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMlproject()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<MLProject> mlproject;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -201,7 +185,7 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 *  
+	 * @generated
 	 */
 	public void setSchema(Schema newSchema) {
 		Schema oldSchema = schema;
@@ -209,11 +193,6 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ProjetTemplatePackage.DATABASE__SCHEMA, oldSchema,
 					schema));
-
-		//		ConnectionInterface conInter = new ConnectionInterface();
-		//		conInter.setTitle("Connection Data base");
-		//		conInter.setVisible(true);
-
 	}
 
 	/**
@@ -260,48 +239,6 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MLProject> getMlproject() {
-		if (mlproject == null) {
-			mlproject = new EObjectWithInverseResolvingEList<MLProject>(MLProject.class, this,
-					ProjetTemplatePackage.DATABASE__MLPROJECT, ProjetTemplatePackage.ML_PROJECT__DATABASE);
-		}
-		return mlproject;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ProjetTemplatePackage.DATABASE__MLPROJECT:
-			return ((InternalEList<InternalEObject>) (InternalEList<?>) getMlproject()).basicAdd(otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ProjetTemplatePackage.DATABASE__MLPROJECT:
-			return ((InternalEList<?>) getMlproject()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -317,8 +254,6 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 			if (resolve)
 				return getData();
 			return basicGetData();
-		case ProjetTemplatePackage.DATABASE__MLPROJECT:
-			return getMlproject();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -328,7 +263,6 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -343,10 +277,6 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 			return;
 		case ProjetTemplatePackage.DATABASE__DATA:
 			setData((Data) newValue);
-			return;
-		case ProjetTemplatePackage.DATABASE__MLPROJECT:
-			getMlproject().clear();
-			getMlproject().addAll((Collection<? extends MLProject>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -372,9 +302,6 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 		case ProjetTemplatePackage.DATABASE__DATA:
 			setData((Data) null);
 			return;
-		case ProjetTemplatePackage.DATABASE__MLPROJECT:
-			getMlproject().clear();
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -395,8 +322,6 @@ public class DatabaseImpl extends MinimalEObjectImpl.Container implements Databa
 			return schema != null;
 		case ProjetTemplatePackage.DATABASE__DATA:
 			return data != null;
-		case ProjetTemplatePackage.DATABASE__MLPROJECT:
-			return mlproject != null && !mlproject.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

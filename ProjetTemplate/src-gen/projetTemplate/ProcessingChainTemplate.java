@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link projetTemplate.ProcessingChainTemplate#getName <em>Name</em>}</li>
  *   <li>{@link projetTemplate.ProcessingChainTemplate#getAuthor <em>Author</em>}</li>
  *   <li>{@link projetTemplate.ProcessingChainTemplate#getExtendedbpmnmodel <em>Extendedbpmnmodel</em>}</li>
- *   <li>{@link projetTemplate.ProcessingChainTemplate#getProcessingchain <em>Processingchain</em>}</li>
  *   <li>{@link projetTemplate.ProcessingChainTemplate#getMlprocchainsolutionpattern <em>Mlprocchainsolutionpattern</em>}</li>
  * </ul>
  *
@@ -92,20 +91,6 @@ public interface ProcessingChainTemplate extends EObject {
 	 * @generated
 	 */
 	void setExtendedbpmnmodel(ExtendedBPMNModel value);
-
-	/**
-	 * Returns the value of the '<em><b>Processingchain</b></em>' reference list.
-	 * The list contents are of type {@link projetTemplate.ProcessingChain}.
-	 * It is bidirectional and its opposite is '{@link projetTemplate.ProcessingChain#getProcessingchaintemplate <em>Processingchaintemplate</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Processingchain</em>' reference list.
-	 * @see projetTemplate.ProjetTemplatePackage#getProcessingChainTemplate_Processingchain()
-	 * @see projetTemplate.ProcessingChain#getProcessingchaintemplate
-	 * @model opposite="processingchaintemplate"
-	 * @generated
-	 */
-	EList<ProcessingChain> getProcessingchain();
 
 	/**
 	 * Returns the value of the '<em><b>Mlprocchainsolutionpattern</b></em>' reference list.

@@ -3,12 +3,13 @@
 package projetTemplate.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import projetTemplate.DataAnalysisProblem;
 import projetTemplate.Database;
 import projetTemplate.DomainProblem;
@@ -322,71 +323,12 @@ public class MLProjectImpl extends MinimalEObjectImpl.Container implements MLPro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDatabase(Database newDatabase, NotificationChain msgs) {
+	public void setDatabase(Database newDatabase) {
 		Database oldDatabase = database;
 		database = newDatabase;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.ML_PROJECT__DATABASE, oldDatabase, newDatabase);
-			if (msgs == null)
-				msgs = notification;
-			else
-				msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDatabase(Database newDatabase) {
-		if (newDatabase != database) {
-			NotificationChain msgs = null;
-			if (database != null)
-				msgs = ((InternalEObject) database).eInverseRemove(this, ProjetTemplatePackage.DATABASE__MLPROJECT,
-						Database.class, msgs);
-			if (newDatabase != null)
-				msgs = ((InternalEObject) newDatabase).eInverseAdd(this, ProjetTemplatePackage.DATABASE__MLPROJECT,
-						Database.class, msgs);
-			msgs = basicSetDatabase(newDatabase, msgs);
-			if (msgs != null)
-				msgs.dispatch();
-		} else if (eNotificationRequired())
+		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ProjetTemplatePackage.ML_PROJECT__DATABASE,
-					newDatabase, newDatabase));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ProjetTemplatePackage.ML_PROJECT__DATABASE:
-			if (database != null)
-				msgs = ((InternalEObject) database).eInverseRemove(this, ProjetTemplatePackage.DATABASE__MLPROJECT,
-						Database.class, msgs);
-			return basicSetDatabase((Database) otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ProjetTemplatePackage.ML_PROJECT__DATABASE:
-			return basicSetDatabase(null, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+					oldDatabase, database));
 	}
 
 	/**
@@ -424,7 +366,6 @@ public class MLProjectImpl extends MinimalEObjectImpl.Container implements MLPro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {

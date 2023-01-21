@@ -54,7 +54,6 @@ public class SelectionCriterionValueItemProvider extends ItemProviderAdapter imp
 			super.getPropertyDescriptors(object);
 
 			addValuesPropertyDescriptor(object);
-			addSelectioncriterionvaluesetPropertyDescriptor(object);
 			addSelectioncriterionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -90,23 +89,6 @@ public class SelectionCriterionValueItemProvider extends ItemProviderAdapter imp
 						"_UI_SelectionCriterionValue_selectioncriterion_feature", "_UI_SelectionCriterionValue_type"),
 				ProjetTemplatePackage.Literals.SELECTION_CRITERION_VALUE__SELECTIONCRITERION, true, false, true, null,
 				null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Selectioncriterionvalueset feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSelectioncriterionvaluesetPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_SelectionCriterionValue_selectioncriterionvalueset_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_SelectionCriterionValue_selectioncriterionvalueset_feature",
-						"_UI_SelectionCriterionValue_type"),
-				ProjetTemplatePackage.Literals.SELECTION_CRITERION_VALUE__SELECTIONCRITERIONVALUESET, true, false, true,
-				null, null, null));
 	}
 
 	/**

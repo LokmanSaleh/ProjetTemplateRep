@@ -56,8 +56,6 @@ public class SelectionCriterionItemProvider extends ItemProviderAdapter implemen
 			addNamePropertyDescriptor(object);
 			addValueTypePropertyDescriptor(object);
 			addDescriptionPropertyDescriptor(object);
-			addSelectioncriterionvaluesetPropertyDescriptor(object);
-			addSelectioncriterionvaluePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -108,38 +106,6 @@ public class SelectionCriterionItemProvider extends ItemProviderAdapter implemen
 						"_UI_SelectionCriterion_type"),
 				ProjetTemplatePackage.Literals.SELECTION_CRITERION__DESCRIPTION, true, false, false,
 				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Selectioncriterionvalueset feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSelectioncriterionvaluesetPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_SelectionCriterion_selectioncriterionvalueset_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_SelectionCriterion_selectioncriterionvalueset_feature", "_UI_SelectionCriterion_type"),
-				ProjetTemplatePackage.Literals.SELECTION_CRITERION__SELECTIONCRITERIONVALUESET, true, false, true, null,
-				null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Selectioncriterionvalue feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSelectioncriterionvaluePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_SelectionCriterion_selectioncriterionvalue_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_SelectionCriterion_selectioncriterionvalue_feature", "_UI_SelectionCriterion_type"),
-				ProjetTemplatePackage.Literals.SELECTION_CRITERION__SELECTIONCRITERIONVALUE, true, false, true, null,
-				null, null));
 	}
 
 	/**
