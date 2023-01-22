@@ -94,7 +94,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DataAnalysisProblemType">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Name" eType="#//DataAnalysisProblemType.1"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="mlalgorithmsolutionpattern"
         upperBound="-1" eType="#//MLAlgorithmSolutionPattern" containment="true"/>
   </eClassifiers>
@@ -181,5 +181,11 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Accuracy">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="#//Values2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="DataAnalysisProblemType">
+    <eLiterals name="Classification"/>
+    <eLiterals name="Regression" value="1"/>
+    <eLiterals name="Clustering" value="2"/>
+    <eLiterals name="Feature construction" value="3"/>
   </eClassifiers>
 </ecore:EPackage>
