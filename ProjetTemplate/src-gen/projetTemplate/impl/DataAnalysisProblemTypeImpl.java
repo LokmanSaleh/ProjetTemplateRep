@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import projetTemplate.DataAnalysisProblemType;
+import projetTemplate.EnumDataAnalysisProblemType;
 import projetTemplate.MLAlgorithmSolutionPattern;
 import projetTemplate.ProjetTemplatePackage;
 
@@ -45,7 +46,7 @@ public class DataAnalysisProblemTypeImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final EnumDataAnalysisProblemType NAME_EDEFAULT = EnumDataAnalysisProblemType.CLASSIFICATION;
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -55,7 +56,7 @@ public class DataAnalysisProblemTypeImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
+	protected EnumDataAnalysisProblemType name = NAME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getMlalgorithmsolutionpattern() <em>Mlalgorithmsolutionpattern</em>}' containment reference list.
@@ -91,7 +92,7 @@ public class DataAnalysisProblemTypeImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
+	public EnumDataAnalysisProblemType getName() {
 		return name;
 	}
 
@@ -100,9 +101,9 @@ public class DataAnalysisProblemTypeImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public void setName(EnumDataAnalysisProblemType newName) {
+		EnumDataAnalysisProblemType oldName = name;
+		name = newName == null ? NAME_EDEFAULT : newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
 					ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM_TYPE__NAME, oldName, name));
@@ -162,7 +163,7 @@ public class DataAnalysisProblemTypeImpl extends MinimalEObjectImpl.Container im
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM_TYPE__NAME:
-			setName((String) newValue);
+			setName((EnumDataAnalysisProblemType) newValue);
 			return;
 		case ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM_TYPE__MLALGORITHMSOLUTIONPATTERN:
 			getMlalgorithmsolutionpattern().clear();
@@ -199,7 +200,7 @@ public class DataAnalysisProblemTypeImpl extends MinimalEObjectImpl.Container im
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 		case ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM_TYPE__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			return name != NAME_EDEFAULT;
 		case ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM_TYPE__MLALGORITHMSOLUTIONPATTERN:
 			return mlalgorithmsolutionpattern != null && !mlalgorithmsolutionpattern.isEmpty();
 		}

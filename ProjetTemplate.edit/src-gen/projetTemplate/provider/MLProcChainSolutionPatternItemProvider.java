@@ -56,7 +56,10 @@ public class MLProcChainSolutionPatternItemProvider extends ItemProviderAdapter 
 			addNamePropertyDescriptor(object);
 			addExplanationPropertyDescriptor(object);
 			addDatapropertyvaluesetPropertyDescriptor(object);
+			addProcessingchainPropertyDescriptor(object);
 			addDataanalysisproblemtypePropertyDescriptor(object);
+			addSelectedProcessingChainTemplateForTheMLAlgorithmPropertyDescriptor(object);
+			addCollecteddataknowledgeabouttemplateconstructionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -111,6 +114,23 @@ public class MLProcChainSolutionPatternItemProvider extends ItemProviderAdapter 
 	}
 
 	/**
+	 * This adds a property descriptor for the Processingchain feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addProcessingchainPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_MLProcChainSolutionPattern_processingchain_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_MLProcChainSolutionPattern_processingchain_feature",
+								"_UI_MLProcChainSolutionPattern_type"),
+						ProjetTemplatePackage.Literals.ML_PROC_CHAIN_SOLUTION_PATTERN__PROCESSINGCHAIN, true, false,
+						true, null, null, null));
+	}
+
+	/**
 	 * This adds a property descriptor for the Dataanalysisproblemtype feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -125,6 +145,40 @@ public class MLProcChainSolutionPatternItemProvider extends ItemProviderAdapter 
 						"_UI_MLProcChainSolutionPattern_type"),
 				ProjetTemplatePackage.Literals.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE, true, false,
 				true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Selected Processing Chain Template For The ML Algorithm feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addSelectedProcessingChainTemplateForTheMLAlgorithmPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_MLProcChainSolutionPattern_SelectedProcessingChainTemplateForTheMLAlgorithm_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_MLProcChainSolutionPattern_SelectedProcessingChainTemplateForTheMLAlgorithm_feature",
+						"_UI_MLProcChainSolutionPattern_type"),
+				ProjetTemplatePackage.Literals.ML_PROC_CHAIN_SOLUTION_PATTERN__SELECTED_PROCESSING_CHAIN_TEMPLATE_FOR_THE_ML_ALGORITHM,
+				true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Collecteddataknowledgeabouttemplateconstruction feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCollecteddataknowledgeabouttemplateconstructionPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_MLProcChainSolutionPattern_collecteddataknowledgeabouttemplateconstruction_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_MLProcChainSolutionPattern_collecteddataknowledgeabouttemplateconstruction_feature",
+						"_UI_MLProcChainSolutionPattern_type"),
+				ProjetTemplatePackage.Literals.ML_PROC_CHAIN_SOLUTION_PATTERN__COLLECTEDDATAKNOWLEDGEABOUTTEMPLATECONSTRUCTION,
+				true, false, true, null, null, null));
 	}
 
 	/**

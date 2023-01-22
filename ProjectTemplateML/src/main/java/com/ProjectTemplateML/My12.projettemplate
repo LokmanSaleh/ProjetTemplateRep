@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:projetTemplate="http://www.example.org/projetTemplate">
+  <projetTemplate:MLProject dataanalysisproblem="/1"/>
+  <projetTemplate:DataAnalysisProblem mlprocchainsolutionpattern="/2"/>
+  <projetTemplate:MLProcChainSolutionPattern processingchain="/3"/>
+  <projetTemplate:ProcessingChain mlalgorithm="/4"/>
+  <projetTemplate:MLAlgorithm processingchaintemplate="/5"/>
+  <projetTemplate:ProcessingChainTemplate component="/6"/>
+  <projetTemplate:Component/>
+</xmi:XMI>

@@ -2,8 +2,6 @@
  */
 package projetTemplate;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Explainability</b></em>'.
@@ -20,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Explainability extends EObject {
+public interface Explainability extends DomainRequirementValue {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
 	 * The literals are from the enumeration {@link projetTemplate.Values1}.

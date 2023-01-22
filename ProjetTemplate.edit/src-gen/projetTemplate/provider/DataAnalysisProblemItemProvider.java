@@ -58,7 +58,7 @@ public class DataAnalysisProblemItemProvider extends ItemProviderAdapter impleme
 			addAuthorPropertyDescriptor(object);
 			addDataanalysisproblemtypePropertyDescriptor(object);
 			addComputationalrequirementvaluePropertyDescriptor(object);
-			addProcessingchainPropertyDescriptor(object);
+			addMlprocchainsolutionpatternPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -145,19 +145,19 @@ public class DataAnalysisProblemItemProvider extends ItemProviderAdapter impleme
 	}
 
 	/**
-	 * This adds a property descriptor for the Processingchain feature.
+	 * This adds a property descriptor for the Mlprocchainsolutionpattern feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addProcessingchainPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_DataAnalysisProblem_processingchain_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_DataAnalysisProblem_processingchain_feature", "_UI_DataAnalysisProblem_type"),
-						ProjetTemplatePackage.Literals.DATA_ANALYSIS_PROBLEM__PROCESSINGCHAIN, true, false, true, null,
-						null, null));
+	protected void addMlprocchainsolutionpatternPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_DataAnalysisProblem_mlprocchainsolutionpattern_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_DataAnalysisProblem_mlprocchainsolutionpattern_feature", "_UI_DataAnalysisProblem_type"),
+				ProjetTemplatePackage.Literals.DATA_ANALYSIS_PROBLEM__MLPROCCHAINSOLUTIONPATTERN, true, false, true,
+				null, null, null));
 	}
 
 	/**

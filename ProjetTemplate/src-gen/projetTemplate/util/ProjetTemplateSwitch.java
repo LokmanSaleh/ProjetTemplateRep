@@ -203,6 +203,8 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 			MLAlgorithm mlAlgorithm = (MLAlgorithm) theEObject;
 			T result = caseMLAlgorithm(mlAlgorithm);
 			if (result == null)
+				result = caseComponent(mlAlgorithm);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -238,12 +240,77 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 			Explainability explainability = (Explainability) theEObject;
 			T result = caseExplainability(explainability);
 			if (result == null)
+				result = caseDomainRequirementValue(explainability);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case ProjetTemplatePackage.ACCURACY: {
 			Accuracy accuracy = (Accuracy) theEObject;
 			T result = caseAccuracy(accuracy);
+			if (result == null)
+				result = caseDomainRequirementValue(accuracy);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjetTemplatePackage.COLLECTED_DATA_KNOWLEDGE_ABOUT_TEMPLATE_CONSTRUCTION: {
+			CollectedDataKnowledgeAboutTemplateConstruction collectedDataKnowledgeAboutTemplateConstruction = (CollectedDataKnowledgeAboutTemplateConstruction) theEObject;
+			T result = caseCollectedDataKnowledgeAboutTemplateConstruction(
+					collectedDataKnowledgeAboutTemplateConstruction);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjetTemplatePackage.RULE: {
+			Rule rule = (Rule) theEObject;
+			T result = caseRule(rule);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjetTemplatePackage.CONDITION: {
+			Condition condition = (Condition) theEObject;
+			T result = caseCondition(condition);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjetTemplatePackage.RESULTAT: {
+			Resultat resultat = (Resultat) theEObject;
+			T result = caseResultat(resultat);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjetTemplatePackage.VARIABLE: {
+			variable variable = (variable) theEObject;
+			T result = casevariable(variable);
+			if (result == null)
+				result = caseTerm(variable);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjetTemplatePackage.TERM: {
+			Term term = (Term) theEObject;
+			T result = caseTerm(term);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjetTemplatePackage.CONNECTOR: {
+			connector connector = (connector) theEObject;
+			T result = caseconnector(connector);
+			if (result == null)
+				result = caseTerm(connector);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjetTemplatePackage.COMPONENT: {
+			Component component = (Component) theEObject;
+			T result = caseComponent(component);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -640,6 +707,127 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseAccuracy(Accuracy object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Collected Data Knowledge About Template Construction</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Collected Data Knowledge About Template Construction</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCollectedDataKnowledgeAboutTemplateConstruction(
+			CollectedDataKnowledgeAboutTemplateConstruction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Rule</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Rule</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRule(Rule object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Condition</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCondition(Condition object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Resultat</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Resultat</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseResultat(Resultat object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casevariable(variable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Term</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Term</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTerm(Term object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>connector</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>connector</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseconnector(connector object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Component</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Component</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComponent(Component object) {
 		return null;
 	}
 

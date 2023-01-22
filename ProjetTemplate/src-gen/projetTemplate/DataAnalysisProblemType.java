@@ -26,25 +26,28 @@ import org.eclipse.emf.ecore.EObject;
 public interface DataAnalysisProblemType extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * The literals are from the enumeration {@link projetTemplate.EnumDataAnalysisProblemType}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
+	 * @see projetTemplate.EnumDataAnalysisProblemType
+	 * @see #setName(EnumDataAnalysisProblemType)
 	 * @see projetTemplate.ProjetTemplatePackage#getDataAnalysisProblemType_Name()
 	 * @model
 	 * @generated
 	 */
-	String getName();
+	EnumDataAnalysisProblemType getName();
 
 	/**
 	 * Sets the value of the '{@link projetTemplate.DataAnalysisProblemType#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see projetTemplate.EnumDataAnalysisProblemType
 	 * @see #getName()
 	 * @generated
 	 */
-	void setName(String value);
+	void setName(EnumDataAnalysisProblemType value);
 
 	/**
 	 * Returns the value of the '<em><b>Mlalgorithmsolutionpattern</b></em>' containment reference list.

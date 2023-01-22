@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link projetTemplate.DataAnalysisProblem#getAuthor <em>Author</em>}</li>
  *   <li>{@link projetTemplate.DataAnalysisProblem#getDataanalysisproblemtype <em>Dataanalysisproblemtype</em>}</li>
  *   <li>{@link projetTemplate.DataAnalysisProblem#getComputationalrequirementvalue <em>Computationalrequirementvalue</em>}</li>
- *   <li>{@link projetTemplate.DataAnalysisProblem#getProcessingchain <em>Processingchain</em>}</li>
+ *   <li>{@link projetTemplate.DataAnalysisProblem#getMlprocchainsolutionpattern <em>Mlprocchainsolutionpattern</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getDataAnalysisProblem()
@@ -129,25 +129,25 @@ public interface DataAnalysisProblem extends EObject {
 	EList<ComputationalRequirementValue> getComputationalrequirementvalue();
 
 	/**
-	 * Returns the value of the '<em><b>Processingchain</b></em>' reference.
+	 * Returns the value of the '<em><b>Mlprocchainsolutionpattern</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Processingchain</em>' reference.
-	 * @see #setProcessingchain(ProcessingChain)
-	 * @see projetTemplate.ProjetTemplatePackage#getDataAnalysisProblem_Processingchain()
-	 * @model required="true"
+	 * @return the value of the '<em>Mlprocchainsolutionpattern</em>' reference.
+	 * @see #setMlprocchainsolutionpattern(MLProcChainSolutionPattern)
+	 * @see projetTemplate.ProjetTemplatePackage#getDataAnalysisProblem_Mlprocchainsolutionpattern()
+	 * @model
 	 * @generated
 	 */
-	ProcessingChain getProcessingchain();
+	MLProcChainSolutionPattern getMlprocchainsolutionpattern();
 
 	/**
-	 * Sets the value of the '{@link projetTemplate.DataAnalysisProblem#getProcessingchain <em>Processingchain</em>}' reference.
+	 * Sets the value of the '{@link projetTemplate.DataAnalysisProblem#getMlprocchainsolutionpattern <em>Mlprocchainsolutionpattern</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Processingchain</em>' reference.
-	 * @see #getProcessingchain()
+	 * @param value the new value of the '<em>Mlprocchainsolutionpattern</em>' reference.
+	 * @see #getMlprocchainsolutionpattern()
 	 * @generated
 	 */
-	void setProcessingchain(ProcessingChain value);
+	void setMlprocchainsolutionpattern(MLProcChainSolutionPattern value);
 
 } // DataAnalysisProblem

@@ -55,7 +55,6 @@ public class MLAlgorithmSolutionPatternItemProvider extends ItemProviderAdapter 
 
 			addNamePropertyDescriptor(object);
 			addExplanationPropertyDescriptor(object);
-			addProcessingchaintemplatePropertyDescriptor(object);
 			addMlalgorithmPropertyDescriptor(object);
 			addDatapropertyvaluesetPropertyDescriptor(object);
 		}
@@ -92,23 +91,6 @@ public class MLAlgorithmSolutionPatternItemProvider extends ItemProviderAdapter 
 						"_UI_MLAlgorithmSolutionPattern_type"),
 				ProjetTemplatePackage.Literals.ML_ALGORITHM_SOLUTION_PATTERN__EXPLANATION, true, false, false,
 				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Processingchaintemplate feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addProcessingchaintemplatePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_MLAlgorithmSolutionPattern_processingchaintemplate_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_MLAlgorithmSolutionPattern_processingchaintemplate_feature",
-						"_UI_MLAlgorithmSolutionPattern_type"),
-				ProjetTemplatePackage.Literals.ML_ALGORITHM_SOLUTION_PATTERN__PROCESSINGCHAINTEMPLATE, true, false,
-				true, null, null, null));
 	}
 
 	/**

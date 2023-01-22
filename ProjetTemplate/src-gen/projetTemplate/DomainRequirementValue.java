@@ -15,8 +15,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link projetTemplate.DomainRequirementValue#getExplanation <em>Explanation</em>}</li>
  *   <li>{@link projetTemplate.DomainRequirementValue#getRequirementtype <em>Requirementtype</em>}</li>
- *   <li>{@link projetTemplate.DomainRequirementValue#getExplainability <em>Explainability</em>}</li>
- *   <li>{@link projetTemplate.DomainRequirementValue#getAccuracy <em>Accuracy</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getDomainRequirementValue()
@@ -67,49 +65,5 @@ public interface DomainRequirementValue extends EObject {
 	 * @generated
 	 */
 	void setRequirementtype(RequirementType value);
-
-	/**
-	 * Returns the value of the '<em><b>Explainability</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Explainability</em>' reference.
-	 * @see #setExplainability(Explainability)
-	 * @see projetTemplate.ProjetTemplatePackage#getDomainRequirementValue_Explainability()
-	 * @model
-	 * @generated
-	 */
-	Explainability getExplainability();
-
-	/**
-	 * Sets the value of the '{@link projetTemplate.DomainRequirementValue#getExplainability <em>Explainability</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Explainability</em>' reference.
-	 * @see #getExplainability()
-	 * @generated
-	 */
-	void setExplainability(Explainability value);
-
-	/**
-	 * Returns the value of the '<em><b>Accuracy</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Accuracy</em>' reference.
-	 * @see #setAccuracy(Accuracy)
-	 * @see projetTemplate.ProjetTemplatePackage#getDomainRequirementValue_Accuracy()
-	 * @model
-	 * @generated
-	 */
-	Accuracy getAccuracy();
-
-	/**
-	 * Sets the value of the '{@link projetTemplate.DomainRequirementValue#getAccuracy <em>Accuracy</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Accuracy</em>' reference.
-	 * @see #getAccuracy()
-	 * @generated
-	 */
-	void setAccuracy(Accuracy value);
 
 } // DomainRequirementValue

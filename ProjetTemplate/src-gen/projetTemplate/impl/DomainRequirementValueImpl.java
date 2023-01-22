@@ -10,9 +10,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import projetTemplate.Accuracy;
 import projetTemplate.DomainRequirementValue;
-import projetTemplate.Explainability;
 import projetTemplate.ProjetTemplatePackage;
 import projetTemplate.RequirementType;
 
@@ -26,8 +24,6 @@ import projetTemplate.RequirementType;
  * <ul>
  *   <li>{@link projetTemplate.impl.DomainRequirementValueImpl#getExplanation <em>Explanation</em>}</li>
  *   <li>{@link projetTemplate.impl.DomainRequirementValueImpl#getRequirementtype <em>Requirementtype</em>}</li>
- *   <li>{@link projetTemplate.impl.DomainRequirementValueImpl#getExplainability <em>Explainability</em>}</li>
- *   <li>{@link projetTemplate.impl.DomainRequirementValueImpl#getAccuracy <em>Accuracy</em>}</li>
  * </ul>
  *
  * @generated
@@ -62,26 +58,6 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 	 * @ordered
 	 */
 	protected RequirementType requirementtype;
-
-	/**
-	 * The cached value of the '{@link #getExplainability() <em>Explainability</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExplainability()
-	 * @generated
-	 * @ordered
-	 */
-	protected Explainability explainability;
-
-	/**
-	 * The cached value of the '{@link #getAccuracy() <em>Accuracy</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getAccuracy()
-	 * @generated
-	 * @ordered
-	 */
-	protected Accuracy accuracy;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -171,87 +147,6 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Explainability getExplainability() {
-		if (explainability != null && explainability.eIsProxy()) {
-			InternalEObject oldExplainability = (InternalEObject) explainability;
-			explainability = (Explainability) eResolveProxy(oldExplainability);
-			if (explainability != oldExplainability) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__EXPLAINABILITY, oldExplainability,
-							explainability));
-			}
-		}
-		return explainability;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Explainability basicGetExplainability() {
-		return explainability;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setExplainability(Explainability newExplainability) {
-		Explainability oldExplainability = explainability;
-		explainability = newExplainability;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__EXPLAINABILITY, oldExplainability, explainability));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Accuracy getAccuracy() {
-		if (accuracy != null && accuracy.eIsProxy()) {
-			InternalEObject oldAccuracy = (InternalEObject) accuracy;
-			accuracy = (Accuracy) eResolveProxy(oldAccuracy);
-			if (accuracy != oldAccuracy) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__ACCURACY, oldAccuracy, accuracy));
-			}
-		}
-		return accuracy;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Accuracy basicGetAccuracy() {
-		return accuracy;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAccuracy(Accuracy newAccuracy) {
-		Accuracy oldAccuracy = accuracy;
-		accuracy = newAccuracy;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__ACCURACY, oldAccuracy, accuracy));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -261,14 +156,6 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 			if (resolve)
 				return getRequirementtype();
 			return basicGetRequirementtype();
-		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__EXPLAINABILITY:
-			if (resolve)
-				return getExplainability();
-			return basicGetExplainability();
-		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__ACCURACY:
-			if (resolve)
-				return getAccuracy();
-			return basicGetAccuracy();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -286,12 +173,6 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 			return;
 		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE:
 			setRequirementtype((RequirementType) newValue);
-			return;
-		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__EXPLAINABILITY:
-			setExplainability((Explainability) newValue);
-			return;
-		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__ACCURACY:
-			setAccuracy((Accuracy) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -311,12 +192,6 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE:
 			setRequirementtype((RequirementType) null);
 			return;
-		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__EXPLAINABILITY:
-			setExplainability((Explainability) null);
-			return;
-		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__ACCURACY:
-			setAccuracy((Accuracy) null);
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -333,10 +208,6 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 			return EXPLANATION_EDEFAULT == null ? explanation != null : !EXPLANATION_EDEFAULT.equals(explanation);
 		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE:
 			return requirementtype != null;
-		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__EXPLAINABILITY:
-			return explainability != null;
-		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__ACCURACY:
-			return accuracy != null;
 		}
 		return super.eIsSet(featureID);
 	}

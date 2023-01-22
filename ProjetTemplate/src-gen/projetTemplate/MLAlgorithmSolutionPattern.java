@@ -17,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link projetTemplate.MLAlgorithmSolutionPattern#getName <em>Name</em>}</li>
  *   <li>{@link projetTemplate.MLAlgorithmSolutionPattern#getExplanation <em>Explanation</em>}</li>
- *   <li>{@link projetTemplate.MLAlgorithmSolutionPattern#getProcessingchaintemplate <em>Processingchaintemplate</em>}</li>
  *   <li>{@link projetTemplate.MLAlgorithmSolutionPattern#getMlalgorithm <em>Mlalgorithm</em>}</li>
  *   <li>{@link projetTemplate.MLAlgorithmSolutionPattern#getDatapropertyvalueset <em>Datapropertyvalueset</em>}</li>
  * </ul>
@@ -70,28 +69,6 @@ public interface MLAlgorithmSolutionPattern extends EObject {
 	 * @generated
 	 */
 	void setExplanation(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Processingchaintemplate</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Processingchaintemplate</em>' reference.
-	 * @see #setProcessingchaintemplate(ProcessingChainTemplate)
-	 * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithmSolutionPattern_Processingchaintemplate()
-	 * @model required="true"
-	 * @generated
-	 */
-	ProcessingChainTemplate getProcessingchaintemplate();
-
-	/**
-	 * Sets the value of the '{@link projetTemplate.MLAlgorithmSolutionPattern#getProcessingchaintemplate <em>Processingchaintemplate</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Processingchaintemplate</em>' reference.
-	 * @see #getProcessingchaintemplate()
-	 * @generated
-	 */
-	void setProcessingchaintemplate(ProcessingChainTemplate value);
 
 	/**
 	 * Returns the value of the '<em><b>Mlalgorithm</b></em>' reference.

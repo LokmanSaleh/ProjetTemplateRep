@@ -24,6 +24,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import projetTemplate.DataAnalysisProblemType;
+import projetTemplate.EnumDataAnalysisProblemType;
 import projetTemplate.ProjetTemplateFactory;
 import projetTemplate.ProjetTemplatePackage;
 
@@ -136,7 +137,8 @@ public class DataAnalysisProblemTypeItemProvider extends ItemProviderAdapter imp
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((DataAnalysisProblemType) object).getName();
+		EnumDataAnalysisProblemType labelValue = ((DataAnalysisProblemType) object).getName();
+		String label = labelValue == null ? null : labelValue.toString();
 		return label == null || label.length() == 0 ? getString("_UI_DataAnalysisProblemType_type")
 				: getString("_UI_DataAnalysisProblemType_type") + " " + label;
 	}

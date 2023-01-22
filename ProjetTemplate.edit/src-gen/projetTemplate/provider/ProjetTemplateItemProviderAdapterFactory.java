@@ -671,6 +671,191 @@ public class ProjetTemplateItemProviderAdapterFactory extends ProjetTemplateAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.CollectedDataKnowledgeAboutTemplateConstruction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CollectedDataKnowledgeAboutTemplateConstructionItemProvider collectedDataKnowledgeAboutTemplateConstructionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.CollectedDataKnowledgeAboutTemplateConstruction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCollectedDataKnowledgeAboutTemplateConstructionAdapter() {
+		if (collectedDataKnowledgeAboutTemplateConstructionItemProvider == null) {
+			collectedDataKnowledgeAboutTemplateConstructionItemProvider = new CollectedDataKnowledgeAboutTemplateConstructionItemProvider(
+					this);
+		}
+
+		return collectedDataKnowledgeAboutTemplateConstructionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.Rule} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RuleItemProvider ruleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.Rule}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRuleAdapter() {
+		if (ruleItemProvider == null) {
+			ruleItemProvider = new RuleItemProvider(this);
+		}
+
+		return ruleItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.Condition} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConditionItemProvider conditionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.Condition}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConditionAdapter() {
+		if (conditionItemProvider == null) {
+			conditionItemProvider = new ConditionItemProvider(this);
+		}
+
+		return conditionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.Resultat} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ResultatItemProvider resultatItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.Resultat}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createResultatAdapter() {
+		if (resultatItemProvider == null) {
+			resultatItemProvider = new ResultatItemProvider(this);
+		}
+
+		return resultatItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.variable} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected variableItemProvider variableItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.variable}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createvariableAdapter() {
+		if (variableItemProvider == null) {
+			variableItemProvider = new variableItemProvider(this);
+		}
+
+		return variableItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.Term} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TermItemProvider termItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.Term}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTermAdapter() {
+		if (termItemProvider == null) {
+			termItemProvider = new TermItemProvider(this);
+		}
+
+		return termItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.connector} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected connectorItemProvider connectorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.connector}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createconnectorAdapter() {
+		if (connectorItemProvider == null) {
+			connectorItemProvider = new connectorItemProvider(this);
+		}
+
+		return connectorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.Component} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ComponentItemProvider componentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.Component}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createComponentAdapter() {
+		if (componentItemProvider == null) {
+			componentItemProvider = new ComponentItemProvider(this);
+		}
+
+		return componentItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -821,6 +1006,22 @@ public class ProjetTemplateItemProviderAdapterFactory extends ProjetTemplateAdap
 			explainabilityItemProvider.dispose();
 		if (accuracyItemProvider != null)
 			accuracyItemProvider.dispose();
+		if (collectedDataKnowledgeAboutTemplateConstructionItemProvider != null)
+			collectedDataKnowledgeAboutTemplateConstructionItemProvider.dispose();
+		if (ruleItemProvider != null)
+			ruleItemProvider.dispose();
+		if (conditionItemProvider != null)
+			conditionItemProvider.dispose();
+		if (resultatItemProvider != null)
+			resultatItemProvider.dispose();
+		if (variableItemProvider != null)
+			variableItemProvider.dispose();
+		if (termItemProvider != null)
+			termItemProvider.dispose();
+		if (connectorItemProvider != null)
+			connectorItemProvider.dispose();
+		if (componentItemProvider != null)
+			componentItemProvider.dispose();
 	}
 
 }

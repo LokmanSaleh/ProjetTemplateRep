@@ -197,6 +197,47 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseCollectedDataKnowledgeAboutTemplateConstruction(
+				CollectedDataKnowledgeAboutTemplateConstruction object) {
+			return createCollectedDataKnowledgeAboutTemplateConstructionAdapter();
+		}
+
+		@Override
+		public Adapter caseRule(Rule object) {
+			return createRuleAdapter();
+		}
+
+		@Override
+		public Adapter caseCondition(Condition object) {
+			return createConditionAdapter();
+		}
+
+		@Override
+		public Adapter caseResultat(Resultat object) {
+			return createResultatAdapter();
+		}
+
+		@Override
+		public Adapter casevariable(variable object) {
+			return createvariableAdapter();
+		}
+
+		@Override
+		public Adapter caseTerm(Term object) {
+			return createTermAdapter();
+		}
+
+		@Override
+		public Adapter caseconnector(connector object) {
+			return createconnectorAdapter();
+		}
+
+		@Override
+		public Adapter caseComponent(Component object) {
+			return createComponentAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -576,6 +617,118 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createAccuracyAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.CollectedDataKnowledgeAboutTemplateConstruction <em>Collected Data Knowledge About Template Construction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.CollectedDataKnowledgeAboutTemplateConstruction
+	 * @generated
+	 */
+	public Adapter createCollectedDataKnowledgeAboutTemplateConstructionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.Rule <em>Rule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.Rule
+	 * @generated
+	 */
+	public Adapter createRuleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.Condition <em>Condition</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.Condition
+	 * @generated
+	 */
+	public Adapter createConditionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.Resultat <em>Resultat</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.Resultat
+	 * @generated
+	 */
+	public Adapter createResultatAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.variable <em>variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.variable
+	 * @generated
+	 */
+	public Adapter createvariableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.Term <em>Term</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.Term
+	 * @generated
+	 */
+	public Adapter createTermAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.connector <em>connector</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.connector
+	 * @generated
+	 */
+	public Adapter createconnectorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.Component <em>Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.Component
+	 * @generated
+	 */
+	public Adapter createComponentAdapter() {
 		return null;
 	}
 

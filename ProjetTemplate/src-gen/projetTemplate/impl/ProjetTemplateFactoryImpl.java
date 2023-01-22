@@ -109,6 +109,22 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 			return createExplainability();
 		case ProjetTemplatePackage.ACCURACY:
 			return createAccuracy();
+		case ProjetTemplatePackage.COLLECTED_DATA_KNOWLEDGE_ABOUT_TEMPLATE_CONSTRUCTION:
+			return createCollectedDataKnowledgeAboutTemplateConstruction();
+		case ProjetTemplatePackage.RULE:
+			return createRule();
+		case ProjetTemplatePackage.CONDITION:
+			return createCondition();
+		case ProjetTemplatePackage.RESULTAT:
+			return createResultat();
+		case ProjetTemplatePackage.VARIABLE:
+			return createvariable();
+		case ProjetTemplatePackage.TERM:
+			return createTerm();
+		case ProjetTemplatePackage.CONNECTOR:
+			return createconnector();
+		case ProjetTemplatePackage.COMPONENT:
+			return createComponent();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -128,6 +144,12 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 			return createValues2FromString(eDataType, initialValue);
 		case ProjetTemplatePackage.REQUIREMENT_TYPE_VALUES:
 			return createRequirementTypeValuesFromString(eDataType, initialValue);
+		case ProjetTemplatePackage.ENUM_DATA_ANALYSIS_PROBLEM_TYPE:
+			return createEnumDataAnalysisProblemTypeFromString(eDataType, initialValue);
+		case ProjetTemplatePackage.ENUM_CONNECTOR:
+			return createEnumConnectorFromString(eDataType, initialValue);
+		case ProjetTemplatePackage.NEW_DATA_TYPE6:
+			return createNewDataType6FromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -147,6 +169,12 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 			return convertValues2ToString(eDataType, instanceValue);
 		case ProjetTemplatePackage.REQUIREMENT_TYPE_VALUES:
 			return convertRequirementTypeValuesToString(eDataType, instanceValue);
+		case ProjetTemplatePackage.ENUM_DATA_ANALYSIS_PROBLEM_TYPE:
+			return convertEnumDataAnalysisProblemTypeToString(eDataType, instanceValue);
+		case ProjetTemplatePackage.ENUM_CONNECTOR:
+			return convertEnumConnectorToString(eDataType, instanceValue);
+		case ProjetTemplatePackage.NEW_DATA_TYPE6:
+			return convertNewDataType6ToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -417,6 +445,86 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public CollectedDataKnowledgeAboutTemplateConstruction createCollectedDataKnowledgeAboutTemplateConstruction() {
+		CollectedDataKnowledgeAboutTemplateConstructionImpl collectedDataKnowledgeAboutTemplateConstruction = new CollectedDataKnowledgeAboutTemplateConstructionImpl();
+		return collectedDataKnowledgeAboutTemplateConstruction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Rule createRule() {
+		RuleImpl rule = new RuleImpl();
+		return rule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Condition createCondition() {
+		ConditionImpl condition = new ConditionImpl();
+		return condition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Resultat createResultat() {
+		ResultatImpl resultat = new ResultatImpl();
+		return resultat;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public variable createvariable() {
+		variableImpl variable = new variableImpl();
+		return variable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Term createTerm() {
+		TermImpl term = new TermImpl();
+		return term;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public connector createconnector() {
+		connectorImpl connector = new connectorImpl();
+		return connector;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Component createComponent() {
+		ComponentImpl component = new ComponentImpl();
+		return component;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Values1 createValues1FromString(EDataType eDataType, String initialValue) {
 		Values1 result = Values1.get(initialValue);
 		if (result == null)
@@ -476,6 +584,69 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 	 */
 	public String convertRequirementTypeValuesToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EnumDataAnalysisProblemType createEnumDataAnalysisProblemTypeFromString(EDataType eDataType,
+			String initialValue) {
+		EnumDataAnalysisProblemType result = EnumDataAnalysisProblemType.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEnumDataAnalysisProblemTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EnumConnector createEnumConnectorFromString(EDataType eDataType, String initialValue) {
+		EnumConnector result = EnumConnector.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEnumConnectorToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Object createNewDataType6FromString(EDataType eDataType, String initialValue) {
+		return super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertNewDataType6ToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

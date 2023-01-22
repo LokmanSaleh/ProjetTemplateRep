@@ -256,6 +256,78 @@ public interface ProjetTemplateFactory extends EFactory {
 	Accuracy createAccuracy();
 
 	/**
+	 * Returns a new object of class '<em>Collected Data Knowledge About Template Construction</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Collected Data Knowledge About Template Construction</em>'.
+	 * @generated
+	 */
+	CollectedDataKnowledgeAboutTemplateConstruction createCollectedDataKnowledgeAboutTemplateConstruction();
+
+	/**
+	 * Returns a new object of class '<em>Rule</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Rule</em>'.
+	 * @generated
+	 */
+	Rule createRule();
+
+	/**
+	 * Returns a new object of class '<em>Condition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Condition</em>'.
+	 * @generated
+	 */
+	Condition createCondition();
+
+	/**
+	 * Returns a new object of class '<em>Resultat</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Resultat</em>'.
+	 * @generated
+	 */
+	Resultat createResultat();
+
+	/**
+	 * Returns a new object of class '<em>variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>variable</em>'.
+	 * @generated
+	 */
+	variable createvariable();
+
+	/**
+	 * Returns a new object of class '<em>Term</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Term</em>'.
+	 * @generated
+	 */
+	Term createTerm();
+
+	/**
+	 * Returns a new object of class '<em>connector</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>connector</em>'.
+	 * @generated
+	 */
+	connector createconnector();
+
+	/**
+	 * Returns a new object of class '<em>Component</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Component</em>'.
+	 * @generated
+	 */
+	Component createComponent();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

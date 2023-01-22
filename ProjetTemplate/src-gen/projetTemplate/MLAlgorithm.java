@@ -4,8 +4,6 @@ package projetTemplate;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>ML Algorithm</b></em>'.
@@ -15,38 +13,16 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link projetTemplate.MLAlgorithm#getName <em>Name</em>}</li>
  *   <li>{@link projetTemplate.MLAlgorithm#getSelectioncriterionvalueset <em>Selectioncriterionvalueset</em>}</li>
  *   <li>{@link projetTemplate.MLAlgorithm#getSelectioncriterionvalue <em>Selectioncriterionvalue</em>}</li>
+ *   <li>{@link projetTemplate.MLAlgorithm#getProcessingchaintemplate <em>Processingchaintemplate</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithm()
  * @model
  * @generated
  */
-public interface MLAlgorithm extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithm_Name()
-	 * @model
-	 * @generated
-	 */
-	String getName();
-
-	/**
-	 * Sets the value of the '{@link projetTemplate.MLAlgorithm#getName <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
-	 * @generated
-	 */
-	void setName(String value);
-
+public interface MLAlgorithm extends Component {
 	/**
 	 * Returns the value of the '<em><b>Selectioncriterionvalueset</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -80,5 +56,27 @@ public interface MLAlgorithm extends EObject {
 	 * @generated
 	 */
 	EList<SelectionCriterionValue> getSelectioncriterionvalue();
+
+	/**
+	 * Returns the value of the '<em><b>Processingchaintemplate</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Processingchaintemplate</em>' reference.
+	 * @see #setProcessingchaintemplate(ProcessingChainTemplate)
+	 * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithm_Processingchaintemplate()
+	 * @model required="true"
+	 * @generated
+	 */
+	ProcessingChainTemplate getProcessingchaintemplate();
+
+	/**
+	 * Sets the value of the '{@link projetTemplate.MLAlgorithm#getProcessingchaintemplate <em>Processingchaintemplate</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Processingchaintemplate</em>' reference.
+	 * @see #getProcessingchaintemplate()
+	 * @generated
+	 */
+	void setProcessingchaintemplate(ProcessingChainTemplate value);
 
 } // MLAlgorithm

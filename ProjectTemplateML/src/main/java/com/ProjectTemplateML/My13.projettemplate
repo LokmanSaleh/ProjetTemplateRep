@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:projetTemplate="http://www.example.org/projetTemplate">
+  <projetTemplate:MLProject dataanalysisproblem="/2" domainproblem="/1"/>
+  <projetTemplate:DomainProblem/>
+  <projetTemplate:DataAnalysisProblem mlprocchainsolutionpattern="/3"/>
+  <projetTemplate:MLProcChainSolutionPattern processingchain="/6" dataanalysisproblemtype="/5" SelectedProcessingChainTemplateForTheMLAlgorithm="/16"/>
+  <projetTemplate:ProcessingChainTemplate/>
+  <projetTemplate:DataAnalysisProblemType/>
+  <projetTemplate:ProcessingChain mlalgorithm="/8"/>
+  <projetTemplate:MLAlgorithm/>
+  <projetTemplate:MLAlgorithm processingchaintemplate="/9"/>
+  <projetTemplate:ProcessingChainTemplate name="Chaine1" author="Lokman" extendedbpmnmodel="/13" component="/11 /12"/>
+  <projetTemplate:MLAlgorithm/>
+  <projetTemplate:Component name="Component1"/>
+  <projetTemplate:Component name="component2"/>
+  <projetTemplate:ExtendedBPMNModel name="abc" author="avc"/>
+  <projetTemplate:ProcessingChainTemplate/>
+  <projetTemplate:ProcessingChainTemplate/>
+  <projetTemplate:ProcessingChainTemplate/>
+  <projetTemplate:ExtendedBPMNModel/>
+</xmi:XMI>

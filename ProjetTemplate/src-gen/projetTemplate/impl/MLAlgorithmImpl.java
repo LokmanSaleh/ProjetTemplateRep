@@ -12,11 +12,11 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 import projetTemplate.MLAlgorithm;
+import projetTemplate.ProcessingChainTemplate;
 import projetTemplate.ProjetTemplatePackage;
 import projetTemplate.SelectionCriterionValue;
 import projetTemplate.SelectionCriterionValueSet;
@@ -29,34 +29,14 @@ import projetTemplate.SelectionCriterionValueSet;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link projetTemplate.impl.MLAlgorithmImpl#getName <em>Name</em>}</li>
  *   <li>{@link projetTemplate.impl.MLAlgorithmImpl#getSelectioncriterionvalueset <em>Selectioncriterionvalueset</em>}</li>
  *   <li>{@link projetTemplate.impl.MLAlgorithmImpl#getSelectioncriterionvalue <em>Selectioncriterionvalue</em>}</li>
+ *   <li>{@link projetTemplate.impl.MLAlgorithmImpl#getProcessingchaintemplate <em>Processingchaintemplate</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLAlgorithm {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
+public class MLAlgorithmImpl extends ComponentImpl implements MLAlgorithm {
 	/**
 	 * The cached value of the '{@link #getSelectioncriterionvalueset() <em>Selectioncriterionvalueset</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -78,6 +58,16 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 	protected EList<SelectionCriterionValue> selectioncriterionvalue;
 
 	/**
+	 * The cached value of the '{@link #getProcessingchaintemplate() <em>Processingchaintemplate</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getProcessingchaintemplate()
+	 * @generated
+	 * @ordered
+	 */
+	protected ProcessingChainTemplate processingchaintemplate;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -94,28 +84,6 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 	@Override
 	protected EClass eStaticClass() {
 		return ProjetTemplatePackage.Literals.ML_ALGORITHM;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProjetTemplatePackage.ML_ALGORITHM__NAME, oldName,
-					name));
 	}
 
 	/**
@@ -178,17 +146,61 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ProcessingChainTemplate getProcessingchaintemplate() {
+		if (processingchaintemplate != null && processingchaintemplate.eIsProxy()) {
+			InternalEObject oldProcessingchaintemplate = (InternalEObject) processingchaintemplate;
+			processingchaintemplate = (ProcessingChainTemplate) eResolveProxy(oldProcessingchaintemplate);
+			if (processingchaintemplate != oldProcessingchaintemplate) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							ProjetTemplatePackage.ML_ALGORITHM__PROCESSINGCHAINTEMPLATE, oldProcessingchaintemplate,
+							processingchaintemplate));
+			}
+		}
+		return processingchaintemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ProcessingChainTemplate basicGetProcessingchaintemplate() {
+		return processingchaintemplate;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setProcessingchaintemplate(ProcessingChainTemplate newProcessingchaintemplate) {
+		ProcessingChainTemplate oldProcessingchaintemplate = processingchaintemplate;
+		processingchaintemplate = newProcessingchaintemplate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					ProjetTemplatePackage.ML_ALGORITHM__PROCESSINGCHAINTEMPLATE, oldProcessingchaintemplate,
+					processingchaintemplate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ProjetTemplatePackage.ML_ALGORITHM__NAME:
-			return getName();
 		case ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUESET:
 			if (resolve)
 				return getSelectioncriterionvalueset();
 			return basicGetSelectioncriterionvalueset();
 		case ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUE:
 			return getSelectioncriterionvalue();
+		case ProjetTemplatePackage.ML_ALGORITHM__PROCESSINGCHAINTEMPLATE:
+			if (resolve)
+				return getProcessingchaintemplate();
+			return basicGetProcessingchaintemplate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -202,15 +214,15 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ProjetTemplatePackage.ML_ALGORITHM__NAME:
-			setName((String) newValue);
-			return;
 		case ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUESET:
 			setSelectioncriterionvalueset((SelectionCriterionValueSet) newValue);
 			return;
 		case ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUE:
 			getSelectioncriterionvalue().clear();
 			getSelectioncriterionvalue().addAll((Collection<? extends SelectionCriterionValue>) newValue);
+			return;
+		case ProjetTemplatePackage.ML_ALGORITHM__PROCESSINGCHAINTEMPLATE:
+			setProcessingchaintemplate((ProcessingChainTemplate) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -224,14 +236,14 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ProjetTemplatePackage.ML_ALGORITHM__NAME:
-			setName(NAME_EDEFAULT);
-			return;
 		case ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUESET:
 			setSelectioncriterionvalueset((SelectionCriterionValueSet) null);
 			return;
 		case ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUE:
 			getSelectioncriterionvalue().clear();
+			return;
+		case ProjetTemplatePackage.ML_ALGORITHM__PROCESSINGCHAINTEMPLATE:
+			setProcessingchaintemplate((ProcessingChainTemplate) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -245,31 +257,14 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ProjetTemplatePackage.ML_ALGORITHM__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUESET:
 			return selectioncriterionvalueset != null;
 		case ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUE:
 			return selectioncriterionvalue != null && !selectioncriterionvalue.isEmpty();
+		case ProjetTemplatePackage.ML_ALGORITHM__PROCESSINGCHAINTEMPLATE:
+			return processingchaintemplate != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy())
-			return super.toString();
-
-		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //MLAlgorithmImpl

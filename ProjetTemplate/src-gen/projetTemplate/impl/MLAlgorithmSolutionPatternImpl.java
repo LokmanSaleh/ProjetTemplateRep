@@ -19,7 +19,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import projetTemplate.DataPropertyValueSet;
 import projetTemplate.MLAlgorithm;
 import projetTemplate.MLAlgorithmSolutionPattern;
-import projetTemplate.ProcessingChainTemplate;
 import projetTemplate.ProjetTemplatePackage;
 
 /**
@@ -32,7 +31,6 @@ import projetTemplate.ProjetTemplatePackage;
  * <ul>
  *   <li>{@link projetTemplate.impl.MLAlgorithmSolutionPatternImpl#getName <em>Name</em>}</li>
  *   <li>{@link projetTemplate.impl.MLAlgorithmSolutionPatternImpl#getExplanation <em>Explanation</em>}</li>
- *   <li>{@link projetTemplate.impl.MLAlgorithmSolutionPatternImpl#getProcessingchaintemplate <em>Processingchaintemplate</em>}</li>
  *   <li>{@link projetTemplate.impl.MLAlgorithmSolutionPatternImpl#getMlalgorithm <em>Mlalgorithm</em>}</li>
  *   <li>{@link projetTemplate.impl.MLAlgorithmSolutionPatternImpl#getDatapropertyvalueset <em>Datapropertyvalueset</em>}</li>
  * </ul>
@@ -79,16 +77,6 @@ public class MLAlgorithmSolutionPatternImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected String explanation = EXPLANATION_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getProcessingchaintemplate() <em>Processingchaintemplate</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProcessingchaintemplate()
-	 * @generated
-	 * @ordered
-	 */
-	protected ProcessingChainTemplate processingchaintemplate;
 
 	/**
 	 * The cached value of the '{@link #getMlalgorithm() <em>Mlalgorithm</em>}' reference.
@@ -178,48 +166,6 @@ public class MLAlgorithmSolutionPatternImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProcessingChainTemplate getProcessingchaintemplate() {
-		if (processingchaintemplate != null && processingchaintemplate.eIsProxy()) {
-			InternalEObject oldProcessingchaintemplate = (InternalEObject) processingchaintemplate;
-			processingchaintemplate = (ProcessingChainTemplate) eResolveProxy(oldProcessingchaintemplate);
-			if (processingchaintemplate != oldProcessingchaintemplate) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__PROCESSINGCHAINTEMPLATE,
-							oldProcessingchaintemplate, processingchaintemplate));
-			}
-		}
-		return processingchaintemplate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ProcessingChainTemplate basicGetProcessingchaintemplate() {
-		return processingchaintemplate;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setProcessingchaintemplate(ProcessingChainTemplate newProcessingchaintemplate) {
-		ProcessingChainTemplate oldProcessingchaintemplate = processingchaintemplate;
-		processingchaintemplate = newProcessingchaintemplate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__PROCESSINGCHAINTEMPLATE,
-					oldProcessingchaintemplate, processingchaintemplate));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public MLAlgorithm getMlalgorithm() {
 		if (mlalgorithm != null && mlalgorithm.eIsProxy()) {
 			InternalEObject oldMlalgorithm = (InternalEObject) mlalgorithm;
@@ -281,10 +227,6 @@ public class MLAlgorithmSolutionPatternImpl extends MinimalEObjectImpl.Container
 			return getName();
 		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__EXPLANATION:
 			return getExplanation();
-		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__PROCESSINGCHAINTEMPLATE:
-			if (resolve)
-				return getProcessingchaintemplate();
-			return basicGetProcessingchaintemplate();
 		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__MLALGORITHM:
 			if (resolve)
 				return getMlalgorithm();
@@ -309,9 +251,6 @@ public class MLAlgorithmSolutionPatternImpl extends MinimalEObjectImpl.Container
 			return;
 		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__EXPLANATION:
 			setExplanation((String) newValue);
-			return;
-		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__PROCESSINGCHAINTEMPLATE:
-			setProcessingchaintemplate((ProcessingChainTemplate) newValue);
 			return;
 		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__MLALGORITHM:
 			setMlalgorithm((MLAlgorithm) newValue);
@@ -338,9 +277,6 @@ public class MLAlgorithmSolutionPatternImpl extends MinimalEObjectImpl.Container
 		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__EXPLANATION:
 			setExplanation(EXPLANATION_EDEFAULT);
 			return;
-		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__PROCESSINGCHAINTEMPLATE:
-			setProcessingchaintemplate((ProcessingChainTemplate) null);
-			return;
 		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__MLALGORITHM:
 			setMlalgorithm((MLAlgorithm) null);
 			return;
@@ -363,8 +299,6 @@ public class MLAlgorithmSolutionPatternImpl extends MinimalEObjectImpl.Container
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__EXPLANATION:
 			return EXPLANATION_EDEFAULT == null ? explanation != null : !EXPLANATION_EDEFAULT.equals(explanation);
-		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__PROCESSINGCHAINTEMPLATE:
-			return processingchaintemplate != null;
 		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__MLALGORITHM:
 			return mlalgorithm != null;
 		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__DATAPROPERTYVALUESET:

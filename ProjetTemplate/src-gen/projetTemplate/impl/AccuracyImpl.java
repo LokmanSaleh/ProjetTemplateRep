@@ -7,7 +7,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import projetTemplate.Accuracy;
 import projetTemplate.ProjetTemplatePackage;
@@ -26,7 +25,7 @@ import projetTemplate.Values2;
  *
  * @generated
  */
-public class AccuracyImpl extends MinimalEObjectImpl.Container implements Accuracy {
+public class AccuracyImpl extends DomainRequirementValueImpl implements Accuracy {
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
