@@ -315,6 +315,100 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case ProjetTemplatePackage.DATA_CLEANING: {
+			DataCleaning dataCleaning = (DataCleaning) theEObject;
+			T result = caseDataCleaning(dataCleaning);
+			if (result == null)
+				result = caseComponent(dataCleaning);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjetTemplatePackage.DATA_PRETRAITEMENT: {
+			DataPretraitement dataPretraitement = (DataPretraitement) theEObject;
+			T result = caseDataPretraitement(dataPretraitement);
+			if (result == null)
+				result = caseComponent(dataPretraitement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjetTemplatePackage.FEATURE_SELECTION: {
+			FeatureSelection featureSelection = (FeatureSelection) theEObject;
+			T result = caseFeatureSelection(featureSelection);
+			if (result == null)
+				result = caseComponent(featureSelection);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjetTemplatePackage.FEATURE_CONSTRUCTION: {
+			FeatureConstruction featureConstruction = (FeatureConstruction) theEObject;
+			T result = caseFeatureConstruction(featureConstruction);
+			if (result == null)
+				result = caseComponent(featureConstruction);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjetTemplatePackage.POST_TREATEMENT: {
+			PostTreatement postTreatement = (PostTreatement) theEObject;
+			T result = casePostTreatement(postTreatement);
+			if (result == null)
+				result = caseComponent(postTreatement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjetTemplatePackage.DEPLOYEMENT: {
+			Deployement deployement = (Deployement) theEObject;
+			T result = caseDeployement(deployement);
+			if (result == null)
+				result = caseComponent(deployement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjetTemplatePackage.REMOVE_UNCESSARY_FILEDS: {
+			RemoveUncessaryFileds removeUncessaryFileds = (RemoveUncessaryFileds) theEObject;
+			T result = caseRemoveUncessaryFileds(removeUncessaryFileds);
+			if (result == null)
+				result = caseDataCleaning(removeUncessaryFileds);
+			if (result == null)
+				result = caseComponent(removeUncessaryFileds);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjetTemplatePackage.CONVERSION: {
+			Conversion conversion = (Conversion) theEObject;
+			T result = caseConversion(conversion);
+			if (result == null)
+				result = caseDataPretraitement(conversion);
+			if (result == null)
+				result = caseComponent(conversion);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjetTemplatePackage.NOISE_TREATEMENT: {
+			NoiseTreatement noiseTreatement = (NoiseTreatement) theEObject;
+			T result = caseNoiseTreatement(noiseTreatement);
+			if (result == null)
+				result = caseDataPretraitement(noiseTreatement);
+			if (result == null)
+				result = caseComponent(noiseTreatement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjetTemplatePackage.MISSING_VALUE_TREATEMENT: {
+			MissingValueTreatement missingValueTreatement = (MissingValueTreatement) theEObject;
+			T result = caseMissingValueTreatement(missingValueTreatement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -828,6 +922,156 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseComponent(Component object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Data Cleaning</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Data Cleaning</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDataCleaning(DataCleaning object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Data Pretraitement</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Data Pretraitement</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDataPretraitement(DataPretraitement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Feature Selection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Feature Selection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFeatureSelection(FeatureSelection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Feature Construction</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Feature Construction</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseFeatureConstruction(FeatureConstruction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Post Treatement</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Post Treatement</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePostTreatement(PostTreatement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Deployement</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Deployement</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDeployement(Deployement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Remove Uncessary Fileds</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Remove Uncessary Fileds</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRemoveUncessaryFileds(RemoveUncessaryFileds object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Conversion</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Conversion</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseConversion(Conversion object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Noise Treatement</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Noise Treatement</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNoiseTreatement(NoiseTreatement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Missing Value Treatement</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Missing Value Treatement</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMissingValueTreatement(MissingValueTreatement object) {
 		return null;
 	}
 

@@ -125,6 +125,26 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 			return createconnector();
 		case ProjetTemplatePackage.COMPONENT:
 			return createComponent();
+		case ProjetTemplatePackage.DATA_CLEANING:
+			return createDataCleaning();
+		case ProjetTemplatePackage.DATA_PRETRAITEMENT:
+			return createDataPretraitement();
+		case ProjetTemplatePackage.FEATURE_SELECTION:
+			return createFeatureSelection();
+		case ProjetTemplatePackage.FEATURE_CONSTRUCTION:
+			return createFeatureConstruction();
+		case ProjetTemplatePackage.POST_TREATEMENT:
+			return createPostTreatement();
+		case ProjetTemplatePackage.DEPLOYEMENT:
+			return createDeployement();
+		case ProjetTemplatePackage.REMOVE_UNCESSARY_FILEDS:
+			return createRemoveUncessaryFileds();
+		case ProjetTemplatePackage.CONVERSION:
+			return createConversion();
+		case ProjetTemplatePackage.NOISE_TREATEMENT:
+			return createNoiseTreatement();
+		case ProjetTemplatePackage.MISSING_VALUE_TREATEMENT:
+			return createMissingValueTreatement();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -148,8 +168,14 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 			return createEnumDataAnalysisProblemTypeFromString(eDataType, initialValue);
 		case ProjetTemplatePackage.ENUM_CONNECTOR:
 			return createEnumConnectorFromString(eDataType, initialValue);
-		case ProjetTemplatePackage.NEW_DATA_TYPE6:
-			return createNewDataType6FromString(eDataType, initialValue);
+		case ProjetTemplatePackage.CONVERSION_ENUM:
+			return createConversionEnumFromString(eDataType, initialValue);
+		case ProjetTemplatePackage.REMOVE_UNCESSARY_FILEDS_ENUM:
+			return createRemoveUncessaryFiledsEnumFromString(eDataType, initialValue);
+		case ProjetTemplatePackage.NOISE_TREATEMENT_ENUM:
+			return createNoiseTreatementEnumFromString(eDataType, initialValue);
+		case ProjetTemplatePackage.MISSING_VALUE_TREATEMENT_ENUM:
+			return createMissingValueTreatementEnumFromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -173,8 +199,14 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 			return convertEnumDataAnalysisProblemTypeToString(eDataType, instanceValue);
 		case ProjetTemplatePackage.ENUM_CONNECTOR:
 			return convertEnumConnectorToString(eDataType, instanceValue);
-		case ProjetTemplatePackage.NEW_DATA_TYPE6:
-			return convertNewDataType6ToString(eDataType, instanceValue);
+		case ProjetTemplatePackage.CONVERSION_ENUM:
+			return convertConversionEnumToString(eDataType, instanceValue);
+		case ProjetTemplatePackage.REMOVE_UNCESSARY_FILEDS_ENUM:
+			return convertRemoveUncessaryFiledsEnumToString(eDataType, instanceValue);
+		case ProjetTemplatePackage.NOISE_TREATEMENT_ENUM:
+			return convertNoiseTreatementEnumToString(eDataType, instanceValue);
+		case ProjetTemplatePackage.MISSING_VALUE_TREATEMENT_ENUM:
+			return convertMissingValueTreatementEnumToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -525,6 +557,106 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public DataCleaning createDataCleaning() {
+		DataCleaningImpl dataCleaning = new DataCleaningImpl();
+		return dataCleaning;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DataPretraitement createDataPretraitement() {
+		DataPretraitementImpl dataPretraitement = new DataPretraitementImpl();
+		return dataPretraitement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FeatureSelection createFeatureSelection() {
+		FeatureSelectionImpl featureSelection = new FeatureSelectionImpl();
+		return featureSelection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public FeatureConstruction createFeatureConstruction() {
+		FeatureConstructionImpl featureConstruction = new FeatureConstructionImpl();
+		return featureConstruction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PostTreatement createPostTreatement() {
+		PostTreatementImpl postTreatement = new PostTreatementImpl();
+		return postTreatement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Deployement createDeployement() {
+		DeployementImpl deployement = new DeployementImpl();
+		return deployement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RemoveUncessaryFileds createRemoveUncessaryFileds() {
+		RemoveUncessaryFiledsImpl removeUncessaryFileds = new RemoveUncessaryFiledsImpl();
+		return removeUncessaryFileds;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Conversion createConversion() {
+		ConversionImpl conversion = new ConversionImpl();
+		return conversion;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NoiseTreatement createNoiseTreatement() {
+		NoiseTreatementImpl noiseTreatement = new NoiseTreatementImpl();
+		return noiseTreatement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MissingValueTreatement createMissingValueTreatement() {
+		MissingValueTreatementImpl missingValueTreatement = new MissingValueTreatementImpl();
+		return missingValueTreatement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Values1 createValues1FromString(EDataType eDataType, String initialValue) {
 		Values1 result = Values1.get(initialValue);
 		if (result == null)
@@ -636,8 +768,12 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Object createNewDataType6FromString(EDataType eDataType, String initialValue) {
-		return super.createFromString(eDataType, initialValue);
+	public ConversionEnum createConversionEnumFromString(EDataType eDataType, String initialValue) {
+		ConversionEnum result = ConversionEnum.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
 	}
 
 	/**
@@ -645,8 +781,76 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertNewDataType6ToString(EDataType eDataType, Object instanceValue) {
-		return super.convertToString(eDataType, instanceValue);
+	public String convertConversionEnumToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RemoveUncessaryFiledsEnum createRemoveUncessaryFiledsEnumFromString(EDataType eDataType,
+			String initialValue) {
+		RemoveUncessaryFiledsEnum result = RemoveUncessaryFiledsEnum.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertRemoveUncessaryFiledsEnumToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NoiseTreatementEnum createNoiseTreatementEnumFromString(EDataType eDataType, String initialValue) {
+		NoiseTreatementEnum result = NoiseTreatementEnum.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertNoiseTreatementEnumToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MissingValueTreatementEnum createMissingValueTreatementEnumFromString(EDataType eDataType,
+			String initialValue) {
+		MissingValueTreatementEnum result = MissingValueTreatementEnum.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMissingValueTreatementEnumToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

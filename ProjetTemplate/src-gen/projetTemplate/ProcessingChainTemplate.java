@@ -19,7 +19,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link projetTemplate.ProcessingChainTemplate#getAuthor <em>Author</em>}</li>
  *   <li>{@link projetTemplate.ProcessingChainTemplate#getExtendedbpmnmodel <em>Extendedbpmnmodel</em>}</li>
  *   <li>{@link projetTemplate.ProcessingChainTemplate#getComponent <em>Component</em>}</li>
- *   <li>{@link projetTemplate.ProcessingChainTemplate#getMlprocchainsolutionpattern <em>Mlprocchainsolutionpattern</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getProcessingChainTemplate()
@@ -104,28 +103,6 @@ public interface ProcessingChainTemplate extends EObject {
 	 * @generated
 	 */
 	EList<Component> getComponent();
-
-	/**
-	 * Returns the value of the '<em><b>Mlprocchainsolutionpattern</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mlprocchainsolutionpattern</em>' reference.
-	 * @see #setMlprocchainsolutionpattern(MLProcChainSolutionPattern)
-	 * @see projetTemplate.ProjetTemplatePackage#getProcessingChainTemplate_Mlprocchainsolutionpattern()
-	 * @model
-	 * @generated
-	 */
-	MLProcChainSolutionPattern getMlprocchainsolutionpattern();
-
-	/**
-	 * Sets the value of the '{@link projetTemplate.ProcessingChainTemplate#getMlprocchainsolutionpattern <em>Mlprocchainsolutionpattern</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Mlprocchainsolutionpattern</em>' reference.
-	 * @see #getMlprocchainsolutionpattern()
-	 * @generated
-	 */
-	void setMlprocchainsolutionpattern(MLProcChainSolutionPattern value);
 
 	/**
 	 * <!-- begin-user-doc -->

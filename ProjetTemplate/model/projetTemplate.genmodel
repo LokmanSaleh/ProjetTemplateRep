@@ -34,7 +34,22 @@
       <genEnumLiterals ecoreEnumLiteral="projetTemplate.ecore#//EnumConnector/ACCOLAD_OUVERT"/>
       <genEnumLiterals ecoreEnumLiteral="projetTemplate.ecore#//EnumConnector/ACCOLAD_FERME"/>
     </genEnums>
-    <genDataTypes ecoreDataType="projetTemplate.ecore#//NewDataType6"/>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="projetTemplate.ecore#//ConversionEnum">
+      <genEnumLiterals ecoreEnumLiteral="projetTemplate.ecore#//ConversionEnum/convertCategoricalAttributesToContinue"/>
+      <genEnumLiterals ecoreEnumLiteral="projetTemplate.ecore#//ConversionEnum/convertContinueAttributesToCategorical"/>
+      <genEnumLiterals ecoreEnumLiteral="projetTemplate.ecore#//ConversionEnum/detectAttributeType"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="projetTemplate.ecore#//RemoveUncessaryFiledsEnum">
+      <genEnumLiterals ecoreEnumLiteral="projetTemplate.ecore#//RemoveUncessaryFiledsEnum/removeIDs"/>
+      <genEnumLiterals ecoreEnumLiteral="projetTemplate.ecore#//RemoveUncessaryFiledsEnum/removeSpecialCharacters"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="projetTemplate.ecore#//NoiseTreatementEnum">
+      <genEnumLiterals ecoreEnumLiteral="projetTemplate.ecore#//NoiseTreatementEnum/removeNoiseFromFileds"/>
+    </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="projetTemplate.ecore#//MissingValueTreatementEnum">
+      <genEnumLiterals ecoreEnumLiteral="projetTemplate.ecore#//MissingValueTreatementEnum/ReplaceByMean"/>
+      <genEnumLiterals ecoreEnumLiteral="projetTemplate.ecore#//MissingValueTreatementEnum/ReplaceByZero"/>
+    </genEnums>
     <genClasses ecoreClass="projetTemplate.ecore#//DomainProblem">
       <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//DomainProblem/text"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//DomainProblem/DomainRequirementValue"/>
@@ -133,7 +148,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//ProcessingChainTemplate/author"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//ProcessingChainTemplate/extendedbpmnmodel"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//ProcessingChainTemplate/component"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//ProcessingChainTemplate/mlprocchainsolutionpattern"/>
       <genOperations ecoreOperation="projetTemplate.ecore#//ProcessingChainTemplate/ReducedItUsingknwoledge">
         <genParameters ecoreParameter="projetTemplate.ecore#//ProcessingChainTemplate/ReducedItUsingknwoledge/param1"/>
       </genOperations>
@@ -198,5 +212,27 @@
     <genClasses ecoreClass="projetTemplate.ecore#//Component">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//Component/name"/>
     </genClasses>
+    <genClasses ecoreClass="projetTemplate.ecore#//DataCleaning"/>
+    <genClasses ecoreClass="projetTemplate.ecore#//DataPretraitement"/>
+    <genClasses ecoreClass="projetTemplate.ecore#//FeatureSelection"/>
+    <genClasses ecoreClass="projetTemplate.ecore#//FeatureConstruction"/>
+    <genClasses ecoreClass="projetTemplate.ecore#//PostTreatement"/>
+    <genClasses ecoreClass="projetTemplate.ecore#//Deployement"/>
+    <genClasses ecoreClass="projetTemplate.ecore#//RemoveUncessaryFileds">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//RemoveUncessaryFileds/method"/>
+      <genOperations ecoreOperation="projetTemplate.ecore#//RemoveUncessaryFileds/removeIDs"/>
+      <genOperations ecoreOperation="projetTemplate.ecore#//RemoveUncessaryFileds/removeSpecialCharacters"/>
+    </genClasses>
+    <genClasses ecoreClass="projetTemplate.ecore#//Conversion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//Conversion/method"/>
+      <genOperations ecoreOperation="projetTemplate.ecore#//Conversion/convertCategoricalAttributesToContinue"/>
+      <genOperations ecoreOperation="projetTemplate.ecore#//Conversion/convertContinueAttributesToCategorical"/>
+      <genOperations ecoreOperation="projetTemplate.ecore#//Conversion/detectAttributeType"/>
+    </genClasses>
+    <genClasses ecoreClass="projetTemplate.ecore#//NoiseTreatement">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//NoiseTreatement/method"/>
+      <genOperations ecoreOperation="projetTemplate.ecore#//NoiseTreatement/removeNoiseFromFileds"/>
+    </genClasses>
+    <genClasses ecoreClass="projetTemplate.ecore#//MissingValueTreatement"/>
   </genPackages>
 </genmodel:GenModel>

@@ -328,6 +328,96 @@ public interface ProjetTemplateFactory extends EFactory {
 	Component createComponent();
 
 	/**
+	 * Returns a new object of class '<em>Data Cleaning</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Data Cleaning</em>'.
+	 * @generated
+	 */
+	DataCleaning createDataCleaning();
+
+	/**
+	 * Returns a new object of class '<em>Data Pretraitement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Data Pretraitement</em>'.
+	 * @generated
+	 */
+	DataPretraitement createDataPretraitement();
+
+	/**
+	 * Returns a new object of class '<em>Feature Selection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Feature Selection</em>'.
+	 * @generated
+	 */
+	FeatureSelection createFeatureSelection();
+
+	/**
+	 * Returns a new object of class '<em>Feature Construction</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Feature Construction</em>'.
+	 * @generated
+	 */
+	FeatureConstruction createFeatureConstruction();
+
+	/**
+	 * Returns a new object of class '<em>Post Treatement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Post Treatement</em>'.
+	 * @generated
+	 */
+	PostTreatement createPostTreatement();
+
+	/**
+	 * Returns a new object of class '<em>Deployement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Deployement</em>'.
+	 * @generated
+	 */
+	Deployement createDeployement();
+
+	/**
+	 * Returns a new object of class '<em>Remove Uncessary Fileds</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Remove Uncessary Fileds</em>'.
+	 * @generated
+	 */
+	RemoveUncessaryFileds createRemoveUncessaryFileds();
+
+	/**
+	 * Returns a new object of class '<em>Conversion</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Conversion</em>'.
+	 * @generated
+	 */
+	Conversion createConversion();
+
+	/**
+	 * Returns a new object of class '<em>Noise Treatement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Noise Treatement</em>'.
+	 * @generated
+	 */
+	NoiseTreatement createNoiseTreatement();
+
+	/**
+	 * Returns a new object of class '<em>Missing Value Treatement</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Missing Value Treatement</em>'.
+	 * @generated
+	 */
+	MissingValueTreatement createMissingValueTreatement();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

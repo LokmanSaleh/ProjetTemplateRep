@@ -127,8 +127,6 @@
         eType="#//ExtendedBPMNModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="component" lowerBound="1"
         upperBound="-1" eType="#//Component"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="mlprocchainsolutionpattern"
-        eType="#//MLProcChainSolutionPattern"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MLAlgorithmSolutionPattern">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -227,5 +225,42 @@
   <eClassifiers xsi:type="ecore:EClass" name="Component">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="NewDataType6" instanceTypeName="newDataType6"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataCleaning" eSuperTypes="#//Component"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DataPretraitement" eSuperTypes="#//Component"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FeatureSelection" eSuperTypes="#//Component"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FeatureConstruction" eSuperTypes="#//Component"/>
+  <eClassifiers xsi:type="ecore:EClass" name="PostTreatement" eSuperTypes="#//Component"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Deployement" eSuperTypes="#//Component"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RemoveUncessaryFileds" eSuperTypes="#//DataCleaning">
+    <eOperations name="removeIDs"/>
+    <eOperations name="removeSpecialCharacters"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" eType="#//RemoveUncessaryFiledsEnum"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Conversion" eSuperTypes="#//DataPretraitement">
+    <eOperations name="convertCategoricalAttributesToContinue"/>
+    <eOperations name="convertContinueAttributesToCategorical"/>
+    <eOperations name="detectAttributeType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" eType="#//ConversionEnum"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NoiseTreatement" eSuperTypes="#//DataPretraitement">
+    <eOperations name="removeNoiseFromFileds"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="method" eType="#//NoiseTreatementEnum"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MissingValueTreatement"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="ConversionEnum">
+    <eLiterals name="convertCategoricalAttributesToContinue" literal="convertCategoricalAttributesToContinue"/>
+    <eLiterals name="convertContinueAttributesToCategorical" value="1"/>
+    <eLiterals name="detectAttributeType" value="2" literal="detectAttributeType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="RemoveUncessaryFiledsEnum">
+    <eLiterals name="removeIDs"/>
+    <eLiterals name="removeSpecialCharacters" value="1" literal="removeSpecialCharacters"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="NoiseTreatementEnum">
+    <eLiterals name="removeNoiseFromFileds" literal="removeNoiseFromFileds"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MissingValueTreatementEnum">
+    <eLiterals name="ReplaceByMean"/>
+    <eLiterals name="ReplaceByZero" value="1"/>
+  </eClassifiers>
 </ecore:EPackage>

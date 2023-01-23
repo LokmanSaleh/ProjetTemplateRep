@@ -21,7 +21,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import projetTemplate.CollectedDataKnowledgeAboutTemplateConstruction;
 import projetTemplate.Component;
 import projetTemplate.ExtendedBPMNModel;
-import projetTemplate.MLProcChainSolutionPattern;
 import projetTemplate.ProcessingChainTemplate;
 import projetTemplate.ProjetTemplatePackage;
 
@@ -37,7 +36,6 @@ import projetTemplate.ProjetTemplatePackage;
  *   <li>{@link projetTemplate.impl.ProcessingChainTemplateImpl#getAuthor <em>Author</em>}</li>
  *   <li>{@link projetTemplate.impl.ProcessingChainTemplateImpl#getExtendedbpmnmodel <em>Extendedbpmnmodel</em>}</li>
  *   <li>{@link projetTemplate.impl.ProcessingChainTemplateImpl#getComponent <em>Component</em>}</li>
- *   <li>{@link projetTemplate.impl.ProcessingChainTemplateImpl#getMlprocchainsolutionpattern <em>Mlprocchainsolutionpattern</em>}</li>
  * </ul>
  *
  * @generated
@@ -102,16 +100,6 @@ public class ProcessingChainTemplateImpl extends MinimalEObjectImpl.Container im
 	 * @ordered
 	 */
 	protected EList<Component> component;
-
-	/**
-	 * The cached value of the '{@link #getMlprocchainsolutionpattern() <em>Mlprocchainsolutionpattern</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMlprocchainsolutionpattern()
-	 * @generated
-	 * @ordered
-	 */
-	protected MLProcChainSolutionPattern mlprocchainsolutionpattern;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -236,48 +224,6 @@ public class ProcessingChainTemplateImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MLProcChainSolutionPattern getMlprocchainsolutionpattern() {
-		if (mlprocchainsolutionpattern != null && mlprocchainsolutionpattern.eIsProxy()) {
-			InternalEObject oldMlprocchainsolutionpattern = (InternalEObject) mlprocchainsolutionpattern;
-			mlprocchainsolutionpattern = (MLProcChainSolutionPattern) eResolveProxy(oldMlprocchainsolutionpattern);
-			if (mlprocchainsolutionpattern != oldMlprocchainsolutionpattern) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__MLPROCCHAINSOLUTIONPATTERN,
-							oldMlprocchainsolutionpattern, mlprocchainsolutionpattern));
-			}
-		}
-		return mlprocchainsolutionpattern;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MLProcChainSolutionPattern basicGetMlprocchainsolutionpattern() {
-		return mlprocchainsolutionpattern;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMlprocchainsolutionpattern(MLProcChainSolutionPattern newMlprocchainsolutionpattern) {
-		MLProcChainSolutionPattern oldMlprocchainsolutionpattern = mlprocchainsolutionpattern;
-		mlprocchainsolutionpattern = newMlprocchainsolutionpattern;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__MLPROCCHAINSOLUTIONPATTERN,
-					oldMlprocchainsolutionpattern, mlprocchainsolutionpattern));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public void ReducedItUsingknwoledge(CollectedDataKnowledgeAboutTemplateConstruction param1) {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
@@ -302,10 +248,6 @@ public class ProcessingChainTemplateImpl extends MinimalEObjectImpl.Container im
 			return basicGetExtendedbpmnmodel();
 		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__COMPONENT:
 			return getComponent();
-		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__MLPROCCHAINSOLUTIONPATTERN:
-			if (resolve)
-				return getMlprocchainsolutionpattern();
-			return basicGetMlprocchainsolutionpattern();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -332,9 +274,6 @@ public class ProcessingChainTemplateImpl extends MinimalEObjectImpl.Container im
 			getComponent().clear();
 			getComponent().addAll((Collection<? extends Component>) newValue);
 			return;
-		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__MLPROCCHAINSOLUTIONPATTERN:
-			setMlprocchainsolutionpattern((MLProcChainSolutionPattern) newValue);
-			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -359,9 +298,6 @@ public class ProcessingChainTemplateImpl extends MinimalEObjectImpl.Container im
 		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__COMPONENT:
 			getComponent().clear();
 			return;
-		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__MLPROCCHAINSOLUTIONPATTERN:
-			setMlprocchainsolutionpattern((MLProcChainSolutionPattern) null);
-			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -382,8 +318,6 @@ public class ProcessingChainTemplateImpl extends MinimalEObjectImpl.Container im
 			return extendedbpmnmodel != null;
 		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__COMPONENT:
 			return component != null && !component.isEmpty();
-		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__MLPROCCHAINSOLUTIONPATTERN:
-			return mlprocchainsolutionpattern != null;
 		}
 		return super.eIsSet(featureID);
 	}

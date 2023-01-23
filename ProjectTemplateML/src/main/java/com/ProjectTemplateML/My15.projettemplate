@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:projetTemplate="http://www.example.org/projetTemplate">
+  <projetTemplate:MLProject dataanalysisproblem="/1"/>
+  <projetTemplate:DataAnalysisProblem mlprocchainsolutionpattern="/2"/>
+  <projetTemplate:MLProcChainSolutionPattern processingchain="/3"/>
+  <projetTemplate:ProcessingChain date="Chaine 1" author="Lokman" mlalgorithm="/4"/>
+  <projetTemplate:MLAlgorithm name="NaiveBayes" processingchaintemplate="/5"/>
+  <projetTemplate:ProcessingChainTemplate name="ChaineDeNaiveBayes" component="/6"/>
+  <projetTemplate:MLAlgorithm/>
+</xmi:XMI>

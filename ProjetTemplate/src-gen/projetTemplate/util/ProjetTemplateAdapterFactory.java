@@ -238,6 +238,56 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseDataCleaning(DataCleaning object) {
+			return createDataCleaningAdapter();
+		}
+
+		@Override
+		public Adapter caseDataPretraitement(DataPretraitement object) {
+			return createDataPretraitementAdapter();
+		}
+
+		@Override
+		public Adapter caseFeatureSelection(FeatureSelection object) {
+			return createFeatureSelectionAdapter();
+		}
+
+		@Override
+		public Adapter caseFeatureConstruction(FeatureConstruction object) {
+			return createFeatureConstructionAdapter();
+		}
+
+		@Override
+		public Adapter casePostTreatement(PostTreatement object) {
+			return createPostTreatementAdapter();
+		}
+
+		@Override
+		public Adapter caseDeployement(Deployement object) {
+			return createDeployementAdapter();
+		}
+
+		@Override
+		public Adapter caseRemoveUncessaryFileds(RemoveUncessaryFileds object) {
+			return createRemoveUncessaryFiledsAdapter();
+		}
+
+		@Override
+		public Adapter caseConversion(Conversion object) {
+			return createConversionAdapter();
+		}
+
+		@Override
+		public Adapter caseNoiseTreatement(NoiseTreatement object) {
+			return createNoiseTreatementAdapter();
+		}
+
+		@Override
+		public Adapter caseMissingValueTreatement(MissingValueTreatement object) {
+			return createMissingValueTreatementAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -729,6 +779,146 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createComponentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.DataCleaning <em>Data Cleaning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.DataCleaning
+	 * @generated
+	 */
+	public Adapter createDataCleaningAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.DataPretraitement <em>Data Pretraitement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.DataPretraitement
+	 * @generated
+	 */
+	public Adapter createDataPretraitementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.FeatureSelection <em>Feature Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.FeatureSelection
+	 * @generated
+	 */
+	public Adapter createFeatureSelectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.FeatureConstruction <em>Feature Construction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.FeatureConstruction
+	 * @generated
+	 */
+	public Adapter createFeatureConstructionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.PostTreatement <em>Post Treatement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.PostTreatement
+	 * @generated
+	 */
+	public Adapter createPostTreatementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.Deployement <em>Deployement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.Deployement
+	 * @generated
+	 */
+	public Adapter createDeployementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.RemoveUncessaryFileds <em>Remove Uncessary Fileds</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.RemoveUncessaryFileds
+	 * @generated
+	 */
+	public Adapter createRemoveUncessaryFiledsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.Conversion <em>Conversion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.Conversion
+	 * @generated
+	 */
+	public Adapter createConversionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.NoiseTreatement <em>Noise Treatement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.NoiseTreatement
+	 * @generated
+	 */
+	public Adapter createNoiseTreatementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.MissingValueTreatement <em>Missing Value Treatement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.MissingValueTreatement
+	 * @generated
+	 */
+	public Adapter createMissingValueTreatementAdapter() {
 		return null;
 	}
 

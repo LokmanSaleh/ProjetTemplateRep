@@ -4,7 +4,6 @@ package projetTemplate;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
@@ -1113,22 +1112,13 @@ public interface ProjetTemplatePackage extends EPackage {
 	int PROCESSING_CHAIN_TEMPLATE__COMPONENT = 3;
 
 	/**
-	 * The feature id for the '<em><b>Mlprocchainsolutionpattern</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESSING_CHAIN_TEMPLATE__MLPROCCHAINSOLUTIONPATTERN = 4;
-
-	/**
 	 * The number of structural features of the '<em>Processing Chain Template</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESSING_CHAIN_TEMPLATE_FEATURE_COUNT = 5;
+	int PROCESSING_CHAIN_TEMPLATE_FEATURE_COUNT = 4;
 
 	/**
 	 * The operation id for the '<em>Reduced It Usingknwoledge</em>' operation.
@@ -1903,6 +1893,448 @@ public interface ProjetTemplatePackage extends EPackage {
 	int CONNECTOR_OPERATION_COUNT = TERM_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link projetTemplate.impl.DataCleaningImpl <em>Data Cleaning</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.DataCleaningImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDataCleaning()
+	 * @generated
+	 */
+	int DATA_CLEANING = 34;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_CLEANING__NAME = COMPONENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Data Cleaning</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_CLEANING_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Data Cleaning</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_CLEANING_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.DataPretraitementImpl <em>Data Pretraitement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.DataPretraitementImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDataPretraitement()
+	 * @generated
+	 */
+	int DATA_PRETRAITEMENT = 35;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_PRETRAITEMENT__NAME = COMPONENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Data Pretraitement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_PRETRAITEMENT_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Data Pretraitement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_PRETRAITEMENT_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.FeatureSelectionImpl <em>Feature Selection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.FeatureSelectionImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getFeatureSelection()
+	 * @generated
+	 */
+	int FEATURE_SELECTION = 36;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_SELECTION__NAME = COMPONENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Feature Selection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_SELECTION_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Feature Selection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_SELECTION_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.FeatureConstructionImpl <em>Feature Construction</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.FeatureConstructionImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getFeatureConstruction()
+	 * @generated
+	 */
+	int FEATURE_CONSTRUCTION = 37;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_CONSTRUCTION__NAME = COMPONENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Feature Construction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_CONSTRUCTION_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Feature Construction</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FEATURE_CONSTRUCTION_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.PostTreatementImpl <em>Post Treatement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.PostTreatementImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getPostTreatement()
+	 * @generated
+	 */
+	int POST_TREATEMENT = 38;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POST_TREATEMENT__NAME = COMPONENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Post Treatement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POST_TREATEMENT_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Post Treatement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POST_TREATEMENT_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.DeployementImpl <em>Deployement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.DeployementImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDeployement()
+	 * @generated
+	 */
+	int DEPLOYEMENT = 39;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPLOYEMENT__NAME = COMPONENT__NAME;
+
+	/**
+	 * The number of structural features of the '<em>Deployement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPLOYEMENT_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Deployement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DEPLOYEMENT_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.RemoveUncessaryFiledsImpl <em>Remove Uncessary Fileds</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.RemoveUncessaryFiledsImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getRemoveUncessaryFileds()
+	 * @generated
+	 */
+	int REMOVE_UNCESSARY_FILEDS = 40;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REMOVE_UNCESSARY_FILEDS__NAME = DATA_CLEANING__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Method</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REMOVE_UNCESSARY_FILEDS__METHOD = DATA_CLEANING_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Remove Uncessary Fileds</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REMOVE_UNCESSARY_FILEDS_FEATURE_COUNT = DATA_CLEANING_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Remove IDs</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REMOVE_UNCESSARY_FILEDS___REMOVE_IDS = DATA_CLEANING_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Remove Special Characters</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REMOVE_UNCESSARY_FILEDS___REMOVE_SPECIAL_CHARACTERS = DATA_CLEANING_OPERATION_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Remove Uncessary Fileds</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REMOVE_UNCESSARY_FILEDS_OPERATION_COUNT = DATA_CLEANING_OPERATION_COUNT + 2;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.ConversionImpl <em>Conversion</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.ConversionImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getConversion()
+	 * @generated
+	 */
+	int CONVERSION = 41;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONVERSION__NAME = DATA_PRETRAITEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Method</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONVERSION__METHOD = DATA_PRETRAITEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Conversion</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONVERSION_FEATURE_COUNT = DATA_PRETRAITEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Convert Categorical Attributes To Continue</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONVERSION___CONVERT_CATEGORICAL_ATTRIBUTES_TO_CONTINUE = DATA_PRETRAITEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The operation id for the '<em>Convert Continue Attributes To Categorical</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONVERSION___CONVERT_CONTINUE_ATTRIBUTES_TO_CATEGORICAL = DATA_PRETRAITEMENT_OPERATION_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Detect Attribute Type</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONVERSION___DETECT_ATTRIBUTE_TYPE = DATA_PRETRAITEMENT_OPERATION_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Conversion</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONVERSION_OPERATION_COUNT = DATA_PRETRAITEMENT_OPERATION_COUNT + 3;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.NoiseTreatementImpl <em>Noise Treatement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.NoiseTreatementImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getNoiseTreatement()
+	 * @generated
+	 */
+	int NOISE_TREATEMENT = 42;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOISE_TREATEMENT__NAME = DATA_PRETRAITEMENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Method</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOISE_TREATEMENT__METHOD = DATA_PRETRAITEMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Noise Treatement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOISE_TREATEMENT_FEATURE_COUNT = DATA_PRETRAITEMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The operation id for the '<em>Remove Noise From Fileds</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOISE_TREATEMENT___REMOVE_NOISE_FROM_FILEDS = DATA_PRETRAITEMENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Noise Treatement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NOISE_TREATEMENT_OPERATION_COUNT = DATA_PRETRAITEMENT_OPERATION_COUNT + 1;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.MissingValueTreatementImpl <em>Missing Value Treatement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.MissingValueTreatementImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMissingValueTreatement()
+	 * @generated
+	 */
+	int MISSING_VALUE_TREATEMENT = 43;
+
+	/**
+	 * The number of structural features of the '<em>Missing Value Treatement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MISSING_VALUE_TREATEMENT_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Missing Value Treatement</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MISSING_VALUE_TREATEMENT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link projetTemplate.Values1 <em>Values1</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1910,7 +2342,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getValues1()
 	 * @generated
 	 */
-	int VALUES1 = 34;
+	int VALUES1 = 44;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.Values2 <em>Values2</em>}' enum.
@@ -1920,7 +2352,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getValues2()
 	 * @generated
 	 */
-	int VALUES2 = 35;
+	int VALUES2 = 45;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.RequirementTypeValues <em>Requirement Type Values</em>}' enum.
@@ -1930,7 +2362,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getRequirementTypeValues()
 	 * @generated
 	 */
-	int REQUIREMENT_TYPE_VALUES = 36;
+	int REQUIREMENT_TYPE_VALUES = 46;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.EnumDataAnalysisProblemType <em>Enum Data Analysis Problem Type</em>}' enum.
@@ -1940,7 +2372,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getEnumDataAnalysisProblemType()
 	 * @generated
 	 */
-	int ENUM_DATA_ANALYSIS_PROBLEM_TYPE = 37;
+	int ENUM_DATA_ANALYSIS_PROBLEM_TYPE = 47;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.EnumConnector <em>Enum Connector</em>}' enum.
@@ -1950,17 +2382,47 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getEnumConnector()
 	 * @generated
 	 */
-	int ENUM_CONNECTOR = 38;
+	int ENUM_CONNECTOR = 48;
 
 	/**
-	 * The meta object id for the '<em>New Data Type6</em>' data type.
+	 * The meta object id for the '{@link projetTemplate.ConversionEnum <em>Conversion Enum</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see java.lang.Object
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getNewDataType6()
+	 * @see projetTemplate.ConversionEnum
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getConversionEnum()
 	 * @generated
 	 */
-	int NEW_DATA_TYPE6 = 39;
+	int CONVERSION_ENUM = 49;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.RemoveUncessaryFiledsEnum <em>Remove Uncessary Fileds Enum</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.RemoveUncessaryFiledsEnum
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getRemoveUncessaryFiledsEnum()
+	 * @generated
+	 */
+	int REMOVE_UNCESSARY_FILEDS_ENUM = 50;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.NoiseTreatementEnum <em>Noise Treatement Enum</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.NoiseTreatementEnum
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getNoiseTreatementEnum()
+	 * @generated
+	 */
+	int NOISE_TREATEMENT_ENUM = 51;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.MissingValueTreatementEnum <em>Missing Value Treatement Enum</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.MissingValueTreatementEnum
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMissingValueTreatementEnum()
+	 * @generated
+	 */
+	int MISSING_VALUE_TREATEMENT_ENUM = 52;
 
 	/**
 	 * Returns the meta object for class '{@link projetTemplate.DomainProblem <em>Domain Problem</em>}'.
@@ -2834,17 +3296,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	EReference getProcessingChainTemplate_Component();
 
 	/**
-	 * Returns the meta object for the reference '{@link projetTemplate.ProcessingChainTemplate#getMlprocchainsolutionpattern <em>Mlprocchainsolutionpattern</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Mlprocchainsolutionpattern</em>'.
-	 * @see projetTemplate.ProcessingChainTemplate#getMlprocchainsolutionpattern()
-	 * @see #getProcessingChainTemplate()
-	 * @generated
-	 */
-	EReference getProcessingChainTemplate_Mlprocchainsolutionpattern();
-
-	/**
 	 * Returns the meta object for the '{@link projetTemplate.ProcessingChainTemplate#ReducedItUsingknwoledge(projetTemplate.CollectedDataKnowledgeAboutTemplateConstruction) <em>Reduced It Usingknwoledge</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3334,6 +3785,199 @@ public interface ProjetTemplatePackage extends EPackage {
 	EAttribute getComponent_Name();
 
 	/**
+	 * Returns the meta object for class '{@link projetTemplate.DataCleaning <em>Data Cleaning</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Data Cleaning</em>'.
+	 * @see projetTemplate.DataCleaning
+	 * @generated
+	 */
+	EClass getDataCleaning();
+
+	/**
+	 * Returns the meta object for class '{@link projetTemplate.DataPretraitement <em>Data Pretraitement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Data Pretraitement</em>'.
+	 * @see projetTemplate.DataPretraitement
+	 * @generated
+	 */
+	EClass getDataPretraitement();
+
+	/**
+	 * Returns the meta object for class '{@link projetTemplate.FeatureSelection <em>Feature Selection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Feature Selection</em>'.
+	 * @see projetTemplate.FeatureSelection
+	 * @generated
+	 */
+	EClass getFeatureSelection();
+
+	/**
+	 * Returns the meta object for class '{@link projetTemplate.FeatureConstruction <em>Feature Construction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Feature Construction</em>'.
+	 * @see projetTemplate.FeatureConstruction
+	 * @generated
+	 */
+	EClass getFeatureConstruction();
+
+	/**
+	 * Returns the meta object for class '{@link projetTemplate.PostTreatement <em>Post Treatement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Post Treatement</em>'.
+	 * @see projetTemplate.PostTreatement
+	 * @generated
+	 */
+	EClass getPostTreatement();
+
+	/**
+	 * Returns the meta object for class '{@link projetTemplate.Deployement <em>Deployement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Deployement</em>'.
+	 * @see projetTemplate.Deployement
+	 * @generated
+	 */
+	EClass getDeployement();
+
+	/**
+	 * Returns the meta object for class '{@link projetTemplate.RemoveUncessaryFileds <em>Remove Uncessary Fileds</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Remove Uncessary Fileds</em>'.
+	 * @see projetTemplate.RemoveUncessaryFileds
+	 * @generated
+	 */
+	EClass getRemoveUncessaryFileds();
+
+	/**
+	 * Returns the meta object for the attribute '{@link projetTemplate.RemoveUncessaryFileds#getMethod <em>Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Method</em>'.
+	 * @see projetTemplate.RemoveUncessaryFileds#getMethod()
+	 * @see #getRemoveUncessaryFileds()
+	 * @generated
+	 */
+	EAttribute getRemoveUncessaryFileds_Method();
+
+	/**
+	 * Returns the meta object for the '{@link projetTemplate.RemoveUncessaryFileds#removeIDs() <em>Remove IDs</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Remove IDs</em>' operation.
+	 * @see projetTemplate.RemoveUncessaryFileds#removeIDs()
+	 * @generated
+	 */
+	EOperation getRemoveUncessaryFileds__RemoveIDs();
+
+	/**
+	 * Returns the meta object for the '{@link projetTemplate.RemoveUncessaryFileds#removeSpecialCharacters() <em>Remove Special Characters</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Remove Special Characters</em>' operation.
+	 * @see projetTemplate.RemoveUncessaryFileds#removeSpecialCharacters()
+	 * @generated
+	 */
+	EOperation getRemoveUncessaryFileds__RemoveSpecialCharacters();
+
+	/**
+	 * Returns the meta object for class '{@link projetTemplate.Conversion <em>Conversion</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Conversion</em>'.
+	 * @see projetTemplate.Conversion
+	 * @generated
+	 */
+	EClass getConversion();
+
+	/**
+	 * Returns the meta object for the attribute '{@link projetTemplate.Conversion#getMethod <em>Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Method</em>'.
+	 * @see projetTemplate.Conversion#getMethod()
+	 * @see #getConversion()
+	 * @generated
+	 */
+	EAttribute getConversion_Method();
+
+	/**
+	 * Returns the meta object for the '{@link projetTemplate.Conversion#convertCategoricalAttributesToContinue() <em>Convert Categorical Attributes To Continue</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Convert Categorical Attributes To Continue</em>' operation.
+	 * @see projetTemplate.Conversion#convertCategoricalAttributesToContinue()
+	 * @generated
+	 */
+	EOperation getConversion__ConvertCategoricalAttributesToContinue();
+
+	/**
+	 * Returns the meta object for the '{@link projetTemplate.Conversion#convertContinueAttributesToCategorical() <em>Convert Continue Attributes To Categorical</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Convert Continue Attributes To Categorical</em>' operation.
+	 * @see projetTemplate.Conversion#convertContinueAttributesToCategorical()
+	 * @generated
+	 */
+	EOperation getConversion__ConvertContinueAttributesToCategorical();
+
+	/**
+	 * Returns the meta object for the '{@link projetTemplate.Conversion#detectAttributeType() <em>Detect Attribute Type</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Detect Attribute Type</em>' operation.
+	 * @see projetTemplate.Conversion#detectAttributeType()
+	 * @generated
+	 */
+	EOperation getConversion__DetectAttributeType();
+
+	/**
+	 * Returns the meta object for class '{@link projetTemplate.NoiseTreatement <em>Noise Treatement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Noise Treatement</em>'.
+	 * @see projetTemplate.NoiseTreatement
+	 * @generated
+	 */
+	EClass getNoiseTreatement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link projetTemplate.NoiseTreatement#getMethod <em>Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Method</em>'.
+	 * @see projetTemplate.NoiseTreatement#getMethod()
+	 * @see #getNoiseTreatement()
+	 * @generated
+	 */
+	EAttribute getNoiseTreatement_Method();
+
+	/**
+	 * Returns the meta object for the '{@link projetTemplate.NoiseTreatement#removeNoiseFromFileds() <em>Remove Noise From Fileds</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Remove Noise From Fileds</em>' operation.
+	 * @see projetTemplate.NoiseTreatement#removeNoiseFromFileds()
+	 * @generated
+	 */
+	EOperation getNoiseTreatement__RemoveNoiseFromFileds();
+
+	/**
+	 * Returns the meta object for class '{@link projetTemplate.MissingValueTreatement <em>Missing Value Treatement</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Missing Value Treatement</em>'.
+	 * @see projetTemplate.MissingValueTreatement
+	 * @generated
+	 */
+	EClass getMissingValueTreatement();
+
+	/**
 	 * Returns the meta object for enum '{@link projetTemplate.Values1 <em>Values1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3384,15 +4028,44 @@ public interface ProjetTemplatePackage extends EPackage {
 	EEnum getEnumConnector();
 
 	/**
-	 * Returns the meta object for data type '{@link java.lang.Object <em>New Data Type6</em>}'.
+	 * Returns the meta object for enum '{@link projetTemplate.ConversionEnum <em>Conversion Enum</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for data type '<em>New Data Type6</em>'.
-	 * @see java.lang.Object
-	 * @model instanceClass="java.lang.Object"
+	 * @return the meta object for enum '<em>Conversion Enum</em>'.
+	 * @see projetTemplate.ConversionEnum
 	 * @generated
 	 */
-	EDataType getNewDataType6();
+	EEnum getConversionEnum();
+
+	/**
+	 * Returns the meta object for enum '{@link projetTemplate.RemoveUncessaryFiledsEnum <em>Remove Uncessary Fileds Enum</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Remove Uncessary Fileds Enum</em>'.
+	 * @see projetTemplate.RemoveUncessaryFiledsEnum
+	 * @generated
+	 */
+	EEnum getRemoveUncessaryFiledsEnum();
+
+	/**
+	 * Returns the meta object for enum '{@link projetTemplate.NoiseTreatementEnum <em>Noise Treatement Enum</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Noise Treatement Enum</em>'.
+	 * @see projetTemplate.NoiseTreatementEnum
+	 * @generated
+	 */
+	EEnum getNoiseTreatementEnum();
+
+	/**
+	 * Returns the meta object for enum '{@link projetTemplate.MissingValueTreatementEnum <em>Missing Value Treatement Enum</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Missing Value Treatement Enum</em>'.
+	 * @see projetTemplate.MissingValueTreatementEnum
+	 * @generated
+	 */
+	EEnum getMissingValueTreatementEnum();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -4114,15 +4787,6 @@ public interface ProjetTemplatePackage extends EPackage {
 		EReference PROCESSING_CHAIN_TEMPLATE__COMPONENT = eINSTANCE.getProcessingChainTemplate_Component();
 
 		/**
-		 * The meta object literal for the '<em><b>Mlprocchainsolutionpattern</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PROCESSING_CHAIN_TEMPLATE__MLPROCCHAINSOLUTIONPATTERN = eINSTANCE
-				.getProcessingChainTemplate_Mlprocchainsolutionpattern();
-
-		/**
 		 * The meta object literal for the '<em><b>Reduced It Usingknwoledge</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4530,6 +5194,181 @@ public interface ProjetTemplatePackage extends EPackage {
 		EAttribute COMPONENT__NAME = eINSTANCE.getComponent_Name();
 
 		/**
+		 * The meta object literal for the '{@link projetTemplate.impl.DataCleaningImpl <em>Data Cleaning</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projetTemplate.impl.DataCleaningImpl
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDataCleaning()
+		 * @generated
+		 */
+		EClass DATA_CLEANING = eINSTANCE.getDataCleaning();
+
+		/**
+		 * The meta object literal for the '{@link projetTemplate.impl.DataPretraitementImpl <em>Data Pretraitement</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projetTemplate.impl.DataPretraitementImpl
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDataPretraitement()
+		 * @generated
+		 */
+		EClass DATA_PRETRAITEMENT = eINSTANCE.getDataPretraitement();
+
+		/**
+		 * The meta object literal for the '{@link projetTemplate.impl.FeatureSelectionImpl <em>Feature Selection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projetTemplate.impl.FeatureSelectionImpl
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getFeatureSelection()
+		 * @generated
+		 */
+		EClass FEATURE_SELECTION = eINSTANCE.getFeatureSelection();
+
+		/**
+		 * The meta object literal for the '{@link projetTemplate.impl.FeatureConstructionImpl <em>Feature Construction</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projetTemplate.impl.FeatureConstructionImpl
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getFeatureConstruction()
+		 * @generated
+		 */
+		EClass FEATURE_CONSTRUCTION = eINSTANCE.getFeatureConstruction();
+
+		/**
+		 * The meta object literal for the '{@link projetTemplate.impl.PostTreatementImpl <em>Post Treatement</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projetTemplate.impl.PostTreatementImpl
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getPostTreatement()
+		 * @generated
+		 */
+		EClass POST_TREATEMENT = eINSTANCE.getPostTreatement();
+
+		/**
+		 * The meta object literal for the '{@link projetTemplate.impl.DeployementImpl <em>Deployement</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projetTemplate.impl.DeployementImpl
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDeployement()
+		 * @generated
+		 */
+		EClass DEPLOYEMENT = eINSTANCE.getDeployement();
+
+		/**
+		 * The meta object literal for the '{@link projetTemplate.impl.RemoveUncessaryFiledsImpl <em>Remove Uncessary Fileds</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projetTemplate.impl.RemoveUncessaryFiledsImpl
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getRemoveUncessaryFileds()
+		 * @generated
+		 */
+		EClass REMOVE_UNCESSARY_FILEDS = eINSTANCE.getRemoveUncessaryFileds();
+
+		/**
+		 * The meta object literal for the '<em><b>Method</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REMOVE_UNCESSARY_FILEDS__METHOD = eINSTANCE.getRemoveUncessaryFileds_Method();
+
+		/**
+		 * The meta object literal for the '<em><b>Remove IDs</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation REMOVE_UNCESSARY_FILEDS___REMOVE_IDS = eINSTANCE.getRemoveUncessaryFileds__RemoveIDs();
+
+		/**
+		 * The meta object literal for the '<em><b>Remove Special Characters</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation REMOVE_UNCESSARY_FILEDS___REMOVE_SPECIAL_CHARACTERS = eINSTANCE
+				.getRemoveUncessaryFileds__RemoveSpecialCharacters();
+
+		/**
+		 * The meta object literal for the '{@link projetTemplate.impl.ConversionImpl <em>Conversion</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projetTemplate.impl.ConversionImpl
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getConversion()
+		 * @generated
+		 */
+		EClass CONVERSION = eINSTANCE.getConversion();
+
+		/**
+		 * The meta object literal for the '<em><b>Method</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONVERSION__METHOD = eINSTANCE.getConversion_Method();
+
+		/**
+		 * The meta object literal for the '<em><b>Convert Categorical Attributes To Continue</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CONVERSION___CONVERT_CATEGORICAL_ATTRIBUTES_TO_CONTINUE = eINSTANCE
+				.getConversion__ConvertCategoricalAttributesToContinue();
+
+		/**
+		 * The meta object literal for the '<em><b>Convert Continue Attributes To Categorical</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CONVERSION___CONVERT_CONTINUE_ATTRIBUTES_TO_CATEGORICAL = eINSTANCE
+				.getConversion__ConvertContinueAttributesToCategorical();
+
+		/**
+		 * The meta object literal for the '<em><b>Detect Attribute Type</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation CONVERSION___DETECT_ATTRIBUTE_TYPE = eINSTANCE.getConversion__DetectAttributeType();
+
+		/**
+		 * The meta object literal for the '{@link projetTemplate.impl.NoiseTreatementImpl <em>Noise Treatement</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projetTemplate.impl.NoiseTreatementImpl
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getNoiseTreatement()
+		 * @generated
+		 */
+		EClass NOISE_TREATEMENT = eINSTANCE.getNoiseTreatement();
+
+		/**
+		 * The meta object literal for the '<em><b>Method</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NOISE_TREATEMENT__METHOD = eINSTANCE.getNoiseTreatement_Method();
+
+		/**
+		 * The meta object literal for the '<em><b>Remove Noise From Fileds</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation NOISE_TREATEMENT___REMOVE_NOISE_FROM_FILEDS = eINSTANCE.getNoiseTreatement__RemoveNoiseFromFileds();
+
+		/**
+		 * The meta object literal for the '{@link projetTemplate.impl.MissingValueTreatementImpl <em>Missing Value Treatement</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projetTemplate.impl.MissingValueTreatementImpl
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMissingValueTreatement()
+		 * @generated
+		 */
+		EClass MISSING_VALUE_TREATEMENT = eINSTANCE.getMissingValueTreatement();
+
+		/**
 		 * The meta object literal for the '{@link projetTemplate.Values1 <em>Values1</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4580,14 +5419,44 @@ public interface ProjetTemplatePackage extends EPackage {
 		EEnum ENUM_CONNECTOR = eINSTANCE.getEnumConnector();
 
 		/**
-		 * The meta object literal for the '<em>New Data Type6</em>' data type.
+		 * The meta object literal for the '{@link projetTemplate.ConversionEnum <em>Conversion Enum</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see java.lang.Object
-		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getNewDataType6()
+		 * @see projetTemplate.ConversionEnum
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getConversionEnum()
 		 * @generated
 		 */
-		EDataType NEW_DATA_TYPE6 = eINSTANCE.getNewDataType6();
+		EEnum CONVERSION_ENUM = eINSTANCE.getConversionEnum();
+
+		/**
+		 * The meta object literal for the '{@link projetTemplate.RemoveUncessaryFiledsEnum <em>Remove Uncessary Fileds Enum</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projetTemplate.RemoveUncessaryFiledsEnum
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getRemoveUncessaryFiledsEnum()
+		 * @generated
+		 */
+		EEnum REMOVE_UNCESSARY_FILEDS_ENUM = eINSTANCE.getRemoveUncessaryFiledsEnum();
+
+		/**
+		 * The meta object literal for the '{@link projetTemplate.NoiseTreatementEnum <em>Noise Treatement Enum</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projetTemplate.NoiseTreatementEnum
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getNoiseTreatementEnum()
+		 * @generated
+		 */
+		EEnum NOISE_TREATEMENT_ENUM = eINSTANCE.getNoiseTreatementEnum();
+
+		/**
+		 * The meta object literal for the '{@link projetTemplate.MissingValueTreatementEnum <em>Missing Value Treatement Enum</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projetTemplate.MissingValueTreatementEnum
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMissingValueTreatementEnum()
+		 * @generated
+		 */
+		EEnum MISSING_VALUE_TREATEMENT_ENUM = eINSTANCE.getMissingValueTreatementEnum();
 
 	}
 

@@ -4,7 +4,6 @@ package projetTemplate.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
@@ -17,28 +16,42 @@ import projetTemplate.CollectedDataKnowledgeAboutTemplateConstruction;
 import projetTemplate.Component;
 import projetTemplate.ComputationalRequirementValue;
 import projetTemplate.Condition;
+import projetTemplate.Conversion;
+import projetTemplate.ConversionEnum;
 import projetTemplate.Data;
 import projetTemplate.DataAnalysisProblem;
 import projetTemplate.DataAnalysisProblemType;
+import projetTemplate.DataCleaning;
+import projetTemplate.DataPretraitement;
 import projetTemplate.DataPropertyType;
 import projetTemplate.DataPropertyValue;
 import projetTemplate.DataPropertyValueSet;
 import projetTemplate.Database;
+import projetTemplate.Deployement;
 import projetTemplate.DomainProblem;
 import projetTemplate.DomainRequirementValue;
 import projetTemplate.EnumConnector;
 import projetTemplate.EnumDataAnalysisProblemType;
 import projetTemplate.Explainability;
 import projetTemplate.ExtendedBPMNModel;
+import projetTemplate.FeatureConstruction;
+import projetTemplate.FeatureSelection;
 import projetTemplate.MLAlgorithm;
 import projetTemplate.MLAlgorithmSolutionPattern;
 import projetTemplate.MLProcChainSolutionPattern;
 import projetTemplate.MLProject;
+import projetTemplate.MissingValueTreatement;
+import projetTemplate.MissingValueTreatementEnum;
 import projetTemplate.ModelElement;
+import projetTemplate.NoiseTreatement;
+import projetTemplate.NoiseTreatementEnum;
+import projetTemplate.PostTreatement;
 import projetTemplate.ProcessingChain;
 import projetTemplate.ProcessingChainTemplate;
 import projetTemplate.ProjetTemplateFactory;
 import projetTemplate.ProjetTemplatePackage;
+import projetTemplate.RemoveUncessaryFileds;
+import projetTemplate.RemoveUncessaryFiledsEnum;
 import projetTemplate.RequirementMapping;
 import projetTemplate.RequirementType;
 import projetTemplate.RequirementTypeValues;
@@ -304,6 +317,76 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass dataCleaningEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass dataPretraitementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass featureSelectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass featureConstructionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass postTreatementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass deployementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass removeUncessaryFiledsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass conversionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass noiseTreatementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass missingValueTreatementEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum values1EEnum = null;
 
 	/**
@@ -339,7 +422,28 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EDataType newDataType6EDataType = null;
+	private EEnum conversionEnumEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum removeUncessaryFiledsEnumEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum noiseTreatementEnumEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum missingValueTreatementEnumEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1139,15 +1243,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProcessingChainTemplate_Mlprocchainsolutionpattern() {
-		return (EReference) processingChainTemplateEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EOperation getProcessingChainTemplate__ReducedItUsingknwoledge__CollectedDataKnowledgeAboutTemplateConstruction() {
 		return processingChainTemplateEClass.getEOperations().get(0);
 	}
@@ -1562,6 +1657,177 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getDataCleaning() {
+		return dataCleaningEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDataPretraitement() {
+		return dataPretraitementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFeatureSelection() {
+		return featureSelectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFeatureConstruction() {
+		return featureConstructionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPostTreatement() {
+		return postTreatementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDeployement() {
+		return deployementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRemoveUncessaryFileds() {
+		return removeUncessaryFiledsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRemoveUncessaryFileds_Method() {
+		return (EAttribute) removeUncessaryFiledsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getRemoveUncessaryFileds__RemoveIDs() {
+		return removeUncessaryFiledsEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getRemoveUncessaryFileds__RemoveSpecialCharacters() {
+		return removeUncessaryFiledsEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getConversion() {
+		return conversionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getConversion_Method() {
+		return (EAttribute) conversionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getConversion__ConvertCategoricalAttributesToContinue() {
+		return conversionEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getConversion__ConvertContinueAttributesToCategorical() {
+		return conversionEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getConversion__DetectAttributeType() {
+		return conversionEClass.getEOperations().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getNoiseTreatement() {
+		return noiseTreatementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNoiseTreatement_Method() {
+		return (EAttribute) noiseTreatementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getNoiseTreatement__RemoveNoiseFromFileds() {
+		return noiseTreatementEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMissingValueTreatement() {
+		return missingValueTreatementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getValues1() {
 		return values1EEnum;
 	}
@@ -1607,8 +1873,35 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EDataType getNewDataType6() {
-		return newDataType6EDataType;
+	public EEnum getConversionEnum() {
+		return conversionEnumEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getRemoveUncessaryFiledsEnum() {
+		return removeUncessaryFiledsEnumEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getNoiseTreatementEnum() {
+		return noiseTreatementEnumEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getMissingValueTreatementEnum() {
+		return missingValueTreatementEnumEEnum;
 	}
 
 	/**
@@ -1740,7 +2033,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		createEAttribute(processingChainTemplateEClass, PROCESSING_CHAIN_TEMPLATE__AUTHOR);
 		createEReference(processingChainTemplateEClass, PROCESSING_CHAIN_TEMPLATE__EXTENDEDBPMNMODEL);
 		createEReference(processingChainTemplateEClass, PROCESSING_CHAIN_TEMPLATE__COMPONENT);
-		createEReference(processingChainTemplateEClass, PROCESSING_CHAIN_TEMPLATE__MLPROCCHAINSOLUTIONPATTERN);
 		createEOperation(processingChainTemplateEClass,
 				PROCESSING_CHAIN_TEMPLATE___REDUCED_IT_USINGKNWOLEDGE__COLLECTEDDATAKNOWLEDGEABOUTTEMPLATECONSTRUCTION);
 
@@ -1807,15 +2099,45 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		componentEClass = createEClass(COMPONENT);
 		createEAttribute(componentEClass, COMPONENT__NAME);
 
+		dataCleaningEClass = createEClass(DATA_CLEANING);
+
+		dataPretraitementEClass = createEClass(DATA_PRETRAITEMENT);
+
+		featureSelectionEClass = createEClass(FEATURE_SELECTION);
+
+		featureConstructionEClass = createEClass(FEATURE_CONSTRUCTION);
+
+		postTreatementEClass = createEClass(POST_TREATEMENT);
+
+		deployementEClass = createEClass(DEPLOYEMENT);
+
+		removeUncessaryFiledsEClass = createEClass(REMOVE_UNCESSARY_FILEDS);
+		createEAttribute(removeUncessaryFiledsEClass, REMOVE_UNCESSARY_FILEDS__METHOD);
+		createEOperation(removeUncessaryFiledsEClass, REMOVE_UNCESSARY_FILEDS___REMOVE_IDS);
+		createEOperation(removeUncessaryFiledsEClass, REMOVE_UNCESSARY_FILEDS___REMOVE_SPECIAL_CHARACTERS);
+
+		conversionEClass = createEClass(CONVERSION);
+		createEAttribute(conversionEClass, CONVERSION__METHOD);
+		createEOperation(conversionEClass, CONVERSION___CONVERT_CATEGORICAL_ATTRIBUTES_TO_CONTINUE);
+		createEOperation(conversionEClass, CONVERSION___CONVERT_CONTINUE_ATTRIBUTES_TO_CATEGORICAL);
+		createEOperation(conversionEClass, CONVERSION___DETECT_ATTRIBUTE_TYPE);
+
+		noiseTreatementEClass = createEClass(NOISE_TREATEMENT);
+		createEAttribute(noiseTreatementEClass, NOISE_TREATEMENT__METHOD);
+		createEOperation(noiseTreatementEClass, NOISE_TREATEMENT___REMOVE_NOISE_FROM_FILEDS);
+
+		missingValueTreatementEClass = createEClass(MISSING_VALUE_TREATEMENT);
+
 		// Create enums
 		values1EEnum = createEEnum(VALUES1);
 		values2EEnum = createEEnum(VALUES2);
 		requirementTypeValuesEEnum = createEEnum(REQUIREMENT_TYPE_VALUES);
 		enumDataAnalysisProblemTypeEEnum = createEEnum(ENUM_DATA_ANALYSIS_PROBLEM_TYPE);
 		enumConnectorEEnum = createEEnum(ENUM_CONNECTOR);
-
-		// Create data types
-		newDataType6EDataType = createEDataType(NEW_DATA_TYPE6);
+		conversionEnumEEnum = createEEnum(CONVERSION_ENUM);
+		removeUncessaryFiledsEnumEEnum = createEEnum(REMOVE_UNCESSARY_FILEDS_ENUM);
+		noiseTreatementEnumEEnum = createEEnum(NOISE_TREATEMENT_ENUM);
+		missingValueTreatementEnumEEnum = createEEnum(MISSING_VALUE_TREATEMENT_ENUM);
 	}
 
 	/**
@@ -1852,6 +2174,15 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		accuracyEClass.getESuperTypes().add(this.getDomainRequirementValue());
 		variableEClass.getESuperTypes().add(this.getTerm());
 		connectorEClass.getESuperTypes().add(this.getTerm());
+		dataCleaningEClass.getESuperTypes().add(this.getComponent());
+		dataPretraitementEClass.getESuperTypes().add(this.getComponent());
+		featureSelectionEClass.getESuperTypes().add(this.getComponent());
+		featureConstructionEClass.getESuperTypes().add(this.getComponent());
+		postTreatementEClass.getESuperTypes().add(this.getComponent());
+		deployementEClass.getESuperTypes().add(this.getComponent());
+		removeUncessaryFiledsEClass.getESuperTypes().add(this.getDataCleaning());
+		conversionEClass.getESuperTypes().add(this.getDataPretraitement());
+		noiseTreatementEClass.getESuperTypes().add(this.getDataPretraitement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(domainProblemEClass, DomainProblem.class, "DomainProblem", !IS_ABSTRACT, !IS_INTERFACE,
@@ -2086,10 +2417,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEReference(getProcessingChainTemplate_Component(), this.getComponent(), null, "component", null, 1, -1,
 				ProcessingChainTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProcessingChainTemplate_Mlprocchainsolutionpattern(), this.getMLProcChainSolutionPattern(),
-				null, "mlprocchainsolutionpattern", null, 0, 1, ProcessingChainTemplate.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
 
 		EOperation op = initEOperation(
 				getProcessingChainTemplate__ReducedItUsingknwoledge__CollectedDataKnowledgeAboutTemplateConstruction(),
@@ -2226,6 +2553,60 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEAttribute(getComponent_Name(), ecorePackage.getEString(), "name", null, 0, 1, Component.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(dataCleaningEClass, DataCleaning.class, "DataCleaning", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(dataPretraitementEClass, DataPretraitement.class, "DataPretraitement", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(featureSelectionEClass, FeatureSelection.class, "FeatureSelection", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(featureConstructionEClass, FeatureConstruction.class, "FeatureConstruction", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(postTreatementEClass, PostTreatement.class, "PostTreatement", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(deployementEClass, Deployement.class, "Deployement", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(removeUncessaryFiledsEClass, RemoveUncessaryFileds.class, "RemoveUncessaryFileds", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRemoveUncessaryFileds_Method(), this.getRemoveUncessaryFiledsEnum(), "method", null, 0, 1,
+				RemoveUncessaryFileds.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getRemoveUncessaryFileds__RemoveIDs(), null, "removeIDs", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getRemoveUncessaryFileds__RemoveSpecialCharacters(), null, "removeSpecialCharacters", 0, 1,
+				IS_UNIQUE, IS_ORDERED);
+
+		initEClass(conversionEClass, Conversion.class, "Conversion", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getConversion_Method(), this.getConversionEnum(), "method", null, 0, 1, Conversion.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getConversion__ConvertCategoricalAttributesToContinue(), null,
+				"convertCategoricalAttributesToContinue", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getConversion__ConvertContinueAttributesToCategorical(), null,
+				"convertContinueAttributesToCategorical", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEOperation(getConversion__DetectAttributeType(), null, "detectAttributeType", 0, 1, IS_UNIQUE, IS_ORDERED);
+
+		initEClass(noiseTreatementEClass, NoiseTreatement.class, "NoiseTreatement", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNoiseTreatement_Method(), this.getNoiseTreatementEnum(), "method", null, 0, 1,
+				NoiseTreatement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+
+		initEOperation(getNoiseTreatement__RemoveNoiseFromFileds(), null, "removeNoiseFromFileds", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
+
+		initEClass(missingValueTreatementEClass, MissingValueTreatement.class, "MissingValueTreatement", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		// Initialize enums and add enum literals
 		initEEnum(values1EEnum, Values1.class, "Values1");
 		addEEnumLiteral(values1EEnum, Values1.YES);
@@ -2252,9 +2633,21 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		addEEnumLiteral(enumConnectorEEnum, EnumConnector.ACCOLAD_OUVERT);
 		addEEnumLiteral(enumConnectorEEnum, EnumConnector.ACCOLAD_FERME);
 
-		// Initialize data types
-		initEDataType(newDataType6EDataType, Object.class, "NewDataType6", IS_SERIALIZABLE,
-				!IS_GENERATED_INSTANCE_CLASS);
+		initEEnum(conversionEnumEEnum, ConversionEnum.class, "ConversionEnum");
+		addEEnumLiteral(conversionEnumEEnum, ConversionEnum.CONVERT_CATEGORICAL_ATTRIBUTES_TO_CONTINUE);
+		addEEnumLiteral(conversionEnumEEnum, ConversionEnum.CONVERT_CONTINUE_ATTRIBUTES_TO_CATEGORICAL);
+		addEEnumLiteral(conversionEnumEEnum, ConversionEnum.DETECT_ATTRIBUTE_TYPE);
+
+		initEEnum(removeUncessaryFiledsEnumEEnum, RemoveUncessaryFiledsEnum.class, "RemoveUncessaryFiledsEnum");
+		addEEnumLiteral(removeUncessaryFiledsEnumEEnum, RemoveUncessaryFiledsEnum.REMOVE_IDS);
+		addEEnumLiteral(removeUncessaryFiledsEnumEEnum, RemoveUncessaryFiledsEnum.REMOVE_SPECIAL_CHARACTERS);
+
+		initEEnum(noiseTreatementEnumEEnum, NoiseTreatementEnum.class, "NoiseTreatementEnum");
+		addEEnumLiteral(noiseTreatementEnumEEnum, NoiseTreatementEnum.REMOVE_NOISE_FROM_FILEDS);
+
+		initEEnum(missingValueTreatementEnumEEnum, MissingValueTreatementEnum.class, "MissingValueTreatementEnum");
+		addEEnumLiteral(missingValueTreatementEnumEEnum, MissingValueTreatementEnum.REPLACE_BY_MEAN);
+		addEEnumLiteral(missingValueTreatementEnumEEnum, MissingValueTreatementEnum.REPLACE_BY_ZERO);
 
 		// Create resource
 		createResource(eNS_URI);

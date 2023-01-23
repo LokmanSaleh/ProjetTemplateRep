@@ -856,6 +856,236 @@ public class ProjetTemplateItemProviderAdapterFactory extends ProjetTemplateAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.DataCleaning} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DataCleaningItemProvider dataCleaningItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.DataCleaning}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDataCleaningAdapter() {
+		if (dataCleaningItemProvider == null) {
+			dataCleaningItemProvider = new DataCleaningItemProvider(this);
+		}
+
+		return dataCleaningItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.DataPretraitement} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DataPretraitementItemProvider dataPretraitementItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.DataPretraitement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDataPretraitementAdapter() {
+		if (dataPretraitementItemProvider == null) {
+			dataPretraitementItemProvider = new DataPretraitementItemProvider(this);
+		}
+
+		return dataPretraitementItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.FeatureSelection} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FeatureSelectionItemProvider featureSelectionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.FeatureSelection}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFeatureSelectionAdapter() {
+		if (featureSelectionItemProvider == null) {
+			featureSelectionItemProvider = new FeatureSelectionItemProvider(this);
+		}
+
+		return featureSelectionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.FeatureConstruction} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FeatureConstructionItemProvider featureConstructionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.FeatureConstruction}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFeatureConstructionAdapter() {
+		if (featureConstructionItemProvider == null) {
+			featureConstructionItemProvider = new FeatureConstructionItemProvider(this);
+		}
+
+		return featureConstructionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.PostTreatement} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PostTreatementItemProvider postTreatementItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.PostTreatement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPostTreatementAdapter() {
+		if (postTreatementItemProvider == null) {
+			postTreatementItemProvider = new PostTreatementItemProvider(this);
+		}
+
+		return postTreatementItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.Deployement} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DeployementItemProvider deployementItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.Deployement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDeployementAdapter() {
+		if (deployementItemProvider == null) {
+			deployementItemProvider = new DeployementItemProvider(this);
+		}
+
+		return deployementItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.RemoveUncessaryFileds} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RemoveUncessaryFiledsItemProvider removeUncessaryFiledsItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.RemoveUncessaryFileds}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRemoveUncessaryFiledsAdapter() {
+		if (removeUncessaryFiledsItemProvider == null) {
+			removeUncessaryFiledsItemProvider = new RemoveUncessaryFiledsItemProvider(this);
+		}
+
+		return removeUncessaryFiledsItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.Conversion} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConversionItemProvider conversionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.Conversion}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConversionAdapter() {
+		if (conversionItemProvider == null) {
+			conversionItemProvider = new ConversionItemProvider(this);
+		}
+
+		return conversionItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.NoiseTreatement} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected NoiseTreatementItemProvider noiseTreatementItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.NoiseTreatement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createNoiseTreatementAdapter() {
+		if (noiseTreatementItemProvider == null) {
+			noiseTreatementItemProvider = new NoiseTreatementItemProvider(this);
+		}
+
+		return noiseTreatementItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.MissingValueTreatement} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MissingValueTreatementItemProvider missingValueTreatementItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.MissingValueTreatement}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMissingValueTreatementAdapter() {
+		if (missingValueTreatementItemProvider == null) {
+			missingValueTreatementItemProvider = new MissingValueTreatementItemProvider(this);
+		}
+
+		return missingValueTreatementItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1022,6 +1252,26 @@ public class ProjetTemplateItemProviderAdapterFactory extends ProjetTemplateAdap
 			connectorItemProvider.dispose();
 		if (componentItemProvider != null)
 			componentItemProvider.dispose();
+		if (dataCleaningItemProvider != null)
+			dataCleaningItemProvider.dispose();
+		if (dataPretraitementItemProvider != null)
+			dataPretraitementItemProvider.dispose();
+		if (featureSelectionItemProvider != null)
+			featureSelectionItemProvider.dispose();
+		if (featureConstructionItemProvider != null)
+			featureConstructionItemProvider.dispose();
+		if (postTreatementItemProvider != null)
+			postTreatementItemProvider.dispose();
+		if (deployementItemProvider != null)
+			deployementItemProvider.dispose();
+		if (removeUncessaryFiledsItemProvider != null)
+			removeUncessaryFiledsItemProvider.dispose();
+		if (conversionItemProvider != null)
+			conversionItemProvider.dispose();
+		if (noiseTreatementItemProvider != null)
+			noiseTreatementItemProvider.dispose();
+		if (missingValueTreatementItemProvider != null)
+			missingValueTreatementItemProvider.dispose();
 	}
 
 }
