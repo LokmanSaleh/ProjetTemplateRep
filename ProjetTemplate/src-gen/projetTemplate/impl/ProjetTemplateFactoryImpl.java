@@ -176,6 +176,8 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 			return createNoiseTreatementEnumFromString(eDataType, initialValue);
 		case ProjetTemplatePackage.MISSING_VALUE_TREATEMENT_ENUM:
 			return createMissingValueTreatementEnumFromString(eDataType, initialValue);
+		case ProjetTemplatePackage.NEW_DATA_TYPE10:
+			return createNewDataType10FromString(eDataType, initialValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -207,6 +209,8 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 			return convertNoiseTreatementEnumToString(eDataType, instanceValue);
 		case ProjetTemplatePackage.MISSING_VALUE_TREATEMENT_ENUM:
 			return convertMissingValueTreatementEnumToString(eDataType, instanceValue);
+		case ProjetTemplatePackage.NEW_DATA_TYPE10:
+			return convertNewDataType10ToString(eDataType, instanceValue);
 		default:
 			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -851,6 +855,24 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 	 */
 	public String convertMissingValueTreatementEnumToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Object createNewDataType10FromString(EDataType eDataType, String initialValue) {
+		return super.createFromString(eDataType, initialValue);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertNewDataType10ToString(EDataType eDataType, Object instanceValue) {
+		return super.convertToString(eDataType, instanceValue);
 	}
 
 	/**

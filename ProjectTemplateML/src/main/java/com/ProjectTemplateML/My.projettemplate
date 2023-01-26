@@ -1,10 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:projetTemplate="http://www.example.org/projetTemplate">
-  <projetTemplate:MLProject domainproblem="/1"/>
-  <projetTemplate:DomainProblem DomainRequirementValue="/2"/>
-  <projetTemplate:DomainRequirementValue value="/4" requirementtype="/5"/>
-  <projetTemplate:Value AccuracyValue="Moderate"/>
-  <projetTemplate:Value/>
-  <projetTemplate:RequirementType requirementmapping="/6" valueType="Accuracy"/>
-  <projetTemplate:RequirementMapping/>
+  <projetTemplate:MLProject dataanalysisproblem="/1"/>
+  <projetTemplate:DataAnalysisProblem mlprocchainsolutionpattern="/2"/>
+  <projetTemplate:MLProcChainSolutionPattern processingchain="/3" dataanalysisproblemtype="/28" collecteddataknowledgeabouttemplateconstruction="/29"/>
+  <projetTemplate:ProcessingChain mlalgorithm="/4 /13 /21"/>
+  <projetTemplate:MLAlgorithm name="NaiveBayes" processingchaintemplate="/5"/>
+  <projetTemplate:ProcessingChainTemplate name="Chaine1" component="/6 /7 /8 /9 /10 /11 /12"/>
+  <projetTemplate:Component name="RemoveNoise"/>
+  <projetTemplate:Component name="RemoveIrrelevantAttributs"/>
+  <projetTemplate:Component name="ImproveTheIndependencyBetweenAttributsUsing J48"/>
+  <projetTemplate:Component name="SelectTheRelevantAttributs"/>
+  <projetTemplate:Component name="ApplyNaiveBayes"/>
+  <projetTemplate:Component name="ApplyDesicionTree"/>
+  <projetTemplate:Component name="ApplyNaiveBayesOnTheLeafs"/>
+  <projetTemplate:MLAlgorithm name="DescionTree" processingchaintemplate="/14"/>
+  <projetTemplate:ProcessingChainTemplate name="Chaine2" component="/16 /17 /18 /19 /20"/>
+  <projetTemplate:DataPretraitement/>
+  <projetTemplate:Component name="MissingValueTreatement"/>
+  <projetTemplate:Component name="RemoveMissingValues"/>
+  <projetTemplate:Component name="ReplaceMissingValueByMeanOrZero"/>
+  <projetTemplate:Component name="DiscritizeNumericalValues"/>
+  <projetTemplate:Component name="UsePCAForFeatureSelection"/>
+  <projetTemplate:MLAlgorithm name="KNN" processingchaintemplate="/22"/>
+  <projetTemplate:ProcessingChainTemplate name="Chaine3" component="/23 /24 /25 /26"/>
+  <projetTemplate:Component name="ConvertCategorialAttributsIntoContinue"/>
+  <projetTemplate:Component name="Standardized"/>
+  <projetTemplate:Component name="Normalization"/>
+  <projetTemplate:Component name="KNN"/>
+  <projetTemplate:ProcessingChainTemplate/>
+  <projetTemplate:DataAnalysisProblemType/>
+  <projetTemplate:CollectedDataKnowledgeAboutTemplateConstruction rule="/30 /38 /47 /54"/>
+  <projetTemplate:Rule condition="/31" resultat="/36"/>
+  <projetTemplate:Condition term="/33 /34 /35"/>
+  <projetTemplate:Term/>
+  <projetTemplate:variable name="MLAlgorithm" valeur="NaiveBayes"/>
+  <projetTemplate:connector conneteur="^"/>
+  <projetTemplate:variable name="DataSize" valeur="Small"/>
+  <projetTemplate:Resultat term="/37"/>
+  <projetTemplate:variable name="MLAlgorithm" valeur="NaiveBayes"/>
+  <projetTemplate:Rule condition="/39" resultat="/43"/>
+  <projetTemplate:Condition term="/40 /41 /42"/>
+  <projetTemplate:variable name="MLAlgorithm" valeur="NaiveBayes"/>
+  <projetTemplate:connector conneteur="^"/>
+  <projetTemplate:variable name="DataSize" valeur="BigDataSet"/>
+  <projetTemplate:Resultat term="/44 /45 /46"/>
+  <projetTemplate:variable name="MLAlgorithm" valeur="DescionTree"/>
+  <projetTemplate:connector conneteur="^"/>
+  <projetTemplate:variable name="ExtendedMLAlgorithm" valeur="Use naive bayes on the leaves"/>
+  <projetTemplate:Rule condition="/48" resultat="/52"/>
+  <projetTemplate:Condition term="/49 /50 /51"/>
+  <projetTemplate:variable name="MLAlgorithm" valeur="DescionTree"/>
+  <projetTemplate:connector conneteur="^"/>
+  <projetTemplate:variable name="NmberOfFeatures" valeur=">88"/>
+  <projetTemplate:Resultat term="/53"/>
+  <projetTemplate:variable name="FeatureSelection" valeur="PCA algorithm"/>
+  <projetTemplate:Rule condition="/55" resultat="/57"/>
+  <projetTemplate:Condition term="/56"/>
+  <projetTemplate:variable name="MLAlgorithm" valeur="KNN"/>
+  <projetTemplate:Resultat term="/58 /59"/>
+  <projetTemplate:variable name="DataSize" valeur="Deal with high data size"/>
+  <projetTemplate:variable name="UnbalancedDataSet" valeur="False"/>
+  <projetTemplate:ProcessingChainTemplate/>
 </xmi:XMI>

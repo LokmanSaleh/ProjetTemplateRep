@@ -4,7 +4,6 @@ package projetTemplate.provider;
 
 import java.util.Collection;
 import java.util.List;
-
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -53,25 +52,25 @@ public class ExtendedBPMNModelItemProvider extends ItemProviderAdapter implement
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
+			addPathPropertyDescriptor(object);
 			addAuthorPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Path feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addPathPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ExtendedBPMNModel_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ExtendedBPMNModel_name_feature",
+						getResourceLocator(), getString("_UI_ExtendedBPMNModel_path_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ExtendedBPMNModel_path_feature",
 								"_UI_ExtendedBPMNModel_type"),
-						ProjetTemplatePackage.Literals.EXTENDED_BPMN_MODEL__NAME, true, false, false,
+						ProjetTemplatePackage.Literals.EXTENDED_BPMN_MODEL__PATH, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -120,7 +119,7 @@ public class ExtendedBPMNModelItemProvider extends ItemProviderAdapter implement
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ExtendedBPMNModel) object).getName();
+		String label = ((ExtendedBPMNModel) object).getPath();
 		return label == null || label.length() == 0 ? getString("_UI_ExtendedBPMNModel_type")
 				: getString("_UI_ExtendedBPMNModel_type") + " " + label;
 	}
@@ -137,7 +136,7 @@ public class ExtendedBPMNModelItemProvider extends ItemProviderAdapter implement
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ExtendedBPMNModel.class)) {
-		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__NAME:
+		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__PATH:
 		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__AUTHOR:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;

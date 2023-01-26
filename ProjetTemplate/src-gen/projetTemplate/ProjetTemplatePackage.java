@@ -4,6 +4,7 @@ package projetTemplate;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
@@ -1479,13 +1480,13 @@ public interface ProjetTemplatePackage extends EPackage {
 	int EXTENDED_BPMN_MODEL = 23;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXTENDED_BPMN_MODEL__NAME = 0;
+	int EXTENDED_BPMN_MODEL__PATH = 0;
 
 	/**
 	 * The feature id for the '<em><b>Author</b></em>' attribute.
@@ -2423,6 +2424,16 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 */
 	int MISSING_VALUE_TREATEMENT_ENUM = 52;
+
+	/**
+	 * The meta object id for the '<em>New Data Type10</em>' data type.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see java.lang.Object
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getNewDataType10()
+	 * @generated
+	 */
+	int NEW_DATA_TYPE10 = 53;
 
 	/**
 	 * Returns the meta object for class '{@link projetTemplate.DomainProblem <em>Domain Problem</em>}'.
@@ -3542,15 +3553,15 @@ public interface ProjetTemplatePackage extends EPackage {
 	EClass getExtendedBPMNModel();
 
 	/**
-	 * Returns the meta object for the attribute '{@link projetTemplate.ExtendedBPMNModel#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link projetTemplate.ExtendedBPMNModel#getPath <em>Path</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see projetTemplate.ExtendedBPMNModel#getName()
+	 * @return the meta object for the attribute '<em>Path</em>'.
+	 * @see projetTemplate.ExtendedBPMNModel#getPath()
 	 * @see #getExtendedBPMNModel()
 	 * @generated
 	 */
-	EAttribute getExtendedBPMNModel_Name();
+	EAttribute getExtendedBPMNModel_Path();
 
 	/**
 	 * Returns the meta object for the attribute '{@link projetTemplate.ExtendedBPMNModel#getAuthor <em>Author</em>}'.
@@ -4066,6 +4077,17 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getMissingValueTreatementEnum();
+
+	/**
+	 * Returns the meta object for data type '{@link java.lang.Object <em>New Data Type10</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for data type '<em>New Data Type10</em>'.
+	 * @see java.lang.Object
+	 * @model instanceClass="java.lang.Object"
+	 * @generated
+	 */
+	EDataType getNewDataType10();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -4988,12 +5010,12 @@ public interface ProjetTemplatePackage extends EPackage {
 		EClass EXTENDED_BPMN_MODEL = eINSTANCE.getExtendedBPMNModel();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Path</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute EXTENDED_BPMN_MODEL__NAME = eINSTANCE.getExtendedBPMNModel_Name();
+		EAttribute EXTENDED_BPMN_MODEL__PATH = eINSTANCE.getExtendedBPMNModel_Path();
 
 		/**
 		 * The meta object literal for the '<em><b>Author</b></em>' attribute feature.
@@ -5457,6 +5479,16 @@ public interface ProjetTemplatePackage extends EPackage {
 		 * @generated
 		 */
 		EEnum MISSING_VALUE_TREATEMENT_ENUM = eINSTANCE.getMissingValueTreatementEnum();
+
+		/**
+		 * The meta object literal for the '<em>New Data Type10</em>' data type.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see java.lang.Object
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getNewDataType10()
+		 * @generated
+		 */
+		EDataType NEW_DATA_TYPE10 = eINSTANCE.getNewDataType10();
 
 	}
 

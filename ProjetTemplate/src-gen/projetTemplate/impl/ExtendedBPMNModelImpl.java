@@ -2,6 +2,10 @@
  */
 package projetTemplate.impl;
 
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -20,7 +24,7 @@ import projetTemplate.ProjetTemplatePackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link projetTemplate.impl.ExtendedBPMNModelImpl#getName <em>Name</em>}</li>
+ *   <li>{@link projetTemplate.impl.ExtendedBPMNModelImpl#getPath <em>Path</em>}</li>
  *   <li>{@link projetTemplate.impl.ExtendedBPMNModelImpl#getAuthor <em>Author</em>}</li>
  * </ul>
  *
@@ -28,24 +32,24 @@ import projetTemplate.ProjetTemplatePackage;
  */
 public class ExtendedBPMNModelImpl extends MinimalEObjectImpl.Container implements ExtendedBPMNModel {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getPath() <em>Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getPath()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String PATH_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getPath() <em>Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getPath()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
+	protected String path = PATH_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getAuthor() <em>Author</em>}' attribute.
@@ -91,21 +95,51 @@ public class ExtendedBPMNModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public String getPath() {
+		return path;
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * 
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProjetTemplatePackage.EXTENDED_BPMN_MODEL__NAME,
-					oldName, name));
+	public void setPath(String newPath) {
+		String oldPath = path;
+		path = newPath;
+		if (eNotificationRequired()) {
+
+			eNotify(new ENotificationImpl(this, Notification.SET, ProjetTemplatePackage.EXTENDED_BPMN_MODEL__PATH,
+					oldPath, path));
+
+			try {
+				path = path.replaceAll("/", "\\");
+				//path = path.replaceAll("\\", "\\\\");
+				//TODO: create the bpmn file by the ressource offered by bpmn, to eliminate error 
+			     File myFile = new File("C:\\Users\\lookm\\git\\ProjetTemplateRep\\ProjectTemplateML\\src\\main\\java\\com\\ProjectTemplateML\\"+ path +".bpmn");
+			      if (myFile.createNewFile()) {
+				        //System.out.println("File created: " + myObj.getName());
+			    	  
+						if (Desktop.isDesktopSupported()) {
+							Desktop.getDesktop().open(myFile);
+						}
+
+			      }  else {
+						if (Desktop.isDesktopSupported()) {
+							Desktop.getDesktop().open(myFile);
+						}
+			        //System.out.println("File already exists.");
+			      }
+//			        
+//				if (Desktop.isDesktopSupported()) {
+//					Desktop.getDesktop().open(new File("C:\\Users\\lookm\\git\\ProjetTemplateRep\\ProjectTemplateML\\src\\main\\java\\com\\ProjectTemplateML\\MY" + ".bpmn"));
+//				}
+
+			} catch (IOException e1) {
+
+				e1.printStackTrace();
+			}
+		}
 	}
 
 	/**
@@ -138,8 +172,8 @@ public class ExtendedBPMNModelImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__NAME:
-			return getName();
+		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__PATH:
+			return getPath();
 		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__AUTHOR:
 			return getAuthor();
 		}
@@ -154,8 +188,8 @@ public class ExtendedBPMNModelImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__NAME:
-			setName((String) newValue);
+		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__PATH:
+			setPath((String) newValue);
 			return;
 		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__AUTHOR:
 			setAuthor((String) newValue);
@@ -172,8 +206,8 @@ public class ExtendedBPMNModelImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__NAME:
-			setName(NAME_EDEFAULT);
+		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__PATH:
+			setPath(PATH_EDEFAULT);
 			return;
 		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__AUTHOR:
 			setAuthor(AUTHOR_EDEFAULT);
@@ -190,8 +224,8 @@ public class ExtendedBPMNModelImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__NAME:
-			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__PATH:
+			return PATH_EDEFAULT == null ? path != null : !PATH_EDEFAULT.equals(path);
 		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__AUTHOR:
 			return AUTHOR_EDEFAULT == null ? author != null : !AUTHOR_EDEFAULT.equals(author);
 		}
@@ -209,8 +243,8 @@ public class ExtendedBPMNModelImpl extends MinimalEObjectImpl.Container implemen
 			return super.toString();
 
 		StringBuilder result = new StringBuilder(super.toString());
-		result.append(" (name: ");
-		result.append(name);
+		result.append(" (path: ");
+		result.append(path);
 		result.append(", author: ");
 		result.append(author);
 		result.append(')');

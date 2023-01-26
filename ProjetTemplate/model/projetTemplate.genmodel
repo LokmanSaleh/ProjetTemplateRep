@@ -50,6 +50,7 @@
       <genEnumLiterals ecoreEnumLiteral="projetTemplate.ecore#//MissingValueTreatementEnum/ReplaceByMean"/>
       <genEnumLiterals ecoreEnumLiteral="projetTemplate.ecore#//MissingValueTreatementEnum/ReplaceByZero"/>
     </genEnums>
+    <genDataTypes ecoreDataType="projetTemplate.ecore#//NewDataType10"/>
     <genClasses ecoreClass="projetTemplate.ecore#//DomainProblem">
       <genFeatures createChild="false" propertyMultiLine="true" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//DomainProblem/text"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//DomainProblem/DomainRequirementValue"/>
@@ -179,7 +180,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//SelectionCriterion/description"/>
     </genClasses>
     <genClasses ecoreClass="projetTemplate.ecore#//ExtendedBPMNModel">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//ExtendedBPMNModel/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//ExtendedBPMNModel/path"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//ExtendedBPMNModel/author"/>
     </genClasses>
     <genClasses ecoreClass="projetTemplate.ecore#//Explainability">

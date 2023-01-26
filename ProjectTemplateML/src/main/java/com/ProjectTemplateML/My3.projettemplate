@@ -1,2 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<projetTemplate:MLProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:projetTemplate="http://www.example.org/projetTemplate"/>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:projetTemplate="http://www.example.org/projetTemplate">
+  <projetTemplate:MLProject dataanalysisproblem="/2" domainproblem="/1"/>
+  <projetTemplate:DomainProblem/>
+  <projetTemplate:DataAnalysisProblem mlprocchainsolutionpattern="/3"/>
+  <projetTemplate:MLProcChainSolutionPattern processingchain="/4"/>
+  <projetTemplate:ProcessingChain mlalgorithm="/5"/>
+  <projetTemplate:MLAlgorithm processingchaintemplate="/6"/>
+  <projetTemplate:ProcessingChainTemplate extendedbpmnmodel="/8"/>
+  <projetTemplate:ExtendedBPMNModel/>
+  <projetTemplate:ExtendedBPMNModel/>
+</xmi:XMI>

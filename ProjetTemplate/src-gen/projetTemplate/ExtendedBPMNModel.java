@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link projetTemplate.ExtendedBPMNModel#getName <em>Name</em>}</li>
+ *   <li>{@link projetTemplate.ExtendedBPMNModel#getPath <em>Path</em>}</li>
  *   <li>{@link projetTemplate.ExtendedBPMNModel#getAuthor <em>Author</em>}</li>
  * </ul>
  *
@@ -23,26 +23,26 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ExtendedBPMNModel extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * Returns the value of the '<em><b>Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Name</em>' attribute.
-	 * @see #setName(String)
-	 * @see projetTemplate.ProjetTemplatePackage#getExtendedBPMNModel_Name()
+	 * @return the value of the '<em>Path</em>' attribute.
+	 * @see #setPath(String)
+	 * @see projetTemplate.ProjetTemplatePackage#getExtendedBPMNModel_Path()
 	 * @model
 	 * @generated
 	 */
-	String getName();
+	String getPath();
 
 	/**
-	 * Sets the value of the '{@link projetTemplate.ExtendedBPMNModel#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link projetTemplate.ExtendedBPMNModel#getPath <em>Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Name</em>' attribute.
-	 * @see #getName()
+	 * @param value the new value of the '<em>Path</em>' attribute.
+	 * @see #getPath()
 	 * @generated
 	 */
-	void setName(String value);
+	void setPath(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Author</b></em>' attribute.

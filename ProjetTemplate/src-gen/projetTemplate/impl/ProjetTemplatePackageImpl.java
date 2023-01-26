@@ -4,6 +4,7 @@ package projetTemplate.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
@@ -444,6 +445,13 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * @generated
 	 */
 	private EEnum missingValueTreatementEnumEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EDataType newDataType10EDataType = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1450,7 +1458,7 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getExtendedBPMNModel_Name() {
+	public EAttribute getExtendedBPMNModel_Path() {
 		return (EAttribute) extendedBPMNModelEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1909,6 +1917,15 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EDataType getNewDataType10() {
+		return newDataType10EDataType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ProjetTemplateFactory getProjetTemplateFactory() {
 		return (ProjetTemplateFactory) getEFactoryInstance();
 	}
@@ -2063,7 +2080,7 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		createEAttribute(selectionCriterionEClass, SELECTION_CRITERION__DESCRIPTION);
 
 		extendedBPMNModelEClass = createEClass(EXTENDED_BPMN_MODEL);
-		createEAttribute(extendedBPMNModelEClass, EXTENDED_BPMN_MODEL__NAME);
+		createEAttribute(extendedBPMNModelEClass, EXTENDED_BPMN_MODEL__PATH);
 		createEAttribute(extendedBPMNModelEClass, EXTENDED_BPMN_MODEL__AUTHOR);
 
 		explainabilityEClass = createEClass(EXPLAINABILITY);
@@ -2138,6 +2155,9 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		removeUncessaryFiledsEnumEEnum = createEEnum(REMOVE_UNCESSARY_FILEDS_ENUM);
 		noiseTreatementEnumEEnum = createEEnum(NOISE_TREATEMENT_ENUM);
 		missingValueTreatementEnumEEnum = createEEnum(MISSING_VALUE_TREATEMENT_ENUM);
+
+		// Create data types
+		newDataType10EDataType = createEDataType(NEW_DATA_TYPE10);
 	}
 
 	/**
@@ -2489,7 +2509,7 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 		initEClass(extendedBPMNModelEClass, ExtendedBPMNModel.class, "ExtendedBPMNModel", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getExtendedBPMNModel_Name(), ecorePackage.getEString(), "name", null, 0, 1,
+		initEAttribute(getExtendedBPMNModel_Path(), ecorePackage.getEString(), "path", null, 0, 1,
 				ExtendedBPMNModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getExtendedBPMNModel_Author(), ecorePackage.getEString(), "author", null, 0, 1,
@@ -2648,6 +2668,10 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEEnum(missingValueTreatementEnumEEnum, MissingValueTreatementEnum.class, "MissingValueTreatementEnum");
 		addEEnumLiteral(missingValueTreatementEnumEEnum, MissingValueTreatementEnum.REPLACE_BY_MEAN);
 		addEEnumLiteral(missingValueTreatementEnumEEnum, MissingValueTreatementEnum.REPLACE_BY_ZERO);
+
+		// Initialize data types
+		initEDataType(newDataType10EDataType, Object.class, "NewDataType10", IS_SERIALIZABLE,
+				!IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);
