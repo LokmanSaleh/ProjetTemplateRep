@@ -12,6 +12,7 @@ public class MLTemplateManipulaition {
 
         MLProject mlProject =  EMFUtiles.load(TEMPLATE_PATH);
         
+        //TODO : it's possible to parse the bpmn file into java object 
         //EMFUtiles.SaveEMFObjectAsXMLEditor(mlProject);
         
         System.out.println(mlProject.toString()); 
