@@ -97,36 +97,32 @@
         upperBound="-1" eType="#//MLAlgorithmSolutionPattern" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProcessingChain">
+    <eOperations name="SelectTheRightMLAlgroithm"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="author" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="mlalgorithm" lowerBound="1"
-        upperBound="-1" eType="#//MLAlgorithm"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extendedbpmnmodel" lowerBound="1"
+        eType="#//ExtendedBPMNModel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processingchaintemplate"
+        upperBound="-1" eType="#//ProcessingChainTemplate"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MLProcChainSolutionPattern">
-    <eOperations name="SelectMLAlgorithm"/>
+    <eOperations name="ConstruireUneChaineDeTraitementInitiale" eType="#//ProcessingChain"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="explanation" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="datapropertyvalueset" lowerBound="1"
         upperBound="-1" eType="#//DataPropertyValueSet"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="processingchain" lowerBound="1"
         eType="#//ProcessingChain"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataanalysisproblemtype"
         eType="#//DataAnalysisProblemType"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="SelectedProcessingChainTemplateForTheMLAlgorithm"
-        lowerBound="1" eType="#//ProcessingChainTemplate"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="collecteddataknowledgeabouttemplateconstruction"
         eType="#//CollectedDataKnowledgeAboutTemplateConstruction"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProcessingChainTemplate">
-    <eOperations name="ReducedItUsingknwoledge">
-      <eParameters name="param1" eType="#//CollectedDataKnowledgeAboutTemplateConstruction"/>
-    </eOperations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="author" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="extendedbpmnmodel" lowerBound="1"
         eType="#//ExtendedBPMNModel"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="component" lowerBound="1"
-        upperBound="-1" eType="#//Component"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mlalgorithm" eType="#//MLAlgorithm"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MLAlgorithmSolutionPattern">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -141,8 +137,6 @@
         eType="#//SelectionCriterionValueSet"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selectioncriterionvalue"
         upperBound="-1" eType="#//SelectionCriterionValue"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="processingchaintemplate"
-        lowerBound="1" eType="#//ProcessingChainTemplate"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SelectionCriterionValueSet">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="setType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
