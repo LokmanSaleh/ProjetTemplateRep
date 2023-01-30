@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:projetTemplate="http://www.example.org/projetTemplate">
+  <projetTemplate:MLProject name="Lokman" author="hhsfkh@hotmail.com " dataanalysisproblem="/1"/>
+  <projetTemplate:DataAnalysisProblem dataanalysisproblemtype="/19" mlprocchainsolutionpattern="/2"/>
+  <projetTemplate:MLProcChainSolutionPattern processingchain="/4" collecteddataknowledgeabouttemplateconstruction="/3"/>
+  <projetTemplate:CollectedDataKnowledgeAboutTemplateConstruction/>
+  <projetTemplate:ProcessingChain name="Processing chaine 1" author="Lokman" extendedbpmnmodel="/12" processingchaintemplate="/5"/>
+  <projetTemplate:ProcessingChainTemplate mlalgorithm="/6 /8 /10"/>
+  <projetTemplate:MLAlgorithm extendedbpmnmodel="/7"/>
+  <projetTemplate:ExtendedBPMNModel path="NaiveBayesChaine"/>
+  <projetTemplate:MLAlgorithm name="DecisionTree" extendedbpmnmodel="/9"/>
+  <projetTemplate:ExtendedBPMNModel path="DecisionTreeChaine"/>
+  <projetTemplate:MLAlgorithm name="KNN" extendedbpmnmodel="/11"/>
+  <projetTemplate:ExtendedBPMNModel path="KNNChaine"/>
+  <projetTemplate:ExtendedBPMNModel path="BasedChaineConstructedByCollectedKnowledge"/>
+  <projetTemplate:DomainProblem/>
+  <projetTemplate:ComputationalRequirementValue requirementtype="/15"/>
+  <projetTemplate:RequirementType requirementmapping="/16"/>
+  <projetTemplate:RequirementMapping requirementtype="/17"/>
+  <projetTemplate:RequirementType requirementmapping="/18"/>
+  <projetTemplate:RequirementMapping/>
+  <projetTemplate:DataAnalysisProblemType/>
+</xmi:XMI>

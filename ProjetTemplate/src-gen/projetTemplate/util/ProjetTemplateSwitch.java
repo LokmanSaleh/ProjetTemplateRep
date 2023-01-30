@@ -203,8 +203,6 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 			MLAlgorithm mlAlgorithm = (MLAlgorithm) theEObject;
 			T result = caseMLAlgorithm(mlAlgorithm);
 			if (result == null)
-				result = caseComponent(mlAlgorithm);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}

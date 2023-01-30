@@ -116,24 +116,26 @@ public class ExtendedBPMNModelImpl extends MinimalEObjectImpl.Container implemen
 				path = path.replaceAll("/", "\\");
 				//path = path.replaceAll("\\", "\\\\");
 				//TODO: create the bpmn file by the ressource offered by bpmn, to eliminate error 
-			     File myFile = new File("C:\\Users\\lookm\\git\\ProjetTemplateRep\\ProjectTemplateML\\src\\main\\java\\com\\ProjectTemplateML\\"+ path +".bpmn");
-			      if (myFile.createNewFile()) {
-				        //System.out.println("File created: " + myObj.getName());
-			    	  
-						if (Desktop.isDesktopSupported()) {
-							Desktop.getDesktop().open(myFile);
-						}
+				File myFile = new File(
+						"C:\\Users\\lookm\\git\\ProjetTemplateRep\\ProjectTemplateML\\src\\main\\java\\com\\ProjectTemplateML\\"
+								+ path + ".bpmn");
+				if (myFile.createNewFile()) {
+					//System.out.println("File created: " + myObj.getName());
 
-			      }  else {
-						if (Desktop.isDesktopSupported()) {
-							Desktop.getDesktop().open(myFile);
-						}
-			        //System.out.println("File already exists.");
-			      }
-//			        
-//				if (Desktop.isDesktopSupported()) {
-//					Desktop.getDesktop().open(new File("C:\\Users\\lookm\\git\\ProjetTemplateRep\\ProjectTemplateML\\src\\main\\java\\com\\ProjectTemplateML\\MY" + ".bpmn"));
-//				}
+					if (Desktop.isDesktopSupported()) {
+						Desktop.getDesktop().open(myFile);
+					}
+
+				} else {
+					if (Desktop.isDesktopSupported()) {
+						Desktop.getDesktop().open(myFile);
+					}
+					//System.out.println("File already exists.");
+				}
+				//			        
+				//				if (Desktop.isDesktopSupported()) {
+				//					Desktop.getDesktop().open(new File("C:\\Users\\lookm\\git\\ProjetTemplateRep\\ProjectTemplateML\\src\\main\\java\\com\\ProjectTemplateML\\MY" + ".bpmn"));
+				//				}
 
 			} catch (IOException e1) {
 

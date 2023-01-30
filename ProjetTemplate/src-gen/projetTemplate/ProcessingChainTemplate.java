@@ -17,8 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link projetTemplate.ProcessingChainTemplate#getName <em>Name</em>}</li>
  *   <li>{@link projetTemplate.ProcessingChainTemplate#getAuthor <em>Author</em>}</li>
- *   <li>{@link projetTemplate.ProcessingChainTemplate#getExtendedbpmnmodel <em>Extendedbpmnmodel</em>}</li>
- *   <li>{@link projetTemplate.ProcessingChainTemplate#getComponent <em>Component</em>}</li>
+ *   <li>{@link projetTemplate.ProcessingChainTemplate#getMlalgorithm <em>Mlalgorithm</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getProcessingChainTemplate()
@@ -71,45 +70,15 @@ public interface ProcessingChainTemplate extends EObject {
 	void setAuthor(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Extendedbpmnmodel</b></em>' reference.
+	 * Returns the value of the '<em><b>Mlalgorithm</b></em>' reference list.
+	 * The list contents are of type {@link projetTemplate.MLAlgorithm}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Extendedbpmnmodel</em>' reference.
-	 * @see #setExtendedbpmnmodel(ExtendedBPMNModel)
-	 * @see projetTemplate.ProjetTemplatePackage#getProcessingChainTemplate_Extendedbpmnmodel()
+	 * @return the value of the '<em>Mlalgorithm</em>' reference list.
+	 * @see projetTemplate.ProjetTemplatePackage#getProcessingChainTemplate_Mlalgorithm()
 	 * @model required="true"
 	 * @generated
 	 */
-	ExtendedBPMNModel getExtendedbpmnmodel();
-
-	/**
-	 * Sets the value of the '{@link projetTemplate.ProcessingChainTemplate#getExtendedbpmnmodel <em>Extendedbpmnmodel</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Extendedbpmnmodel</em>' reference.
-	 * @see #getExtendedbpmnmodel()
-	 * @generated
-	 */
-	void setExtendedbpmnmodel(ExtendedBPMNModel value);
-
-	/**
-	 * Returns the value of the '<em><b>Component</b></em>' reference list.
-	 * The list contents are of type {@link projetTemplate.Component}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Component</em>' reference list.
-	 * @see projetTemplate.ProjetTemplatePackage#getProcessingChainTemplate_Component()
-	 * @model required="true"
-	 * @generated
-	 */
-	EList<Component> getComponent();
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void ReducedItUsingknwoledge(CollectedDataKnowledgeAboutTemplateConstruction param1);
+	EList<MLAlgorithm> getMlalgorithm();
 
 } // ProcessingChainTemplate

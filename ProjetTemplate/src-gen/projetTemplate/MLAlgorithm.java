@@ -3,6 +3,7 @@
 package projetTemplate;
 
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,14 +16,15 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link projetTemplate.MLAlgorithm#getSelectioncriterionvalueset <em>Selectioncriterionvalueset</em>}</li>
  *   <li>{@link projetTemplate.MLAlgorithm#getSelectioncriterionvalue <em>Selectioncriterionvalue</em>}</li>
- *   <li>{@link projetTemplate.MLAlgorithm#getProcessingchaintemplate <em>Processingchaintemplate</em>}</li>
+ *   <li>{@link projetTemplate.MLAlgorithm#getName <em>Name</em>}</li>
+ *   <li>{@link projetTemplate.MLAlgorithm#getExtendedbpmnmodel <em>Extendedbpmnmodel</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithm()
  * @model
  * @generated
  */
-public interface MLAlgorithm extends Component {
+public interface MLAlgorithm extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Selectioncriterionvalueset</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -58,25 +60,50 @@ public interface MLAlgorithm extends Component {
 	EList<SelectionCriterionValue> getSelectioncriterionvalue();
 
 	/**
-	 * Returns the value of the '<em><b>Processingchaintemplate</b></em>' reference.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * The literals are from the enumeration {@link projetTemplate.MLAlgorithms}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Processingchaintemplate</em>' reference.
-	 * @see #setProcessingchaintemplate(ProcessingChainTemplate)
-	 * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithm_Processingchaintemplate()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see projetTemplate.MLAlgorithms
+	 * @see #setName(MLAlgorithms)
+	 * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithm_Name()
+	 * @model
+	 * @generated
+	 */
+	MLAlgorithms getName();
+
+	/**
+	 * Sets the value of the '{@link projetTemplate.MLAlgorithm#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see projetTemplate.MLAlgorithms
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(MLAlgorithms value);
+
+	/**
+	 * Returns the value of the '<em><b>Extendedbpmnmodel</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Extendedbpmnmodel</em>' reference.
+	 * @see #setExtendedbpmnmodel(ExtendedBPMNModel)
+	 * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithm_Extendedbpmnmodel()
 	 * @model required="true"
 	 * @generated
 	 */
-	ProcessingChainTemplate getProcessingchaintemplate();
+	ExtendedBPMNModel getExtendedbpmnmodel();
 
 	/**
-	 * Sets the value of the '{@link projetTemplate.MLAlgorithm#getProcessingchaintemplate <em>Processingchaintemplate</em>}' reference.
+	 * Sets the value of the '{@link projetTemplate.MLAlgorithm#getExtendedbpmnmodel <em>Extendedbpmnmodel</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Processingchaintemplate</em>' reference.
-	 * @see #getProcessingchaintemplate()
+	 * @param value the new value of the '<em>Extendedbpmnmodel</em>' reference.
+	 * @see #getExtendedbpmnmodel()
 	 * @generated
 	 */
-	void setProcessingchaintemplate(ProcessingChainTemplate value);
+	void setExtendedbpmnmodel(ExtendedBPMNModel value);
 
 } // MLAlgorithm

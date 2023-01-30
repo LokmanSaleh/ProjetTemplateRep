@@ -176,6 +176,8 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 			return createNoiseTreatementEnumFromString(eDataType, initialValue);
 		case ProjetTemplatePackage.MISSING_VALUE_TREATEMENT_ENUM:
 			return createMissingValueTreatementEnumFromString(eDataType, initialValue);
+		case ProjetTemplatePackage.ML_ALGORITHMS:
+			return createMLAlgorithmsFromString(eDataType, initialValue);
 		case ProjetTemplatePackage.NEW_DATA_TYPE10:
 			return createNewDataType10FromString(eDataType, initialValue);
 		default:
@@ -209,6 +211,8 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 			return convertNoiseTreatementEnumToString(eDataType, instanceValue);
 		case ProjetTemplatePackage.MISSING_VALUE_TREATEMENT_ENUM:
 			return convertMissingValueTreatementEnumToString(eDataType, instanceValue);
+		case ProjetTemplatePackage.ML_ALGORITHMS:
+			return convertMLAlgorithmsToString(eDataType, instanceValue);
 		case ProjetTemplatePackage.NEW_DATA_TYPE10:
 			return convertNewDataType10ToString(eDataType, instanceValue);
 		default:
@@ -854,6 +858,28 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 	 * @generated
 	 */
 	public String convertMissingValueTreatementEnumToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MLAlgorithms createMLAlgorithmsFromString(EDataType eDataType, String initialValue) {
+		MLAlgorithms result = MLAlgorithms.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertMLAlgorithmsToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

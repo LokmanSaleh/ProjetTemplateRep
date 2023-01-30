@@ -54,11 +54,10 @@ public class MLProcChainSolutionPatternItemProvider extends ItemProviderAdapter 
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addExplanationPropertyDescriptor(object);
 			addDatapropertyvaluesetPropertyDescriptor(object);
 			addProcessingchainPropertyDescriptor(object);
 			addDataanalysisproblemtypePropertyDescriptor(object);
-			addSelectedProcessingChainTemplateForTheMLAlgorithmPropertyDescriptor(object);
+			addExecutedTemplatePropertyDescriptor(object);
 			addCollecteddataknowledgeabouttemplateconstructionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -78,22 +77,6 @@ public class MLProcChainSolutionPatternItemProvider extends ItemProviderAdapter 
 								"_UI_MLProcChainSolutionPattern_type"),
 						ProjetTemplatePackage.Literals.ML_PROC_CHAIN_SOLUTION_PATTERN__NAME, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Explanation feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addExplanationPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_MLProcChainSolutionPattern_explanation_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_MLProcChainSolutionPattern_explanation_feature",
-						"_UI_MLProcChainSolutionPattern_type"),
-				ProjetTemplatePackage.Literals.ML_PROC_CHAIN_SOLUTION_PATTERN__EXPLANATION, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -148,20 +131,20 @@ public class MLProcChainSolutionPatternItemProvider extends ItemProviderAdapter 
 	}
 
 	/**
-	 * This adds a property descriptor for the Selected Processing Chain Template For The ML Algorithm feature.
+	 * This adds a property descriptor for the Executed Template feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSelectedProcessingChainTemplateForTheMLAlgorithmPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_MLProcChainSolutionPattern_SelectedProcessingChainTemplateForTheMLAlgorithm_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_MLProcChainSolutionPattern_SelectedProcessingChainTemplateForTheMLAlgorithm_feature",
-						"_UI_MLProcChainSolutionPattern_type"),
-				ProjetTemplatePackage.Literals.ML_PROC_CHAIN_SOLUTION_PATTERN__SELECTED_PROCESSING_CHAIN_TEMPLATE_FOR_THE_ML_ALGORITHM,
-				true, false, true, null, null, null));
+	protected void addExecutedTemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_MLProcChainSolutionPattern_ExecutedTemplate_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_MLProcChainSolutionPattern_ExecutedTemplate_feature",
+								"_UI_MLProcChainSolutionPattern_type"),
+						ProjetTemplatePackage.Literals.ML_PROC_CHAIN_SOLUTION_PATTERN__EXECUTED_TEMPLATE, true, false,
+						true, null, null, null));
 	}
 
 	/**
@@ -228,7 +211,6 @@ public class MLProcChainSolutionPatternItemProvider extends ItemProviderAdapter 
 
 		switch (notification.getFeatureID(MLProcChainSolutionPattern.class)) {
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__NAME:
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__EXPLANATION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

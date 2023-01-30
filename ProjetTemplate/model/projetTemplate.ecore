@@ -98,15 +98,16 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProcessingChain">
     <eOperations name="SelectTheRightMLAlgroithm"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="author" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="extendedbpmnmodel" lowerBound="1"
         eType="#//ExtendedBPMNModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="processingchaintemplate"
-        upperBound="-1" eType="#//ProcessingChainTemplate"/>
+        eType="#//ProcessingChainTemplate"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MLProcChainSolutionPattern">
     <eOperations name="ConstruireUneChaineDeTraitementInitiale" eType="#//ProcessingChain"/>
+    <eOperations name="MergeProcessingChainAndTemplate" eType="#//ExtendedBPMNModel"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="datapropertyvalueset" lowerBound="1"
         upperBound="-1" eType="#//DataPropertyValueSet"/>
@@ -114,15 +115,15 @@
         eType="#//ProcessingChain"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataanalysisproblemtype"
         eType="#//DataAnalysisProblemType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ExecutedTemplate" eType="#//ExtendedBPMNModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="collecteddataknowledgeabouttemplateconstruction"
-        eType="#//CollectedDataKnowledgeAboutTemplateConstruction"/>
+        lowerBound="1" upperBound="-1" eType="#//CollectedDataKnowledgeAboutTemplateConstruction"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ProcessingChainTemplate">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="author" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="extendedbpmnmodel" lowerBound="1"
-        eType="#//ExtendedBPMNModel"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="mlalgorithm" eType="#//MLAlgorithm"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mlalgorithm" lowerBound="1"
+        upperBound="-1" eType="#//MLAlgorithm"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MLAlgorithmSolutionPattern">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -132,11 +133,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="datapropertyvalueset" lowerBound="1"
         upperBound="-1" eType="#//DataPropertyValueSet"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MLAlgorithm" eSuperTypes="#//Component">
+  <eClassifiers xsi:type="ecore:EClass" name="MLAlgorithm">
     <eStructuralFeatures xsi:type="ecore:EReference" name="selectioncriterionvalueset"
         eType="#//SelectionCriterionValueSet"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="selectioncriterionvalue"
         upperBound="-1" eType="#//SelectionCriterionValue"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//MLAlgorithms"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extendedbpmnmodel" lowerBound="1"
+        eType="#//ExtendedBPMNModel"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SelectionCriterionValueSet">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="setType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -258,4 +262,12 @@
     <eLiterals name="ReplaceByZero" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EDataType" name="NewDataType10" instanceTypeName="newDataType10"/>
+  <eClassifiers xsi:type="ecore:EEnum" name="MLAlgorithms">
+    <eLiterals name="NaiveBayes"/>
+    <eLiterals name="DecisionTree" value="1"/>
+    <eLiterals name="KNN" value="2"/>
+    <eLiterals name="BayesianNetwork" value="3"/>
+    <eLiterals name="NeuralNetrowk" value="4"/>
+    <eLiterals name="SVM" value="5"/>
+  </eClassifiers>
 </ecore:EPackage>

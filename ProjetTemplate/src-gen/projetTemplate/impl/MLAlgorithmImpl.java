@@ -13,10 +13,12 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
+import projetTemplate.ExtendedBPMNModel;
 import projetTemplate.MLAlgorithm;
-import projetTemplate.ProcessingChainTemplate;
+import projetTemplate.MLAlgorithms;
 import projetTemplate.ProjetTemplatePackage;
 import projetTemplate.SelectionCriterionValue;
 import projetTemplate.SelectionCriterionValueSet;
@@ -31,12 +33,13 @@ import projetTemplate.SelectionCriterionValueSet;
  * <ul>
  *   <li>{@link projetTemplate.impl.MLAlgorithmImpl#getSelectioncriterionvalueset <em>Selectioncriterionvalueset</em>}</li>
  *   <li>{@link projetTemplate.impl.MLAlgorithmImpl#getSelectioncriterionvalue <em>Selectioncriterionvalue</em>}</li>
- *   <li>{@link projetTemplate.impl.MLAlgorithmImpl#getProcessingchaintemplate <em>Processingchaintemplate</em>}</li>
+ *   <li>{@link projetTemplate.impl.MLAlgorithmImpl#getName <em>Name</em>}</li>
+ *   <li>{@link projetTemplate.impl.MLAlgorithmImpl#getExtendedbpmnmodel <em>Extendedbpmnmodel</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MLAlgorithmImpl extends ComponentImpl implements MLAlgorithm {
+public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLAlgorithm {
 	/**
 	 * The cached value of the '{@link #getSelectioncriterionvalueset() <em>Selectioncriterionvalueset</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -58,14 +61,34 @@ public class MLAlgorithmImpl extends ComponentImpl implements MLAlgorithm {
 	protected EList<SelectionCriterionValue> selectioncriterionvalue;
 
 	/**
-	 * The cached value of the '{@link #getProcessingchaintemplate() <em>Processingchaintemplate</em>}' reference.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getProcessingchaintemplate()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected ProcessingChainTemplate processingchaintemplate;
+	protected static final MLAlgorithms NAME_EDEFAULT = MLAlgorithms.NAIVE_BAYES;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected MLAlgorithms name = NAME_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getExtendedbpmnmodel() <em>Extendedbpmnmodel</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getExtendedbpmnmodel()
+	 * @generated
+	 * @ordered
+	 */
+	protected ExtendedBPMNModel extendedbpmnmodel;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -146,18 +169,40 @@ public class MLAlgorithmImpl extends ComponentImpl implements MLAlgorithm {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProcessingChainTemplate getProcessingchaintemplate() {
-		if (processingchaintemplate != null && processingchaintemplate.eIsProxy()) {
-			InternalEObject oldProcessingchaintemplate = (InternalEObject) processingchaintemplate;
-			processingchaintemplate = (ProcessingChainTemplate) eResolveProxy(oldProcessingchaintemplate);
-			if (processingchaintemplate != oldProcessingchaintemplate) {
+	public MLAlgorithms getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(MLAlgorithms newName) {
+		MLAlgorithms oldName = name;
+		name = newName == null ? NAME_EDEFAULT : newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProjetTemplatePackage.ML_ALGORITHM__NAME, oldName,
+					name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ExtendedBPMNModel getExtendedbpmnmodel() {
+		if (extendedbpmnmodel != null && extendedbpmnmodel.eIsProxy()) {
+			InternalEObject oldExtendedbpmnmodel = (InternalEObject) extendedbpmnmodel;
+			extendedbpmnmodel = (ExtendedBPMNModel) eResolveProxy(oldExtendedbpmnmodel);
+			if (extendedbpmnmodel != oldExtendedbpmnmodel) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ProjetTemplatePackage.ML_ALGORITHM__PROCESSINGCHAINTEMPLATE, oldProcessingchaintemplate,
-							processingchaintemplate));
+							ProjetTemplatePackage.ML_ALGORITHM__EXTENDEDBPMNMODEL, oldExtendedbpmnmodel,
+							extendedbpmnmodel));
 			}
 		}
-		return processingchaintemplate;
+		return extendedbpmnmodel;
 	}
 
 	/**
@@ -165,8 +210,8 @@ public class MLAlgorithmImpl extends ComponentImpl implements MLAlgorithm {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProcessingChainTemplate basicGetProcessingchaintemplate() {
-		return processingchaintemplate;
+	public ExtendedBPMNModel basicGetExtendedbpmnmodel() {
+		return extendedbpmnmodel;
 	}
 
 	/**
@@ -174,13 +219,12 @@ public class MLAlgorithmImpl extends ComponentImpl implements MLAlgorithm {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProcessingchaintemplate(ProcessingChainTemplate newProcessingchaintemplate) {
-		ProcessingChainTemplate oldProcessingchaintemplate = processingchaintemplate;
-		processingchaintemplate = newProcessingchaintemplate;
+	public void setExtendedbpmnmodel(ExtendedBPMNModel newExtendedbpmnmodel) {
+		ExtendedBPMNModel oldExtendedbpmnmodel = extendedbpmnmodel;
+		extendedbpmnmodel = newExtendedbpmnmodel;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.ML_ALGORITHM__PROCESSINGCHAINTEMPLATE, oldProcessingchaintemplate,
-					processingchaintemplate));
+			eNotify(new ENotificationImpl(this, Notification.SET, ProjetTemplatePackage.ML_ALGORITHM__EXTENDEDBPMNMODEL,
+					oldExtendedbpmnmodel, extendedbpmnmodel));
 	}
 
 	/**
@@ -197,10 +241,12 @@ public class MLAlgorithmImpl extends ComponentImpl implements MLAlgorithm {
 			return basicGetSelectioncriterionvalueset();
 		case ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUE:
 			return getSelectioncriterionvalue();
-		case ProjetTemplatePackage.ML_ALGORITHM__PROCESSINGCHAINTEMPLATE:
+		case ProjetTemplatePackage.ML_ALGORITHM__NAME:
+			return getName();
+		case ProjetTemplatePackage.ML_ALGORITHM__EXTENDEDBPMNMODEL:
 			if (resolve)
-				return getProcessingchaintemplate();
-			return basicGetProcessingchaintemplate();
+				return getExtendedbpmnmodel();
+			return basicGetExtendedbpmnmodel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -221,8 +267,11 @@ public class MLAlgorithmImpl extends ComponentImpl implements MLAlgorithm {
 			getSelectioncriterionvalue().clear();
 			getSelectioncriterionvalue().addAll((Collection<? extends SelectionCriterionValue>) newValue);
 			return;
-		case ProjetTemplatePackage.ML_ALGORITHM__PROCESSINGCHAINTEMPLATE:
-			setProcessingchaintemplate((ProcessingChainTemplate) newValue);
+		case ProjetTemplatePackage.ML_ALGORITHM__NAME:
+			setName((MLAlgorithms) newValue);
+			return;
+		case ProjetTemplatePackage.ML_ALGORITHM__EXTENDEDBPMNMODEL:
+			setExtendedbpmnmodel((ExtendedBPMNModel) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -242,8 +291,11 @@ public class MLAlgorithmImpl extends ComponentImpl implements MLAlgorithm {
 		case ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUE:
 			getSelectioncriterionvalue().clear();
 			return;
-		case ProjetTemplatePackage.ML_ALGORITHM__PROCESSINGCHAINTEMPLATE:
-			setProcessingchaintemplate((ProcessingChainTemplate) null);
+		case ProjetTemplatePackage.ML_ALGORITHM__NAME:
+			setName(NAME_EDEFAULT);
+			return;
+		case ProjetTemplatePackage.ML_ALGORITHM__EXTENDEDBPMNMODEL:
+			setExtendedbpmnmodel((ExtendedBPMNModel) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -261,10 +313,29 @@ public class MLAlgorithmImpl extends ComponentImpl implements MLAlgorithm {
 			return selectioncriterionvalueset != null;
 		case ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUE:
 			return selectioncriterionvalue != null && !selectioncriterionvalue.isEmpty();
-		case ProjetTemplatePackage.ML_ALGORITHM__PROCESSINGCHAINTEMPLATE:
-			return processingchaintemplate != null;
+		case ProjetTemplatePackage.ML_ALGORITHM__NAME:
+			return name != NAME_EDEFAULT;
+		case ProjetTemplatePackage.ML_ALGORITHM__EXTENDEDBPMNMODEL:
+			return extendedbpmnmodel != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 } //MLAlgorithmImpl

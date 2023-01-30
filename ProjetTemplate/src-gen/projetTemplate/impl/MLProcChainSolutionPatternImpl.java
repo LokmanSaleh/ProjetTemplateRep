@@ -21,9 +21,9 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import projetTemplate.CollectedDataKnowledgeAboutTemplateConstruction;
 import projetTemplate.DataAnalysisProblemType;
 import projetTemplate.DataPropertyValueSet;
+import projetTemplate.ExtendedBPMNModel;
 import projetTemplate.MLProcChainSolutionPattern;
 import projetTemplate.ProcessingChain;
-import projetTemplate.ProcessingChainTemplate;
 import projetTemplate.ProjetTemplatePackage;
 
 /**
@@ -35,11 +35,10 @@ import projetTemplate.ProjetTemplatePackage;
  * </p>
  * <ul>
  *   <li>{@link projetTemplate.impl.MLProcChainSolutionPatternImpl#getName <em>Name</em>}</li>
- *   <li>{@link projetTemplate.impl.MLProcChainSolutionPatternImpl#getExplanation <em>Explanation</em>}</li>
  *   <li>{@link projetTemplate.impl.MLProcChainSolutionPatternImpl#getDatapropertyvalueset <em>Datapropertyvalueset</em>}</li>
  *   <li>{@link projetTemplate.impl.MLProcChainSolutionPatternImpl#getProcessingchain <em>Processingchain</em>}</li>
  *   <li>{@link projetTemplate.impl.MLProcChainSolutionPatternImpl#getDataanalysisproblemtype <em>Dataanalysisproblemtype</em>}</li>
- *   <li>{@link projetTemplate.impl.MLProcChainSolutionPatternImpl#getSelectedProcessingChainTemplateForTheMLAlgorithm <em>Selected Processing Chain Template For The ML Algorithm</em>}</li>
+ *   <li>{@link projetTemplate.impl.MLProcChainSolutionPatternImpl#getExecutedTemplate <em>Executed Template</em>}</li>
  *   <li>{@link projetTemplate.impl.MLProcChainSolutionPatternImpl#getCollecteddataknowledgeabouttemplateconstruction <em>Collecteddataknowledgeabouttemplateconstruction</em>}</li>
  * </ul>
  *
@@ -65,26 +64,6 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getExplanation() <em>Explanation</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExplanation()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String EXPLANATION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getExplanation() <em>Explanation</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getExplanation()
-	 * @generated
-	 * @ordered
-	 */
-	protected String explanation = EXPLANATION_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getDatapropertyvalueset() <em>Datapropertyvalueset</em>}' reference list.
@@ -117,24 +96,24 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 	protected DataAnalysisProblemType dataanalysisproblemtype;
 
 	/**
-	 * The cached value of the '{@link #getSelectedProcessingChainTemplateForTheMLAlgorithm() <em>Selected Processing Chain Template For The ML Algorithm</em>}' reference.
+	 * The cached value of the '{@link #getExecutedTemplate() <em>Executed Template</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSelectedProcessingChainTemplateForTheMLAlgorithm()
+	 * @see #getExecutedTemplate()
 	 * @generated
 	 * @ordered
 	 */
-	protected ProcessingChainTemplate selectedProcessingChainTemplateForTheMLAlgorithm;
+	protected ExtendedBPMNModel executedTemplate;
 
 	/**
-	 * The cached value of the '{@link #getCollecteddataknowledgeabouttemplateconstruction() <em>Collecteddataknowledgeabouttemplateconstruction</em>}' reference.
+	 * The cached value of the '{@link #getCollecteddataknowledgeabouttemplateconstruction() <em>Collecteddataknowledgeabouttemplateconstruction</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCollecteddataknowledgeabouttemplateconstruction()
 	 * @generated
 	 * @ordered
 	 */
-	protected CollectedDataKnowledgeAboutTemplateConstruction collecteddataknowledgeabouttemplateconstruction;
+	protected EList<CollectedDataKnowledgeAboutTemplateConstruction> collecteddataknowledgeabouttemplateconstruction;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -175,28 +154,6 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
 					ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getExplanation() {
-		return explanation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setExplanation(String newExplanation) {
-		String oldExplanation = explanation;
-		explanation = newExplanation;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__EXPLANATION, oldExplanation, explanation));
 	}
 
 	/**
@@ -301,21 +258,18 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProcessingChainTemplate getSelectedProcessingChainTemplateForTheMLAlgorithm() {
-		if (selectedProcessingChainTemplateForTheMLAlgorithm != null
-				&& selectedProcessingChainTemplateForTheMLAlgorithm.eIsProxy()) {
-			InternalEObject oldSelectedProcessingChainTemplateForTheMLAlgorithm = (InternalEObject) selectedProcessingChainTemplateForTheMLAlgorithm;
-			selectedProcessingChainTemplateForTheMLAlgorithm = (ProcessingChainTemplate) eResolveProxy(
-					oldSelectedProcessingChainTemplateForTheMLAlgorithm);
-			if (selectedProcessingChainTemplateForTheMLAlgorithm != oldSelectedProcessingChainTemplateForTheMLAlgorithm) {
+	public ExtendedBPMNModel getExecutedTemplate() {
+		if (executedTemplate != null && executedTemplate.eIsProxy()) {
+			InternalEObject oldExecutedTemplate = (InternalEObject) executedTemplate;
+			executedTemplate = (ExtendedBPMNModel) eResolveProxy(oldExecutedTemplate);
+			if (executedTemplate != oldExecutedTemplate) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__SELECTED_PROCESSING_CHAIN_TEMPLATE_FOR_THE_ML_ALGORITHM,
-							oldSelectedProcessingChainTemplateForTheMLAlgorithm,
-							selectedProcessingChainTemplateForTheMLAlgorithm));
+							ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__EXECUTED_TEMPLATE,
+							oldExecutedTemplate, executedTemplate));
 			}
 		}
-		return selectedProcessingChainTemplateForTheMLAlgorithm;
+		return executedTemplate;
 	}
 
 	/**
@@ -323,8 +277,8 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProcessingChainTemplate basicGetSelectedProcessingChainTemplateForTheMLAlgorithm() {
-		return selectedProcessingChainTemplateForTheMLAlgorithm;
+	public ExtendedBPMNModel basicGetExecutedTemplate() {
+		return executedTemplate;
 	}
 
 	/**
@@ -332,15 +286,13 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSelectedProcessingChainTemplateForTheMLAlgorithm(
-			ProcessingChainTemplate newSelectedProcessingChainTemplateForTheMLAlgorithm) {
-		ProcessingChainTemplate oldSelectedProcessingChainTemplateForTheMLAlgorithm = selectedProcessingChainTemplateForTheMLAlgorithm;
-		selectedProcessingChainTemplateForTheMLAlgorithm = newSelectedProcessingChainTemplateForTheMLAlgorithm;
+	public void setExecutedTemplate(ExtendedBPMNModel newExecutedTemplate) {
+		ExtendedBPMNModel oldExecutedTemplate = executedTemplate;
+		executedTemplate = newExecutedTemplate;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__SELECTED_PROCESSING_CHAIN_TEMPLATE_FOR_THE_ML_ALGORITHM,
-					oldSelectedProcessingChainTemplateForTheMLAlgorithm,
-					selectedProcessingChainTemplateForTheMLAlgorithm));
+					ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__EXECUTED_TEMPLATE, oldExecutedTemplate,
+					executedTemplate));
 	}
 
 	/**
@@ -348,19 +300,11 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CollectedDataKnowledgeAboutTemplateConstruction getCollecteddataknowledgeabouttemplateconstruction() {
-		if (collecteddataknowledgeabouttemplateconstruction != null
-				&& collecteddataknowledgeabouttemplateconstruction.eIsProxy()) {
-			InternalEObject oldCollecteddataknowledgeabouttemplateconstruction = (InternalEObject) collecteddataknowledgeabouttemplateconstruction;
-			collecteddataknowledgeabouttemplateconstruction = (CollectedDataKnowledgeAboutTemplateConstruction) eResolveProxy(
-					oldCollecteddataknowledgeabouttemplateconstruction);
-			if (collecteddataknowledgeabouttemplateconstruction != oldCollecteddataknowledgeabouttemplateconstruction) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__COLLECTEDDATAKNOWLEDGEABOUTTEMPLATECONSTRUCTION,
-							oldCollecteddataknowledgeabouttemplateconstruction,
-							collecteddataknowledgeabouttemplateconstruction));
-			}
+	public EList<CollectedDataKnowledgeAboutTemplateConstruction> getCollecteddataknowledgeabouttemplateconstruction() {
+		if (collecteddataknowledgeabouttemplateconstruction == null) {
+			collecteddataknowledgeabouttemplateconstruction = new EObjectResolvingEList<CollectedDataKnowledgeAboutTemplateConstruction>(
+					CollectedDataKnowledgeAboutTemplateConstruction.class, this,
+					ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__COLLECTEDDATAKNOWLEDGEABOUTTEMPLATECONSTRUCTION);
 		}
 		return collecteddataknowledgeabouttemplateconstruction;
 	}
@@ -370,8 +314,10 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CollectedDataKnowledgeAboutTemplateConstruction basicGetCollecteddataknowledgeabouttemplateconstruction() {
-		return collecteddataknowledgeabouttemplateconstruction;
+	public ProcessingChain ConstruireUneChaineDeTraitementInitiale() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -379,23 +325,7 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCollecteddataknowledgeabouttemplateconstruction(
-			CollectedDataKnowledgeAboutTemplateConstruction newCollecteddataknowledgeabouttemplateconstruction) {
-		CollectedDataKnowledgeAboutTemplateConstruction oldCollecteddataknowledgeabouttemplateconstruction = collecteddataknowledgeabouttemplateconstruction;
-		collecteddataknowledgeabouttemplateconstruction = newCollecteddataknowledgeabouttemplateconstruction;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__COLLECTEDDATAKNOWLEDGEABOUTTEMPLATECONSTRUCTION,
-					oldCollecteddataknowledgeabouttemplateconstruction,
-					collecteddataknowledgeabouttemplateconstruction));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void SelectMLAlgorithm() {
+	public ExtendedBPMNModel MergeProcessingChainAndTemplate() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -411,8 +341,6 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 		switch (featureID) {
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__NAME:
 			return getName();
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__EXPLANATION:
-			return getExplanation();
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET:
 			return getDatapropertyvalueset();
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__PROCESSINGCHAIN:
@@ -423,14 +351,12 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 			if (resolve)
 				return getDataanalysisproblemtype();
 			return basicGetDataanalysisproblemtype();
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__SELECTED_PROCESSING_CHAIN_TEMPLATE_FOR_THE_ML_ALGORITHM:
+		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__EXECUTED_TEMPLATE:
 			if (resolve)
-				return getSelectedProcessingChainTemplateForTheMLAlgorithm();
-			return basicGetSelectedProcessingChainTemplateForTheMLAlgorithm();
+				return getExecutedTemplate();
+			return basicGetExecutedTemplate();
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__COLLECTEDDATAKNOWLEDGEABOUTTEMPLATECONSTRUCTION:
-			if (resolve)
-				return getCollecteddataknowledgeabouttemplateconstruction();
-			return basicGetCollecteddataknowledgeabouttemplateconstruction();
+			return getCollecteddataknowledgeabouttemplateconstruction();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -447,9 +373,6 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__NAME:
 			setName((String) newValue);
 			return;
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__EXPLANATION:
-			setExplanation((String) newValue);
-			return;
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET:
 			getDatapropertyvalueset().clear();
 			getDatapropertyvalueset().addAll((Collection<? extends DataPropertyValueSet>) newValue);
@@ -460,12 +383,13 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE:
 			setDataanalysisproblemtype((DataAnalysisProblemType) newValue);
 			return;
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__SELECTED_PROCESSING_CHAIN_TEMPLATE_FOR_THE_ML_ALGORITHM:
-			setSelectedProcessingChainTemplateForTheMLAlgorithm((ProcessingChainTemplate) newValue);
+		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__EXECUTED_TEMPLATE:
+			setExecutedTemplate((ExtendedBPMNModel) newValue);
 			return;
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__COLLECTEDDATAKNOWLEDGEABOUTTEMPLATECONSTRUCTION:
-			setCollecteddataknowledgeabouttemplateconstruction(
-					(CollectedDataKnowledgeAboutTemplateConstruction) newValue);
+			getCollecteddataknowledgeabouttemplateconstruction().clear();
+			getCollecteddataknowledgeabouttemplateconstruction()
+					.addAll((Collection<? extends CollectedDataKnowledgeAboutTemplateConstruction>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -482,9 +406,6 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__EXPLANATION:
-			setExplanation(EXPLANATION_EDEFAULT);
-			return;
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET:
 			getDatapropertyvalueset().clear();
 			return;
@@ -494,11 +415,11 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE:
 			setDataanalysisproblemtype((DataAnalysisProblemType) null);
 			return;
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__SELECTED_PROCESSING_CHAIN_TEMPLATE_FOR_THE_ML_ALGORITHM:
-			setSelectedProcessingChainTemplateForTheMLAlgorithm((ProcessingChainTemplate) null);
+		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__EXECUTED_TEMPLATE:
+			setExecutedTemplate((ExtendedBPMNModel) null);
 			return;
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__COLLECTEDDATAKNOWLEDGEABOUTTEMPLATECONSTRUCTION:
-			setCollecteddataknowledgeabouttemplateconstruction((CollectedDataKnowledgeAboutTemplateConstruction) null);
+			getCollecteddataknowledgeabouttemplateconstruction().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -514,18 +435,17 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 		switch (featureID) {
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__EXPLANATION:
-			return EXPLANATION_EDEFAULT == null ? explanation != null : !EXPLANATION_EDEFAULT.equals(explanation);
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET:
 			return datapropertyvalueset != null && !datapropertyvalueset.isEmpty();
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__PROCESSINGCHAIN:
 			return processingchain != null;
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE:
 			return dataanalysisproblemtype != null;
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__SELECTED_PROCESSING_CHAIN_TEMPLATE_FOR_THE_ML_ALGORITHM:
-			return selectedProcessingChainTemplateForTheMLAlgorithm != null;
+		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__EXECUTED_TEMPLATE:
+			return executedTemplate != null;
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__COLLECTEDDATAKNOWLEDGEABOUTTEMPLATECONSTRUCTION:
-			return collecteddataknowledgeabouttemplateconstruction != null;
+			return collecteddataknowledgeabouttemplateconstruction != null
+					&& !collecteddataknowledgeabouttemplateconstruction.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -538,9 +458,10 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 	@Override
 	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
 		switch (operationID) {
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN___SELECT_ML_ALGORITHM:
-			SelectMLAlgorithm();
-			return null;
+		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN___CONSTRUIRE_UNE_CHAINE_DE_TRAITEMENT_INITIALE:
+			return ConstruireUneChaineDeTraitementInitiale();
+		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN___MERGE_PROCESSING_CHAIN_AND_TEMPLATE:
+			return MergeProcessingChainAndTemplate();
 		}
 		return super.eInvoke(operationID, arguments);
 	}
@@ -558,8 +479,6 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", explanation: ");
-		result.append(explanation);
 		result.append(')');
 		return result.toString();
 	}

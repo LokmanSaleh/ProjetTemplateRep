@@ -53,26 +53,27 @@ public class ProcessingChainItemProvider extends ItemProviderAdapter implements 
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDatePropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 			addAuthorPropertyDescriptor(object);
-			addMlalgorithmPropertyDescriptor(object);
+			addExtendedbpmnmodelPropertyDescriptor(object);
+			addProcessingchaintemplatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Date feature.
+	 * This adds a property descriptor for the Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDatePropertyDescriptor(Object object) {
+	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ProcessingChain_date_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ProcessingChain_date_feature",
+						getResourceLocator(), getString("_UI_ProcessingChain_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ProcessingChain_name_feature",
 								"_UI_ProcessingChain_type"),
-						ProjetTemplatePackage.Literals.PROCESSING_CHAIN__DATE, true, false, false,
+						ProjetTemplatePackage.Literals.PROCESSING_CHAIN__NAME, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -93,18 +94,35 @@ public class ProcessingChainItemProvider extends ItemProviderAdapter implements 
 	}
 
 	/**
-	 * This adds a property descriptor for the Mlalgorithm feature.
+	 * This adds a property descriptor for the Extendedbpmnmodel feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addMlalgorithmPropertyDescriptor(Object object) {
+	protected void addExtendedbpmnmodelPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_ProcessingChain_mlalgorithm_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ProcessingChain_mlalgorithm_feature",
+				getString("_UI_ProcessingChain_extendedbpmnmodel_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ProcessingChain_extendedbpmnmodel_feature",
 						"_UI_ProcessingChain_type"),
-				ProjetTemplatePackage.Literals.PROCESSING_CHAIN__MLALGORITHM, true, false, true, null, null, null));
+				ProjetTemplatePackage.Literals.PROCESSING_CHAIN__EXTENDEDBPMNMODEL, true, false, true, null, null,
+				null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Processingchaintemplate feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addProcessingchaintemplatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ProcessingChain_processingchaintemplate_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_ProcessingChain_processingchaintemplate_feature", "_UI_ProcessingChain_type"),
+						ProjetTemplatePackage.Literals.PROCESSING_CHAIN__PROCESSINGCHAINTEMPLATE, true, false, true,
+						null, null, null));
 	}
 
 	/**
@@ -136,7 +154,7 @@ public class ProcessingChainItemProvider extends ItemProviderAdapter implements 
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ProcessingChain) object).getDate();
+		String label = ((ProcessingChain) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_ProcessingChain_type")
 				: getString("_UI_ProcessingChain_type") + " " + label;
 	}
@@ -153,7 +171,7 @@ public class ProcessingChainItemProvider extends ItemProviderAdapter implements 
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ProcessingChain.class)) {
-		case ProjetTemplatePackage.PROCESSING_CHAIN__DATE:
+		case ProjetTemplatePackage.PROCESSING_CHAIN__NAME:
 		case ProjetTemplatePackage.PROCESSING_CHAIN__AUTHOR:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;

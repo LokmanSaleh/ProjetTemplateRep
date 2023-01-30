@@ -2,8 +2,6 @@
  */
 package projetTemplate.impl;
 
-import java.lang.reflect.InvocationTargetException;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -11,16 +9,11 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
-import projetTemplate.CollectedDataKnowledgeAboutTemplateConstruction;
-import projetTemplate.Component;
-import projetTemplate.ExtendedBPMNModel;
+import projetTemplate.MLAlgorithm;
 import projetTemplate.ProcessingChainTemplate;
 import projetTemplate.ProjetTemplatePackage;
 
@@ -34,8 +27,7 @@ import projetTemplate.ProjetTemplatePackage;
  * <ul>
  *   <li>{@link projetTemplate.impl.ProcessingChainTemplateImpl#getName <em>Name</em>}</li>
  *   <li>{@link projetTemplate.impl.ProcessingChainTemplateImpl#getAuthor <em>Author</em>}</li>
- *   <li>{@link projetTemplate.impl.ProcessingChainTemplateImpl#getExtendedbpmnmodel <em>Extendedbpmnmodel</em>}</li>
- *   <li>{@link projetTemplate.impl.ProcessingChainTemplateImpl#getComponent <em>Component</em>}</li>
+ *   <li>{@link projetTemplate.impl.ProcessingChainTemplateImpl#getMlalgorithm <em>Mlalgorithm</em>}</li>
  * </ul>
  *
  * @generated
@@ -82,24 +74,14 @@ public class ProcessingChainTemplateImpl extends MinimalEObjectImpl.Container im
 	protected String author = AUTHOR_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getExtendedbpmnmodel() <em>Extendedbpmnmodel</em>}' reference.
+	 * The cached value of the '{@link #getMlalgorithm() <em>Mlalgorithm</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getExtendedbpmnmodel()
+	 * @see #getMlalgorithm()
 	 * @generated
 	 * @ordered
 	 */
-	protected ExtendedBPMNModel extendedbpmnmodel;
-
-	/**
-	 * The cached value of the '{@link #getComponent() <em>Component</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getComponent()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<Component> component;
+	protected EList<MLAlgorithm> mlalgorithm;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -169,65 +151,12 @@ public class ProcessingChainTemplateImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ExtendedBPMNModel getExtendedbpmnmodel() {
-		if (extendedbpmnmodel != null && extendedbpmnmodel.eIsProxy()) {
-			InternalEObject oldExtendedbpmnmodel = (InternalEObject) extendedbpmnmodel;
-			extendedbpmnmodel = (ExtendedBPMNModel) eResolveProxy(oldExtendedbpmnmodel);
-			if (extendedbpmnmodel != oldExtendedbpmnmodel) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__EXTENDEDBPMNMODEL, oldExtendedbpmnmodel,
-							extendedbpmnmodel));
-			}
+	public EList<MLAlgorithm> getMlalgorithm() {
+		if (mlalgorithm == null) {
+			mlalgorithm = new EObjectResolvingEList<MLAlgorithm>(MLAlgorithm.class, this,
+					ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__MLALGORITHM);
 		}
-		return extendedbpmnmodel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ExtendedBPMNModel basicGetExtendedbpmnmodel() {
-		return extendedbpmnmodel;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setExtendedbpmnmodel(ExtendedBPMNModel newExtendedbpmnmodel) {
-		ExtendedBPMNModel oldExtendedbpmnmodel = extendedbpmnmodel;
-		extendedbpmnmodel = newExtendedbpmnmodel;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__EXTENDEDBPMNMODEL, oldExtendedbpmnmodel,
-					extendedbpmnmodel));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Component> getComponent() {
-		if (component == null) {
-			component = new EObjectResolvingEList<Component>(Component.class, this,
-					ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__COMPONENT);
-		}
-		return component;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void ReducedItUsingknwoledge(CollectedDataKnowledgeAboutTemplateConstruction param1) {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+		return mlalgorithm;
 	}
 
 	/**
@@ -242,12 +171,8 @@ public class ProcessingChainTemplateImpl extends MinimalEObjectImpl.Container im
 			return getName();
 		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__AUTHOR:
 			return getAuthor();
-		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__EXTENDEDBPMNMODEL:
-			if (resolve)
-				return getExtendedbpmnmodel();
-			return basicGetExtendedbpmnmodel();
-		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__COMPONENT:
-			return getComponent();
+		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__MLALGORITHM:
+			return getMlalgorithm();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -267,12 +192,9 @@ public class ProcessingChainTemplateImpl extends MinimalEObjectImpl.Container im
 		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__AUTHOR:
 			setAuthor((String) newValue);
 			return;
-		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__EXTENDEDBPMNMODEL:
-			setExtendedbpmnmodel((ExtendedBPMNModel) newValue);
-			return;
-		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__COMPONENT:
-			getComponent().clear();
-			getComponent().addAll((Collection<? extends Component>) newValue);
+		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__MLALGORITHM:
+			getMlalgorithm().clear();
+			getMlalgorithm().addAll((Collection<? extends MLAlgorithm>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -292,11 +214,8 @@ public class ProcessingChainTemplateImpl extends MinimalEObjectImpl.Container im
 		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__AUTHOR:
 			setAuthor(AUTHOR_EDEFAULT);
 			return;
-		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__EXTENDEDBPMNMODEL:
-			setExtendedbpmnmodel((ExtendedBPMNModel) null);
-			return;
-		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__COMPONENT:
-			getComponent().clear();
+		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__MLALGORITHM:
+			getMlalgorithm().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -314,27 +233,10 @@ public class ProcessingChainTemplateImpl extends MinimalEObjectImpl.Container im
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__AUTHOR:
 			return AUTHOR_EDEFAULT == null ? author != null : !AUTHOR_EDEFAULT.equals(author);
-		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__EXTENDEDBPMNMODEL:
-			return extendedbpmnmodel != null;
-		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__COMPONENT:
-			return component != null && !component.isEmpty();
+		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE__MLALGORITHM:
+			return mlalgorithm != null && !mlalgorithm.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE___REDUCED_IT_USINGKNWOLEDGE__COLLECTEDDATAKNOWLEDGEABOUTTEMPLATECONSTRUCTION:
-			ReducedItUsingknwoledge((CollectedDataKnowledgeAboutTemplateConstruction) arguments.get(0));
-			return null;
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
