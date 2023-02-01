@@ -11,11 +11,11 @@ import projetTemplate.MLProject;
 
 public class MLTemplateManipulaition {
 	
-	final static String TEMPLATE_PATH = "C:\\Users\\lookm\\git\\ProjetTemplateRep\\ProjectTemplateML\\src\\main\\java\\com\\ProjectTemplateML\\MLTemplate.projettemplate";
+	final static String TEMPLATE_PATH = "C:\\Users\\lookm\\git\\ProjetTemplateRep\\ProjectTemplateML\\src\\main\\java\\com\\ProjectTemplateML\\My8.projettemplate";
 
     public static void main(String args[]) {
 
-       // MLProject mlProject =  EMFUtiles.load(TEMPLATE_PATH);
+        MLProject mlProject =  EMFUtiles.load(TEMPLATE_PATH);
         
         //TODO : it's possible to parse the bpmn file into java object 
         File file = new File("C:\\Users\\lookm\\git\\ProjetTemplateRep\\ProjectTemplateML\\src\\main\\java\\com\\ProjectTemplateML\\NaiveBayesChaine.bpmn");
