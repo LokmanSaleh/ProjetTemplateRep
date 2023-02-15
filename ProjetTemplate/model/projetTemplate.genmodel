@@ -137,12 +137,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//DataAnalysisProblemType/Name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//DataAnalysisProblemType/mlalgorithmsolutionpattern"/>
     </genClasses>
-    <genClasses ecoreClass="projetTemplate.ecore#//ProcessingChain">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//ProcessingChain/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//ProcessingChain/author"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//ProcessingChain/extendedbpmnmodel"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//ProcessingChain/processingchaintemplate"/>
-      <genOperations ecoreOperation="projetTemplate.ecore#//ProcessingChain/SelectTheRightMLAlgroithm"/>
+    <genClasses ecoreClass="projetTemplate.ecore#//ProcessingChainTemplate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//ProcessingChainTemplate/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//ProcessingChainTemplate/author"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//ProcessingChainTemplate/extendedbpmnmodel"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//ProcessingChainTemplate/processingchaintemplate"/>
+      <genOperations ecoreOperation="projetTemplate.ecore#//ProcessingChainTemplate/SelectTheRightMLAlgroithm"/>
     </genClasses>
     <genClasses ecoreClass="projetTemplate.ecore#//MLProcChainSolutionPattern">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//MLProcChainSolutionPattern/name"/>
@@ -154,10 +154,10 @@
       <genOperations ecoreOperation="projetTemplate.ecore#//MLProcChainSolutionPattern/ConstruireUneChaineDeTraitementInitiale"/>
       <genOperations ecoreOperation="projetTemplate.ecore#//MLProcChainSolutionPattern/MergeProcessingChainAndTemplate"/>
     </genClasses>
-    <genClasses ecoreClass="projetTemplate.ecore#//ProcessingChainTemplate">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//ProcessingChainTemplate/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//ProcessingChainTemplate/author"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//ProcessingChainTemplate/mlalgorithm"/>
+    <genClasses ecoreClass="projetTemplate.ecore#//ProcessingChain">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//ProcessingChain/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//ProcessingChain/author"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference projetTemplate.ecore#//ProcessingChain/mlalgorithm"/>
     </genClasses>
     <genClasses ecoreClass="projetTemplate.ecore#//MLAlgorithmSolutionPattern">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute projetTemplate.ecore#//MLAlgorithmSolutionPattern/name"/>

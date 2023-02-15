@@ -2,6 +2,8 @@
  */
 package projetTemplate.impl;
 
+import genmodel.GenmodelPackage;
+import genmodel.impl.GenmodelPackageImpl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -511,11 +513,19 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 		isInited = true;
 
+		// Obtain or create and register interdependencies
+		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GenmodelPackage.eNS_URI);
+		GenmodelPackageImpl theGenmodelPackage = (GenmodelPackageImpl) (registeredPackage instanceof GenmodelPackageImpl
+				? registeredPackage
+				: GenmodelPackage.eINSTANCE);
+
 		// Create package meta-data objects
 		theProjetTemplatePackage.createPackageContents();
+		theGenmodelPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theProjetTemplatePackage.initializePackageContents();
+		theGenmodelPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theProjetTemplatePackage.freeze();
@@ -1124,26 +1134,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProcessingChain_Extendedbpmnmodel() {
+	public EReference getProcessingChain_Mlalgorithm() {
 		return (EReference) processingChainEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getProcessingChain_Processingchaintemplate() {
-		return (EReference) processingChainEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getProcessingChain__SelectTheRightMLAlgroithm() {
-		return processingChainEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -1259,8 +1251,26 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getProcessingChainTemplate_Mlalgorithm() {
+	public EReference getProcessingChainTemplate_Extendedbpmnmodel() {
 		return (EReference) processingChainTemplateEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getProcessingChainTemplate_Processingchaintemplate() {
+		return (EReference) processingChainTemplateEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getProcessingChainTemplate__SelectTheRightMLAlgroithm() {
+		return processingChainTemplateEClass.getEOperations().get(0);
 	}
 
 	/**
@@ -2054,12 +2064,12 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		createEAttribute(dataAnalysisProblemTypeEClass, DATA_ANALYSIS_PROBLEM_TYPE__NAME);
 		createEReference(dataAnalysisProblemTypeEClass, DATA_ANALYSIS_PROBLEM_TYPE__MLALGORITHMSOLUTIONPATTERN);
 
-		processingChainEClass = createEClass(PROCESSING_CHAIN);
-		createEAttribute(processingChainEClass, PROCESSING_CHAIN__NAME);
-		createEAttribute(processingChainEClass, PROCESSING_CHAIN__AUTHOR);
-		createEReference(processingChainEClass, PROCESSING_CHAIN__EXTENDEDBPMNMODEL);
-		createEReference(processingChainEClass, PROCESSING_CHAIN__PROCESSINGCHAINTEMPLATE);
-		createEOperation(processingChainEClass, PROCESSING_CHAIN___SELECT_THE_RIGHT_ML_ALGROITHM);
+		processingChainTemplateEClass = createEClass(PROCESSING_CHAIN_TEMPLATE);
+		createEAttribute(processingChainTemplateEClass, PROCESSING_CHAIN_TEMPLATE__NAME);
+		createEAttribute(processingChainTemplateEClass, PROCESSING_CHAIN_TEMPLATE__AUTHOR);
+		createEReference(processingChainTemplateEClass, PROCESSING_CHAIN_TEMPLATE__EXTENDEDBPMNMODEL);
+		createEReference(processingChainTemplateEClass, PROCESSING_CHAIN_TEMPLATE__PROCESSINGCHAINTEMPLATE);
+		createEOperation(processingChainTemplateEClass, PROCESSING_CHAIN_TEMPLATE___SELECT_THE_RIGHT_ML_ALGROITHM);
 
 		mlProcChainSolutionPatternEClass = createEClass(ML_PROC_CHAIN_SOLUTION_PATTERN);
 		createEAttribute(mlProcChainSolutionPatternEClass, ML_PROC_CHAIN_SOLUTION_PATTERN__NAME);
@@ -2074,10 +2084,10 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		createEOperation(mlProcChainSolutionPatternEClass,
 				ML_PROC_CHAIN_SOLUTION_PATTERN___MERGE_PROCESSING_CHAIN_AND_TEMPLATE);
 
-		processingChainTemplateEClass = createEClass(PROCESSING_CHAIN_TEMPLATE);
-		createEAttribute(processingChainTemplateEClass, PROCESSING_CHAIN_TEMPLATE__NAME);
-		createEAttribute(processingChainTemplateEClass, PROCESSING_CHAIN_TEMPLATE__AUTHOR);
-		createEReference(processingChainTemplateEClass, PROCESSING_CHAIN_TEMPLATE__MLALGORITHM);
+		processingChainEClass = createEClass(PROCESSING_CHAIN);
+		createEAttribute(processingChainEClass, PROCESSING_CHAIN__NAME);
+		createEAttribute(processingChainEClass, PROCESSING_CHAIN__AUTHOR);
+		createEReference(processingChainEClass, PROCESSING_CHAIN__MLALGORITHM);
 
 		mlAlgorithmSolutionPatternEClass = createEClass(ML_ALGORITHM_SOLUTION_PATTERN);
 		createEAttribute(mlAlgorithmSolutionPatternEClass, ML_ALGORITHM_SOLUTION_PATTERN__NAME);
@@ -2409,21 +2419,22 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
-		initEClass(processingChainEClass, ProcessingChain.class, "ProcessingChain", !IS_ABSTRACT, !IS_INTERFACE,
-				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getProcessingChain_Name(), ecorePackage.getEString(), "name", null, 0, 1, ProcessingChain.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProcessingChain_Author(), ecorePackage.getEString(), "author", null, 0, 1,
-				ProcessingChain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
-				!IS_DERIVED, IS_ORDERED);
-		initEReference(getProcessingChain_Extendedbpmnmodel(), this.getExtendedBPMNModel(), null, "extendedbpmnmodel",
-				null, 1, 1, ProcessingChain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProcessingChain_Processingchaintemplate(), this.getProcessingChainTemplate(), null,
-				"processingchaintemplate", null, 0, 1, ProcessingChain.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEClass(processingChainTemplateEClass, ProcessingChainTemplate.class, "ProcessingChainTemplate",
+				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getProcessingChainTemplate_Name(), ecorePackage.getEString(), "name", null, 0, 1,
+				ProcessingChainTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProcessingChainTemplate_Author(), ecorePackage.getEString(), "author", null, 0, 1,
+				ProcessingChainTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProcessingChainTemplate_Extendedbpmnmodel(), this.getExtendedBPMNModel(), null,
+				"extendedbpmnmodel", null, 1, 1, ProcessingChainTemplate.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getProcessingChainTemplate_Processingchaintemplate(), this.getProcessingChain(), null,
+				"processingchaintemplate", null, 1, -1, ProcessingChainTemplate.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getProcessingChain__SelectTheRightMLAlgroithm(), null, "SelectTheRightMLAlgroithm", 0, 1,
+		initEOperation(getProcessingChainTemplate__SelectTheRightMLAlgroithm(), null, "SelectTheRightMLAlgroithm", 0, 1,
 				IS_UNIQUE, IS_ORDERED);
 
 		initEClass(mlProcChainSolutionPatternEClass, MLProcChainSolutionPattern.class, "MLProcChainSolutionPattern",
@@ -2434,8 +2445,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEReference(getMLProcChainSolutionPattern_Datapropertyvalueset(), this.getDataPropertyValueSet(), null,
 				"datapropertyvalueset", null, 1, -1, MLProcChainSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMLProcChainSolutionPattern_Processingchain(), this.getProcessingChain(), null,
-				"processingchain", null, 1, 1, MLProcChainSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEReference(getMLProcChainSolutionPattern_Processingchain(), this.getProcessingChainTemplate(), null,
+				"processingchain", null, 1, -1, MLProcChainSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMLProcChainSolutionPattern_Dataanalysisproblemtype(), this.getDataAnalysisProblemType(), null,
 				"dataanalysisproblemtype", null, 0, 1, MLProcChainSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE,
@@ -2450,22 +2461,22 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getMLProcChainSolutionPattern__ConstruireUneChaineDeTraitementInitiale(),
-				this.getProcessingChain(), "ConstruireUneChaineDeTraitementInitiale", 0, 1, IS_UNIQUE, IS_ORDERED);
+				this.getProcessingChainTemplate(), "ConstruireUneChaineDeTraitementInitiale", 0, 1, IS_UNIQUE,
+				IS_ORDERED);
 
 		initEOperation(getMLProcChainSolutionPattern__MergeProcessingChainAndTemplate(), this.getExtendedBPMNModel(),
 				"MergeProcessingChainAndTemplate", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(processingChainTemplateEClass, ProcessingChainTemplate.class, "ProcessingChainTemplate",
-				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getProcessingChainTemplate_Name(), ecorePackage.getEString(), "name", null, 0, 1,
-				ProcessingChainTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getProcessingChainTemplate_Author(), ecorePackage.getEString(), "author", null, 0, 1,
-				ProcessingChainTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getProcessingChainTemplate_Mlalgorithm(), this.getMLAlgorithm(), null, "mlalgorithm", null, 1,
-				-1, ProcessingChainTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(processingChainEClass, ProcessingChain.class, "ProcessingChain", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getProcessingChain_Name(), ecorePackage.getEString(), "name", null, 0, 1, ProcessingChain.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getProcessingChain_Author(), ecorePackage.getEString(), "author", null, 0, 1,
+				ProcessingChain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getProcessingChain_Mlalgorithm(), this.getMLAlgorithm(), null, "mlalgorithm", null, 1, -1,
+				ProcessingChain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mlAlgorithmSolutionPatternEClass, MLAlgorithmSolutionPattern.class, "MLAlgorithmSolutionPattern",
 				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

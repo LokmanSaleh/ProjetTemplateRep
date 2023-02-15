@@ -63,26 +63,16 @@ public interface MLProcChainSolutionPattern extends EObject {
 	EList<DataPropertyValueSet> getDatapropertyvalueset();
 
 	/**
-	 * Returns the value of the '<em><b>Processingchain</b></em>' reference.
+	 * Returns the value of the '<em><b>Processingchain</b></em>' reference list.
+	 * The list contents are of type {@link projetTemplate.ProcessingChainTemplate}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Processingchain</em>' reference.
-	 * @see #setProcessingchain(ProcessingChain)
+	 * @return the value of the '<em>Processingchain</em>' reference list.
 	 * @see projetTemplate.ProjetTemplatePackage#getMLProcChainSolutionPattern_Processingchain()
 	 * @model required="true"
 	 * @generated
 	 */
-	ProcessingChain getProcessingchain();
-
-	/**
-	 * Sets the value of the '{@link projetTemplate.MLProcChainSolutionPattern#getProcessingchain <em>Processingchain</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Processingchain</em>' reference.
-	 * @see #getProcessingchain()
-	 * @generated
-	 */
-	void setProcessingchain(ProcessingChain value);
+	EList<ProcessingChainTemplate> getProcessingchain();
 
 	/**
 	 * Returns the value of the '<em><b>Dataanalysisproblemtype</b></em>' reference.
@@ -146,7 +136,7 @@ public interface MLProcChainSolutionPattern extends EObject {
 	 * @model
 	 * @generated
 	 */
-	ProcessingChain ConstruireUneChaineDeTraitementInitiale();
+	ProcessingChainTemplate ConstruireUneChaineDeTraitementInitiale();
 
 	/**
 	 * <!-- begin-user-doc -->

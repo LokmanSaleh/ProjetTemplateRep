@@ -1214,12 +1214,12 @@ public class ProjetTemplateItemProviderAdapterFactory extends ProjetTemplateAdap
 			dataPropertyTypeItemProvider.dispose();
 		if (dataAnalysisProblemTypeItemProvider != null)
 			dataAnalysisProblemTypeItemProvider.dispose();
-		if (processingChainItemProvider != null)
-			processingChainItemProvider.dispose();
-		if (mlProcChainSolutionPatternItemProvider != null)
-			mlProcChainSolutionPatternItemProvider.dispose();
 		if (processingChainTemplateItemProvider != null)
 			processingChainTemplateItemProvider.dispose();
+		if (mlProcChainSolutionPatternItemProvider != null)
+			mlProcChainSolutionPatternItemProvider.dispose();
+		if (processingChainItemProvider != null)
+			processingChainItemProvider.dispose();
 		if (mlAlgorithmSolutionPatternItemProvider != null)
 			mlAlgorithmSolutionPatternItemProvider.dispose();
 		if (mlAlgorithmItemProvider != null)

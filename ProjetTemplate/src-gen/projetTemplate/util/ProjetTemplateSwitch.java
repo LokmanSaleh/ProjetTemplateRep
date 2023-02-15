@@ -171,9 +171,9 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ProjetTemplatePackage.PROCESSING_CHAIN: {
-			ProcessingChain processingChain = (ProcessingChain) theEObject;
-			T result = caseProcessingChain(processingChain);
+		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE: {
+			ProcessingChainTemplate processingChainTemplate = (ProcessingChainTemplate) theEObject;
+			T result = caseProcessingChainTemplate(processingChainTemplate);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -185,9 +185,9 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE: {
-			ProcessingChainTemplate processingChainTemplate = (ProcessingChainTemplate) theEObject;
-			T result = caseProcessingChainTemplate(processingChainTemplate);
+		case ProjetTemplatePackage.PROCESSING_CHAIN: {
+			ProcessingChain processingChain = (ProcessingChain) theEObject;
+			T result = caseProcessingChain(processingChain);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;

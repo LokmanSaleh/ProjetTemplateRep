@@ -919,70 +919,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getProcessingChain()
 	 * @generated
 	 */
-	int PROCESSING_CHAIN = 15;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESSING_CHAIN__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Author</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESSING_CHAIN__AUTHOR = 1;
-
-	/**
-	 * The feature id for the '<em><b>Extendedbpmnmodel</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESSING_CHAIN__EXTENDEDBPMNMODEL = 2;
-
-	/**
-	 * The feature id for the '<em><b>Processingchaintemplate</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESSING_CHAIN__PROCESSINGCHAINTEMPLATE = 3;
-
-	/**
-	 * The number of structural features of the '<em>Processing Chain</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESSING_CHAIN_FEATURE_COUNT = 4;
-
-	/**
-	 * The operation id for the '<em>Select The Right ML Algroithm</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESSING_CHAIN___SELECT_THE_RIGHT_ML_ALGROITHM = 0;
-
-	/**
-	 * The number of operations of the '<em>Processing Chain</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROCESSING_CHAIN_OPERATION_COUNT = 1;
+	int PROCESSING_CHAIN = 17;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.impl.MLProcChainSolutionPatternImpl <em>ML Proc Chain Solution Pattern</em>}' class.
@@ -993,6 +930,79 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 */
 	int ML_PROC_CHAIN_SOLUTION_PATTERN = 16;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.ProcessingChainTemplateImpl <em>Processing Chain Template</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.ProcessingChainTemplateImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getProcessingChainTemplate()
+	 * @generated
+	 */
+	int PROCESSING_CHAIN_TEMPLATE = 15;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSING_CHAIN_TEMPLATE__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Author</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSING_CHAIN_TEMPLATE__AUTHOR = 1;
+
+	/**
+	 * The feature id for the '<em><b>Extendedbpmnmodel</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSING_CHAIN_TEMPLATE__EXTENDEDBPMNMODEL = 2;
+
+	/**
+	 * The feature id for the '<em><b>Processingchaintemplate</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSING_CHAIN_TEMPLATE__PROCESSINGCHAINTEMPLATE = 3;
+
+	/**
+	 * The number of structural features of the '<em>Processing Chain Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSING_CHAIN_TEMPLATE_FEATURE_COUNT = 4;
+
+	/**
+	 * The operation id for the '<em>Select The Right ML Algroithm</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSING_CHAIN_TEMPLATE___SELECT_THE_RIGHT_ML_ALGROITHM = 0;
+
+	/**
+	 * The number of operations of the '<em>Processing Chain Template</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROCESSING_CHAIN_TEMPLATE_OPERATION_COUNT = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1013,7 +1023,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	int ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET = 1;
 
 	/**
-	 * The feature id for the '<em><b>Processingchain</b></em>' reference.
+	 * The feature id for the '<em><b>Processingchain</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1085,23 +1095,13 @@ public interface ProjetTemplatePackage extends EPackage {
 	int ML_PROC_CHAIN_SOLUTION_PATTERN_OPERATION_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.ProcessingChainTemplateImpl <em>Processing Chain Template</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.ProcessingChainTemplateImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getProcessingChainTemplate()
-	 * @generated
-	 */
-	int PROCESSING_CHAIN_TEMPLATE = 17;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESSING_CHAIN_TEMPLATE__NAME = 0;
+	int PROCESSING_CHAIN__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Author</b></em>' attribute.
@@ -1110,7 +1110,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESSING_CHAIN_TEMPLATE__AUTHOR = 1;
+	int PROCESSING_CHAIN__AUTHOR = 1;
 
 	/**
 	 * The feature id for the '<em><b>Mlalgorithm</b></em>' reference list.
@@ -1119,25 +1119,25 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESSING_CHAIN_TEMPLATE__MLALGORITHM = 2;
+	int PROCESSING_CHAIN__MLALGORITHM = 2;
 
 	/**
-	 * The number of structural features of the '<em>Processing Chain Template</em>' class.
+	 * The number of structural features of the '<em>Processing Chain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESSING_CHAIN_TEMPLATE_FEATURE_COUNT = 3;
+	int PROCESSING_CHAIN_FEATURE_COUNT = 3;
 
 	/**
-	 * The number of operations of the '<em>Processing Chain Template</em>' class.
+	 * The number of operations of the '<em>Processing Chain</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROCESSING_CHAIN_TEMPLATE_OPERATION_COUNT = 0;
+	int PROCESSING_CHAIN_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.impl.MLAlgorithmSolutionPatternImpl <em>ML Algorithm Solution Pattern</em>}' class.
@@ -3155,36 +3155,15 @@ public interface ProjetTemplatePackage extends EPackage {
 	EAttribute getProcessingChain_Author();
 
 	/**
-	 * Returns the meta object for the reference '{@link projetTemplate.ProcessingChain#getExtendedbpmnmodel <em>Extendedbpmnmodel</em>}'.
+	 * Returns the meta object for the reference list '{@link projetTemplate.ProcessingChain#getMlalgorithm <em>Mlalgorithm</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Extendedbpmnmodel</em>'.
-	 * @see projetTemplate.ProcessingChain#getExtendedbpmnmodel()
+	 * @return the meta object for the reference list '<em>Mlalgorithm</em>'.
+	 * @see projetTemplate.ProcessingChain#getMlalgorithm()
 	 * @see #getProcessingChain()
 	 * @generated
 	 */
-	EReference getProcessingChain_Extendedbpmnmodel();
-
-	/**
-	 * Returns the meta object for the reference '{@link projetTemplate.ProcessingChain#getProcessingchaintemplate <em>Processingchaintemplate</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Processingchaintemplate</em>'.
-	 * @see projetTemplate.ProcessingChain#getProcessingchaintemplate()
-	 * @see #getProcessingChain()
-	 * @generated
-	 */
-	EReference getProcessingChain_Processingchaintemplate();
-
-	/**
-	 * Returns the meta object for the '{@link projetTemplate.ProcessingChain#SelectTheRightMLAlgroithm() <em>Select The Right ML Algroithm</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Select The Right ML Algroithm</em>' operation.
-	 * @see projetTemplate.ProcessingChain#SelectTheRightMLAlgroithm()
-	 * @generated
-	 */
-	EOperation getProcessingChain__SelectTheRightMLAlgroithm();
+	EReference getProcessingChain_Mlalgorithm();
 
 	/**
 	 * Returns the meta object for class '{@link projetTemplate.MLProcChainSolutionPattern <em>ML Proc Chain Solution Pattern</em>}'.
@@ -3219,10 +3198,10 @@ public interface ProjetTemplatePackage extends EPackage {
 	EReference getMLProcChainSolutionPattern_Datapropertyvalueset();
 
 	/**
-	 * Returns the meta object for the reference '{@link projetTemplate.MLProcChainSolutionPattern#getProcessingchain <em>Processingchain</em>}'.
+	 * Returns the meta object for the reference list '{@link projetTemplate.MLProcChainSolutionPattern#getProcessingchain <em>Processingchain</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Processingchain</em>'.
+	 * @return the meta object for the reference list '<em>Processingchain</em>'.
 	 * @see projetTemplate.MLProcChainSolutionPattern#getProcessingchain()
 	 * @see #getMLProcChainSolutionPattern()
 	 * @generated
@@ -3315,15 +3294,36 @@ public interface ProjetTemplatePackage extends EPackage {
 	EAttribute getProcessingChainTemplate_Author();
 
 	/**
-	 * Returns the meta object for the reference list '{@link projetTemplate.ProcessingChainTemplate#getMlalgorithm <em>Mlalgorithm</em>}'.
+	 * Returns the meta object for the reference '{@link projetTemplate.ProcessingChainTemplate#getExtendedbpmnmodel <em>Extendedbpmnmodel</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Mlalgorithm</em>'.
-	 * @see projetTemplate.ProcessingChainTemplate#getMlalgorithm()
+	 * @return the meta object for the reference '<em>Extendedbpmnmodel</em>'.
+	 * @see projetTemplate.ProcessingChainTemplate#getExtendedbpmnmodel()
 	 * @see #getProcessingChainTemplate()
 	 * @generated
 	 */
-	EReference getProcessingChainTemplate_Mlalgorithm();
+	EReference getProcessingChainTemplate_Extendedbpmnmodel();
+
+	/**
+	 * Returns the meta object for the reference list '{@link projetTemplate.ProcessingChainTemplate#getProcessingchaintemplate <em>Processingchaintemplate</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Processingchaintemplate</em>'.
+	 * @see projetTemplate.ProcessingChainTemplate#getProcessingchaintemplate()
+	 * @see #getProcessingChainTemplate()
+	 * @generated
+	 */
+	EReference getProcessingChainTemplate_Processingchaintemplate();
+
+	/**
+	 * Returns the meta object for the '{@link projetTemplate.ProcessingChainTemplate#SelectTheRightMLAlgroithm() <em>Select The Right ML Algroithm</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Select The Right ML Algroithm</em>' operation.
+	 * @see projetTemplate.ProcessingChainTemplate#SelectTheRightMLAlgroithm()
+	 * @generated
+	 */
+	EOperation getProcessingChainTemplate__SelectTheRightMLAlgroithm();
 
 	/**
 	 * Returns the meta object for class '{@link projetTemplate.MLAlgorithmSolutionPattern <em>ML Algorithm Solution Pattern</em>}'.
@@ -4708,29 +4708,12 @@ public interface ProjetTemplatePackage extends EPackage {
 		EAttribute PROCESSING_CHAIN__AUTHOR = eINSTANCE.getProcessingChain_Author();
 
 		/**
-		 * The meta object literal for the '<em><b>Extendedbpmnmodel</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Mlalgorithm</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PROCESSING_CHAIN__EXTENDEDBPMNMODEL = eINSTANCE.getProcessingChain_Extendedbpmnmodel();
-
-		/**
-		 * The meta object literal for the '<em><b>Processingchaintemplate</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PROCESSING_CHAIN__PROCESSINGCHAINTEMPLATE = eINSTANCE.getProcessingChain_Processingchaintemplate();
-
-		/**
-		 * The meta object literal for the '<em><b>Select The Right ML Algroithm</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation PROCESSING_CHAIN___SELECT_THE_RIGHT_ML_ALGROITHM = eINSTANCE
-				.getProcessingChain__SelectTheRightMLAlgroithm();
+		EReference PROCESSING_CHAIN__MLALGORITHM = eINSTANCE.getProcessingChain_Mlalgorithm();
 
 		/**
 		 * The meta object literal for the '{@link projetTemplate.impl.MLProcChainSolutionPatternImpl <em>ML Proc Chain Solution Pattern</em>}' class.
@@ -4760,7 +4743,7 @@ public interface ProjetTemplatePackage extends EPackage {
 				.getMLProcChainSolutionPattern_Datapropertyvalueset();
 
 		/**
-		 * The meta object literal for the '<em><b>Processingchain</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Processingchain</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -4840,12 +4823,31 @@ public interface ProjetTemplatePackage extends EPackage {
 		EAttribute PROCESSING_CHAIN_TEMPLATE__AUTHOR = eINSTANCE.getProcessingChainTemplate_Author();
 
 		/**
-		 * The meta object literal for the '<em><b>Mlalgorithm</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Extendedbpmnmodel</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PROCESSING_CHAIN_TEMPLATE__MLALGORITHM = eINSTANCE.getProcessingChainTemplate_Mlalgorithm();
+		EReference PROCESSING_CHAIN_TEMPLATE__EXTENDEDBPMNMODEL = eINSTANCE
+				.getProcessingChainTemplate_Extendedbpmnmodel();
+
+		/**
+		 * The meta object literal for the '<em><b>Processingchaintemplate</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PROCESSING_CHAIN_TEMPLATE__PROCESSINGCHAINTEMPLATE = eINSTANCE
+				.getProcessingChainTemplate_Processingchaintemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Select The Right ML Algroithm</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PROCESSING_CHAIN_TEMPLATE___SELECT_THE_RIGHT_ML_ALGROITHM = eINSTANCE
+				.getProcessingChainTemplate__SelectTheRightMLAlgroithm();
 
 		/**
 		 * The meta object literal for the '{@link projetTemplate.impl.MLAlgorithmSolutionPatternImpl <em>ML Algorithm Solution Pattern</em>}' class.

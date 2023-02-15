@@ -55,8 +55,7 @@ public class ProcessingChainItemProvider extends ItemProviderAdapter implements 
 
 			addNamePropertyDescriptor(object);
 			addAuthorPropertyDescriptor(object);
-			addExtendedbpmnmodelPropertyDescriptor(object);
-			addProcessingchaintemplatePropertyDescriptor(object);
+			addMlalgorithmPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -94,35 +93,18 @@ public class ProcessingChainItemProvider extends ItemProviderAdapter implements 
 	}
 
 	/**
-	 * This adds a property descriptor for the Extendedbpmnmodel feature.
+	 * This adds a property descriptor for the Mlalgorithm feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addExtendedbpmnmodelPropertyDescriptor(Object object) {
+	protected void addMlalgorithmPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_ProcessingChain_extendedbpmnmodel_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ProcessingChain_extendedbpmnmodel_feature",
+				getString("_UI_ProcessingChain_mlalgorithm_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ProcessingChain_mlalgorithm_feature",
 						"_UI_ProcessingChain_type"),
-				ProjetTemplatePackage.Literals.PROCESSING_CHAIN__EXTENDEDBPMNMODEL, true, false, true, null, null,
-				null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Processingchaintemplate feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addProcessingchaintemplatePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ProcessingChain_processingchaintemplate_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_ProcessingChain_processingchaintemplate_feature", "_UI_ProcessingChain_type"),
-						ProjetTemplatePackage.Literals.PROCESSING_CHAIN__PROCESSINGCHAINTEMPLATE, true, false, true,
-						null, null, null));
+				ProjetTemplatePackage.Literals.PROCESSING_CHAIN__MLALGORITHM, true, false, true, null, null, null));
 	}
 
 	/**

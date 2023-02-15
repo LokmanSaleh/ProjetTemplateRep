@@ -31,7 +31,7 @@
     <semanticResources>My.bpmn2</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_5bb7MIKxEe2sn-ea3VaFLw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_5ciHYIKxEe2sn-ea3VaFLw" name="projetTemplate" repPath="#_5cYWYIKxEe2sn-ea3VaFLw" changeId="e99293ad-2df0-4270-965f-c24039f357ff">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_5ciHYIKxEe2sn-ea3VaFLw" name="projetTemplate" repPath="#_5cYWYIKxEe2sn-ea3VaFLw" changeId="d886cef3-418a-4b05-8198-1239df2ef83b">
         <description xmi:type="description_1:DiagramDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']"/>
         <target xmi:type="ecore:EPackage" href="projetTemplate.ecore#/"/>
       </ownedRepresentationDescriptors>
@@ -2227,9 +2227,9 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_xRG54IK4Ee2sn-ea3VaFLw" name="ProcessingChain" tooltipText="" outgoingEdges="_uTJ7EqAEEe2YTJXh91YqTA _6aJK-KAYEe2YTJXh91YqTA" incomingEdges="_LC-80po6Ee2eDIBA0aI39w" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="projetTemplate.ecore#//ProcessingChain"/>
-      <semanticElements xmi:type="ecore:EClass" href="projetTemplate.ecore#//ProcessingChain"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_xRG54IK4Ee2sn-ea3VaFLw" name="ProcessingChainTemplate" tooltipText="" outgoingEdges="_uTJ7EqAEEe2YTJXh91YqTA _6aJK-KAYEe2YTJXh91YqTA" incomingEdges="_LC-80po6Ee2eDIBA0aI39w" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="projetTemplate.ecore#//ProcessingChainTemplate"/>
+      <semanticElements xmi:type="ecore:EClass" href="projetTemplate.ecore#//ProcessingChainTemplate"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -2238,24 +2238,24 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_xRKkToK4Ee2sn-ea3VaFLw" name="name : EString" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="projetTemplate.ecore#//ProcessingChain/name"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="projetTemplate.ecore#//ProcessingChain/name"/>
+        <target xmi:type="ecore:EAttribute" href="projetTemplate.ecore#//ProcessingChainTemplate/name"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="projetTemplate.ecore#//ProcessingChainTemplate/name"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_Om7R6ILrEe2sn-ea3VaFLw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_1xLLwIK4Ee2sn-ea3VaFLw" name="author : EString" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="projetTemplate.ecore#//ProcessingChain/author"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="projetTemplate.ecore#//ProcessingChain/author"/>
+        <target xmi:type="ecore:EAttribute" href="projetTemplate.ecore#//ProcessingChainTemplate/author"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="projetTemplate.ecore#//ProcessingChainTemplate/author"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_NkI-8oLrEe2sn-ea3VaFLw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_ZgakgKAHEe2YTJXh91YqTA" name="SelectTheRightMLAlgroithm()" tooltipText="SelectTheRightMLAlgroithm()">
-        <target xmi:type="ecore:EOperation" href="projetTemplate.ecore#//ProcessingChain/SelectTheRightMLAlgroithm"/>
-        <semanticElements xmi:type="ecore:EOperation" href="projetTemplate.ecore#//ProcessingChain/SelectTheRightMLAlgroithm"/>
+        <target xmi:type="ecore:EOperation" href="projetTemplate.ecore#//ProcessingChainTemplate/SelectTheRightMLAlgroithm"/>
+        <semanticElements xmi:type="ecore:EOperation" href="projetTemplate.ecore#//ProcessingChainTemplate/SelectTheRightMLAlgroithm"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_ZgbLkKAHEe2YTJXh91YqTA" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']/@style"/>
         </ownedStyle>
@@ -2280,7 +2280,7 @@
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
-      <ownedElements xmi:type="diagram:DNodeListElement" uid="_nvVzIJo6Ee2eDIBA0aI39w" name="ConstruireUneChaineDeTraitementInitiale() : ProcessingChain" tooltipText="ConstruireUneChaineDeTraitementInitiale() : ProcessingChain">
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_nvVzIJo6Ee2eDIBA0aI39w" name="ConstruireUneChaineDeTraitementInitiale() : ProcessingChainTemplate" tooltipText="ConstruireUneChaineDeTraitementInitiale() : ProcessingChainTemplate">
         <target xmi:type="ecore:EOperation" href="projetTemplate.ecore#//MLProcChainSolutionPattern/ConstruireUneChaineDeTraitementInitiale"/>
         <semanticElements xmi:type="ecore:EOperation" href="projetTemplate.ecore#//MLProcChainSolutionPattern/ConstruireUneChaineDeTraitementInitiale"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_nvWaMJo6Ee2eDIBA0aI39w" labelAlignment="LEFT">
@@ -2297,9 +2297,9 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='Operation']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_EnhU8IK5Ee2sn-ea3VaFLw" name="ProcessingChainTemplate" tooltipText="" outgoingEdges="_9LkJrKAYEe2YTJXh91YqTA" incomingEdges="_6aJK-KAYEe2YTJXh91YqTA" width="12" height="10">
-      <target xmi:type="ecore:EClass" href="projetTemplate.ecore#//ProcessingChainTemplate"/>
-      <semanticElements xmi:type="ecore:EClass" href="projetTemplate.ecore#//ProcessingChainTemplate"/>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_EnhU8IK5Ee2sn-ea3VaFLw" name="ProcessingChain" tooltipText="" outgoingEdges="_9LkJrKAYEe2YTJXh91YqTA" incomingEdges="_6aJK-KAYEe2YTJXh91YqTA" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="projetTemplate.ecore#//ProcessingChain"/>
+      <semanticElements xmi:type="ecore:EClass" href="projetTemplate.ecore#//ProcessingChain"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
       <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
       <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
@@ -2308,16 +2308,16 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_Enk_W4K5Ee2sn-ea3VaFLw" name="name : EString" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="projetTemplate.ecore#//ProcessingChainTemplate/name"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="projetTemplate.ecore#//ProcessingChainTemplate/name"/>
+        <target xmi:type="ecore:EAttribute" href="projetTemplate.ecore#//ProcessingChain/name"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="projetTemplate.ecore#//ProcessingChain/name"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_VOxIVoLrEe2sn-ea3VaFLw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
       </ownedElements>
       <ownedElements xmi:type="diagram:DNodeListElement" uid="_EnlmYIK5Ee2sn-ea3VaFLw" name="author : EString" tooltipText="">
-        <target xmi:type="ecore:EAttribute" href="projetTemplate.ecore#//ProcessingChainTemplate/author"/>
-        <semanticElements xmi:type="ecore:EAttribute" href="projetTemplate.ecore#//ProcessingChainTemplate/author"/>
+        <target xmi:type="ecore:EAttribute" href="projetTemplate.ecore#//ProcessingChain/author"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="projetTemplate.ecore#//ProcessingChain/author"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_WKOD8YLrEe2sn-ea3VaFLw" labelAlignment="LEFT">
           <description xmi:type="style:BundledImageDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']/@style"/>
         </ownedStyle>
@@ -2972,7 +2972,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_LC-80po6Ee2eDIBA0aI39w" name="[1..1] processingchain" sourceNode="_5yfFEIK4Ee2sn-ea3VaFLw" targetNode="_xRG54IK4Ee2sn-ea3VaFLw">
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_LC-80po6Ee2eDIBA0aI39w" name="[1..*] processingchain" sourceNode="_5yfFEIK4Ee2sn-ea3VaFLw" targetNode="_xRG54IK4Ee2sn-ea3VaFLw">
       <target xmi:type="ecore:EReference" href="projetTemplate.ecore#//MLProcChainSolutionPattern/processingchain"/>
       <semanticElements xmi:type="ecore:EReference" href="projetTemplate.ecore#//MLProcChainSolutionPattern/processingchain"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_NB2c0Jo6Ee2eDIBA0aI39w" description="_4jvvJoK6Ee2sn-ea3VaFLw" routingStyle="manhattan" strokeColor="0,0,0">
@@ -3665,8 +3665,8 @@
       </ownedElements>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_uTJ7EqAEEe2YTJXh91YqTA" name="[1..1] extendedbpmnmodel" sourceNode="_xRG54IK4Ee2sn-ea3VaFLw" targetNode="_j6NcUILbEe2sn-ea3VaFLw">
-      <target xmi:type="ecore:EReference" href="projetTemplate.ecore#//ProcessingChain/extendedbpmnmodel"/>
-      <semanticElements xmi:type="ecore:EReference" href="projetTemplate.ecore#//ProcessingChain/extendedbpmnmodel"/>
+      <target xmi:type="ecore:EReference" href="projetTemplate.ecore#//ProcessingChainTemplate/extendedbpmnmodel"/>
+      <semanticElements xmi:type="ecore:EReference" href="projetTemplate.ecore#//ProcessingChainTemplate/extendedbpmnmodel"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_wF5EC6AEEe2YTJXh91YqTA" description="_4jvvJoK6Ee2sn-ea3VaFLw" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_wF5EDaAEEe2YTJXh91YqTA" showIcon="false">
           <labelFormat>bold</labelFormat>
@@ -3756,23 +3756,20 @@
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EEnum']/@subNodeMappings[name='EC%20EEnumLiteral']"/>
       </ownedElements>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_6aJK-KAYEe2YTJXh91YqTA" name="[0..1] processingchaintemplate" sourceNode="_xRG54IK4Ee2sn-ea3VaFLw" targetNode="_EnhU8IK5Ee2sn-ea3VaFLw">
-      <target xmi:type="ecore:EReference" href="projetTemplate.ecore#//ProcessingChain/processingchaintemplate"/>
-      <semanticElements xmi:type="ecore:EReference" href="projetTemplate.ecore#//ProcessingChain/processingchaintemplate"/>
-      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_6aJx8KAYEe2YTJXh91YqTA" routingStyle="manhattan" strokeColor="0,0,0">
-        <description xmi:type="style:EdgeStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']/@style"/>
-        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_6aJx8qAYEe2YTJXh91YqTA" showIcon="false">
-          <customFeatures>labelSize</customFeatures>
+    <ownedDiagramElements xmi:type="diagram:DEdge" uid="_6aJK-KAYEe2YTJXh91YqTA" name="[1..*] processingchaintemplate" sourceNode="_xRG54IK4Ee2sn-ea3VaFLw" targetNode="_EnhU8IK5Ee2sn-ea3VaFLw">
+      <target xmi:type="ecore:EReference" href="projetTemplate.ecore#//ProcessingChainTemplate/processingchaintemplate"/>
+      <semanticElements xmi:type="ecore:EReference" href="projetTemplate.ecore#//ProcessingChainTemplate/processingchaintemplate"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" uid="_1cApDqIFEe20DZfV6n6-Gw" description="_4jvvJoK6Ee2sn-ea3VaFLw" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_1cApEKIFEe20DZfV6n6-Gw" showIcon="false">
+          <labelFormat>bold</labelFormat>
         </centerLabelStyle>
-        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_6aJx8aAYEe2YTJXh91YqTA" showIcon="false" labelColor="39,76,114">
-          <customFeatures>labelSize</customFeatures>
-        </endLabelStyle>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" uid="_1cApD6IFEe20DZfV6n6-Gw" labelSize="6" showIcon="false" labelColor="39,76,114"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" uid="_9LkJrKAYEe2YTJXh91YqTA" name="[1..*] mlalgorithm" sourceNode="_EnhU8IK5Ee2sn-ea3VaFLw" targetNode="_emZRwIK5Ee2sn-ea3VaFLw">
-      <target xmi:type="ecore:EReference" href="projetTemplate.ecore#//ProcessingChainTemplate/mlalgorithm"/>
-      <semanticElements xmi:type="ecore:EReference" href="projetTemplate.ecore#//ProcessingChainTemplate/mlalgorithm"/>
+      <target xmi:type="ecore:EReference" href="projetTemplate.ecore#//ProcessingChain/mlalgorithm"/>
+      <semanticElements xmi:type="ecore:EReference" href="projetTemplate.ecore#//ProcessingChain/mlalgorithm"/>
       <ownedStyle xmi:type="diagram:EdgeStyle" uid="_BF8UhqAZEe2YTJXh91YqTA" description="_4jvvJoK6Ee2sn-ea3VaFLw" routingStyle="manhattan" strokeColor="0,0,0">
         <centerLabelStyle xmi:type="diagram:CenterLabelStyle" uid="_BF8UiKAZEe2YTJXh91YqTA" showIcon="false">
           <labelFormat>bold</labelFormat>

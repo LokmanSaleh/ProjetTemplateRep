@@ -44,4 +44,32 @@
 	</editor>
        
     </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated projetTemplate -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="genmodel.presentation.GenmodelModelWizardID"
+            name="%_UI_GenmodelModelWizard_label"
+            class="genmodel.presentation.GenmodelModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/GenmodelModelFile.gif">
+         <description>%_UI_GenmodelModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated projetTemplate -->
+      <editor
+            id="genmodel.presentation.GenmodelEditorID"
+            name="%_UI_GenmodelEditor_label"
+            icon="icons/full/obj16/GenmodelModelFile.gif"
+            extensions="genmodel"
+            class="genmodel.presentation.GenmodelEditor"
+            contributorClass="genmodel.presentation.GenmodelActionBarContributor">
+      </editor>
+   </extension>
  </plugin>

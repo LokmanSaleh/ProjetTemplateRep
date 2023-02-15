@@ -23,7 +23,7 @@ import projetTemplate.DataAnalysisProblemType;
 import projetTemplate.DataPropertyValueSet;
 import projetTemplate.ExtendedBPMNModel;
 import projetTemplate.MLProcChainSolutionPattern;
-import projetTemplate.ProcessingChain;
+import projetTemplate.ProcessingChainTemplate;
 import projetTemplate.ProjetTemplatePackage;
 
 /**
@@ -76,14 +76,14 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 	protected EList<DataPropertyValueSet> datapropertyvalueset;
 
 	/**
-	 * The cached value of the '{@link #getProcessingchain() <em>Processingchain</em>}' reference.
+	 * The cached value of the '{@link #getProcessingchain() <em>Processingchain</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProcessingchain()
 	 * @generated
 	 * @ordered
 	 */
-	protected ProcessingChain processingchain;
+	protected EList<ProcessingChainTemplate> processingchain;
 
 	/**
 	 * The cached value of the '{@link #getDataanalysisproblemtype() <em>Dataanalysisproblemtype</em>}' reference.
@@ -174,41 +174,12 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProcessingChain getProcessingchain() {
-		if (processingchain != null && processingchain.eIsProxy()) {
-			InternalEObject oldProcessingchain = (InternalEObject) processingchain;
-			processingchain = (ProcessingChain) eResolveProxy(oldProcessingchain);
-			if (processingchain != oldProcessingchain) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__PROCESSINGCHAIN, oldProcessingchain,
-							processingchain));
-			}
+	public EList<ProcessingChainTemplate> getProcessingchain() {
+		if (processingchain == null) {
+			processingchain = new EObjectResolvingEList<ProcessingChainTemplate>(ProcessingChainTemplate.class, this,
+					ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__PROCESSINGCHAIN);
 		}
 		return processingchain;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ProcessingChain basicGetProcessingchain() {
-		return processingchain;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setProcessingchain(ProcessingChain newProcessingchain) {
-		ProcessingChain oldProcessingchain = processingchain;
-		processingchain = newProcessingchain;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__PROCESSINGCHAIN, oldProcessingchain,
-					processingchain));
 	}
 
 	/**
@@ -314,7 +285,7 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProcessingChain ConstruireUneChaineDeTraitementInitiale() {
+	public ProcessingChainTemplate ConstruireUneChaineDeTraitementInitiale() {
 		// TODO: implement this method
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -344,9 +315,7 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET:
 			return getDatapropertyvalueset();
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__PROCESSINGCHAIN:
-			if (resolve)
-				return getProcessingchain();
-			return basicGetProcessingchain();
+			return getProcessingchain();
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE:
 			if (resolve)
 				return getDataanalysisproblemtype();
@@ -378,7 +347,8 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 			getDatapropertyvalueset().addAll((Collection<? extends DataPropertyValueSet>) newValue);
 			return;
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__PROCESSINGCHAIN:
-			setProcessingchain((ProcessingChain) newValue);
+			getProcessingchain().clear();
+			getProcessingchain().addAll((Collection<? extends ProcessingChainTemplate>) newValue);
 			return;
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE:
 			setDataanalysisproblemtype((DataAnalysisProblemType) newValue);
@@ -410,7 +380,7 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 			getDatapropertyvalueset().clear();
 			return;
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__PROCESSINGCHAIN:
-			setProcessingchain((ProcessingChain) null);
+			getProcessingchain().clear();
 			return;
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE:
 			setDataanalysisproblemtype((DataAnalysisProblemType) null);
@@ -438,7 +408,7 @@ public class MLProcChainSolutionPatternImpl extends MinimalEObjectImpl.Container
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET:
 			return datapropertyvalueset != null && !datapropertyvalueset.isEmpty();
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__PROCESSINGCHAIN:
-			return processingchain != null;
+			return processingchain != null && !processingchain.isEmpty();
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE:
 			return dataanalysisproblemtype != null;
 		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN__EXECUTED_TEMPLATE:

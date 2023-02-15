@@ -142,8 +142,8 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseProcessingChain(ProcessingChain object) {
-			return createProcessingChainAdapter();
+		public Adapter caseProcessingChainTemplate(ProcessingChainTemplate object) {
+			return createProcessingChainTemplateAdapter();
 		}
 
 		@Override
@@ -152,8 +152,8 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseProcessingChainTemplate(ProcessingChainTemplate object) {
-			return createProcessingChainTemplateAdapter();
+		public Adapter caseProcessingChain(ProcessingChain object) {
+			return createProcessingChainAdapter();
 		}
 
 		@Override

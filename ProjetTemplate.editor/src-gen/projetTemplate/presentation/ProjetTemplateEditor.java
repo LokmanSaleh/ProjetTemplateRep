@@ -155,6 +155,7 @@ import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import projetTemplate.provider.ProjetTemplateItemProviderAdapterFactory;
 
+import genmodel.provider.GenmodelItemProviderAdapterFactory;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 /**
@@ -676,6 +677,7 @@ public class ProjetTemplateEditor extends MultiPageEditorPart
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ProjetTemplateItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new GenmodelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

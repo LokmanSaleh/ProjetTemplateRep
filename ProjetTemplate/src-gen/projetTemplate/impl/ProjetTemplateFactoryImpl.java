@@ -87,12 +87,12 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 			return createDataPropertyType();
 		case ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM_TYPE:
 			return createDataAnalysisProblemType();
-		case ProjetTemplatePackage.PROCESSING_CHAIN:
-			return createProcessingChain();
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN:
-			return createMLProcChainSolutionPattern();
 		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE:
 			return createProcessingChainTemplate();
+		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN:
+			return createMLProcChainSolutionPattern();
+		case ProjetTemplatePackage.PROCESSING_CHAIN:
+			return createProcessingChain();
 		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN:
 			return createMLAlgorithmSolutionPattern();
 		case ProjetTemplatePackage.ML_ALGORITHM:

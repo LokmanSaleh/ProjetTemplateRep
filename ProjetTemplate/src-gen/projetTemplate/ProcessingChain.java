@@ -2,6 +2,7 @@
  */
 package projetTemplate;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,8 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link projetTemplate.ProcessingChain#getName <em>Name</em>}</li>
  *   <li>{@link projetTemplate.ProcessingChain#getAuthor <em>Author</em>}</li>
- *   <li>{@link projetTemplate.ProcessingChain#getExtendedbpmnmodel <em>Extendedbpmnmodel</em>}</li>
- *   <li>{@link projetTemplate.ProcessingChain#getProcessingchaintemplate <em>Processingchaintemplate</em>}</li>
+ *   <li>{@link projetTemplate.ProcessingChain#getMlalgorithm <em>Mlalgorithm</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getProcessingChain()
@@ -69,55 +69,15 @@ public interface ProcessingChain extends EObject {
 	void setAuthor(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Extendedbpmnmodel</b></em>' reference.
+	 * Returns the value of the '<em><b>Mlalgorithm</b></em>' reference list.
+	 * The list contents are of type {@link projetTemplate.MLAlgorithm}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Extendedbpmnmodel</em>' reference.
-	 * @see #setExtendedbpmnmodel(ExtendedBPMNModel)
-	 * @see projetTemplate.ProjetTemplatePackage#getProcessingChain_Extendedbpmnmodel()
+	 * @return the value of the '<em>Mlalgorithm</em>' reference list.
+	 * @see projetTemplate.ProjetTemplatePackage#getProcessingChain_Mlalgorithm()
 	 * @model required="true"
 	 * @generated
 	 */
-	ExtendedBPMNModel getExtendedbpmnmodel();
-
-	/**
-	 * Sets the value of the '{@link projetTemplate.ProcessingChain#getExtendedbpmnmodel <em>Extendedbpmnmodel</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Extendedbpmnmodel</em>' reference.
-	 * @see #getExtendedbpmnmodel()
-	 * @generated
-	 */
-	void setExtendedbpmnmodel(ExtendedBPMNModel value);
-
-	/**
-	 * Returns the value of the '<em><b>Processingchaintemplate</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Processingchaintemplate</em>' reference.
-	 * @see #setProcessingchaintemplate(ProcessingChainTemplate)
-	 * @see projetTemplate.ProjetTemplatePackage#getProcessingChain_Processingchaintemplate()
-	 * @model
-	 * @generated
-	 */
-	ProcessingChainTemplate getProcessingchaintemplate();
-
-	/**
-	 * Sets the value of the '{@link projetTemplate.ProcessingChain#getProcessingchaintemplate <em>Processingchaintemplate</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Processingchaintemplate</em>' reference.
-	 * @see #getProcessingchaintemplate()
-	 * @generated
-	 */
-	void setProcessingchaintemplate(ProcessingChainTemplate value);
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @model
-	 * @generated
-	 */
-	void SelectTheRightMLAlgroithm();
+	EList<MLAlgorithm> getMlalgorithm();
 
 } // ProcessingChain
