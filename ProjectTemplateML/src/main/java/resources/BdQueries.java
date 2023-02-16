@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.SQLIntegrityConstraintViolationException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,36 +20,71 @@ public class BdQueries {
 	public static String SQL_INSERT_CHAINE = " INSERT INTO chaines (name, chaine) \r\n " + 
 			 								 " VALUES (?, ?)";
 	
+	public static String SQL_UPDATE_CHAINE = " UPDATE chaines  " + 
+			 									"SET chaine = ?" +
+			 									"WHERE id = ?";
+	
 	public static String SQL_LIST_OF_CHAINES = " SELECT * "
 												+ "FROM chaines" ;
 	
-	public static String SQL_CHAINE_BY_NAME = " SELECT * "
+	public static String SQL_CHAINE_BY_ID = " SELECT * "
 											+ "FROM chaines "
-											+ "WHERE name=?" ;
+											+ "WHERE id=?" ;
 
 	
-	public static Blob loadChaine(String name) {
-
+	
+	/**
+	 * Insert the chaine
+	 * @param chaine
+	 */
+	public static void UpdateChaine(int id, String chaine) {
+ 
 		ConnectionClass connClass = new ConnectionClass();
 		Connection con = connClass.getFileFromResources();
 		ResultSet resultSet = null;
+		Statement statement = null; 
+		 
+		try {
 
-		String query = SQL_CHAINE_BY_NAME;
+			PreparedStatement preparedStatement;
+
+			preparedStatement = con.prepareStatement(SQL_UPDATE_CHAINE);
+			preparedStatement.setString(1, chaine);
+			preparedStatement.setInt(2, id); 
+			
+			// on duplicate chaine with the same name throw exception 
+			preparedStatement.executeUpdate();
+
+		} catch (Exception  e) { 
+			 
+		} finally {
+			connClass.close(con);
+			connClass.close(statement);
+			connClass.close(resultSet);
+		} 
+ 
+	}
+	
+	
+	public static Blob loadChaine(int id) {
+
+		ConnectionClass connClass = new ConnectionClass();
+		Connection con = connClass.getFileFromResources();
+		ResultSet resultSet = null; 
 
 		PreparedStatement preparedStatement = null;
 
 		try {
 
-			preparedStatement = con.prepareStatement(SQL_INSERT_CHAINE);
-			preparedStatement.setString(1, name);
+			preparedStatement = con.prepareStatement(SQL_CHAINE_BY_ID);
+			preparedStatement.setInt(1, id);
 
-			resultSet = preparedStatement.executeQuery(query);
+			resultSet = preparedStatement.executeQuery();
 
 			while (resultSet.next()) {
 
 				return resultSet.getBlob("chaine");
-			}
-			;
+			} 
 
 		} catch (SQLException e) {
 
@@ -63,7 +99,7 @@ public class BdQueries {
 		return null;
 	}
 	
-	public static List<String> getListOfChaines() {
+	public static List<ComboItem> getListOfChaines() {
 		
 		ConnectionClass connClass = new ConnectionClass();
 		Connection con = connClass.getFileFromResources();
@@ -71,7 +107,7 @@ public class BdQueries {
 		Statement statement = null; 
 		
 		String query = SQL_LIST_OF_CHAINES; 
-		List<String> listOfChaines = new ArrayList<String>();
+		List<ComboItem> listOfChaines = new ArrayList<ComboItem>();
 		 
 		try {
 			
@@ -80,7 +116,7 @@ public class BdQueries {
 			
 			while (resultSet.next()) {
 				
-				listOfChaines.add(resultSet.getString("name"));
+				listOfChaines.add(new ComboItem(resultSet.getInt("id"),  resultSet.getString("name")));
 			}; 
 			
 		} catch (SQLException e) {
@@ -132,26 +168,25 @@ public class BdQueries {
 	 * @param chaine
 	 */
 	public static void insertChaine(String name, String chaine) {
-
+ 
 		ConnectionClass connClass = new ConnectionClass();
 		Connection con = connClass.getFileFromResources();
 		ResultSet resultSet = null;
 		Statement statement = null; 
 		 
 		try {
-			
+
 			PreparedStatement preparedStatement;
+
+			preparedStatement = con.prepareStatement(SQL_INSERT_CHAINE);
+			preparedStatement.setString(1, name);
+			preparedStatement.setString(2, chaine); 
+			
+			// on duplicate chaine with the same name throw exception 
+			preparedStatement.executeUpdate();
+
+		} catch (Exception  e) { 
 			 
-				preparedStatement = con.prepareStatement(SQL_INSERT_CHAINE);
-				preparedStatement.setString(1, name);
-				preparedStatement.setString(2, chaine);
-				preparedStatement.executeUpdate() ;
-				
-			
-		} catch (SQLException e) {
-			
-			e.printStackTrace();
-			
 		} finally {
 			connClass.close(con);
 			connClass.close(statement);

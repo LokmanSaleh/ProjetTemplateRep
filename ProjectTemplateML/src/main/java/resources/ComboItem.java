@@ -1,22 +1,26 @@
 package resources;
 
 public class ComboItem {
-	private String key;
+	private int key;
     private String value;
 
-    public ComboItem(String key, String value)
+    public ComboItem(int key, String value)
     {
         this.key = key;
         this.value = value;
     }
 
-    @Override
-    public String toString()
-    {
-        return key;
-    }
+ 
 
-    public String getKey()
+    @Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return value;
+	}
+
+
+
+	public int getKey()
     {
         return key;
     }
