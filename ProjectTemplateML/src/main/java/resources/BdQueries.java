@@ -25,13 +25,46 @@ public class BdQueries {
 			 									"WHERE id = ?";
 	
 	public static String SQL_LIST_OF_CHAINES = " SELECT * "
-												+ "FROM chaines" ;
+												+ "FROM chaines "
+												+ "Where isDeleted = 0" ;
 	
 	public static String SQL_CHAINE_BY_ID = " SELECT * "
 											+ "FROM chaines "
 											+ "WHERE id=?" ;
 
+	public static String SQL_DELETE_CHAINE = " UPDATE chaines  " + 
+											"SET isDeleted = 1 " +
+											"WHERE id = ?";
 	
+	
+	public static void deleteChaine(int key) {
+		 
+		ConnectionClass connClass = new ConnectionClass();
+		Connection con = connClass.getFileFromResources();
+		ResultSet resultSet = null;
+		Statement statement = null; 
+		 
+		try {
+
+			PreparedStatement preparedStatement;
+
+			preparedStatement = con.prepareStatement(SQL_DELETE_CHAINE);
+			preparedStatement.setInt(1, key); 
+			
+			// on duplicate chaine with the same name throw exception 
+			preparedStatement.executeUpdate();
+
+		} catch (Exception  e) { 
+			 
+			 e.printStackTrace() ;
+			
+		} finally {
+			connClass.close(con);
+			connClass.close(statement);
+			connClass.close(resultSet);
+		} 
+ 
+	}
 	
 	/**
 	 * Insert the chaine
@@ -226,5 +259,7 @@ public class BdQueries {
 		return 0;
 
 	}
+
+
 
 }

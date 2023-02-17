@@ -66,7 +66,7 @@ public class ManipulateChaines extends JFrame {
 	public ManipulateChaines() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 724, 208);
+		setBounds(100, 100, 956, 208);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -255,9 +255,29 @@ public class ManipulateChaines extends JFrame {
 		contentPane.add(btnNewButton_2);
 		contentPane.add(btnNewButton_3);
 		
+		JButton btnNewButton = new JButton("Delete Selected Chaine");
+		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				ComboItem comboItem = (ComboItem) listOfChainesComboBox.getSelectedItem();
+
+				try {
+					BdQueries.deleteChaine(comboItem.getKey());
+					listOfChainesComboBox.repaint();
+					
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
+		
+		btnNewButton.setBounds(712, 91, 191, 51);
+		contentPane.add(btnNewButton);
+		
 		for (ComboItem comboitem : BdQueries.getListOfChaines()) {
 			listOfChainesComboBox.addItem(comboitem );
 		} 
 	}
- 
 }
