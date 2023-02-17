@@ -1,5 +1,6 @@
 package com.chaine.vue;
 
+import java.awt.Desktop;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,6 +23,17 @@ import javax.swing.border.EmptyBorder;
 
 import resources.BdQueries;
 import resources.ComboItem;
+import java.awt.GridLayout;
+import javax.swing.JLabel;
+import java.awt.GridBagLayout;
+import java.awt.GridBagConstraints;
+import java.awt.Insets;
+import com.jgoodies.forms.layout.FormLayout;
+import com.automl.datarepresentation.bean.StaticPaths;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.FormSpecs;
+import com.jgoodies.forms.layout.RowSpec;
+import java.awt.Font;
 
 
 public class ManipulateChaines extends JFrame {
@@ -54,41 +66,69 @@ public class ManipulateChaines extends JFrame {
 	public ManipulateChaines() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 724, 208);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JButton createChaine = new JButton("Create new chaine");
+		JLabel label = new JLabel("");
+		label.setBounds(145, 11, 47, 21);
+		contentPane.add(label);
 		
-		createChaine.addActionListener(new ActionListener() {
-
+		JButton btnNewButton_3 = new JButton("Update Selected chaine");
+		btnNewButton_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnNewButton_3.setBounds(490, 90, 192, 50);
+		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				
+				ComboItem comboItem = (ComboItem) listOfChainesComboBox.getSelectedItem();
+				
+				// Creating a File object for directory
+				File directoryPath = new File(PROJECT_PATH + "com\\chaine\\loaded");
+				// List of all files and directories
+				File filesList[] = directoryPath.listFiles();
 
-				try {
-					System.out.println("Chaine id = "+  chaineId);
+				System.out.println("List of files  in the specified directory:");
 
-					File myObj = new File(PROJECT_PATH + "com\\chaine\\created\\chaine_" + chaineId ++ + ".bpmn");
+				for (File file : filesList) {
+					
+					if (file.isFile() && file.getName().equals(comboItem.getValue())) {
 
-					if (myObj.createNewFile()) {
-						System.out.println("File created: " + myObj.getName());
-					} else {
-						System.out.println("File already exists.");
+						try {
+							BufferedReader br = new BufferedReader(new FileReader(file.getAbsolutePath()));
+							StringBuilder sb = new StringBuilder();
+							String line;
+
+							line = br.readLine();
+
+							while (line != null) {
+								sb.append(line);
+								sb.append(System.lineSeparator());
+								line = br.readLine();
+							}
+
+							String everything = sb.toString();
+
+							BdQueries.UpdateChaine(comboItem.getKey(), everything);
+
+							br.close();
+
+						} catch (IOException e1) {
+							e1.printStackTrace();
+						}
+
 					}
-				} catch (IOException e1) {
-					System.out.println("An error occurred.");
-					e1.printStackTrace();
+
 				}
+				
 			}
-			
 		});
 		
-		createChaine.setBounds(34, 25, 95, 50);
-		contentPane.add(createChaine);
-		
 		JButton saveAll = new JButton("Save all chaine ");
+		saveAll.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		saveAll.setBounds(270, 23, 191, 51);
 		
 		saveAll.addActionListener(new ActionListener() {
 			
@@ -136,24 +176,50 @@ public class ManipulateChaines extends JFrame {
 
 			}
 		});
-		
-		saveAll.setBounds(161, 25, 85, 50);
 		contentPane.add(saveAll);
+		
+		JButton createChaine = new JButton("Create new chaine");
+		createChaine.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		createChaine.setBounds(9, 21, 225, 55);
+		
+		createChaine.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+
+				try {
+					System.out.println("Chaine id = "+  chaineId);
+
+					File myFile = new File(PROJECT_PATH + "com\\chaine\\created\\chaine_" + chaineId ++ + ".bpmn");
+
+					if (myFile.createNewFile()) {
+						System.out.println("File created: " + myFile.getName());
+					} else {
+						System.out.println("File already exists.");
+					}
+					
+					Desktop.getDesktop().open(myFile);
+					
+				} catch (IOException e1) {
+					System.out.println("An error occurred.");
+					e1.printStackTrace();
+				}
+			}
+			
+		});
+		contentPane.add(createChaine);
 		
 		
 		
 		listOfChainesComboBox = new JComboBox();
-		listOfChainesComboBox.setBounds(34, 101, 166, 50);
-		
-		for (ComboItem comboitem : BdQueries.getListOfChaines()) {
-			listOfChainesComboBox.addItem(comboitem );
-		} 
-		
+		listOfChainesComboBox.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		listOfChainesComboBox.setBounds(9, 93, 224, 43);
 		contentPane.add(listOfChainesComboBox);
-		 
+		
 		
 		
 		JButton btnNewButton_2 = new JButton("Load selected chaine ");
+		btnNewButton_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		btnNewButton_2.setBounds(271, 90, 193, 49);
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
@@ -177,6 +243,8 @@ public class ManipulateChaines extends JFrame {
 						out.write(buff, 0, len);
 					}
 					
+					Desktop.getDesktop().open(myFile);
+					
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -184,57 +252,12 @@ public class ManipulateChaines extends JFrame {
 
 			}
 		});
-		btnNewButton_2.setBounds(222, 101, 85, 50);
 		contentPane.add(btnNewButton_2);
-		
-		JButton btnNewButton_3 = new JButton("Update Loaded chaine");
-		btnNewButton_3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				ComboItem comboItem = (ComboItem) listOfChainesComboBox.getSelectedItem();
-				
-				// Creating a File object for directory
-				File directoryPath = new File(PROJECT_PATH + "com\\chaine\\loaded");
-				// List of all files and directories
-				File filesList[] = directoryPath.listFiles();
-
-				System.out.println("List of files  in the specified directory:");
-
-				for (File file : filesList) {
-					
-					if (file.isFile() && file.getName().equals(comboItem.getValue())) {
-
-						try {
-							BufferedReader br = new BufferedReader(new FileReader(file.getAbsolutePath()));
-							StringBuilder sb = new StringBuilder();
-							String line;
-
-							line = br.readLine();
-
-							while (line != null) {
-								sb.append(line);
-								sb.append(System.lineSeparator());
-								line = br.readLine();
-							}
-
-							String everything = sb.toString();
-
-							BdQueries.UpdateChaine(comboItem.getKey(), everything);
-
-							br.close();
-
-						} catch (IOException e1) {
-							e1.printStackTrace();
-						}
-
-					}
-
-				}
-				
-			}
-		});
-		btnNewButton_3.setBounds(325, 101, 101, 50);
 		contentPane.add(btnNewButton_3);
+		
+		for (ComboItem comboitem : BdQueries.getListOfChaines()) {
+			listOfChainesComboBox.addItem(comboitem );
+		} 
 	}
  
 }

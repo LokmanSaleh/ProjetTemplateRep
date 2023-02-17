@@ -12,3 +12,5 @@ Require-Bundle: datarepresentation;bundle-version="1.0.0",
  ProjetTemplate.editor;bundle-version="1.0.0",
  ProjetTemplate.viewmodel;bundle-version="1.0.0",
  ProjectTemplateLibrary;bundle-version="1.0.0"
+Bundle-ClassPath: .,
+ jgoodies-forms-1.8.0.jar
