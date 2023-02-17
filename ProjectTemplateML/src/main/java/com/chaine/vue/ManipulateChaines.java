@@ -2,38 +2,27 @@ package com.chaine.vue;
 
 import java.awt.Desktop;
 import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.sql.Blob;
-import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import resources.BdQueries;
 import resources.ComboItem;
-import java.awt.GridLayout;
-import javax.swing.JLabel;
-import java.awt.GridBagLayout;
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
-import com.jgoodies.forms.layout.FormLayout;
-import com.automl.datarepresentation.bean.StaticPaths;
-import com.jgoodies.forms.layout.ColumnSpec;
-import com.jgoodies.forms.layout.FormSpecs;
-import com.jgoodies.forms.layout.RowSpec;
-import java.awt.Font;
 
 
 public class ManipulateChaines extends JFrame {
@@ -162,8 +151,12 @@ public class ManipulateChaines extends JFrame {
 
 							String everything = sb.toString();
 
-							BdQueries.insertChaine(file.getName(), everything);
-
+							int id = BdQueries.insertChaine(file.getName(), everything);
+							
+							if (id > 0) {
+								listOfChainesComboBox.addItem(new ComboItem(id, file.getName()));
+							}
+							
 							br.close();
 
 						} catch (IOException e1) {
@@ -264,7 +257,7 @@ public class ManipulateChaines extends JFrame {
 
 				try {
 					BdQueries.deleteChaine(comboItem.getKey());
-					listOfChainesComboBox.repaint();
+					listOfChainesComboBox.removeItem(comboItem);
 					
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block

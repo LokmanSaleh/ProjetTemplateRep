@@ -18,7 +18,7 @@ public class BdQueries {
 										+ "AND   TABLE_NAME   = 'chaines' ";
 	
 	public static String SQL_INSERT_CHAINE = " INSERT INTO chaines (name, chaine) \r\n " + 
-			 								 " VALUES (?, ?)";
+			 								 " VALUES (?, ?)" ;
 	
 	public static String SQL_UPDATE_CHAINE = " UPDATE chaines  " + 
 			 									"SET chaine = ?" +
@@ -86,8 +86,8 @@ public class BdQueries {
 			preparedStatement.setInt(2, id); 
 			
 			// on duplicate chaine with the same name throw exception 
-			preparedStatement.executeUpdate();
-
+			preparedStatement.executeUpdate(); 
+			
 		} catch (Exception  e) { 
 			 
 		} finally {
@@ -200,7 +200,7 @@ public class BdQueries {
 	 * Insert the chaine
 	 * @param chaine
 	 */
-	public static void insertChaine(String name, String chaine) {
+	public static int insertChaine(String name, String chaine) {
  
 		ConnectionClass connClass = new ConnectionClass();
 		Connection con = connClass.getFileFromResources();
@@ -217,14 +217,26 @@ public class BdQueries {
 			
 			// on duplicate chaine with the same name throw exception 
 			preparedStatement.executeUpdate();
-
+			
+			return getLastId() - 1;
+//			int last_inserted_id = 0;
+//
+//			ResultSet rs = preparedStatement.getGeneratedKeys();
+//			if (rs.next()) {
+//				last_inserted_id = rs.getInt(1);
+//			}
+//
+//			return last_inserted_id;
+			
 		} catch (Exception  e) { 
 			 
+			return 0;
+			
 		} finally {
 			connClass.close(con);
 			connClass.close(statement);
 			connClass.close(resultSet);
-		} 
+		}
  
 	}
 	
