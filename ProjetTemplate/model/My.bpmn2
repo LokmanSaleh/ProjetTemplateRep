@@ -1,2 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" id="_Gdg6YJpsEe2Bset8AL9gIA"/>
+<!-- origin at X=0.0 Y=0.0 -->
+<bpmn2:definitions xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xs="http://www.w3.org/2001/XMLSchema" id="_Gdg6YJpsEe2Bset8AL9gIA" exporter="org.eclipse.bpmn2.modeler.core" exporterVersion="1.5.4.RC1-v20220528-0836-B1"/>
