@@ -67,10 +67,6 @@ public class ManipulateChaines extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel label = new JLabel("");
-		label.setBounds(145, 11, 47, 21);
-		contentPane.add(label);
-		
 		JButton btnNewButton_3 = new JButton("Update Selected chaine");
 		btnNewButton_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnNewButton_3.setBounds(520, 148, 192, 50);
@@ -181,7 +177,7 @@ public class ManipulateChaines extends JFrame {
 		
 		JButton createChaine = new JButton("Create new chaine");
 		createChaine.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		createChaine.setBounds(9, 21, 262, 55);
+		createChaine.setBounds(9, 25, 290, 49);
 		
 		createChaine.addActionListener(new ActionListener() {
 
@@ -239,7 +235,7 @@ public class ManipulateChaines extends JFrame {
 		
 		listOfChainesComboBox = new JComboBox();
 		listOfChainesComboBox.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		listOfChainesComboBox.setBounds(9, 150, 262, 46);
+		listOfChainesComboBox.setBounds(9, 150, 291, 46);
 		contentPane.add(listOfChainesComboBox);
 		
 		
