@@ -10,9 +10,8 @@ public class ComboItem {
         this.value = value;
     }
 
- 
 
-    @Override
+	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
 		return value;

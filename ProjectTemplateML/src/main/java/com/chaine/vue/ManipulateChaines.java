@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.sql.Blob;
+import java.util.List;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
@@ -22,7 +23,11 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import resources.BdQueries;
+import resources.Chaine;
 import resources.ComboItem;
+import java.awt.Component;
+import javax.swing.Box;
+import javax.swing.JSeparator;
 
 
 public class ManipulateChaines extends JFrame {
@@ -55,7 +60,7 @@ public class ManipulateChaines extends JFrame {
 	public ManipulateChaines() {
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 956, 208);
+		setBounds(100, 100, 968, 327);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -68,7 +73,7 @@ public class ManipulateChaines extends JFrame {
 		
 		JButton btnNewButton_3 = new JButton("Update Selected chaine");
 		btnNewButton_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnNewButton_3.setBounds(490, 90, 192, 50);
+		btnNewButton_3.setBounds(520, 148, 192, 50);
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -99,10 +104,12 @@ public class ManipulateChaines extends JFrame {
 							}
 
 							String everything = sb.toString();
-
-							BdQueries.UpdateChaine(comboItem.getKey(), everything);
-
+							
 							br.close();
+							
+							BdQueries.UpdateChaine(comboItem.getKey(), everything, file);
+
+							
 
 						} catch (IOException e1) {
 							e1.printStackTrace();
@@ -117,7 +124,7 @@ public class ManipulateChaines extends JFrame {
 		
 		JButton saveAll = new JButton("Save all chaine ");
 		saveAll.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		saveAll.setBounds(270, 23, 191, 51);
+		saveAll.setBounds(309, 23, 191, 51);
 		
 		saveAll.addActionListener(new ActionListener() {
 			
@@ -148,16 +155,17 @@ public class ManipulateChaines extends JFrame {
 								sb.append(System.lineSeparator());
 								line = br.readLine();
 							}
-
+							
+							br.close();
+							
 							String everything = sb.toString();
 
-							int id = BdQueries.insertChaine(file.getName(), everything);
+							int id = BdQueries.insertChaine(file, everything);
 							
 							if (id > 0) {
 								listOfChainesComboBox.addItem(new ComboItem(id, file.getName()));
-							}
-							
-							br.close();
+							} 
+ 
 
 						} catch (IOException e1) {
 							e1.printStackTrace();
@@ -173,7 +181,7 @@ public class ManipulateChaines extends JFrame {
 		
 		JButton createChaine = new JButton("Create new chaine");
 		createChaine.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		createChaine.setBounds(9, 21, 225, 55);
+		createChaine.setBounds(9, 21, 262, 55);
 		
 		createChaine.addActionListener(new ActionListener() {
 
@@ -205,15 +213,15 @@ public class ManipulateChaines extends JFrame {
 		
 		listOfChainesComboBox = new JComboBox();
 		listOfChainesComboBox.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		listOfChainesComboBox.setBounds(9, 93, 224, 43);
+		listOfChainesComboBox.setBounds(9, 150, 262, 46);
 		contentPane.add(listOfChainesComboBox);
 		
 		
 		
-		JButton btnNewButton_2 = new JButton("Load selected chaine ");
-		btnNewButton_2.setFont(new Font("Tahoma", Font.PLAIN, 14));
-		btnNewButton_2.setBounds(271, 90, 193, 49);
-		btnNewButton_2.addActionListener(new ActionListener() {
+		JButton loadSelectedChaine = new JButton("Load selected chaine ");
+		loadSelectedChaine.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		loadSelectedChaine.setBounds(310, 149, 193, 49);
+		loadSelectedChaine.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 
 				ComboItem comboItem = (ComboItem) listOfChainesComboBox.getSelectedItem();
@@ -245,7 +253,7 @@ public class ManipulateChaines extends JFrame {
 
 			}
 		});
-		contentPane.add(btnNewButton_2);
+		contentPane.add(loadSelectedChaine);
 		contentPane.add(btnNewButton_3);
 		
 		JButton btnNewButton = new JButton("Delete Selected Chaine");
@@ -259,6 +267,20 @@ public class ManipulateChaines extends JFrame {
 					BdQueries.deleteChaine(comboItem.getKey());
 					listOfChainesComboBox.removeItem(comboItem);
 					
+
+					// Creating a File object for directory
+					File directoryPath = new File(PROJECT_PATH + "com\\chaine\\loaded");
+					// List of all files and directories
+					File filesList[] = directoryPath.listFiles();
+
+					System.out.println("List of files  in the specified directory:");
+
+					for (File file : filesList) {
+						
+						if (file.isFile() && file.getName().equals(comboItem.getValue())) {
+							file.delete();
+						}
+					}
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -266,8 +288,102 @@ public class ManipulateChaines extends JFrame {
 			}
 		});
 		
-		btnNewButton.setBounds(712, 91, 191, 51);
+		btnNewButton.setBounds(722, 148, 191, 51);
 		contentPane.add(btnNewButton);
+		
+		JButton loadAll = new JButton("Load All");
+		loadAll.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		loadAll.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				try {
+					List<Chaine> listChaine = BdQueries.loadALLChaine();
+
+					for (Chaine chaine : listChaine) {
+						
+						InputStream in = chaine.getBlob().getBinaryStream();
+
+						File myFile = new File(PROJECT_PATH + "com\\chaine\\loaded\\" + chaine.getName());
+
+						myFile.createNewFile();
+						OutputStream out;
+
+						out = new FileOutputStream(myFile);
+
+						byte[] buff = new byte[4096]; // how much of the blob to read/write at a time
+						int len = 0;
+
+						while ((len = in.read(buff)) != -1) {
+							out.write(buff, 0, len);
+						}
+
+						Desktop.getDesktop().open(myFile);
+					}
+					
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+
+			}
+		});
+		loadAll.setBounds(310, 208, 193, 43);
+		contentPane.add(loadAll);
+		
+		JSeparator separator = new JSeparator();
+		separator.setBounds(0, 115, 968, 2);
+		contentPane.add(separator);
+		
+		JButton updateAll = new JButton("Update All");
+		updateAll.setFont(new Font("Tahoma", Font.PLAIN, 14));
+		updateAll.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+
+				// Creating a File object for directory
+				File directoryPath = new File(PROJECT_PATH + "com\\chaine\\loaded");
+				// List of all files and directories
+				File filesList[] = directoryPath.listFiles();
+
+				System.out.println("List of files  in the specified directory:");
+
+				for (File file : filesList) {
+					
+					if (file.isFile()) {
+
+						try {
+							BufferedReader br = new BufferedReader(new FileReader(file.getAbsolutePath()));
+							StringBuilder sb = new StringBuilder();
+							String line;
+
+							line = br.readLine();
+
+							while (line != null) {
+								sb.append(line);
+								sb.append(System.lineSeparator());
+								line = br.readLine();
+							}
+							
+							br.close();
+							
+							String everything = sb.toString();
+
+							BdQueries.UpdateChaineByName(file, everything);
+
+
+						} catch (IOException e1) {
+							e1.printStackTrace();
+						}
+
+					}
+
+				}
+
+				
+			}
+		});
+		updateAll.setBounds(520, 208, 191, 43);
+		contentPane.add(updateAll);
 		
 		for (ComboItem comboitem : BdQueries.getListOfChaines()) {
 			listOfChainesComboBox.addItem(comboitem );
