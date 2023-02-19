@@ -186,24 +186,50 @@ public class ManipulateChaines extends JFrame {
 		createChaine.addActionListener(new ActionListener() {
 
 			public void actionPerformed(ActionEvent e) {
+				
+				
 
 				try {
-					System.out.println("Chaine id = "+  chaineId);
+					Blob blob = BdQueries.loadTemplate();
+					InputStream in = blob.getBinaryStream();
 
 					File myFile = new File(PROJECT_PATH + "com\\chaine\\created\\chaine_" + chaineId ++ + ".bpmn");
 
-					if (myFile.createNewFile()) {
-						System.out.println("File created: " + myFile.getName());
-					} else {
-						System.out.println("File already exists.");
+					myFile.createNewFile();
+					OutputStream out;
+
+					out = new FileOutputStream(myFile);
+
+					byte[] buff = new byte[4096]; // how much of the blob to read/write at a time
+					int len = 0;
+
+					while ((len = in.read(buff)) != -1) {
+						out.write(buff, 0, len);
 					}
 					
 					Desktop.getDesktop().open(myFile);
 					
-				} catch (IOException e1) {
-					System.out.println("An error occurred.");
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
+
+				
+				
+				/*
+				 * try { System.out.println("Chaine id = "+ chaineId);
+				 * 
+				 * File myFile = new File(PROJECT_PATH + "com\\chaine\\created\\chaine_" +
+				 * chaineId ++ + ".bpmn");
+				 * 
+				 * if (myFile.createNewFile()) { System.out.println("File created: " +
+				 * myFile.getName()); } else { System.out.println("File already exists."); }
+				 * 
+				 * Desktop.getDesktop().open(myFile);
+				 * 
+				 * } catch (IOException e1) { System.out.println("An error occurred.");
+				 * e1.printStackTrace(); }
+				 */
 			}
 			
 		});
@@ -368,7 +394,7 @@ public class ManipulateChaines extends JFrame {
 							
 							String everything = sb.toString();
 
-							BdQueries.UpdateChaineByName(file, everything);
+							BdQueries.insertChaine(file, everything);
 
 
 						} catch (IOException e1) {

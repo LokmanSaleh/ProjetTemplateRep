@@ -37,6 +37,10 @@ public class BdQueries {
 											+ "FROM chaines "
 											+ "WHERE id=? AND isDeleted = 0" ;
 
+	public static String SQL_CHAINE_TEMPLATE = " SELECT * "
+											+ "FROM chaines "
+											+ "WHERE name='Template.bpmn'" ;
+	
 	public static String SQL_ALL_CHAINE = " SELECT * "
 										+ "FROM chaines "
 										+ "WHERE isDeleted = 0"; 
@@ -200,6 +204,38 @@ public class BdQueries {
 
 			preparedStatement = con.prepareStatement(SQL_CHAINE_BY_ID);
 			preparedStatement.setInt(1, id);
+
+			resultSet = preparedStatement.executeQuery();
+
+			while (resultSet.next()) {
+
+				return resultSet.getBlob("chaine");
+			} 
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+
+		} finally {
+			connClass.close(con);
+			connClass.close(preparedStatement);
+			connClass.close(resultSet);
+		}
+
+		return null;
+	}
+	
+	public static Blob loadTemplate() {
+
+		ConnectionClass connClass = new ConnectionClass();
+		Connection con = connClass.getFileFromResources();
+		ResultSet resultSet = null; 
+
+		PreparedStatement preparedStatement = null;
+
+		try {
+
+			preparedStatement = con.prepareStatement(SQL_CHAINE_TEMPLATE);
 
 			resultSet = preparedStatement.executeQuery();
 
