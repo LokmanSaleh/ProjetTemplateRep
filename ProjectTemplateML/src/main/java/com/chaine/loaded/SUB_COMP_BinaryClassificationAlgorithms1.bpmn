@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- origin at X=0.0 Y=0.0 -->
 <bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ext="http://org.eclipse.bpmn2/ext" xmlns:ns="http://org.eclipse.bpmn2/default/process" xmlns:xs="http://www.w3.org/2001/XMLSchema" id="Definitions_1" exporter="org.eclipse.bpmn2.modeler.core" exporterVersion="1.5.4.RC1-v20220528-0836-B1" targetNamespace="http://org.eclipse.bpmn2/default/process">
-  <bpmn2:import importType="http://www.omg.org/spec/BPMN/20100524/MODEL" location="platform:/resource/ProjectTemplateML/src/main/java/com/chaine/loaded/BayesianNetwork.bpmn" namespace="http://org.eclipse.bpmn2/default/process"/>
-  <bpmn2:import importType="http://www.omg.org/spec/BPMN/20100524/MODEL" location="platform:/resource/ProjectTemplateML/src/main/java/com/chaine/loaded/DecisionTree.bpmn" namespace="http://org.eclipse.bpmn2/default/process"/>
-  <bpmn2:import importType="http://www.omg.org/spec/BPMN/20100524/MODEL" location="platform:/resource/ProjectTemplateML/src/main/java/com/chaine/loaded/NaiveBayes.bpmn" namespace="http://org.eclipse.bpmn2/default/process"/>
-  <bpmn2:import importType="http://www.omg.org/spec/BPMN/20100524/MODEL" location="platform:/resource/ProjectTemplateML/src/main/java/com/chaine/loaded/NeuralNetwork.bpmn" namespace="http://org.eclipse.bpmn2/default/process"/>
-  <bpmn2:import importType="http://www.omg.org/spec/BPMN/20100524/MODEL" location="platform:/resource/ProjectTemplateML/src/main/java/com/chaine/loaded/SVM.bpmn" namespace="http://org.eclipse.bpmn2/default/process"/>
+  <bpmn2:import importType="http://www.omg.org/spec/BPMN/20100524/MODEL" location="platform:/resource/ProjectTemplateML/src/main/java/com/chaine/loaded/ALGO_BayesianNetwork.bpmn" namespace="http://org.eclipse.bpmn2/default/process"/>
+  <bpmn2:import importType="http://www.omg.org/spec/BPMN/20100524/MODEL" location="platform:/resource/ProjectTemplateML/src/main/java/com/chaine/loaded/ALGO_DecisionTree.bpmn" namespace="http://org.eclipse.bpmn2/default/process"/>
+  <bpmn2:import importType="http://www.omg.org/spec/BPMN/20100524/MODEL" location="platform:/resource/ProjectTemplateML/src/main/java/com/chaine/loaded/ALGO_NaiveBayes.bpmn" namespace="http://org.eclipse.bpmn2/default/process"/>
+  <bpmn2:import importType="http://www.omg.org/spec/BPMN/20100524/MODEL" location="platform:/resource/ProjectTemplateML/src/main/java/com/chaine/loaded/ALGO_NeuralNetwork.bpmn" namespace="http://org.eclipse.bpmn2/default/process"/>
+  <bpmn2:import importType="http://www.omg.org/spec/BPMN/20100524/MODEL" location="platform:/resource/ProjectTemplateML/src/main/java/com/chaine/loaded/ALGO_SVM.bpmn" namespace="http://org.eclipse.bpmn2/default/process"/>
   <bpmn2:process id="process_1" name="Default Process" isExecutable="false">
     <bpmn2:startEvent id="StartEvent_2">
       <bpmn2:outgoing>SequenceFlow_2</bpmn2:outgoing>
@@ -13,23 +13,23 @@
     <bpmn2:endEvent id="EndEvent_2">
       <bpmn2:incoming>SequenceFlow_3</bpmn2:incoming>
     </bpmn2:endEvent>
-    <bpmn2:callActivity id="CallActivity_1" name="SVM" calledElement="SVM.bpmn#NaiveBayes1">
-      <bpmn2:incoming>SequenceFlow_5</bpmn2:incoming>
+    <bpmn2:callActivity id="CallActivity_1" name="SVM" calledElement="ALGO_SVM.bpmn#NaiveBayes1">
+      <bpmn2:incoming>SequenceFlow_14</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_4</bpmn2:outgoing>
     </bpmn2:callActivity>
-    <bpmn2:callActivity id="CallActivity_2" name="Neural netwok" calledElement="NeuralNetwork.bpmn#NaiveBayes1">
-      <bpmn2:incoming>SequenceFlow_7</bpmn2:incoming>
+    <bpmn2:callActivity id="CallActivity_2" name="Neural netwok" calledElement="ALGO_NeuralNetwork.bpmn#NaiveBayes1">
+      <bpmn2:incoming>SequenceFlow_16</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_6</bpmn2:outgoing>
     </bpmn2:callActivity>
-    <bpmn2:callActivity id="CallActivity_3" name="NaiveBayes" calledElement="NaiveBayes.bpmn#NaiveBayes1">
-      <bpmn2:incoming>SequenceFlow_26</bpmn2:incoming>
+    <bpmn2:callActivity id="CallActivity_3" name="NaiveBayes" calledElement="ALGO_NaiveBayes.bpmn#NaiveBayes1">
+      <bpmn2:incoming>SequenceFlow_27</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_8</bpmn2:outgoing>
     </bpmn2:callActivity>
-    <bpmn2:callActivity id="CallActivity_4" name="BayesianNetwork" calledElement="BayesianNetwork.bpmn#NaiveBayes1">
+    <bpmn2:callActivity id="CallActivity_4" name="BayesianNetwork" calledElement="ALGO_BayesianNetwork.bpmn#NaiveBayes1">
       <bpmn2:incoming>SequenceFlow_11</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_10</bpmn2:outgoing>
     </bpmn2:callActivity>
-    <bpmn2:callActivity id="CallActivity_5" name="DescionTree" calledElement="DecisionTree.bpmn#NaiveBayes1">
+    <bpmn2:callActivity id="CallActivity_5" name="DescionTree" calledElement="ALGO_DecisionTree.bpmn#NaiveBayes1">
       <bpmn2:incoming>SequenceFlow_13</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_12</bpmn2:outgoing>
     </bpmn2:callActivity>
@@ -41,14 +41,6 @@
       <bpmn2:incoming>SequenceFlow_12</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_3</bpmn2:outgoing>
     </bpmn2:parallelGateway>
-    <bpmn2:exclusiveGateway id="ExclusiveGateway_1" gatewayDirection="Converging">
-      <bpmn2:incoming>SequenceFlow_14</bpmn2:incoming>
-      <bpmn2:outgoing>SequenceFlow_5</bpmn2:outgoing>
-    </bpmn2:exclusiveGateway>
-    <bpmn2:exclusiveGateway id="ExclusiveGateway_3">
-      <bpmn2:incoming>SequenceFlow_16</bpmn2:incoming>
-      <bpmn2:outgoing>SequenceFlow_7</bpmn2:outgoing>
-    </bpmn2:exclusiveGateway>
     <bpmn2:exclusiveGateway id="ExclusiveGateway_4" gatewayDirection="Converging">
       <bpmn2:incoming>SequenceFlow_17</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_11</bpmn2:outgoing>
@@ -72,17 +64,20 @@
       <bpmn2:outgoing>SequenceFlow_23</bpmn2:outgoing>
       <bpmn2:outgoing>SequenceFlow_24</bpmn2:outgoing>
     </bpmn2:exclusiveGateway>
-    <bpmn2:exclusiveGateway id="ExclusiveGateway_10" name="Explainable">
+    <bpmn2:exclusiveGateway id="ExclusiveGateway_10" name="Explainable" gatewayDirection="Diverging">
       <bpmn2:incoming>SequenceFlow_22</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_14</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_15</bpmn2:outgoing>
     </bpmn2:exclusiveGateway>
     <bpmn2:exclusiveGateway id="ExclusiveGateway_11" name="Explainable" gatewayDirection="Diverging">
       <bpmn2:incoming>SequenceFlow_23</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_25</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_21</bpmn2:outgoing>
     </bpmn2:exclusiveGateway>
-    <bpmn2:exclusiveGateway id="ExclusiveGateway_12" name="Explainable">
+    <bpmn2:exclusiveGateway id="ExclusiveGateway_12" name="Explainable" gatewayDirection="Diverging">
       <bpmn2:incoming>SequenceFlow_24</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_16</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_28</bpmn2:outgoing>
     </bpmn2:exclusiveGateway>
     <bpmn2:parallelGateway id="ParallelGateway_2" gatewayDirection="Diverging">
       <bpmn2:incoming>SequenceFlow_25</bpmn2:incoming>
@@ -92,16 +87,14 @@
     <bpmn2:sequenceFlow id="SequenceFlow_2" sourceRef="StartEvent_2" targetRef="ExclusiveGateway_6"/>
     <bpmn2:sequenceFlow id="SequenceFlow_3" sourceRef="ParallelGateway_1" targetRef="EndEvent_2"/>
     <bpmn2:sequenceFlow id="SequenceFlow_4" sourceRef="CallActivity_1" targetRef="ParallelGateway_1"/>
-    <bpmn2:sequenceFlow id="SequenceFlow_5" sourceRef="ExclusiveGateway_1" targetRef="CallActivity_1"/>
     <bpmn2:sequenceFlow id="SequenceFlow_6" sourceRef="CallActivity_2" targetRef="ParallelGateway_1"/>
-    <bpmn2:sequenceFlow id="SequenceFlow_7" sourceRef="ExclusiveGateway_3" targetRef="CallActivity_2"/>
     <bpmn2:sequenceFlow id="SequenceFlow_8" sourceRef="CallActivity_3" targetRef="ParallelGateway_1"/>
     <bpmn2:sequenceFlow id="SequenceFlow_10" sourceRef="CallActivity_4" targetRef="ParallelGateway_1"/>
     <bpmn2:sequenceFlow id="SequenceFlow_11" sourceRef="ExclusiveGateway_4" targetRef="CallActivity_4"/>
     <bpmn2:sequenceFlow id="SequenceFlow_12" sourceRef="CallActivity_5" targetRef="ParallelGateway_1"/>
     <bpmn2:sequenceFlow id="SequenceFlow_13" sourceRef="ExclusiveGateway_5" targetRef="CallActivity_5"/>
-    <bpmn2:sequenceFlow id="SequenceFlow_14" name="No" sourceRef="ExclusiveGateway_10" targetRef="ExclusiveGateway_1"/>
-    <bpmn2:sequenceFlow id="SequenceFlow_16" name="No" sourceRef="ExclusiveGateway_12" targetRef="ExclusiveGateway_3"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_14" name="No" sourceRef="ExclusiveGateway_10" targetRef="CallActivity_1"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_16" name="No" sourceRef="ExclusiveGateway_12" targetRef="CallActivity_2"/>
     <bpmn2:sequenceFlow id="SequenceFlow_17" sourceRef="ParallelGateway_2" targetRef="ExclusiveGateway_4"/>
     <bpmn2:sequenceFlow id="SequenceFlow_18" sourceRef="ParallelGateway_2" targetRef="ExclusiveGateway_5"/>
     <bpmn2:sequenceFlow id="SequenceFlow_19" name="Yes" sourceRef="ExclusiveGateway_6" targetRef="ExclusiveGateway_7"/>
@@ -110,17 +103,29 @@
     <bpmn2:sequenceFlow id="SequenceFlow_23" name="Yes" sourceRef="ExclusiveGateway_9" targetRef="ExclusiveGateway_11"/>
     <bpmn2:sequenceFlow id="SequenceFlow_24" name="No" sourceRef="ExclusiveGateway_9" targetRef="ExclusiveGateway_12"/>
     <bpmn2:sequenceFlow id="SequenceFlow_25" name="Yes" sourceRef="ExclusiveGateway_11" targetRef="ParallelGateway_2"/>
-    <bpmn2:exclusiveGateway id="ExclusiveGateway_13" name="Explainable">
+    <bpmn2:exclusiveGateway id="ExclusiveGateway_13" name="Explainable" gatewayDirection="Diverging">
       <bpmn2:incoming>SequenceFlow_1</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_27</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_9</bpmn2:outgoing>
     </bpmn2:exclusiveGateway>
     <bpmn2:sequenceFlow id="SequenceFlow_1" name="Yes" sourceRef="ExclusiveGateway_7" targetRef="ExclusiveGateway_13"/>
-    <bpmn2:exclusiveGateway id="ExclusiveGateway_14">
-      <bpmn2:incoming>SequenceFlow_27</bpmn2:incoming>
-      <bpmn2:outgoing>SequenceFlow_26</bpmn2:outgoing>
-    </bpmn2:exclusiveGateway>
-    <bpmn2:sequenceFlow id="SequenceFlow_26" sourceRef="ExclusiveGateway_14" targetRef="CallActivity_3"/>
-    <bpmn2:sequenceFlow id="SequenceFlow_27" name="Yes" sourceRef="ExclusiveGateway_13" targetRef="ExclusiveGateway_14"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_27" name="Yes" sourceRef="ExclusiveGateway_13" targetRef="CallActivity_3"/>
+    <bpmn2:endEvent id="EndEvent_1" name="End Event 1">
+      <bpmn2:incoming>SequenceFlow_9</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="SequenceFlow_9" sourceRef="ExclusiveGateway_13" targetRef="EndEvent_1"/>
+    <bpmn2:endEvent id="EndEvent_3" name="End Event 3">
+      <bpmn2:incoming>SequenceFlow_15</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="SequenceFlow_15" sourceRef="ExclusiveGateway_10" targetRef="EndEvent_3"/>
+    <bpmn2:endEvent id="EndEvent_4" name="End Event 4">
+      <bpmn2:incoming>SequenceFlow_21</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="SequenceFlow_21" sourceRef="ExclusiveGateway_11" targetRef="EndEvent_4"/>
+    <bpmn2:endEvent id="EndEvent_5" name="End Event 5">
+      <bpmn2:incoming>SequenceFlow_28</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="SequenceFlow_28" sourceRef="ExclusiveGateway_12" targetRef="EndEvent_5"/>
   </bpmn2:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Process Diagram">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="process_1">
@@ -165,14 +170,6 @@
       <bpmndi:BPMNShape id="BPMNShape_ParallelGateway_1" bpmnElement="ParallelGateway_1" isMarkerVisible="true">
         <dc:Bounds height="50.0" width="50.0" x="2236.0" y="596.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_11" labelStyle="BPMNLabelStyle_1"/>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_1" bpmnElement="ExclusiveGateway_1" isMarkerVisible="true">
-        <dc:Bounds height="50.0" width="50.0" x="1787.0" y="479.0"/>
-        <bpmndi:BPMNLabel id="BPMNLabel_12" labelStyle="BPMNLabelStyle_1"/>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_3" bpmnElement="ExclusiveGateway_3" isMarkerVisible="true">
-        <dc:Bounds height="50.0" width="50.0" x="1736.0" y="1008.0"/>
-        <bpmndi:BPMNLabel id="BPMNLabel_14" labelStyle="BPMNLabelStyle_1"/>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_4" bpmnElement="ExclusiveGateway_4" isMarkerVisible="true">
         <dc:Bounds height="50.0" width="50.0" x="1707.0" y="645.0"/>
@@ -228,9 +225,29 @@
           <dc:Bounds height="17.0" width="74.0" x="1243.0" y="405.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_14" bpmnElement="ExclusiveGateway_14" isMarkerVisible="true">
-        <dc:Bounds height="50.0" width="50.0" x="1735.0" y="265.0"/>
-        <bpmndi:BPMNLabel id="BPMNLabel_3" labelStyle="BPMNLabelStyle_1"/>
+      <bpmndi:BPMNShape id="BPMNShape_EndEvent_2" bpmnElement="EndEvent_1">
+        <dc:Bounds height="36.0" width="36.0" x="1402.0" y="352.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_13" labelStyle="BPMNLabelStyle_1">
+          <dc:Bounds height="17.0" width="79.0" x="1381.0" y="388.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_EndEvent_3" bpmnElement="EndEvent_3">
+        <dc:Bounds height="36.0" width="36.0" x="1442.0" y="572.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_32" labelStyle="BPMNLabelStyle_1">
+          <dc:Bounds height="17.0" width="79.0" x="1421.0" y="608.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_EndEvent_4" bpmnElement="EndEvent_4">
+        <dc:Bounds height="36.0" width="36.0" x="1422.0" y="782.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_44" labelStyle="BPMNLabelStyle_1">
+          <dc:Bounds height="17.0" width="79.0" x="1401.0" y="818.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_EndEvent_5" bpmnElement="EndEvent_5">
+        <dc:Bounds height="36.0" width="36.0" x="1432.0" y="1022.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_52" labelStyle="BPMNLabelStyle_1">
+          <dc:Bounds height="17.0" width="79.0" x="1411.0" y="1058.0"/>
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_2" bpmnElement="SequenceFlow_2" sourceElement="BPMNShape_StartEvent_1" targetElement="BPMNShape_ExclusiveGateway_6">
         <di:waypoint xsi:type="dc:Point" x="463.0" y="643.0"/>
@@ -252,23 +269,11 @@
         <di:waypoint xsi:type="dc:Point" x="2261.0" y="596.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_27"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_5" bpmnElement="SequenceFlow_5" sourceElement="BPMNShape_ExclusiveGateway_1" targetElement="BPMNShape_CallActivity_1">
-        <di:waypoint xsi:type="dc:Point" x="1812.0" y="479.0"/>
-        <di:waypoint xsi:type="dc:Point" x="1812.0" y="464.0"/>
-        <di:waypoint xsi:type="dc:Point" x="1894.0" y="464.0"/>
-        <bpmndi:BPMNLabel id="BPMNLabel_28"/>
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_6" bpmnElement="SequenceFlow_6" sourceElement="BPMNShape_CallActivity_2" targetElement="BPMNShape_ParallelGateway_1">
         <di:waypoint xsi:type="dc:Point" x="1946.0" y="1033.0"/>
         <di:waypoint xsi:type="dc:Point" x="2261.0" y="1033.0"/>
         <di:waypoint xsi:type="dc:Point" x="2261.0" y="646.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_29"/>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_7" bpmnElement="SequenceFlow_7" sourceElement="BPMNShape_ExclusiveGateway_3" targetElement="BPMNShape_CallActivity_2">
-        <di:waypoint xsi:type="dc:Point" x="1786.0" y="1033.0"/>
-        <di:waypoint xsi:type="dc:Point" x="1811.0" y="1033.0"/>
-        <di:waypoint xsi:type="dc:Point" x="1836.0" y="1033.0"/>
-        <bpmndi:BPMNLabel id="BPMNLabel_30"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_8" bpmnElement="SequenceFlow_8" sourceElement="BPMNShape_CallActivity_3" targetElement="BPMNShape_ParallelGateway_1">
         <di:waypoint xsi:type="dc:Point" x="2004.0" y="311.0"/>
@@ -300,20 +305,22 @@
         <di:waypoint xsi:type="dc:Point" x="1827.0" y="802.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_36"/>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_14" bpmnElement="SequenceFlow_14" sourceElement="BPMNShape_ExclusiveGateway_10" targetElement="BPMNShape_ExclusiveGateway_1">
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_14" bpmnElement="SequenceFlow_14" sourceElement="BPMNShape_ExclusiveGateway_10">
         <di:waypoint xsi:type="dc:Point" x="1323.0" y="569.0"/>
-        <di:waypoint xsi:type="dc:Point" x="1323.0" y="504.0"/>
-        <di:waypoint xsi:type="dc:Point" x="1787.0" y="504.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1323.0" y="499.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1924.0" y="499.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1934.0" y="463.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_37">
-          <dc:Bounds height="17.0" width="18.0" x="1515.0" y="505.0"/>
+          <dc:Bounds height="17.0" width="18.0" x="1599.0" y="500.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_16" bpmnElement="SequenceFlow_16" sourceElement="BPMNShape_ExclusiveGateway_12" targetElement="BPMNShape_ExclusiveGateway_3">
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_16" bpmnElement="SequenceFlow_16" sourceElement="BPMNShape_ExclusiveGateway_12">
         <di:waypoint xsi:type="dc:Point" x="1348.0" y="954.0"/>
-        <di:waypoint xsi:type="dc:Point" x="1761.0" y="954.0"/>
-        <di:waypoint xsi:type="dc:Point" x="1761.0" y="1008.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1835.0" y="954.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1835.0" y="1032.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1845.0" y="1032.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_39">
-          <dc:Bounds height="17.0" width="18.0" x="1574.0" y="955.0"/>
+          <dc:Bounds height="17.0" width="18.0" x="1628.0" y="955.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_17" bpmnElement="SequenceFlow_17" sourceElement="BPMNShape_ParallelGateway_2" targetElement="BPMNShape_ExclusiveGateway_4">
@@ -387,21 +394,40 @@
           <dc:Bounds height="17.0" width="25.0" x="1025.0" y="381.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_26" bpmnElement="SequenceFlow_26" sourceElement="BPMNShape_ExclusiveGateway_14" targetElement="BPMNShape_CallActivity_3">
-        <di:waypoint xsi:type="dc:Point" x="1785.0" y="290.0"/>
-        <di:waypoint xsi:type="dc:Point" x="1839.0" y="290.0"/>
-        <di:waypoint xsi:type="dc:Point" x="1839.0" y="302.0"/>
-        <di:waypoint xsi:type="dc:Point" x="1894.0" y="302.0"/>
-        <bpmndi:BPMNLabel id="BPMNLabel_49"/>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_27" bpmnElement="SequenceFlow_27" sourceElement="BPMNShape_ExclusiveGateway_13" targetElement="BPMNShape_ExclusiveGateway_14">
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_27" bpmnElement="SequenceFlow_27" sourceElement="BPMNShape_ExclusiveGateway_13">
         <di:waypoint xsi:type="dc:Point" x="1280.0" y="355.0"/>
-        <di:waypoint xsi:type="dc:Point" x="1280.0" y="228.0"/>
-        <di:waypoint xsi:type="dc:Point" x="1760.0" y="228.0"/>
-        <di:waypoint xsi:type="dc:Point" x="1760.0" y="265.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1280.0" y="310.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1884.0" y="310.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1910.0" y="310.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_50">
-          <dc:Bounds height="17.0" width="25.0" x="1463.0" y="229.0"/>
+          <dc:Bounds height="17.0" width="25.0" x="1527.0" y="311.0"/>
         </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_9" bpmnElement="SequenceFlow_9" sourceElement="BPMNShape_ExclusiveGateway_13" targetElement="BPMNShape_EndEvent_2">
+        <di:waypoint xsi:type="dc:Point" x="1305.0" y="380.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1353.0" y="380.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1353.0" y="370.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1402.0" y="370.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_19"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_15" bpmnElement="SequenceFlow_15" sourceElement="BPMNShape_ExclusiveGateway_10" targetElement="BPMNShape_EndEvent_3">
+        <di:waypoint xsi:type="dc:Point" x="1348.0" y="594.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1395.0" y="594.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1395.0" y="590.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1442.0" y="590.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_38"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_21" bpmnElement="SequenceFlow_21" sourceElement="BPMNShape_ExclusiveGateway_11" targetElement="BPMNShape_EndEvent_4">
+        <di:waypoint xsi:type="dc:Point" x="1323.0" y="768.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1323.0" y="800.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1422.0" y="800.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_51"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_28" bpmnElement="SequenceFlow_28" sourceElement="BPMNShape_ExclusiveGateway_12" targetElement="BPMNShape_EndEvent_5">
+        <di:waypoint xsi:type="dc:Point" x="1323.0" y="979.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1323.0" y="1040.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1432.0" y="1040.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_53"/>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
     <bpmndi:BPMNLabelStyle id="BPMNLabelStyle_1">

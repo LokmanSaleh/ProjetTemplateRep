@@ -339,7 +339,7 @@ public class ManipulateChaines extends JFrame {
 							out.write(buff, 0, len);
 						}
 
-						Desktop.getDesktop().open(myFile);
+						//Desktop.getDesktop().open(myFile);
 					}
 					
 				} catch (Exception e1) {

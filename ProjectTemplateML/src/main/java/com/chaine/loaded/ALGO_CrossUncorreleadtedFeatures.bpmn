@@ -5,7 +5,7 @@
     <bpmn2:startEvent id="StartEvent_3" name="Start Event 3">
       <bpmn2:outgoing>SequenceFlow_3</bpmn2:outgoing>
     </bpmn2:startEvent>
-    <bpmn2:serviceTask id="ServiceTask_2" name="OverSampling" implementation="##WebService">
+    <bpmn2:serviceTask id="ServiceTask_2" name="SVM">
       <bpmn2:incoming>SequenceFlow_3</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_4</bpmn2:outgoing>
     </bpmn2:serviceTask>
@@ -26,7 +26,7 @@
       <bpmndi:BPMNShape id="BPMNShape_ServiceTask_2" bpmnElement="ServiceTask_2" isExpanded="true">
         <dc:Bounds height="50.0" width="110.0" x="615.0" y="345.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_2" labelStyle="BPMNLabelStyle_1">
-          <dc:Bounds height="17.0" width="93.0" x="623.0" y="361.0"/>
+          <dc:Bounds height="17.0" width="30.0" x="655.0" y="361.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_EndEvent_2" bpmnElement="EndEvent_3">

@@ -5,7 +5,7 @@
     <bpmn2:startEvent id="StartEvent_3" name="Start Event 3">
       <bpmn2:outgoing>SequenceFlow_3</bpmn2:outgoing>
     </bpmn2:startEvent>
-    <bpmn2:serviceTask id="ServiceTask_2" name="OverSampling" implementation="##WebService">
+    <bpmn2:serviceTask id="ServiceTask_2" name="SeperateDataIntoTrainingValidationAndTesting">
       <bpmn2:incoming>SequenceFlow_3</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_4</bpmn2:outgoing>
     </bpmn2:serviceTask>
@@ -18,34 +18,33 @@
   <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Process Diagram">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="NaiveBayes1">
       <bpmndi:BPMNShape id="BPMNShape_StartEvent_2" bpmnElement="StartEvent_3">
-        <dc:Bounds height="36.0" width="36.0" x="492.0" y="352.0"/>
+        <dc:Bounds height="36.0" width="36.0" x="320.0" y="352.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_1" labelStyle="BPMNLabelStyle_1">
-          <dc:Bounds height="34.0" width="80.0" x="470.0" y="388.0"/>
+          <dc:Bounds height="34.0" width="80.0" x="298.0" y="388.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_ServiceTask_2" bpmnElement="ServiceTask_2" isExpanded="true">
-        <dc:Bounds height="50.0" width="110.0" x="615.0" y="345.0"/>
+        <dc:Bounds height="50.0" width="341.0" x="460.0" y="345.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_2" labelStyle="BPMNLabelStyle_1">
-          <dc:Bounds height="17.0" width="93.0" x="623.0" y="361.0"/>
+          <dc:Bounds height="17.0" width="300.0" x="480.0" y="361.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="BPMNShape_EndEvent_2" bpmnElement="EndEvent_3">
-        <dc:Bounds height="36.0" width="36.0" x="813.0" y="361.0"/>
+        <dc:Bounds height="36.0" width="36.0" x="880.0" y="352.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_4" labelStyle="BPMNLabelStyle_1">
-          <dc:Bounds height="17.0" width="79.0" x="792.0" y="397.0"/>
+          <dc:Bounds height="17.0" width="79.0" x="859.0" y="388.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_4" bpmnElement="SequenceFlow_3" sourceElement="BPMNShape_StartEvent_2" targetElement="BPMNShape_ServiceTask_2">
-        <di:waypoint xsi:type="dc:Point" x="528.0" y="370.0"/>
-        <di:waypoint xsi:type="dc:Point" x="571.0" y="370.0"/>
-        <di:waypoint xsi:type="dc:Point" x="615.0" y="370.0"/>
+        <di:waypoint xsi:type="dc:Point" x="356.0" y="370.0"/>
+        <di:waypoint xsi:type="dc:Point" x="408.0" y="370.0"/>
+        <di:waypoint xsi:type="dc:Point" x="460.0" y="370.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_3"/>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_5" bpmnElement="SequenceFlow_4" sourceElement="BPMNShape_ServiceTask_2" targetElement="BPMNShape_EndEvent_2">
-        <di:waypoint xsi:type="dc:Point" x="725.0" y="370.0"/>
-        <di:waypoint xsi:type="dc:Point" x="769.0" y="370.0"/>
-        <di:waypoint xsi:type="dc:Point" x="769.0" y="379.0"/>
-        <di:waypoint xsi:type="dc:Point" x="813.0" y="379.0"/>
+        <di:waypoint xsi:type="dc:Point" x="801.0" y="370.0"/>
+        <di:waypoint xsi:type="dc:Point" x="840.0" y="370.0"/>
+        <di:waypoint xsi:type="dc:Point" x="880.0" y="370.0"/>
         <bpmndi:BPMNLabel id="BPMNLabel_5"/>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>

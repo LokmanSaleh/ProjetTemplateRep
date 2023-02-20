@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- origin at X=0.0 Y=0.0 -->
-<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ext="http://org.eclipse.bpmn2/ext" xmlns:xs="http://www.w3.org/2001/XMLSchema" id="Definitions_1" exporter="org.eclipse.bpmn2.modeler.core" exporterVersion="1.5.4.RC1-v20220528-0836-B1" targetNamespace="http://org.eclipse.bpmn2/default/process">
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ext="http://org.eclipse.bpmn2/ext" xmlns:ns="http://org.eclipse.bpmn2/default/process" xmlns:xs="http://www.w3.org/2001/XMLSchema" id="Definitions_1" exporter="org.eclipse.bpmn2.modeler.core" exporterVersion="1.5.4.RC1-v20220528-0836-B1" targetNamespace="http://org.eclipse.bpmn2/default/process">
+  <bpmn2:import importType="http://www.omg.org/spec/BPMN/20100524/MODEL" location="platform:/resource/ProjectTemplateML/src/main/java/com/chaine/loaded/ALGO_SeperateDataIntoTrainingAndTesting.bpmn" namespace="http://org.eclipse.bpmn2/default/process"/>
+  <bpmn2:import importType="http://www.omg.org/spec/BPMN/20100524/MODEL" location="platform:/resource/ProjectTemplateML/src/main/java/com/chaine/loaded/ALGO_SeperateDataIntoTrainingValidationAndTesting.bpmn" namespace="http://org.eclipse.bpmn2/default/process"/>
   <bpmn2:process id="Template" name="Default Process" isExecutable="false">
     <bpmn2:startEvent id="StartEvent_1" name="Start Event 1">
       <bpmn2:outgoing>SequenceFlow_2</bpmn2:outgoing>
@@ -8,11 +10,11 @@
     <bpmn2:endEvent id="EndEvent_1" name="End Event 1">
       <bpmn2:incoming>SequenceFlow_7</bpmn2:incoming>
     </bpmn2:endEvent>
-    <bpmn2:callActivity id="CallActivity_1" name="SeperateDataIntoTrainingAndTesting">
+    <bpmn2:callActivity id="CallActivity_1" name="SeperateDataIntoTrainingAndTesting" calledElement="ALGO_SeperateDataIntoTrainingAndTesting.bpmn#NaiveBayes1">
       <bpmn2:incoming>SequenceFlow_3</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_5</bpmn2:outgoing>
     </bpmn2:callActivity>
-    <bpmn2:callActivity id="CallActivity_2" name="SeperateDataIntoTrainingValidationAndTesting">
+    <bpmn2:callActivity id="CallActivity_2" name="SeperateDataIntoTrainingValidationAndTesting" calledElement="ALGO_SeperateDataIntoTrainingValidationAndTesting.bpmn#NaiveBayes1">
       <bpmn2:incoming>SequenceFlow_4</bpmn2:incoming>
       <bpmn2:outgoing>SequenceFlow_6</bpmn2:outgoing>
     </bpmn2:callActivity>
