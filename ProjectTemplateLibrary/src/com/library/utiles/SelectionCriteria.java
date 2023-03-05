@@ -20,6 +20,7 @@ public class SelectionCriteria extends JFrame{
 
 	private JFrame frame;
 
+	private static int index=0;
 	/**
 	 * Launch the application.
 	 */
@@ -99,8 +100,8 @@ public class SelectionCriteria extends JFrame{
 		
 		JComboBox comboBoxConfidentialyDataLableled = new JComboBox();
 		comboBoxConfidentialyDataLableled.setBounds(368, 61, 103, 36);
-		comboBoxConfidentialyDataLableled.addItem("Yes");
 		comboBoxConfidentialyDataLableled.addItem("No"); 
+		comboBoxConfidentialyDataLableled.addItem("Yes"); 
 		frame.getContentPane().add(comboBoxConfidentialyDataLableled);
 		
 		JLabel Accuracy = new JLabel("Accuracy");
@@ -141,17 +142,17 @@ public class SelectionCriteria extends JFrame{
 				
 		    	List<String> listOfCondition = new ArrayList<String>(Arrays.asList("Overfitting==" + comboBoxOverfitting.getSelectedItem().toString(),
 																				   "ImbalancedDataSet==" + comboBoxImbalancedDataSet.getSelectedItem().toString(), 
-																				   "MinoryClass<<" + comboBoxMinoryClass.getSelectedItem().toString(), 
+																				   "MinoryClass" + comboBoxMinoryClass.getSelectedItem().toString(), 
 																				   "ProblemType==" + comboBoxProblemType.getSelectedItem().toString(), 
 																				   "ConfidentialyDataLableled==" + comboBoxConfidentialyDataLableled.getSelectedItem().toString(), 
 																				   "Accuracy==" + comboBoxAccuracy.getSelectedItem().toString(),
 																				   "DataType==" + comboBoxDataType.getSelectedItem().toString(),
-																				   "SpeedOfTraining=" + comboBoxSpeedOfTraining.getSelectedItem().toString()));
+																				   "SpeedOfTraining==" + comboBoxSpeedOfTraining.getSelectedItem().toString()));
 		    	
-		    	
+		    	//DataType==Categorial && SpeedOfTraining==High && Accuracy==High
 		    	try {
 		    		
-					BPMN2TaskAndSequenceFlowRemover.CreateNewChaineByRemovingUnecessaryComponent(listOfCondition);
+					BPMN2TaskAndSequenceFlowRemover.CreateNewChaineByRemovingUnecessaryComponent(listOfCondition, index++);
 					
 				} catch (IOException e1) {
 					// TODO Auto-generated catch block
