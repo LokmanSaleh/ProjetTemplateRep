@@ -64,77 +64,135 @@ public class SelectionCriteria extends JFrame{
 		frame.getContentPane().add(comboBoxOverfitting);
 		
 		JLabel ImbalancedDataSet = new JLabel("ImbalancedDataSet");
-		ImbalancedDataSet.setBounds(90, 45, 97, 14);
+		ImbalancedDataSet.setBounds(113, 45, 97, 14);
 		frame.getContentPane().add(ImbalancedDataSet);
 		
 		JComboBox comboBoxImbalancedDataSet = new JComboBox();
-		comboBoxImbalancedDataSet.setBounds(100, 61, 70, 36);
+		comboBoxImbalancedDataSet.setBounds(100, 61, 110, 36);
 		comboBoxImbalancedDataSet.addItem("Yes");
 		comboBoxImbalancedDataSet.addItem("No"); 
 		frame.getContentPane().add(comboBoxImbalancedDataSet);
 		
 		JLabel MinoryClass = new JLabel("MinoryClass");
-		MinoryClass.setBounds(197, 45, 72, 14);
+		MinoryClass.setBounds(233, 45, 72, 14);
 		frame.getContentPane().add(MinoryClass);
 		
 		JComboBox comboBoxMinoryClass = new JComboBox();
-		comboBoxMinoryClass.setBounds(194, 61, 70, 36);
+		comboBoxMinoryClass.setBounds(220, 61, 85, 36);
 		comboBoxMinoryClass.addItem(">>1000");
 		comboBoxMinoryClass.addItem("<<1000");
 		frame.getContentPane().add(comboBoxMinoryClass);
 		
 		JLabel ProblemType = new JLabel("ProblemType");
-		ProblemType.setBounds(282, 45, 85, 14);
+		ProblemType.setBounds(327, 45, 85, 14);
 		frame.getContentPane().add(ProblemType);
 		
 		JComboBox comboBoxProblemType = new JComboBox();
-		comboBoxProblemType.setBounds(278, 61, 70, 36);
+		comboBoxProblemType.setBounds(319, 61, 93, 36);
 		comboBoxProblemType.addItem("Classification");
 		comboBoxProblemType.addItem("Regression");
 		comboBoxProblemType.addItem("Clustering"); 
 		frame.getContentPane().add(comboBoxProblemType);
 		
 		JLabel ConfidentialyDataLableled = new JLabel("ConfidentialyDataLableled");
-		ConfidentialyDataLableled.setBounds(358, 45, 117, 14);
+		ConfidentialyDataLableled.setBounds(430, 45, 117, 14);
 		frame.getContentPane().add(ConfidentialyDataLableled);
 		
 		JComboBox comboBoxConfidentialyDataLableled = new JComboBox();
-		comboBoxConfidentialyDataLableled.setBounds(368, 61, 103, 36);
+		comboBoxConfidentialyDataLableled.setBounds(422, 61, 149, 36);
 		comboBoxConfidentialyDataLableled.addItem("No"); 
 		comboBoxConfidentialyDataLableled.addItem("Yes"); 
 		frame.getContentPane().add(comboBoxConfidentialyDataLableled);
 		
 		JLabel Accuracy = new JLabel("Accuracy");
-		Accuracy.setBounds(490, 45, 64, 14);
+		Accuracy.setBounds(599, 45, 64, 14);
 		frame.getContentPane().add(Accuracy);
 		
 		JComboBox comboBoxAccuracy = new JComboBox();
-		comboBoxAccuracy.setBounds(484, 61, 70, 36);
+		comboBoxAccuracy.setBounds(581, 61, 70, 36);
 		comboBoxAccuracy.addItem("High");
 		comboBoxAccuracy.addItem("Moderate");
 		comboBoxAccuracy.addItem("Low"); 
 		frame.getContentPane().add(comboBoxAccuracy);
 		
 		JLabel DataType = new JLabel("DataType");
-		DataType.setBounds(566, 45, 70, 14);
+		DataType.setBounds(673, 45, 70, 14);
 		frame.getContentPane().add(DataType);
 		
 		JComboBox comboBoxDataType = new JComboBox();
-		comboBoxDataType.setBounds(566, 61, 70, 36);
+		comboBoxDataType.setBounds(663, 61, 70, 36);
 		comboBoxDataType.addItem("Categorial");
 		comboBoxDataType.addItem("Continue"); 
 		frame.getContentPane().add(comboBoxDataType);
 		
 		JLabel SpeedOfTraining = new JLabel("SpeedOfTraining");
-		SpeedOfTraining.setBounds(659, 45, 97, 14);
+		SpeedOfTraining.setBounds(743, 45, 97, 14);
 		frame.getContentPane().add(SpeedOfTraining);
 		
 		JComboBox comboBoxSpeedOfTraining = new JComboBox();
-		comboBoxSpeedOfTraining.setBounds(646, 61, 97, 36);
+		comboBoxSpeedOfTraining.setBounds(743, 61, 97, 36);
 		comboBoxSpeedOfTraining.addItem("High");
 		comboBoxSpeedOfTraining.addItem("Moderate");
 		comboBoxSpeedOfTraining.addItem("Low");
 		frame.getContentPane().add(comboBoxSpeedOfTraining);
+		
+		
+		JLabel lblNewLabel = new JLabel("LabeledData");
+		lblNewLabel.setBounds(10, 126, 97, 13);
+		frame.getContentPane().add(lblNewLabel);
+		JComboBox comboBoxLabeledData = new JComboBox();
+		comboBoxLabeledData.setBounds(10, 149, 97, 21);
+		comboBoxLabeledData.addItem("No"); 
+		comboBoxLabeledData.addItem("Yes"); 
+		frame.getContentPane().add(comboBoxLabeledData);
+		
+		
+		JLabel lblNewLabel_1 = new JLabel("NmberOfLabelsByClasse");
+		lblNewLabel_1.setBounds(117, 126, 110, 13);
+		frame.getContentPane().add(lblNewLabel_1);
+		JComboBox comboBoxNmberOfLabelsByClasse = new JComboBox();
+		comboBoxNmberOfLabelsByClasse.setBounds(117, 149, 110, 21);
+		comboBoxNmberOfLabelsByClasse.addItem(">1"); 
+		comboBoxNmberOfLabelsByClasse.addItem("==1"); 
+		frame.getContentPane().add(comboBoxNmberOfLabelsByClasse);
+		
+		JLabel lblNewLabel_2 = new JLabel("NumberOfClasses");
+		lblNewLabel_2.setBounds(246, 126, 117, 13);
+		frame.getContentPane().add(lblNewLabel_2);
+		JComboBox comboBoxNumberOfClasses = new JComboBox();
+		comboBoxNumberOfClasses.setBounds(245, 149, 103, 21);
+		comboBoxNumberOfClasses.addItem(">2"); 
+		comboBoxNumberOfClasses.addItem("==2"); 
+		frame.getContentPane().add(comboBoxNumberOfClasses);
+		
+		
+		JLabel lblNewLabel_3 = new JLabel("SmallDataSet");
+		lblNewLabel_3.setBounds(373, 126, 86, 13);
+		frame.getContentPane().add(lblNewLabel_3);
+		JComboBox comboBoxSmallDataSet = new JComboBox();
+		comboBoxSmallDataSet.addItem("Yes"); 
+		comboBoxSmallDataSet.addItem("No"); 
+		comboBoxSmallDataSet.setBounds(374, 149, 85, 21);
+		frame.getContentPane().add(comboBoxSmallDataSet);
+		
+		JLabel lblNewLabel_4 = new JLabel("HighTrainingSpeed");
+		lblNewLabel_4.setBounds(479, 126, 98, 13);
+		frame.getContentPane().add(lblNewLabel_4);
+		JComboBox comboBoxHighTrainingSpeed = new JComboBox();
+		comboBoxHighTrainingSpeed.addItem("Yes"); 
+		comboBoxHighTrainingSpeed.addItem("No"); 
+		comboBoxHighTrainingSpeed.setBounds(478, 149, 89, 21);
+		frame.getContentPane().add(comboBoxHighTrainingSpeed);
+		
+		JLabel lblNewLabel_5 = new JLabel("Explainable");
+		lblNewLabel_5.setBounds(605, 126, 110, 13);
+		frame.getContentPane().add(lblNewLabel_5);
+		JComboBox comboBoxExplainable = new JComboBox();
+		comboBoxExplainable.addItem("Yes"); 
+		comboBoxExplainable.addItem("No"); 
+		comboBoxExplainable.setBounds(605, 149, 123, 21);
+		frame.getContentPane().add(comboBoxExplainable);
+ 
 		
 		JButton btnNewButton = new JButton("Creer une nouvelle chaine de traitement");
 		btnNewButton.addActionListener(new ActionListener() {
@@ -146,8 +204,14 @@ public class SelectionCriteria extends JFrame{
 																				   "ProblemType==" + comboBoxProblemType.getSelectedItem().toString(), 
 																				   "ConfidentialyDataLableled==" + comboBoxConfidentialyDataLableled.getSelectedItem().toString(), 
 																				   "Accuracy==" + comboBoxAccuracy.getSelectedItem().toString(),
-																				   "DataType==" + comboBoxDataType.getSelectedItem().toString(),
-																				   "SpeedOfTraining==" + comboBoxSpeedOfTraining.getSelectedItem().toString()));
+																				   "DataType==" + comboBoxDataType.getSelectedItem().toString(), 
+																				   "SpeedOfTraining==" + comboBoxSpeedOfTraining.getSelectedItem().toString(),
+																				   "LabeledData==" + comboBoxLabeledData.getSelectedItem().toString(),
+																				   "NmberOfLabelsByClasse" + comboBoxNmberOfLabelsByClasse.getSelectedItem().toString(),
+																				   "NumberOfClasses" + comboBoxNumberOfClasses.getSelectedItem().toString(),
+																				   "SmallDataSet==" + comboBoxSmallDataSet.getSelectedItem().toString(),
+																				   "HighTrainingSpeed==" + comboBoxHighTrainingSpeed.getSelectedItem().toString(),
+																				   "Explainable==" + comboBoxExplainable.getSelectedItem().toString()));
 		    	
 		    	//DataType==Categorial && SpeedOfTraining==High && Accuracy==High
 		    	try {
@@ -160,11 +224,10 @@ public class SelectionCriteria extends JFrame{
 				}
 			}
 		});
-		btnNewButton.setBounds(10, 131, 259, 21);
+		btnNewButton.setBounds(10, 195, 259, 21);
 		frame.getContentPane().add(btnNewButton);
 		
-		
-		
+
 //		
 //		JButton btnNewButton = new JButton("Select ML Algorithm");
 //		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 11));

@@ -43,10 +43,26 @@ public class BPMN2TaskAndSequenceFlowRemover {
 //    																	   "ProblemType==Classification", 
 //    																	   "ConfidentialyDataLableled==No", 
 //    																	   "Accuracy==High",
-//    																	   "DataType==Categorial",
+//    																		LabeledData==Yes
+//    																		NmberOfLabelsByClasse>1 ==1
+//    																		NumberOfClasses>2 ==2
+//    																		SmallDataSet==Yes No
+//    																		HighTrainingSpeed==Yes No
+//    																		Explainable==Yes No
+//    																	   "DataType==Categorial", Continue
 //    																	   "SpeedOfTraining==Low"));
 
-    	
+//				LabeledData==No
+//				DataType==Categorial && LabeledData==Yes
+//
+//				NmberOfLabelsByClasse>1 && DataType==Categorial && LabeledData==Yes
+//				NmberOfLabelsByClasse==1 && DataType==Categorial && LabeledData==Yes && NumberOfClasses>2
+//				NmberOfLabelsByClasse==1 && DataType==Categorial && LabeledData==Yes && NumberOfClasses==2 && SmallDataSet==No && HighTrainingSpeed==No && Explainable==No && Accuracy==High
+//				NmberOfLabelsByClasse==1 && DataType==Categorial && LabeledData==Yes && NumberOfClasses==2 && SmallDataSet==Yes && HighTrainingSpeed==Yes && Explainable==Yes && Accuracy==High	
+//				NmberOfLabelsByClasse==1 && DataType==Categorial && LabeledData==Yes && NumberOfClasses==2 && SmallDataSet==Yes && HighTrainingSpeed==Yes && Explainable==Yes && Accuracy==High
+//				NmberOfLabelsByClasse==1 && DataType==Categorial && LabeledData==Yes && NumberOfClasses==2 && SmallDataSet==Yes && HighTrainingSpeed==No && Explainable==No && Accuracy==High
+//				NmberOfLabelsByClasse==1 && DataType==Categorial && LabeledData==Yes && NumberOfClasses==2 && SmallDataSet==Yes && HighTrainingSpeed==Yes && Explainable==Yes
+				
         // Load the BPMN2 file
         File file = new File("C:\\Users\\lookm\\git\\ProjetTemplateRep\\ProjectTemplateLibrary\\src\\com\\library\\utiles\\process.bpmn");
         FileInputStream fis = new FileInputStream(file);

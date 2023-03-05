@@ -21,3 +21,5 @@ Require-Bundle: datarepresentation;bundle-version="1.0.0",
  org.eclipse.bpmn2.modeler.help;bundle-version="1.5.4",
  org.eclipse.bpmn2.modeler.runtime.jboss.jbpm;bundle-version="1.5.4",
  org.eclipse.bpmn2.modeler.ui;bundle-version="1.5.4"
+Bundle-ClassPath: .,
+ jgoodies-forms-1.8.0.jar
