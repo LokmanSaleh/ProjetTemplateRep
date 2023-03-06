@@ -1,20 +1,17 @@
 package com.library.utiles;
 
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JComboBox;
-import javax.swing.JLabel;
-import javax.swing.JButton;
-import java.awt.Color;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.awt.event.ActionEvent;
-import java.awt.Font;
-import java.awt.Label;
+
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 public class SelectionCriteria extends JFrame{
 
@@ -146,7 +143,6 @@ public class SelectionCriteria extends JFrame{
 		comboBoxLabeledData.addItem("Yes"); 
 		frame.getContentPane().add(comboBoxLabeledData);
 		
-		
 		JLabel lblNewLabel_1 = new JLabel("NmberOfLabelsByClasse");
 		lblNewLabel_1.setBounds(117, 126, 110, 13);
 		frame.getContentPane().add(lblNewLabel_1);
@@ -164,7 +160,6 @@ public class SelectionCriteria extends JFrame{
 		comboBoxNumberOfClasses.addItem(">2"); 
 		comboBoxNumberOfClasses.addItem("==2"); 
 		frame.getContentPane().add(comboBoxNumberOfClasses);
-		
 		
 		JLabel lblNewLabel_3 = new JLabel("SmallDataSet");
 		lblNewLabel_3.setBounds(373, 126, 86, 13);
