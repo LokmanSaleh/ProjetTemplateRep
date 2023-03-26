@@ -18,22 +18,20 @@ import java.util.List;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JSeparator;
 import javax.swing.border.EmptyBorder;
 
 import resources.BdQueries;
 import resources.Chaine;
 import resources.ComboItem;
-import java.awt.Component;
-import javax.swing.Box;
-import javax.swing.JSeparator;
 
 
+@SuppressWarnings("serial")
 public class ManipulateChaines extends JFrame {
 
 	private JPanel contentPane;
-	private JComboBox listOfChainesComboBox;
+	private JComboBox<ComboItem> listOfChainesComboBox;
 	
 	public final static String PROJECT_PATH = "C:\\Users\\lookm\\git\\ProjetTemplateRep\\ProjectTemplateML\\src\\main\\java\\";
 
@@ -181,6 +179,7 @@ public class ManipulateChaines extends JFrame {
 		
 		createChaine.addActionListener(new ActionListener() {
 
+			@SuppressWarnings("resource")
 			public void actionPerformed(ActionEvent e) {
 				
 				
@@ -233,7 +232,7 @@ public class ManipulateChaines extends JFrame {
 		
 		
 		
-		listOfChainesComboBox = new JComboBox();
+		listOfChainesComboBox = new JComboBox<ComboItem>();
 		listOfChainesComboBox.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		listOfChainesComboBox.setBounds(9, 150, 291, 46);
 		contentPane.add(listOfChainesComboBox);
@@ -244,6 +243,7 @@ public class ManipulateChaines extends JFrame {
 		loadSelectedChaine.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		loadSelectedChaine.setBounds(310, 149, 193, 49);
 		loadSelectedChaine.addActionListener(new ActionListener() {
+			@SuppressWarnings("resource")
 			public void actionPerformed(ActionEvent e) {
 
 				ComboItem comboItem = (ComboItem) listOfChainesComboBox.getSelectedItem();
@@ -316,6 +316,7 @@ public class ManipulateChaines extends JFrame {
 		JButton loadAll = new JButton("Load All");
 		loadAll.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		loadAll.addActionListener(new ActionListener() {
+			@SuppressWarnings("resource")
 			public void actionPerformed(ActionEvent e) {
 				
 				try {

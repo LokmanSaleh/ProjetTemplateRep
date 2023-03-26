@@ -4,12 +4,54 @@ package projetTemplate.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
 import org.eclipse.emf.ecore.EObject;
 
-import projetTemplate.*;
+import projetTemplate.Accuracy;
+import projetTemplate.CollectedDataKnowledgeAboutTemplateConstruction;
+import projetTemplate.Component;
+import projetTemplate.ComputationalRequirementValue;
+import projetTemplate.Condition;
+import projetTemplate.Conversion;
+import projetTemplate.Data;
+import projetTemplate.DataAnalysisProblem;
+import projetTemplate.DataAnalysisProblemType;
+import projetTemplate.DataCleaning;
+import projetTemplate.DataPretraitement;
+import projetTemplate.DataPropertyType;
+import projetTemplate.DataPropertyValue;
+import projetTemplate.DataPropertyValueSet;
+import projetTemplate.Database;
+import projetTemplate.Deployement;
+import projetTemplate.DomainProblem;
+import projetTemplate.DomainRequirementValue;
+import projetTemplate.Explainability;
+import projetTemplate.ExtendedBPMNModel;
+import projetTemplate.FeatureConstruction;
+import projetTemplate.FeatureSelection;
+import projetTemplate.MLAlgorithm;
+import projetTemplate.MLAlgorithmSolutionPattern;
+import projetTemplate.MLProcChainSolutionPattern;
+import projetTemplate.MLProject;
+import projetTemplate.MissingValueTreatement;
+import projetTemplate.ModelElement;
+import projetTemplate.NoiseTreatement;
+import projetTemplate.PostTreatement;
+import projetTemplate.ProcessingChain;
+import projetTemplate.ProcessingChainTemplate;
+import projetTemplate.ProjetTemplatePackage;
+import projetTemplate.RemoveUncessaryFileds;
+import projetTemplate.RequirementMapping;
+import projetTemplate.RequirementType;
+import projetTemplate.Resultat;
+import projetTemplate.Rule;
+import projetTemplate.Schema;
+import projetTemplate.SelectionCriterion;
+import projetTemplate.SelectionCriterionValue;
+import projetTemplate.SelectionCriterionValueSet;
+import projetTemplate.Term;
+import projetTemplate.connector;
+import projetTemplate.variable;
 
 /**
  * <!-- begin-user-doc -->

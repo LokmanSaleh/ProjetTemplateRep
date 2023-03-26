@@ -29,6 +29,7 @@
     <semanticResources>View/ExtendedBPMNModel.view</semanticResources>
     <semanticResources>View/SelectionCriterion.view</semanticResources>
     <semanticResources>My.bpmn2</semanticResources>
+    <semanticResources>TemplateEtendedBPMNChaine.bpmn</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_5bb7MIKxEe2sn-ea3VaFLw">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_5ciHYIKxEe2sn-ea3VaFLw" name="projetTemplate" repPath="#_5cYWYIKxEe2sn-ea3VaFLw" changeId="d886cef3-418a-4b05-8198-1239df2ef83b">

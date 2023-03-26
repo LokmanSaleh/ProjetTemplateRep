@@ -17,5 +17,11 @@ Export-Package: genmodel,
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime,
  datarepresentation;bundle-version="1.0.0",
- org.eclipse.emf.ecore.xmi
+ org.eclipse.emf.ecore.xmi,
+ org.eclipse.bpmn2.modeler.examples.customtask;bundle-version="1.5.4",
+ org.eclipse.ui;bundle-version="3.201.200",
+ org.eclipse.ui.ide;bundle-version="3.20.0",
+ org.eclipse.graphiti;bundle-version="0.19.1",
+ org.eclipse.graphiti.ui;bundle-version="0.19.1",
+ org.eclipse.core.resources;bundle-version="3.18.100"
 Bundle-ActivationPolicy: lazy

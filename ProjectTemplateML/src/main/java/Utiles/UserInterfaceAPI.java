@@ -1,9 +1,6 @@
 package Utiles;
  
 import com.automl.datarepresentation.view.ConnectionInterface;
-import com.library.utiles.EMFUtiles;
-
-import projetTemplate.MLProject;
 
 public class UserInterfaceAPI {
 	

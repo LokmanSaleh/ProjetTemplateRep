@@ -6,12 +6,65 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
-
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import projetTemplate.*;
+import projetTemplate.Accuracy;
+import projetTemplate.CollectedDataKnowledgeAboutTemplateConstruction;
+import projetTemplate.Component;
+import projetTemplate.ComputationalRequirementValue;
+import projetTemplate.Condition;
+import projetTemplate.Conversion;
+import projetTemplate.ConversionEnum;
+import projetTemplate.Data;
+import projetTemplate.DataAnalysisProblem;
+import projetTemplate.DataAnalysisProblemType;
+import projetTemplate.DataCleaning;
+import projetTemplate.DataPretraitement;
+import projetTemplate.DataPropertyType;
+import projetTemplate.DataPropertyValue;
+import projetTemplate.DataPropertyValueSet;
+import projetTemplate.Database;
+import projetTemplate.Deployement;
+import projetTemplate.DomainProblem;
+import projetTemplate.DomainRequirementValue;
+import projetTemplate.EnumConnector;
+import projetTemplate.EnumDataAnalysisProblemType;
+import projetTemplate.Explainability;
+import projetTemplate.ExtendedBPMNModel;
+import projetTemplate.FeatureConstruction;
+import projetTemplate.FeatureSelection;
+import projetTemplate.MLAlgorithm;
+import projetTemplate.MLAlgorithmSolutionPattern;
+import projetTemplate.MLAlgorithms;
+import projetTemplate.MLProcChainSolutionPattern;
+import projetTemplate.MLProject;
+import projetTemplate.MissingValueTreatement;
+import projetTemplate.MissingValueTreatementEnum;
+import projetTemplate.ModelElement;
+import projetTemplate.NoiseTreatement;
+import projetTemplate.NoiseTreatementEnum;
+import projetTemplate.PostTreatement;
+import projetTemplate.ProcessingChain;
+import projetTemplate.ProcessingChainTemplate;
+import projetTemplate.ProjetTemplateFactory;
+import projetTemplate.ProjetTemplatePackage;
+import projetTemplate.RemoveUncessaryFileds;
+import projetTemplate.RemoveUncessaryFiledsEnum;
+import projetTemplate.RequirementMapping;
+import projetTemplate.RequirementType;
+import projetTemplate.RequirementTypeValues;
+import projetTemplate.Resultat;
+import projetTemplate.Rule;
+import projetTemplate.Schema;
+import projetTemplate.SelectionCriterion;
+import projetTemplate.SelectionCriterionValue;
+import projetTemplate.SelectionCriterionValueSet;
+import projetTemplate.Term;
+import projetTemplate.Values1;
+import projetTemplate.Values2;
+import projetTemplate.connector;
+import projetTemplate.variable;
 
 /**
  * <!-- begin-user-doc -->

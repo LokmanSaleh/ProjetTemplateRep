@@ -2,8 +2,6 @@
  */
 package projetTemplate.impl;
 
-import genmodel.GenmodelPackage;
-import genmodel.impl.GenmodelPackageImpl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -11,9 +9,10 @@ import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
-
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
+import genmodel.GenmodelPackage;
+import genmodel.impl.GenmodelPackageImpl;
 import projetTemplate.Accuracy;
 import projetTemplate.CollectedDataKnowledgeAboutTemplateConstruction;
 import projetTemplate.Component;
