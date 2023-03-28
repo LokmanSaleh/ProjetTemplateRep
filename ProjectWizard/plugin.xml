@@ -4,14 +4,15 @@
    <extension
          point="org.eclipse.ui.newWizards">
       <category
-            id="ProjectWizard.category1"
-            name="MyProjects">
+            id="ProjectWizard.category.ML"
+            name="Machine Learning">
       </category>
       <wizard
-            category="ProjectWizard.category1"
+            category="ProjectWizard.category.ML"
             class="projectwizard.MyWizard"
-            id="ProjectWizard.wizard1"
-            name="CustomProject">
+            icon="bin/icons/ML.png"
+            id="ProjectWizard.wizard.ML"
+            name="Machine Learning Project">
       </wizard>
    </extension>
 

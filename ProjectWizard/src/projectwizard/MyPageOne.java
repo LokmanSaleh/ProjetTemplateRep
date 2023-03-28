@@ -1,5 +1,9 @@
 package projectwizard;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.KeyEvent;
@@ -14,10 +18,15 @@ public class MyPageOne extends WizardPage {
     private Text text1;
     private Composite container;
 
-    public MyPageOne() {
-        super("First Page");
-        setTitle("First Page");
-        setDescription("Fake Wizard: First page");
+    public MyPageOne() throws MalformedURLException {
+    	
+        super("Create a Machine Learning Project");
+        setTitle("Create a Machine Learning Project");
+        
+        setDescription("Create a Machine Learning Project in the workspace");
+        
+        ImageDescriptor imageDescriptor = ImageDescriptor.createFromURL(new URL("file:C:\\Users\\lookm\\git\\ProjetTemplateRep\\ProjectWizard\\src\\icons\\ML2.png"));
+        setImageDescriptor(imageDescriptor);
     }
 
     @Override
@@ -26,8 +35,9 @@ public class MyPageOne extends WizardPage {
         GridLayout layout = new GridLayout();
         container.setLayout(layout);
         layout.numColumns = 2;
+        
         Label label1 = new Label(container, SWT.NONE);
-        label1.setText("Put the name of the project here");
+        label1.setText("Project name: ");
 
         text1 = new Text(container, SWT.BORDER | SWT.SINGLE);
         text1.setText("");
@@ -46,6 +56,7 @@ public class MyPageOne extends WizardPage {
             }
 
         });
+        
         GridData gd = new GridData(GridData.FILL_HORIZONTAL);
         text1.setLayoutData(gd);
         // required to avoid an error in the system

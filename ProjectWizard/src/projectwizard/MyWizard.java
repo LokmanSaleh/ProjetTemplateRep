@@ -1,6 +1,8 @@
 package projectwizard;
  
 
+import java.net.MalformedURLException;
+
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IProjectDescription;
 import org.eclipse.core.resources.ResourcesPlugin;
@@ -24,12 +26,20 @@ public class MyWizard extends Wizard implements INewWizard {
 
     @Override
     public String getWindowTitle() {
-        return "Export My Data";
+        return "New Machine Learning Project";
     }
 
     @Override
     public void addPages() {
-        one = new MyPageOne();
+       
+    	try {
+        	
+			one = new MyPageOne();
+			
+		} catch (MalformedURLException e) { 
+			e.printStackTrace();
+		}
+        
         two = new MyPageTwo();
         addPage(one);
         //addPage(two);
