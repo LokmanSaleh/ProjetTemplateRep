@@ -161,11 +161,11 @@ public class MLProjectItemProvider extends ItemProviderAdapter implements IEditi
 	 * This returns MLProject.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/MLProject"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/CustomImages/configurationIcon.png"));
 	}
 
 	/**

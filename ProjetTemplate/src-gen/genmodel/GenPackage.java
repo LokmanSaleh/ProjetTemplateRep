@@ -646,7 +646,7 @@ public interface GenPackage extends EObject, GenBase {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<org.eclipse.emf.codegen.ecore.genmodel.GenPackage> getNestedGenPackages();
+	EList<GenPackage> getNestedGenPackages();
 
 	/**
 	 * Returns the value of the '<em><b>Gen Classifiers</b></em>' reference list.

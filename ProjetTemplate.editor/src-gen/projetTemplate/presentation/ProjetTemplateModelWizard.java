@@ -175,7 +175,7 @@ public class ProjetTemplateModelWizard extends Wizard implements INewWizard {
 		this.selection = selection;
 		setWindowTitle(ProjetTemplateEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
 		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE
-				.getImageDescriptor(ProjetTemplateEditorPlugin.INSTANCE.getImage("full/wizban/NewProjetTemplate")));
+				.getImageDescriptor(ProjetTemplateEditorPlugin.INSTANCE.getImage("full/configuration.png")));
 	}
 
 	/**

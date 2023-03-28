@@ -10,7 +10,6 @@ Require-Bundle: datarepresentation;bundle-version="1.0.0",
  ProjetTemplate;bundle-version="0.1.0",
  ProjetTemplate.edit;bundle-version="1.0.0",
  ProjetTemplate.editor;bundle-version="1.0.0",
- ProjetTemplate.viewmodel;bundle-version="1.0.0",
  org.eclipse.bpmn2;bundle-version="1.5.2",
  org.eclipse.bpmn2.edit;bundle-version="1.5.2",
  org.eclipse.bpmn2.editor;bundle-version="1.5.2",
@@ -20,6 +19,7 @@ Require-Bundle: datarepresentation;bundle-version="1.0.0",
  org.eclipse.bpmn2.modeler.examples.modelreader;bundle-version="1.5.4",
  org.eclipse.bpmn2.modeler.help;bundle-version="1.5.4",
  org.eclipse.bpmn2.modeler.runtime.jboss.jbpm;bundle-version="1.5.4",
- org.eclipse.bpmn2.modeler.ui;bundle-version="1.5.4"
+ org.eclipse.bpmn2.modeler.ui;bundle-version="1.5.4",
+ ProjetTemplate.viewmodel;bundle-version="1.0.0"
 Bundle-ClassPath: .,
  jgoodies-forms-1.8.0.jar

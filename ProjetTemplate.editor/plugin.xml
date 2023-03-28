@@ -15,8 +15,8 @@
             id="projetTemplate.presentation.ProjetTemplateModelWizardID"
             name="%_UI_ProjetTemplateModelWizard_label"
             class="projetTemplate.presentation.ProjetTemplateModelWizard"
-            category="org.eclipse.emf.ecore.Wizard.category.ID"
-            icon="icons/full/obj16/ProjetTemplateModelFile.gif">
+            category="ProjectWizard.category.ML"
+            icon="icons/full/configurationIcon.png">
          <description>%_UI_ProjetTemplateModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
@@ -38,9 +38,9 @@
 		class="org.eclipse.emfforms.spi.editor.GenericEditor" 
 		default="true" 
 		extensions="task" 
-		icon="icons/full/obj16/ProjetTemplateModelFile.gif" 
-		id="yourID" 
-		name="Your editor name"> 
+		icon="icons/full/configurationIcon.png" 
+		id="projetTemplate.presentation.ProjetTemplateEditor.ML" 
+		name="Machine Learning Configuration Editor"> 
 	</editor>
        
     </extension>
