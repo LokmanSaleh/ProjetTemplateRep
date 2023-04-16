@@ -2,12 +2,16 @@
  */
 package projetTemplate.impl;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import projetTemplate.DomainRequirementSelectionCriteria;
 import projetTemplate.DomainRequirementValue;
 import projetTemplate.ProjetTemplatePackage;
 import projetTemplate.RequirementType;
@@ -22,6 +26,7 @@ import projetTemplate.RequirementType;
  * <ul>
  *   <li>{@link projetTemplate.impl.DomainRequirementValueImpl#getExplanation <em>Explanation</em>}</li>
  *   <li>{@link projetTemplate.impl.DomainRequirementValueImpl#getRequirementtype <em>Requirementtype</em>}</li>
+ *   <li>{@link projetTemplate.impl.DomainRequirementValueImpl#getDomainrequirementselectioncriteria <em>Domainrequirementselectioncriteria</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,6 +61,16 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 	 * @ordered
 	 */
 	protected RequirementType requirementtype;
+
+	/**
+	 * The cached value of the '{@link #getDomainrequirementselectioncriteria() <em>Domainrequirementselectioncriteria</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDomainrequirementselectioncriteria()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DomainRequirementSelectionCriteria> domainrequirementselectioncriteria;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -145,6 +160,20 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<DomainRequirementSelectionCriteria> getDomainrequirementselectioncriteria() {
+		if (domainrequirementselectioncriteria == null) {
+			domainrequirementselectioncriteria = new EObjectResolvingEList<DomainRequirementSelectionCriteria>(
+					DomainRequirementSelectionCriteria.class, this,
+					ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__DOMAINREQUIREMENTSELECTIONCRITERIA);
+		}
+		return domainrequirementselectioncriteria;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -154,6 +183,8 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 			if (resolve)
 				return getRequirementtype();
 			return basicGetRequirementtype();
+		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__DOMAINREQUIREMENTSELECTIONCRITERIA:
+			return getDomainrequirementselectioncriteria();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -163,6 +194,7 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -171,6 +203,11 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 			return;
 		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE:
 			setRequirementtype((RequirementType) newValue);
+			return;
+		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__DOMAINREQUIREMENTSELECTIONCRITERIA:
+			getDomainrequirementselectioncriteria().clear();
+			getDomainrequirementselectioncriteria()
+					.addAll((Collection<? extends DomainRequirementSelectionCriteria>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -190,6 +227,9 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE:
 			setRequirementtype((RequirementType) null);
 			return;
+		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__DOMAINREQUIREMENTSELECTIONCRITERIA:
+			getDomainrequirementselectioncriteria().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -206,6 +246,8 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 			return EXPLANATION_EDEFAULT == null ? explanation != null : !EXPLANATION_EDEFAULT.equals(explanation);
 		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE:
 			return requirementtype != null;
+		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__DOMAINREQUIREMENTSELECTIONCRITERIA:
+			return domainrequirementselectioncriteria != null && !domainrequirementselectioncriteria.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

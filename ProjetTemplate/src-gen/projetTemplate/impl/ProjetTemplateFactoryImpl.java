@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
+import projetTemplate.*;
 import projetTemplate.Accuracy;
 import projetTemplate.CollectedDataKnowledgeAboutTemplateConstruction;
 import projetTemplate.Component;
@@ -198,6 +199,10 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 			return createNoiseTreatement();
 		case ProjetTemplatePackage.MISSING_VALUE_TREATEMENT:
 			return createMissingValueTreatement();
+		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_SELECTION_CRITERIA:
+			return createDomainRequirementSelectionCriteria();
+		case ProjetTemplatePackage.CRITERIA_TO_CHOOSE_ML_ALGORITHM:
+			return createCriteriaToChooseMLAlgorithm();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -711,6 +716,26 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 	public MissingValueTreatement createMissingValueTreatement() {
 		MissingValueTreatementImpl missingValueTreatement = new MissingValueTreatementImpl();
 		return missingValueTreatement;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DomainRequirementSelectionCriteria createDomainRequirementSelectionCriteria() {
+		DomainRequirementSelectionCriteriaImpl domainRequirementSelectionCriteria = new DomainRequirementSelectionCriteriaImpl();
+		return domainRequirementSelectionCriteria;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public CriteriaToChooseMLAlgorithm createCriteriaToChooseMLAlgorithm() {
+		CriteriaToChooseMLAlgorithmImpl criteriaToChooseMLAlgorithm = new CriteriaToChooseMLAlgorithmImpl();
+		return criteriaToChooseMLAlgorithm;
 	}
 
 	/**

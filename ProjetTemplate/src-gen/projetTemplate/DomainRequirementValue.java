@@ -2,6 +2,7 @@
  */
 package projetTemplate;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -15,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link projetTemplate.DomainRequirementValue#getExplanation <em>Explanation</em>}</li>
  *   <li>{@link projetTemplate.DomainRequirementValue#getRequirementtype <em>Requirementtype</em>}</li>
+ *   <li>{@link projetTemplate.DomainRequirementValue#getDomainrequirementselectioncriteria <em>Domainrequirementselectioncriteria</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getDomainRequirementValue()
@@ -65,5 +67,17 @@ public interface DomainRequirementValue extends EObject {
 	 * @generated
 	 */
 	void setRequirementtype(RequirementType value);
+
+	/**
+	 * Returns the value of the '<em><b>Domainrequirementselectioncriteria</b></em>' reference list.
+	 * The list contents are of type {@link projetTemplate.DomainRequirementSelectionCriteria}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Domainrequirementselectioncriteria</em>' reference list.
+	 * @see projetTemplate.ProjetTemplatePackage#getDomainRequirementValue_Domainrequirementselectioncriteria()
+	 * @model required="true"
+	 * @generated
+	 */
+	EList<DomainRequirementSelectionCriteria> getDomainrequirementselectioncriteria();
 
 } // DomainRequirementValue

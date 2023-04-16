@@ -55,6 +55,7 @@ public class MLAlgorithmItemProvider extends ItemProviderAdapter implements IEdi
 			addSelectioncriterionvaluePropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addExtendedbpmnmodelPropertyDescriptor(object);
+			addCriteriatochoosemlalgorithmPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -121,6 +122,22 @@ public class MLAlgorithmItemProvider extends ItemProviderAdapter implements IEdi
 								"_UI_MLAlgorithm_type"),
 						ProjetTemplatePackage.Literals.ML_ALGORITHM__EXTENDEDBPMNMODEL, true, false, true, null, null,
 						null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Criteriatochoosemlalgorithm feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCriteriatochoosemlalgorithmPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_MLAlgorithm_criteriatochoosemlalgorithm_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_MLAlgorithm_criteriatochoosemlalgorithm_feature", "_UI_MLAlgorithm_type"),
+						ProjetTemplatePackage.Literals.ML_ALGORITHM__CRITERIATOCHOOSEMLALGORITHM, true, false, true,
+						null, null, null));
 	}
 
 	/**

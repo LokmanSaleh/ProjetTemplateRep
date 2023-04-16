@@ -418,6 +418,24 @@ public interface ProjetTemplateFactory extends EFactory {
 	MissingValueTreatement createMissingValueTreatement();
 
 	/**
+	 * Returns a new object of class '<em>Domain Requirement Selection Criteria</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Domain Requirement Selection Criteria</em>'.
+	 * @generated
+	 */
+	DomainRequirementSelectionCriteria createDomainRequirementSelectionCriteria();
+
+	/**
+	 * Returns a new object of class '<em>Criteria To Choose ML Algorithm</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Criteria To Choose ML Algorithm</em>'.
+	 * @generated
+	 */
+	CriteriaToChooseMLAlgorithm createCriteriaToChooseMLAlgorithm();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -1086,6 +1086,52 @@ public class ProjetTemplateItemProviderAdapterFactory extends ProjetTemplateAdap
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.DomainRequirementSelectionCriteria} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DomainRequirementSelectionCriteriaItemProvider domainRequirementSelectionCriteriaItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.DomainRequirementSelectionCriteria}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDomainRequirementSelectionCriteriaAdapter() {
+		if (domainRequirementSelectionCriteriaItemProvider == null) {
+			domainRequirementSelectionCriteriaItemProvider = new DomainRequirementSelectionCriteriaItemProvider(this);
+		}
+
+		return domainRequirementSelectionCriteriaItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.CriteriaToChooseMLAlgorithm} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected CriteriaToChooseMLAlgorithmItemProvider criteriaToChooseMLAlgorithmItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.CriteriaToChooseMLAlgorithm}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createCriteriaToChooseMLAlgorithmAdapter() {
+		if (criteriaToChooseMLAlgorithmItemProvider == null) {
+			criteriaToChooseMLAlgorithmItemProvider = new CriteriaToChooseMLAlgorithmItemProvider(this);
+		}
+
+		return criteriaToChooseMLAlgorithmItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1272,6 +1318,10 @@ public class ProjetTemplateItemProviderAdapterFactory extends ProjetTemplateAdap
 			noiseTreatementItemProvider.dispose();
 		if (missingValueTreatementItemProvider != null)
 			missingValueTreatementItemProvider.dispose();
+		if (domainRequirementSelectionCriteriaItemProvider != null)
+			domainRequirementSelectionCriteriaItemProvider.dispose();
+		if (criteriaToChooseMLAlgorithmItemProvider != null)
+			criteriaToChooseMLAlgorithmItemProvider.dispose();
 	}
 
 }

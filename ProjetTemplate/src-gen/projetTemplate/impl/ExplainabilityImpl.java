@@ -6,6 +6,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import projetTemplate.Explainability;
 import projetTemplate.ProjetTemplatePackage;
 import projetTemplate.Values1;
@@ -23,7 +24,7 @@ import projetTemplate.Values1;
  *
  * @generated
  */
-public class ExplainabilityImpl extends DomainRequirementValueImpl implements Explainability {
+public class ExplainabilityImpl extends MinimalEObjectImpl.Container implements Explainability {
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->

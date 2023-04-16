@@ -134,13 +134,22 @@ public interface ProjetTemplatePackage extends EPackage {
 	int DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Domainrequirementselectioncriteria</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_REQUIREMENT_VALUE__DOMAINREQUIREMENTSELECTIONCRITERIA = 2;
+
+	/**
 	 * The number of structural features of the '<em>Domain Requirement Value</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_REQUIREMENT_VALUE_FEATURE_COUNT = 2;
+	int DOMAIN_REQUIREMENT_VALUE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Domain Requirement Value</em>' class.
@@ -1260,13 +1269,22 @@ public interface ProjetTemplatePackage extends EPackage {
 	int ML_ALGORITHM__EXTENDEDBPMNMODEL = 3;
 
 	/**
+	 * The feature id for the '<em><b>Criteriatochoosemlalgorithm</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ML_ALGORITHM__CRITERIATOCHOOSEMLALGORITHM = 4;
+
+	/**
 	 * The number of structural features of the '<em>ML Algorithm</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ML_ALGORITHM_FEATURE_COUNT = 4;
+	int ML_ALGORITHM_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>ML Algorithm</em>' class.
@@ -1499,31 +1517,13 @@ public interface ProjetTemplatePackage extends EPackage {
 	int EXPLAINABILITY = 24;
 
 	/**
-	 * The feature id for the '<em><b>Explanation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPLAINABILITY__EXPLANATION = DOMAIN_REQUIREMENT_VALUE__EXPLANATION;
-
-	/**
-	 * The feature id for the '<em><b>Requirementtype</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EXPLAINABILITY__REQUIREMENTTYPE = DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE;
-
-	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXPLAINABILITY__VALUE = DOMAIN_REQUIREMENT_VALUE_FEATURE_COUNT + 0;
+	int EXPLAINABILITY__VALUE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Explainability</em>' class.
@@ -1532,7 +1532,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPLAINABILITY_FEATURE_COUNT = DOMAIN_REQUIREMENT_VALUE_FEATURE_COUNT + 1;
+	int EXPLAINABILITY_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Explainability</em>' class.
@@ -1541,7 +1541,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int EXPLAINABILITY_OPERATION_COUNT = DOMAIN_REQUIREMENT_VALUE_OPERATION_COUNT + 0;
+	int EXPLAINABILITY_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.impl.AccuracyImpl <em>Accuracy</em>}' class.
@@ -1554,31 +1554,13 @@ public interface ProjetTemplatePackage extends EPackage {
 	int ACCURACY = 25;
 
 	/**
-	 * The feature id for the '<em><b>Explanation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCURACY__EXPLANATION = DOMAIN_REQUIREMENT_VALUE__EXPLANATION;
-
-	/**
-	 * The feature id for the '<em><b>Requirementtype</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ACCURACY__REQUIREMENTTYPE = DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE;
-
-	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ACCURACY__VALUE = DOMAIN_REQUIREMENT_VALUE_FEATURE_COUNT + 0;
+	int ACCURACY__VALUE = 0;
 
 	/**
 	 * The number of structural features of the '<em>Accuracy</em>' class.
@@ -1587,7 +1569,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCURACY_FEATURE_COUNT = DOMAIN_REQUIREMENT_VALUE_FEATURE_COUNT + 1;
+	int ACCURACY_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Accuracy</em>' class.
@@ -1596,7 +1578,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ACCURACY_OPERATION_COUNT = DOMAIN_REQUIREMENT_VALUE_OPERATION_COUNT + 0;
+	int ACCURACY_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.impl.CollectedDataKnowledgeAboutTemplateConstructionImpl <em>Collected Data Knowledge About Template Construction</em>}' class.
@@ -2336,6 +2318,89 @@ public interface ProjetTemplatePackage extends EPackage {
 	int MISSING_VALUE_TREATEMENT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link projetTemplate.impl.DomainRequirementSelectionCriteriaImpl <em>Domain Requirement Selection Criteria</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.DomainRequirementSelectionCriteriaImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDomainRequirementSelectionCriteria()
+	 * @generated
+	 */
+	int DOMAIN_REQUIREMENT_SELECTION_CRITERIA = 44;
+
+	/**
+	 * The feature id for the '<em><b>Criteria Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_REQUIREMENT_SELECTION_CRITERIA__CRITERIA_NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Criteria Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_REQUIREMENT_SELECTION_CRITERIA__CRITERIA_VALUE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Domain Requirement Selection Criteria</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_REQUIREMENT_SELECTION_CRITERIA_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Domain Requirement Selection Criteria</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_REQUIREMENT_SELECTION_CRITERIA_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.CriteriaToChooseMLAlgorithmImpl <em>Criteria To Choose ML Algorithm</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.CriteriaToChooseMLAlgorithmImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getCriteriaToChooseMLAlgorithm()
+	 * @generated
+	 */
+	int CRITERIA_TO_CHOOSE_ML_ALGORITHM = 45;
+
+	/**
+	 * The feature id for the '<em><b>Domainrequirementselectioncriteria</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRITERIA_TO_CHOOSE_ML_ALGORITHM__DOMAINREQUIREMENTSELECTIONCRITERIA = 0;
+
+	/**
+	 * The number of structural features of the '<em>Criteria To Choose ML Algorithm</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRITERIA_TO_CHOOSE_ML_ALGORITHM_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Criteria To Choose ML Algorithm</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRITERIA_TO_CHOOSE_ML_ALGORITHM_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link projetTemplate.Values1 <em>Values1</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2343,7 +2408,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getValues1()
 	 * @generated
 	 */
-	int VALUES1 = 44;
+	int VALUES1 = 46;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.Values2 <em>Values2</em>}' enum.
@@ -2353,7 +2418,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getValues2()
 	 * @generated
 	 */
-	int VALUES2 = 45;
+	int VALUES2 = 47;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.RequirementTypeValues <em>Requirement Type Values</em>}' enum.
@@ -2363,7 +2428,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getRequirementTypeValues()
 	 * @generated
 	 */
-	int REQUIREMENT_TYPE_VALUES = 46;
+	int REQUIREMENT_TYPE_VALUES = 48;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.EnumDataAnalysisProblemType <em>Enum Data Analysis Problem Type</em>}' enum.
@@ -2373,7 +2438,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getEnumDataAnalysisProblemType()
 	 * @generated
 	 */
-	int ENUM_DATA_ANALYSIS_PROBLEM_TYPE = 47;
+	int ENUM_DATA_ANALYSIS_PROBLEM_TYPE = 49;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.EnumConnector <em>Enum Connector</em>}' enum.
@@ -2383,7 +2448,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getEnumConnector()
 	 * @generated
 	 */
-	int ENUM_CONNECTOR = 48;
+	int ENUM_CONNECTOR = 50;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.ConversionEnum <em>Conversion Enum</em>}' enum.
@@ -2393,7 +2458,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getConversionEnum()
 	 * @generated
 	 */
-	int CONVERSION_ENUM = 49;
+	int CONVERSION_ENUM = 51;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.RemoveUncessaryFiledsEnum <em>Remove Uncessary Fileds Enum</em>}' enum.
@@ -2403,7 +2468,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getRemoveUncessaryFiledsEnum()
 	 * @generated
 	 */
-	int REMOVE_UNCESSARY_FILEDS_ENUM = 50;
+	int REMOVE_UNCESSARY_FILEDS_ENUM = 52;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.NoiseTreatementEnum <em>Noise Treatement Enum</em>}' enum.
@@ -2413,7 +2478,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getNoiseTreatementEnum()
 	 * @generated
 	 */
-	int NOISE_TREATEMENT_ENUM = 51;
+	int NOISE_TREATEMENT_ENUM = 53;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.MissingValueTreatementEnum <em>Missing Value Treatement Enum</em>}' enum.
@@ -2423,7 +2488,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMissingValueTreatementEnum()
 	 * @generated
 	 */
-	int MISSING_VALUE_TREATEMENT_ENUM = 52;
+	int MISSING_VALUE_TREATEMENT_ENUM = 54;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.MLAlgorithms <em>ML Algorithms</em>}' enum.
@@ -2433,7 +2498,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMLAlgorithms()
 	 * @generated
 	 */
-	int ML_ALGORITHMS = 53;
+	int ML_ALGORITHMS = 55;
 
 	/**
 	 * The meta object id for the '<em>New Data Type10</em>' data type.
@@ -2443,7 +2508,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getNewDataType10()
 	 * @generated
 	 */
-	int NEW_DATA_TYPE10 = 54;
+	int NEW_DATA_TYPE10 = 56;
 
 	/**
 	 * Returns the meta object for class '{@link projetTemplate.DomainProblem <em>Domain Problem</em>}'.
@@ -2508,6 +2573,17 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 */
 	EReference getDomainRequirementValue_Requirementtype();
+
+	/**
+	 * Returns the meta object for the reference list '{@link projetTemplate.DomainRequirementValue#getDomainrequirementselectioncriteria <em>Domainrequirementselectioncriteria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Domainrequirementselectioncriteria</em>'.
+	 * @see projetTemplate.DomainRequirementValue#getDomainrequirementselectioncriteria()
+	 * @see #getDomainRequirementValue()
+	 * @generated
+	 */
+	EReference getDomainRequirementValue_Domainrequirementselectioncriteria();
 
 	/**
 	 * Returns the meta object for class '{@link projetTemplate.RequirementType <em>Requirement Type</em>}'.
@@ -3434,6 +3510,17 @@ public interface ProjetTemplatePackage extends EPackage {
 	EReference getMLAlgorithm_Extendedbpmnmodel();
 
 	/**
+	 * Returns the meta object for the reference list '{@link projetTemplate.MLAlgorithm#getCriteriatochoosemlalgorithm <em>Criteriatochoosemlalgorithm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Criteriatochoosemlalgorithm</em>'.
+	 * @see projetTemplate.MLAlgorithm#getCriteriatochoosemlalgorithm()
+	 * @see #getMLAlgorithm()
+	 * @generated
+	 */
+	EReference getMLAlgorithm_Criteriatochoosemlalgorithm();
+
+	/**
 	 * Returns the meta object for class '{@link projetTemplate.SelectionCriterionValueSet <em>Selection Criterion Value Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4009,6 +4096,59 @@ public interface ProjetTemplatePackage extends EPackage {
 	EClass getMissingValueTreatement();
 
 	/**
+	 * Returns the meta object for class '{@link projetTemplate.DomainRequirementSelectionCriteria <em>Domain Requirement Selection Criteria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Domain Requirement Selection Criteria</em>'.
+	 * @see projetTemplate.DomainRequirementSelectionCriteria
+	 * @generated
+	 */
+	EClass getDomainRequirementSelectionCriteria();
+
+	/**
+	 * Returns the meta object for the attribute '{@link projetTemplate.DomainRequirementSelectionCriteria#getCriteriaName <em>Criteria Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Criteria Name</em>'.
+	 * @see projetTemplate.DomainRequirementSelectionCriteria#getCriteriaName()
+	 * @see #getDomainRequirementSelectionCriteria()
+	 * @generated
+	 */
+	EAttribute getDomainRequirementSelectionCriteria_CriteriaName();
+
+	/**
+	 * Returns the meta object for the attribute '{@link projetTemplate.DomainRequirementSelectionCriteria#getCriteriaValue <em>Criteria Value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Criteria Value</em>'.
+	 * @see projetTemplate.DomainRequirementSelectionCriteria#getCriteriaValue()
+	 * @see #getDomainRequirementSelectionCriteria()
+	 * @generated
+	 */
+	EAttribute getDomainRequirementSelectionCriteria_CriteriaValue();
+
+	/**
+	 * Returns the meta object for class '{@link projetTemplate.CriteriaToChooseMLAlgorithm <em>Criteria To Choose ML Algorithm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Criteria To Choose ML Algorithm</em>'.
+	 * @see projetTemplate.CriteriaToChooseMLAlgorithm
+	 * @generated
+	 */
+	EClass getCriteriaToChooseMLAlgorithm();
+
+	/**
+	 * Returns the meta object for the reference '{@link projetTemplate.CriteriaToChooseMLAlgorithm#getDomainrequirementselectioncriteria <em>Domainrequirementselectioncriteria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Domainrequirementselectioncriteria</em>'.
+	 * @see projetTemplate.CriteriaToChooseMLAlgorithm#getDomainrequirementselectioncriteria()
+	 * @see #getCriteriaToChooseMLAlgorithm()
+	 * @generated
+	 */
+	EReference getCriteriaToChooseMLAlgorithm_Domainrequirementselectioncriteria();
+
+	/**
 	 * Returns the meta object for enum '{@link projetTemplate.Values1 <em>Values1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4193,6 +4333,15 @@ public interface ProjetTemplatePackage extends EPackage {
 		 * @generated
 		 */
 		EReference DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE = eINSTANCE.getDomainRequirementValue_Requirementtype();
+
+		/**
+		 * The meta object literal for the '<em><b>Domainrequirementselectioncriteria</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOMAIN_REQUIREMENT_VALUE__DOMAINREQUIREMENTSELECTIONCRITERIA = eINSTANCE
+				.getDomainRequirementValue_Domainrequirementselectioncriteria();
 
 		/**
 		 * The meta object literal for the '{@link projetTemplate.impl.RequirementTypeImpl <em>Requirement Type</em>}' class.
@@ -4935,6 +5084,14 @@ public interface ProjetTemplatePackage extends EPackage {
 		EReference ML_ALGORITHM__EXTENDEDBPMNMODEL = eINSTANCE.getMLAlgorithm_Extendedbpmnmodel();
 
 		/**
+		 * The meta object literal for the '<em><b>Criteriatochoosemlalgorithm</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ML_ALGORITHM__CRITERIATOCHOOSEMLALGORITHM = eINSTANCE.getMLAlgorithm_Criteriatochoosemlalgorithm();
+
+		/**
 		 * The meta object literal for the '{@link projetTemplate.impl.SelectionCriterionValueSetImpl <em>Selection Criterion Value Set</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5429,6 +5586,53 @@ public interface ProjetTemplatePackage extends EPackage {
 		 * @generated
 		 */
 		EClass MISSING_VALUE_TREATEMENT = eINSTANCE.getMissingValueTreatement();
+
+		/**
+		 * The meta object literal for the '{@link projetTemplate.impl.DomainRequirementSelectionCriteriaImpl <em>Domain Requirement Selection Criteria</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projetTemplate.impl.DomainRequirementSelectionCriteriaImpl
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDomainRequirementSelectionCriteria()
+		 * @generated
+		 */
+		EClass DOMAIN_REQUIREMENT_SELECTION_CRITERIA = eINSTANCE.getDomainRequirementSelectionCriteria();
+
+		/**
+		 * The meta object literal for the '<em><b>Criteria Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DOMAIN_REQUIREMENT_SELECTION_CRITERIA__CRITERIA_NAME = eINSTANCE
+				.getDomainRequirementSelectionCriteria_CriteriaName();
+
+		/**
+		 * The meta object literal for the '<em><b>Criteria Value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DOMAIN_REQUIREMENT_SELECTION_CRITERIA__CRITERIA_VALUE = eINSTANCE
+				.getDomainRequirementSelectionCriteria_CriteriaValue();
+
+		/**
+		 * The meta object literal for the '{@link projetTemplate.impl.CriteriaToChooseMLAlgorithmImpl <em>Criteria To Choose ML Algorithm</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projetTemplate.impl.CriteriaToChooseMLAlgorithmImpl
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getCriteriaToChooseMLAlgorithm()
+		 * @generated
+		 */
+		EClass CRITERIA_TO_CHOOSE_ML_ALGORITHM = eINSTANCE.getCriteriaToChooseMLAlgorithm();
+
+		/**
+		 * The meta object literal for the '<em><b>Domainrequirementselectioncriteria</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CRITERIA_TO_CHOOSE_ML_ALGORITHM__DOMAINREQUIREMENTSELECTIONCRITERIA = eINSTANCE
+				.getCriteriaToChooseMLAlgorithm_Domainrequirementselectioncriteria();
 
 		/**
 		 * The meta object literal for the '{@link projetTemplate.Values1 <em>Values1</em>}' enum.

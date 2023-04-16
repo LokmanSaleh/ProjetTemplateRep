@@ -3,28 +3,29 @@
 package projetTemplate.impl;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-import projetTemplate.Accuracy;
+
+import projetTemplate.CriteriaValues;
 import projetTemplate.ProjetTemplatePackage;
-import projetTemplate.Values2;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Accuracy</b></em>'.
+ * An implementation of the model object '<em><b>Criteria Values</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link projetTemplate.impl.AccuracyImpl#getValue <em>Value</em>}</li>
+ *   <li>{@link projetTemplate.impl.CriteriaValuesImpl#getValue <em>Value</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class AccuracyImpl extends MinimalEObjectImpl.Container implements Accuracy {
+public class CriteriaValuesImpl extends MinimalEObjectImpl.Container implements CriteriaValues {
 	/**
 	 * The default value of the '{@link #getValue() <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -33,7 +34,7 @@ public class AccuracyImpl extends MinimalEObjectImpl.Container implements Accura
 	 * @generated
 	 * @ordered
 	 */
-	protected static final Values2 VALUE_EDEFAULT = Values2.HIGH;
+	protected static final String VALUE_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getValue() <em>Value</em>}' attribute.
@@ -43,14 +44,14 @@ public class AccuracyImpl extends MinimalEObjectImpl.Container implements Accura
 	 * @generated
 	 * @ordered
 	 */
-	protected Values2 value = VALUE_EDEFAULT;
+	protected String value = VALUE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AccuracyImpl() {
+	protected CriteriaValuesImpl() {
 		super();
 	}
 
@@ -61,7 +62,7 @@ public class AccuracyImpl extends MinimalEObjectImpl.Container implements Accura
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ProjetTemplatePackage.Literals.ACCURACY;
+		return ProjetTemplatePackage.Literals.CRITERIA_VALUES;
 	}
 
 	/**
@@ -69,7 +70,7 @@ public class AccuracyImpl extends MinimalEObjectImpl.Container implements Accura
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Values2 getValue() {
+	public String getValue() {
 		return value;
 	}
 
@@ -78,12 +79,12 @@ public class AccuracyImpl extends MinimalEObjectImpl.Container implements Accura
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(Values2 newValue) {
-		Values2 oldValue = value;
-		value = newValue == null ? VALUE_EDEFAULT : newValue;
+	public void setValue(String newValue) {
+		String oldValue = value;
+		value = newValue;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProjetTemplatePackage.ACCURACY__VALUE, oldValue,
-					value));
+			eNotify(new ENotificationImpl(this, Notification.SET, ProjetTemplatePackage.CRITERIA_VALUES__VALUE,
+					oldValue, value));
 	}
 
 	/**
@@ -94,7 +95,7 @@ public class AccuracyImpl extends MinimalEObjectImpl.Container implements Accura
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ProjetTemplatePackage.ACCURACY__VALUE:
+		case ProjetTemplatePackage.CRITERIA_VALUES__VALUE:
 			return getValue();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -108,8 +109,8 @@ public class AccuracyImpl extends MinimalEObjectImpl.Container implements Accura
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ProjetTemplatePackage.ACCURACY__VALUE:
-			setValue((Values2) newValue);
+		case ProjetTemplatePackage.CRITERIA_VALUES__VALUE:
+			setValue((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -123,7 +124,7 @@ public class AccuracyImpl extends MinimalEObjectImpl.Container implements Accura
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ProjetTemplatePackage.ACCURACY__VALUE:
+		case ProjetTemplatePackage.CRITERIA_VALUES__VALUE:
 			setValue(VALUE_EDEFAULT);
 			return;
 		}
@@ -138,8 +139,8 @@ public class AccuracyImpl extends MinimalEObjectImpl.Container implements Accura
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ProjetTemplatePackage.ACCURACY__VALUE:
-			return value != VALUE_EDEFAULT;
+		case ProjetTemplatePackage.CRITERIA_VALUES__VALUE:
+			return VALUE_EDEFAULT == null ? value != null : !VALUE_EDEFAULT.equals(value);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -161,4 +162,4 @@ public class AccuracyImpl extends MinimalEObjectImpl.Container implements Accura
 		return result.toString();
 	}
 
-} //AccuracyImpl
+} //CriteriaValuesImpl

@@ -6,6 +6,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 
+import projetTemplate.*;
 import projetTemplate.Accuracy;
 import projetTemplate.CollectedDataKnowledgeAboutTemplateConstruction;
 import projetTemplate.Component;
@@ -281,16 +282,12 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 			Explainability explainability = (Explainability) theEObject;
 			T result = caseExplainability(explainability);
 			if (result == null)
-				result = caseDomainRequirementValue(explainability);
-			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
 		case ProjetTemplatePackage.ACCURACY: {
 			Accuracy accuracy = (Accuracy) theEObject;
 			T result = caseAccuracy(accuracy);
-			if (result == null)
-				result = caseDomainRequirementValue(accuracy);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -446,6 +443,20 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 		case ProjetTemplatePackage.MISSING_VALUE_TREATEMENT: {
 			MissingValueTreatement missingValueTreatement = (MissingValueTreatement) theEObject;
 			T result = caseMissingValueTreatement(missingValueTreatement);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_SELECTION_CRITERIA: {
+			DomainRequirementSelectionCriteria domainRequirementSelectionCriteria = (DomainRequirementSelectionCriteria) theEObject;
+			T result = caseDomainRequirementSelectionCriteria(domainRequirementSelectionCriteria);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case ProjetTemplatePackage.CRITERIA_TO_CHOOSE_ML_ALGORITHM: {
+			CriteriaToChooseMLAlgorithm criteriaToChooseMLAlgorithm = (CriteriaToChooseMLAlgorithm) theEObject;
+			T result = caseCriteriaToChooseMLAlgorithm(criteriaToChooseMLAlgorithm);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1113,6 +1124,36 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMissingValueTreatement(MissingValueTreatement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Domain Requirement Selection Criteria</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Domain Requirement Selection Criteria</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDomainRequirementSelectionCriteria(DomainRequirementSelectionCriteria object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Criteria To Choose ML Algorithm</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Criteria To Choose ML Algorithm</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseCriteriaToChooseMLAlgorithm(CriteriaToChooseMLAlgorithm object) {
 		return null;
 	}
 

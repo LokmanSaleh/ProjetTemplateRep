@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link projetTemplate.MLAlgorithm#getSelectioncriterionvalue <em>Selectioncriterionvalue</em>}</li>
  *   <li>{@link projetTemplate.MLAlgorithm#getName <em>Name</em>}</li>
  *   <li>{@link projetTemplate.MLAlgorithm#getExtendedbpmnmodel <em>Extendedbpmnmodel</em>}</li>
+ *   <li>{@link projetTemplate.MLAlgorithm#getCriteriatochoosemlalgorithm <em>Criteriatochoosemlalgorithm</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithm()
@@ -105,5 +106,17 @@ public interface MLAlgorithm extends EObject {
 	 * @generated
 	 */
 	void setExtendedbpmnmodel(ExtendedBPMNModel value);
+
+	/**
+	 * Returns the value of the '<em><b>Criteriatochoosemlalgorithm</b></em>' reference list.
+	 * The list contents are of type {@link projetTemplate.CriteriaToChooseMLAlgorithm}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Criteriatochoosemlalgorithm</em>' reference list.
+	 * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithm_Criteriatochoosemlalgorithm()
+	 * @model
+	 * @generated
+	 */
+	EList<CriteriaToChooseMLAlgorithm> getCriteriatochoosemlalgorithm();
 
 } // MLAlgorithm

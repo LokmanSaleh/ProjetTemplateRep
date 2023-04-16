@@ -7,6 +7,7 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 
+import projetTemplate.*;
 import projetTemplate.Accuracy;
 import projetTemplate.CollectedDataKnowledgeAboutTemplateConstruction;
 import projetTemplate.Component;
@@ -327,6 +328,16 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseMissingValueTreatement(MissingValueTreatement object) {
 			return createMissingValueTreatementAdapter();
+		}
+
+		@Override
+		public Adapter caseDomainRequirementSelectionCriteria(DomainRequirementSelectionCriteria object) {
+			return createDomainRequirementSelectionCriteriaAdapter();
+		}
+
+		@Override
+		public Adapter caseCriteriaToChooseMLAlgorithm(CriteriaToChooseMLAlgorithm object) {
+			return createCriteriaToChooseMLAlgorithmAdapter();
 		}
 
 		@Override
@@ -961,6 +972,34 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMissingValueTreatementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.DomainRequirementSelectionCriteria <em>Domain Requirement Selection Criteria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.DomainRequirementSelectionCriteria
+	 * @generated
+	 */
+	public Adapter createDomainRequirementSelectionCriteriaAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.CriteriaToChooseMLAlgorithm <em>Criteria To Choose ML Algorithm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.CriteriaToChooseMLAlgorithm
+	 * @generated
+	 */
+	public Adapter createCriteriaToChooseMLAlgorithmAdapter() {
 		return null;
 	}
 

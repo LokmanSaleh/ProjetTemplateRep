@@ -19,36 +19,12 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import projetTemplate.ExtendedBPMNModel;
 import projetTemplate.ProjetTemplatePackage;
-
-
-
-import org.eclipse.bpmn2.Bpmn2Factory;
-import org.eclipse.bpmn2.Definitions;
-import org.eclipse.bpmn2.Process;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IProject;
-import org.eclipse.core.resources.IWorkspaceRoot;
-import org.eclipse.core.resources.ResourcesPlugin;
-import org.eclipse.core.runtime.CoreException;
-import org.eclipse.core.runtime.NullProgressMonitor;
-import org.eclipse.core.runtime.Path;
-import org.eclipse.emf.common.util.URI;
-import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.emf.ecore.resource.ResourceSet;
-import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
-import org.eclipse.graphiti.ui.editor.DiagramEditorInput;
-import org.eclipse.ui.IEditorDescriptor;
-import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.IFileEditorInput;
-import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPage;
-import org.eclipse.ui.IWorkbenchWindow;
-import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
-import org.eclipse.ui.ide.IDE;
-import org.eclipse.ui.part.FileEditorInput;
-
 
 /**
  * <!-- begin-user-doc -->
@@ -146,69 +122,62 @@ public class ExtendedBPMNModelImpl extends MinimalEObjectImpl.Container implemen
 			eNotify(new ENotificationImpl(this, Notification.SET, ProjetTemplatePackage.EXTENDED_BPMN_MODEL__PATH,
 					oldPath, path));
 
-			
-//			
-//			
-//			// create a new BPMN2 model
-//			Bpmn2Factory factory = Bpmn2Factory.eINSTANCE;
-//			Definitions definitions = factory.createDefinitions();
-//			Process process = factory.createProcess();
-//			process.setId("myProcess");
-//			definitions.getRootElements().add(process);
-//
-//	        // Create a new file in the workspace
-//	        IWorkspaceRoot workspaceRoot = ResourcesPlugin.getWorkspace().getRoot();
-//	        IFile file = workspaceRoot.getFile(new Path("hy\\src" + path+".bpmn") );
-//	        URI uri = URI.createPlatformResourceURI(file.getFullPath().toString(), true);
-//	        
-//	        // Save the BPMN model to the file
-//	        ResourceSet resourceSet = new ResourceSetImpl();
-//	        Resource resource = resourceSet.createResource(uri);
-//	        resource.getContents().add(definitions);
-//	        
-//	        try {
-//	            resource.save(null);
-//	        } catch (IOException e) {
-//	            e.printStackTrace();
-//	            return;
-//	        }
-//
-//	        // Open the BPMN file in an editor
-//	        IWorkbench workbench = PlatformUI.getWorkbench();
-//	        IWorkbenchWindow window = workbench.getActiveWorkbenchWindow();
-//	        IWorkbenchPage page = window.getActivePage();
-//	        IEditorDescriptor desc = PlatformUI.getWorkbench().getEditorRegistry().getDefaultEditor(file.getName());
-//	        IEditorInput editorInput = new FileEditorInput(file);
-//	        
-//			try {
-//			    IDE.openEditor(page, file, "http://org.eclipse.bpmn2.modeler.examples.customtask", true);
-//			} catch (PartInitException e) {
-//			    e.printStackTrace();
-//			}
-//
-//			
-//			
-//			
-			
-			
-			
-			
-			
-			
-			
+			//			
+			//			
+			//			// create a new BPMN2 model
+			//			Bpmn2Factory factory = Bpmn2Factory.eINSTANCE;
+			//			Definitions definitions = factory.createDefinitions();
+			//			Process process = factory.createProcess();
+			//			process.setId("myProcess");
+			//			definitions.getRootElements().add(process);
+			//
+			//	        // Create a new file in the workspace
+			//	        IWorkspaceRoot workspaceRoot = ResourcesPlugin.getWorkspace().getRoot();
+			//	        IFile file = workspaceRoot.getFile(new Path("hy\\src" + path+".bpmn") );
+			//	        URI uri = URI.createPlatformResourceURI(file.getFullPath().toString(), true);
+			//	        
+			//	        // Save the BPMN model to the file
+			//	        ResourceSet resourceSet = new ResourceSetImpl();
+			//	        Resource resource = resourceSet.createResource(uri);
+			//	        resource.getContents().add(definitions);
+			//	        
+			//	        try {
+			//	            resource.save(null);
+			//	        } catch (IOException e) {
+			//	            e.printStackTrace();
+			//	            return;
+			//	        }
+			//
+			//	        // Open the BPMN file in an editor
+			//	        IWorkbench workbench = PlatformUI.getWorkbench();
+			//	        IWorkbenchWindow window = workbench.getActiveWorkbenchWindow();
+			//	        IWorkbenchPage page = window.getActivePage();
+			//	        IEditorDescriptor desc = PlatformUI.getWorkbench().getEditorRegistry().getDefaultEditor(file.getName());
+			//	        IEditorInput editorInput = new FileEditorInput(file);
+			//	        
+			//			try {
+			//			    IDE.openEditor(page, file, "http://org.eclipse.bpmn2.modeler.examples.customtask", true);
+			//			} catch (PartInitException e) {
+			//			    e.printStackTrace();
+			//			}
+			//
+			//			
+			//			
+			//			
+
 			try {
 				path = path.replaceAll("/", "\\");
 				//path = path.replaceAll("\\", "\\\\");
 				//TODO: create the bpmn file by the ressource offered by bpmn, to eliminate error 
 				IWorkbenchPage page = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage();
 				IEditorPart editor = page.getActiveEditor();
-				IFileEditorInput input = (IFileEditorInput)editor.getEditorInput();
+				IFileEditorInput input = (IFileEditorInput) editor.getEditorInput();
 				IFile file = input.getFile();
 				IProject project = file.getProject();
 				String pathProject = project.getLocation().toString();
-				
-				File myFile =  copieTemplate(pathProject+"/" + path + ".bpmn");
-				
+
+				File myFile = copieTemplate(pathProject + "/" + path + ".bpmn");
+
 				if (myFile.createNewFile()) {
 					//System.out.println("File created: " + myObj.getName());
 
@@ -218,7 +187,7 @@ public class ExtendedBPMNModelImpl extends MinimalEObjectImpl.Container implemen
 
 				} else {
 					if (Desktop.isDesktopSupported()) {
-						
+
 						Desktop.getDesktop().open(myFile);
 					}
 					//System.out.println("File already exists.");
@@ -235,47 +204,45 @@ public class ExtendedBPMNModelImpl extends MinimalEObjectImpl.Container implemen
 		}
 	}
 
-	
 	public static File copieTemplate(String Path) {
-		
-	      InputStream inputStream = null;
-	      OutputStream outputStream = null;
-	      File file2 = null;
-	      try {
-	         File file1 = new File("C:\\Users\\lookm\\git\\ProjetTemplateRep\\ProjetTemplate\\model\\TemplateEtendedBPMNChaine.bpmn"); // Replace "source_file_path" with the path of the source file
-	         file2 = new File(Path); // Replace "destination_file_path" with the path of the destination file
-	         inputStream = new FileInputStream(file1);
-	         outputStream = new FileOutputStream(file2);
 
-	         byte[] buffer = new byte[1024];
-	         int length;
+		InputStream inputStream = null;
+		OutputStream outputStream = null;
+		File file2 = null;
+		try {
+			File file1 = new File(
+					"C:\\Users\\lookm\\git\\ProjetTemplateRep\\ProjetTemplate\\model\\TemplateEtendedBPMNChaine.bpmn"); // Replace "source_file_path" with the path of the source file
+			file2 = new File(Path); // Replace "destination_file_path" with the path of the destination file
+			inputStream = new FileInputStream(file1);
+			outputStream = new FileOutputStream(file2);
 
-	         while ((length = inputStream.read(buffer)) > 0) {
-	            outputStream.write(buffer, 0, length);
-	         }
+			byte[] buffer = new byte[1024];
+			int length;
 
-	         System.out.println("File copied successfully");
-	         
-	         
-	      } catch (IOException e) {
-	    	  
-	         e.printStackTrace();
-	      } finally {
-	         try {
-	        	 
-	            inputStream.close();
-	            outputStream.close();
-  
-	         } catch (IOException e) {
-	            e.printStackTrace();
-	         }
-	      }
-	      
+			while ((length = inputStream.read(buffer)) > 0) {
+				outputStream.write(buffer, 0, length);
+			}
+
+			System.out.println("File copied successfully");
+
+		} catch (IOException e) {
+
+			e.printStackTrace();
+		} finally {
+			try {
+
+				inputStream.close();
+				outputStream.close();
+
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
 		return file2;
 
-	   }
-	
-	
+	}
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

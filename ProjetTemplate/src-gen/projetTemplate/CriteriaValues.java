@@ -6,44 +6,41 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Accuracy</b></em>'.
+ * A representation of the model object '<em><b>Criteria Values</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link projetTemplate.Accuracy#getValue <em>Value</em>}</li>
+ *   <li>{@link projetTemplate.CriteriaValues#getValue <em>Value</em>}</li>
  * </ul>
  *
- * @see projetTemplate.ProjetTemplatePackage#getAccuracy()
+ * @see projetTemplate.ProjetTemplatePackage#getCriteriaValues()
  * @model
  * @generated
  */
-public interface Accuracy extends EObject {
+public interface CriteriaValues extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Value</b></em>' attribute.
-	 * The literals are from the enumeration {@link projetTemplate.Values2}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' attribute.
-	 * @see projetTemplate.Values2
-	 * @see #setValue(Values2)
-	 * @see projetTemplate.ProjetTemplatePackage#getAccuracy_Value()
+	 * @see #setValue(String)
+	 * @see projetTemplate.ProjetTemplatePackage#getCriteriaValues_Value()
 	 * @model
 	 * @generated
 	 */
-	Values2 getValue();
+	String getValue();
 
 	/**
-	 * Sets the value of the '{@link projetTemplate.Accuracy#getValue <em>Value</em>}' attribute.
+	 * Sets the value of the '{@link projetTemplate.CriteriaValues#getValue <em>Value</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Value</em>' attribute.
-	 * @see projetTemplate.Values2
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(Values2 value);
+	void setValue(String value);
 
-} // Accuracy
+} // CriteriaValues

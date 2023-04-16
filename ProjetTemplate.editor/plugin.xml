@@ -15,8 +15,8 @@
             id="projetTemplate.presentation.ProjetTemplateModelWizardID"
             name="%_UI_ProjetTemplateModelWizard_label"
             class="projetTemplate.presentation.ProjetTemplateModelWizard"
-            category="ProjectWizard.category.ML"
-            icon="icons/full/configurationIcon.png">
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ProjetTemplateModelFile.gif">
          <description>%_UI_ProjetTemplateModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
