@@ -21,24 +21,25 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import projetTemplate.CriteriaValues;
+import projetTemplate.MLAlgorithmSelectionCriteriaContainer;
 import projetTemplate.ProjetTemplatePackage;
 
 /**
- * This is the item provider adapter for a {@link projetTemplate.CriteriaValues} object.
+ * This is the item provider adapter for a {@link projetTemplate.MLAlgorithmSelectionCriteriaContainer} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class CriteriaValuesItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class MLAlgorithmSelectionCriteriaContainerItemProvider extends ItemProviderAdapter
+		implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
+		IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CriteriaValuesItemProvider(AdapterFactory adapterFactory) {
+	public MLAlgorithmSelectionCriteriaContainerItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -53,36 +54,55 @@ public class CriteriaValuesItemProvider extends ItemProviderAdapter implements I
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addValuePropertyDescriptor(object);
+			addDomainrequirementselectioncriteriaPropertyDescriptor(object);
+			addReglePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Value feature.
+	 * This adds a property descriptor for the Domainrequirementselectioncriteria feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addValuePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_CriteriaValues_value_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_CriteriaValues_value_feature",
-								"_UI_CriteriaValues_type"),
-						ProjetTemplatePackage.Literals.CRITERIA_VALUES__VALUE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	protected void addDomainrequirementselectioncriteriaPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_MLAlgorithmSelectionCriteriaContainer_domainrequirementselectioncriteria_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_MLAlgorithmSelectionCriteriaContainer_domainrequirementselectioncriteria_feature",
+						"_UI_MLAlgorithmSelectionCriteriaContainer_type"),
+				ProjetTemplatePackage.Literals.ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__DOMAINREQUIREMENTSELECTIONCRITERIA,
+				true, false, true, null, null, null));
 	}
 
 	/**
-	 * This returns CriteriaValues.gif.
+	 * This adds a property descriptor for the Regle feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addReglePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_MLAlgorithmSelectionCriteriaContainer_Regle_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_MLAlgorithmSelectionCriteriaContainer_Regle_feature",
+								"_UI_MLAlgorithmSelectionCriteriaContainer_type"),
+						ProjetTemplatePackage.Literals.ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__REGLE, true, true,
+						false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This returns MLAlgorithmSelectionCriteriaContainer.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/CriteriaValues"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/MLAlgorithmSelectionCriteriaContainer"));
 	}
 
 	/**
@@ -103,9 +123,9 @@ public class CriteriaValuesItemProvider extends ItemProviderAdapter implements I
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((CriteriaValues) object).getValue();
-		return label == null || label.length() == 0 ? getString("_UI_CriteriaValues_type")
-				: getString("_UI_CriteriaValues_type") + " " + label;
+		String label = crop(((MLAlgorithmSelectionCriteriaContainer) object).getRegle());
+		return label == null || label.length() == 0 ? getString("_UI_MLAlgorithmSelectionCriteriaContainer_type")
+				: getString("_UI_MLAlgorithmSelectionCriteriaContainer_type") + " " + label;
 	}
 
 	/**
@@ -119,8 +139,8 @@ public class CriteriaValuesItemProvider extends ItemProviderAdapter implements I
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(CriteriaValues.class)) {
-		case ProjetTemplatePackage.CRITERIA_VALUES__VALUE:
+		switch (notification.getFeatureID(MLAlgorithmSelectionCriteriaContainer.class)) {
+		case ProjetTemplatePackage.ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__REGLE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

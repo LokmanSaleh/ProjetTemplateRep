@@ -1086,49 +1086,50 @@ public class ProjetTemplateItemProviderAdapterFactory extends ProjetTemplateAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link projetTemplate.DomainRequirementSelectionCriteria} instances.
+	 * This keeps track of the one adapter used for all {@link projetTemplate.SelectionCriteria} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DomainRequirementSelectionCriteriaItemProvider domainRequirementSelectionCriteriaItemProvider;
+	protected SelectionCriteriaItemProvider selectionCriteriaItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link projetTemplate.DomainRequirementSelectionCriteria}.
+	 * This creates an adapter for a {@link projetTemplate.SelectionCriteria}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createDomainRequirementSelectionCriteriaAdapter() {
-		if (domainRequirementSelectionCriteriaItemProvider == null) {
-			domainRequirementSelectionCriteriaItemProvider = new DomainRequirementSelectionCriteriaItemProvider(this);
+	public Adapter createSelectionCriteriaAdapter() {
+		if (selectionCriteriaItemProvider == null) {
+			selectionCriteriaItemProvider = new SelectionCriteriaItemProvider(this);
 		}
 
-		return domainRequirementSelectionCriteriaItemProvider;
+		return selectionCriteriaItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link projetTemplate.CriteriaToChooseMLAlgorithm} instances.
+	 * This keeps track of the one adapter used for all {@link projetTemplate.MLAlgorithmSelectionCriteriaContainer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected CriteriaToChooseMLAlgorithmItemProvider criteriaToChooseMLAlgorithmItemProvider;
+	protected MLAlgorithmSelectionCriteriaContainerItemProvider mlAlgorithmSelectionCriteriaContainerItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link projetTemplate.CriteriaToChooseMLAlgorithm}.
+	 * This creates an adapter for a {@link projetTemplate.MLAlgorithmSelectionCriteriaContainer}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createCriteriaToChooseMLAlgorithmAdapter() {
-		if (criteriaToChooseMLAlgorithmItemProvider == null) {
-			criteriaToChooseMLAlgorithmItemProvider = new CriteriaToChooseMLAlgorithmItemProvider(this);
+	public Adapter createMLAlgorithmSelectionCriteriaContainerAdapter() {
+		if (mlAlgorithmSelectionCriteriaContainerItemProvider == null) {
+			mlAlgorithmSelectionCriteriaContainerItemProvider = new MLAlgorithmSelectionCriteriaContainerItemProvider(
+					this);
 		}
 
-		return criteriaToChooseMLAlgorithmItemProvider;
+		return mlAlgorithmSelectionCriteriaContainerItemProvider;
 	}
 
 	/**
@@ -1318,10 +1319,10 @@ public class ProjetTemplateItemProviderAdapterFactory extends ProjetTemplateAdap
 			noiseTreatementItemProvider.dispose();
 		if (missingValueTreatementItemProvider != null)
 			missingValueTreatementItemProvider.dispose();
-		if (domainRequirementSelectionCriteriaItemProvider != null)
-			domainRequirementSelectionCriteriaItemProvider.dispose();
-		if (criteriaToChooseMLAlgorithmItemProvider != null)
-			criteriaToChooseMLAlgorithmItemProvider.dispose();
+		if (selectionCriteriaItemProvider != null)
+			selectionCriteriaItemProvider.dispose();
+		if (mlAlgorithmSelectionCriteriaContainerItemProvider != null)
+			mlAlgorithmSelectionCriteriaContainerItemProvider.dispose();
 	}
 
 }

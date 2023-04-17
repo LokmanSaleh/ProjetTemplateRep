@@ -12,7 +12,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="requirementtype" lowerBound="1"
         eType="#//RequirementType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="domainrequirementselectioncriteria"
-        lowerBound="1" upperBound="-1" eType="#//DomainRequirementSelectionCriteria"/>
+        lowerBound="1" upperBound="-1" eType="#//SelectionCriteria"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RequirementType">
     <eStructuralFeatures xsi:type="ecore:EReference" name="requirementmapping" lowerBound="1"
@@ -136,15 +136,15 @@
         upperBound="-1" eType="#//DataPropertyValueSet"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MLAlgorithm">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="selectioncriterionvalueset"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="X_selectioncriterionvalueset"
         eType="#//SelectionCriterionValueSet"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="selectioncriterionvalue"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="X_selectioncriterionvalue"
         upperBound="-1" eType="#//SelectionCriterionValue"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="#//MLAlgorithms"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="extendedbpmnmodel" lowerBound="1"
         eType="#//ExtendedBPMNModel"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="criteriatochoosemlalgorithm"
-        upperBound="-1" eType="#//CriteriaToChooseMLAlgorithm"/>
+        lowerBound="1" eType="#//MLAlgorithmSelectionCriteriaContainer"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SelectionCriterionValueSet">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="setType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -274,12 +274,22 @@
     <eLiterals name="NeuralNetrowk" value="4"/>
     <eLiterals name="SVM" value="5"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DomainRequirementSelectionCriteria">
+  <eClassifiers xsi:type="ecore:EClass" name="SelectionCriteria">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="criteriaName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="criteriaValue" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CriteriaToChooseMLAlgorithm">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="domainrequirementselectioncriteria"
-        lowerBound="1" eType="#//DomainRequirementSelectionCriteria"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MLAlgorithmSelectionCriteriaContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="SelectionCriteria" lowerBound="1"
+        upperBound="-1" eType="#//SelectionCriteria"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Regle" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Componenet" eType="#//Componenets"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="Componenets">
+    <eLiterals name="DataPreProcessing"/>
+    <eLiterals name="DataSeparation" value="1"/>
+    <eLiterals name="ModelConstruction" value="2"/>
+    <eLiterals name="FeatureSelection" value="3"/>
+    <eLiterals name="FeatureConstruction" value="4"/>
   </eClassifiers>
 </ecore:EPackage>

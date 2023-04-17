@@ -199,10 +199,10 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 			return createNoiseTreatement();
 		case ProjetTemplatePackage.MISSING_VALUE_TREATEMENT:
 			return createMissingValueTreatement();
-		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_SELECTION_CRITERIA:
-			return createDomainRequirementSelectionCriteria();
-		case ProjetTemplatePackage.CRITERIA_TO_CHOOSE_ML_ALGORITHM:
-			return createCriteriaToChooseMLAlgorithm();
+		case ProjetTemplatePackage.SELECTION_CRITERIA:
+			return createSelectionCriteria();
+		case ProjetTemplatePackage.ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER:
+			return createMLAlgorithmSelectionCriteriaContainer();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -723,9 +723,9 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DomainRequirementSelectionCriteria createDomainRequirementSelectionCriteria() {
-		DomainRequirementSelectionCriteriaImpl domainRequirementSelectionCriteria = new DomainRequirementSelectionCriteriaImpl();
-		return domainRequirementSelectionCriteria;
+	public SelectionCriteria createSelectionCriteria() {
+		SelectionCriteriaImpl selectionCriteria = new SelectionCriteriaImpl();
+		return selectionCriteria;
 	}
 
 	/**
@@ -733,9 +733,9 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public CriteriaToChooseMLAlgorithm createCriteriaToChooseMLAlgorithm() {
-		CriteriaToChooseMLAlgorithmImpl criteriaToChooseMLAlgorithm = new CriteriaToChooseMLAlgorithmImpl();
-		return criteriaToChooseMLAlgorithm;
+	public MLAlgorithmSelectionCriteriaContainer createMLAlgorithmSelectionCriteriaContainer() {
+		MLAlgorithmSelectionCriteriaContainerImpl mlAlgorithmSelectionCriteriaContainer = new MLAlgorithmSelectionCriteriaContainerImpl();
+		return mlAlgorithmSelectionCriteriaContainer;
 	}
 
 	/**

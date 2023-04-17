@@ -21,16 +21,16 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import projetTemplate.GroupeCriteria;
 import projetTemplate.ProjetTemplatePackage;
+import projetTemplate.SelectionCriteria;
 
 /**
- * This is the item provider adapter for a {@link projetTemplate.GroupeCriteria} object.
+ * This is the item provider adapter for a {@link projetTemplate.SelectionCriteria} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class GroupeCriteriaItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class SelectionCriteriaItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -38,7 +38,7 @@ public class GroupeCriteriaItemProvider extends ItemProviderAdapter implements I
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public GroupeCriteriaItemProvider(AdapterFactory adapterFactory) {
+	public SelectionCriteriaItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -53,69 +53,70 @@ public class GroupeCriteriaItemProvider extends ItemProviderAdapter implements I
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
-			addCriteriavaluesPropertyDescriptor(object);
-			addSelectedcriteriavaluesPropertyDescriptor(object);
+			addCriteriaNamePropertyDescriptor(object);
+			addCriteriaValuePropertyDescriptor(object);
+			addIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Name feature.
+	 * This adds a property descriptor for the Criteria Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNamePropertyDescriptor(Object object) {
+	protected void addCriteriaNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_SelectionCriteria_criteriaName_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_SelectionCriteria_criteriaName_feature",
+						"_UI_SelectionCriteria_type"),
+				ProjetTemplatePackage.Literals.SELECTION_CRITERIA__CRITERIA_NAME, true, false, false,
+				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Criteria Value feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addCriteriaValuePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_GroupeCriteria_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_GroupeCriteria_name_feature",
-								"_UI_GroupeCriteria_type"),
-						ProjetTemplatePackage.Literals.GROUPE_CRITERIA__NAME, true, false, false,
+						getResourceLocator(), getString("_UI_SelectionCriteria_criteriaValue_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_SelectionCriteria_criteriaValue_feature",
+								"_UI_SelectionCriteria_type"),
+						ProjetTemplatePackage.Literals.SELECTION_CRITERIA__CRITERIA_VALUE, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Criteriavalues feature.
+	 * This adds a property descriptor for the Id feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCriteriavaluesPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_GroupeCriteria_criteriavalues_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_GroupeCriteria_criteriavalues_feature",
-						"_UI_GroupeCriteria_type"),
-				ProjetTemplatePackage.Literals.GROUPE_CRITERIA__CRITERIAVALUES, true, false, true, null, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Selectedcriteriavalues feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSelectedcriteriavaluesPropertyDescriptor(Object object) {
+	protected void addIdPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_GroupeCriteria_Selectedcriteriavalues_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_GroupeCriteria_Selectedcriteriavalues_feature", "_UI_GroupeCriteria_type"),
-						ProjetTemplatePackage.Literals.GROUPE_CRITERIA__SELECTEDCRITERIAVALUES, true, false, true, null,
-						null, null));
+						getResourceLocator(), getString("_UI_SelectionCriteria_Id_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_SelectionCriteria_Id_feature",
+								"_UI_SelectionCriteria_type"),
+						ProjetTemplatePackage.Literals.SELECTION_CRITERIA__ID, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This returns GroupeCriteria.gif.
+	 * This returns SelectionCriteria.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/GroupeCriteria"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/SelectionCriteria"));
 	}
 
 	/**
@@ -136,9 +137,9 @@ public class GroupeCriteriaItemProvider extends ItemProviderAdapter implements I
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((GroupeCriteria) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_GroupeCriteria_type")
-				: getString("_UI_GroupeCriteria_type") + " " + label;
+		String label = ((SelectionCriteria) object).getId();
+		return label == null || label.length() == 0 ? getString("_UI_SelectionCriteria_type")
+				: getString("_UI_SelectionCriteria_type") + " " + label;
 	}
 
 	/**
@@ -152,8 +153,10 @@ public class GroupeCriteriaItemProvider extends ItemProviderAdapter implements I
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(GroupeCriteria.class)) {
-		case ProjetTemplatePackage.GROUPE_CRITERIA__NAME:
+		switch (notification.getFeatureID(SelectionCriteria.class)) {
+		case ProjetTemplatePackage.SELECTION_CRITERIA__CRITERIA_NAME:
+		case ProjetTemplatePackage.SELECTION_CRITERIA__CRITERIA_VALUE:
+		case ProjetTemplatePackage.SELECTION_CRITERIA__ID:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

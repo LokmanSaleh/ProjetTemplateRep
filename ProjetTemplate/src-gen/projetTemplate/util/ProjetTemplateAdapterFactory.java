@@ -331,13 +331,13 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseDomainRequirementSelectionCriteria(DomainRequirementSelectionCriteria object) {
-			return createDomainRequirementSelectionCriteriaAdapter();
+		public Adapter caseSelectionCriteria(SelectionCriteria object) {
+			return createSelectionCriteriaAdapter();
 		}
 
 		@Override
-		public Adapter caseCriteriaToChooseMLAlgorithm(CriteriaToChooseMLAlgorithm object) {
-			return createCriteriaToChooseMLAlgorithmAdapter();
+		public Adapter caseMLAlgorithmSelectionCriteriaContainer(MLAlgorithmSelectionCriteriaContainer object) {
+			return createMLAlgorithmSelectionCriteriaContainerAdapter();
 		}
 
 		@Override
@@ -976,30 +976,30 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link projetTemplate.DomainRequirementSelectionCriteria <em>Domain Requirement Selection Criteria</em>}'.
+	 * Creates a new adapter for an object of class '{@link projetTemplate.SelectionCriteria <em>Selection Criteria</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see projetTemplate.DomainRequirementSelectionCriteria
+	 * @see projetTemplate.SelectionCriteria
 	 * @generated
 	 */
-	public Adapter createDomainRequirementSelectionCriteriaAdapter() {
+	public Adapter createSelectionCriteriaAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link projetTemplate.CriteriaToChooseMLAlgorithm <em>Criteria To Choose ML Algorithm</em>}'.
+	 * Creates a new adapter for an object of class '{@link projetTemplate.MLAlgorithmSelectionCriteriaContainer <em>ML Algorithm Selection Criteria Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see projetTemplate.CriteriaToChooseMLAlgorithm
+	 * @see projetTemplate.MLAlgorithmSelectionCriteriaContainer
 	 * @generated
 	 */
-	public Adapter createCriteriaToChooseMLAlgorithmAdapter() {
+	public Adapter createMLAlgorithmSelectionCriteriaContainerAdapter() {
 		return null;
 	}
 

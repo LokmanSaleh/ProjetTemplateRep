@@ -19,7 +19,6 @@ import projetTemplate.ComputationalRequirementValue;
 import projetTemplate.Condition;
 import projetTemplate.Conversion;
 import projetTemplate.ConversionEnum;
-import projetTemplate.CriteriaToChooseMLAlgorithm;
 import projetTemplate.Data;
 import projetTemplate.DataAnalysisProblem;
 import projetTemplate.DataAnalysisProblemType;
@@ -31,7 +30,6 @@ import projetTemplate.DataPropertyValueSet;
 import projetTemplate.Database;
 import projetTemplate.Deployement;
 import projetTemplate.DomainProblem;
-import projetTemplate.DomainRequirementSelectionCriteria;
 import projetTemplate.DomainRequirementValue;
 import projetTemplate.EnumConnector;
 import projetTemplate.EnumDataAnalysisProblemType;
@@ -40,6 +38,7 @@ import projetTemplate.ExtendedBPMNModel;
 import projetTemplate.FeatureConstruction;
 import projetTemplate.FeatureSelection;
 import projetTemplate.MLAlgorithm;
+import projetTemplate.MLAlgorithmSelectionCriteriaContainer;
 import projetTemplate.MLAlgorithmSolutionPattern;
 import projetTemplate.MLAlgorithms;
 import projetTemplate.MLProcChainSolutionPattern;
@@ -62,6 +61,7 @@ import projetTemplate.RequirementTypeValues;
 import projetTemplate.Resultat;
 import projetTemplate.Rule;
 import projetTemplate.Schema;
+import projetTemplate.SelectionCriteria;
 import projetTemplate.SelectionCriterion;
 import projetTemplate.SelectionCriterionValue;
 import projetTemplate.SelectionCriterionValueSet;
@@ -391,14 +391,14 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass domainRequirementSelectionCriteriaEClass = null;
+	private EClass selectionCriteriaEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass criteriaToChooseMLAlgorithmEClass = null;
+	private EClass mlAlgorithmSelectionCriteriaContainerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1895,8 +1895,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDomainRequirementSelectionCriteria() {
-		return domainRequirementSelectionCriteriaEClass;
+	public EClass getSelectionCriteria() {
+		return selectionCriteriaEClass;
 	}
 
 	/**
@@ -1904,8 +1904,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDomainRequirementSelectionCriteria_CriteriaName() {
-		return (EAttribute) domainRequirementSelectionCriteriaEClass.getEStructuralFeatures().get(0);
+	public EAttribute getSelectionCriteria_CriteriaName() {
+		return (EAttribute) selectionCriteriaEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1913,8 +1913,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDomainRequirementSelectionCriteria_CriteriaValue() {
-		return (EAttribute) domainRequirementSelectionCriteriaEClass.getEStructuralFeatures().get(1);
+	public EAttribute getSelectionCriteria_CriteriaValue() {
+		return (EAttribute) selectionCriteriaEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1922,8 +1922,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getCriteriaToChooseMLAlgorithm() {
-		return criteriaToChooseMLAlgorithmEClass;
+	public EAttribute getSelectionCriteria_Id() {
+		return (EAttribute) selectionCriteriaEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1931,8 +1931,26 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getCriteriaToChooseMLAlgorithm_Domainrequirementselectioncriteria() {
-		return (EReference) criteriaToChooseMLAlgorithmEClass.getEStructuralFeatures().get(0);
+	public EClass getMLAlgorithmSelectionCriteriaContainer() {
+		return mlAlgorithmSelectionCriteriaContainerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMLAlgorithmSelectionCriteriaContainer_Domainrequirementselectioncriteria() {
+		return (EReference) mlAlgorithmSelectionCriteriaContainerEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMLAlgorithmSelectionCriteriaContainer_Regle() {
+		return (EAttribute) mlAlgorithmSelectionCriteriaContainerEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -2261,15 +2279,15 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 		missingValueTreatementEClass = createEClass(MISSING_VALUE_TREATEMENT);
 
-		domainRequirementSelectionCriteriaEClass = createEClass(DOMAIN_REQUIREMENT_SELECTION_CRITERIA);
-		createEAttribute(domainRequirementSelectionCriteriaEClass,
-				DOMAIN_REQUIREMENT_SELECTION_CRITERIA__CRITERIA_NAME);
-		createEAttribute(domainRequirementSelectionCriteriaEClass,
-				DOMAIN_REQUIREMENT_SELECTION_CRITERIA__CRITERIA_VALUE);
+		selectionCriteriaEClass = createEClass(SELECTION_CRITERIA);
+		createEAttribute(selectionCriteriaEClass, SELECTION_CRITERIA__CRITERIA_NAME);
+		createEAttribute(selectionCriteriaEClass, SELECTION_CRITERIA__CRITERIA_VALUE);
+		createEAttribute(selectionCriteriaEClass, SELECTION_CRITERIA__ID);
 
-		criteriaToChooseMLAlgorithmEClass = createEClass(CRITERIA_TO_CHOOSE_ML_ALGORITHM);
-		createEReference(criteriaToChooseMLAlgorithmEClass,
-				CRITERIA_TO_CHOOSE_ML_ALGORITHM__DOMAINREQUIREMENTSELECTIONCRITERIA);
+		mlAlgorithmSelectionCriteriaContainerEClass = createEClass(ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER);
+		createEReference(mlAlgorithmSelectionCriteriaContainerEClass,
+				ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__DOMAINREQUIREMENTSELECTIONCRITERIA);
+		createEAttribute(mlAlgorithmSelectionCriteriaContainerEClass, ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__REGLE);
 
 		// Create enums
 		values1EEnum = createEEnum(VALUES1);
@@ -2345,10 +2363,10 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEReference(getDomainRequirementValue_Requirementtype(), this.getRequirementType(), null, "requirementtype",
 				null, 1, 1, DomainRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomainRequirementValue_Domainrequirementselectioncriteria(),
-				this.getDomainRequirementSelectionCriteria(), null, "domainrequirementselectioncriteria", null, 1, -1,
-				DomainRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDomainRequirementValue_Domainrequirementselectioncriteria(), this.getSelectionCriteria(),
+				null, "domainrequirementselectioncriteria", null, 1, -1, DomainRequirementValue.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		initEClass(requirementTypeEClass, RequirementType.class, "RequirementType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2597,8 +2615,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEReference(getMLAlgorithm_Extendedbpmnmodel(), this.getExtendedBPMNModel(), null, "extendedbpmnmodel", null,
 				1, 1, MLAlgorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMLAlgorithm_Criteriatochoosemlalgorithm(), this.getCriteriaToChooseMLAlgorithm(), null,
-				"criteriatochoosemlalgorithm", null, 0, -1, MLAlgorithm.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEReference(getMLAlgorithm_Criteriatochoosemlalgorithm(), this.getMLAlgorithmSelectionCriteriaContainer(),
+				null, "criteriatochoosemlalgorithm", null, 1, 1, MLAlgorithm.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(selectionCriterionValueSetEClass, SelectionCriterionValueSet.class, "SelectionCriterionValueSet",
@@ -2757,21 +2775,26 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEClass(missingValueTreatementEClass, MissingValueTreatement.class, "MissingValueTreatement", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(domainRequirementSelectionCriteriaEClass, DomainRequirementSelectionCriteria.class,
-				"DomainRequirementSelectionCriteria", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDomainRequirementSelectionCriteria_CriteriaName(), ecorePackage.getEString(), "criteriaName",
-				null, 0, 1, DomainRequirementSelectionCriteria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDomainRequirementSelectionCriteria_CriteriaValue(), ecorePackage.getEString(),
-				"criteriaValue", null, 0, 1, DomainRequirementSelectionCriteria.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(selectionCriteriaEClass, SelectionCriteria.class, "SelectionCriteria", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getSelectionCriteria_CriteriaName(), ecorePackage.getEString(), "criteriaName", null, 0, 1,
+				SelectionCriteria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSelectionCriteria_CriteriaValue(), ecorePackage.getEString(), "criteriaValue", null, 0, 1,
+				SelectionCriteria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getSelectionCriteria_Id(), ecorePackage.getEString(), "Id", null, 0, 1, SelectionCriteria.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(criteriaToChooseMLAlgorithmEClass, CriteriaToChooseMLAlgorithm.class, "CriteriaToChooseMLAlgorithm",
-				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCriteriaToChooseMLAlgorithm_Domainrequirementselectioncriteria(),
-				this.getDomainRequirementSelectionCriteria(), null, "domainrequirementselectioncriteria", null, 1, 1,
-				CriteriaToChooseMLAlgorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+		initEClass(mlAlgorithmSelectionCriteriaContainerEClass, MLAlgorithmSelectionCriteriaContainer.class,
+				"MLAlgorithmSelectionCriteriaContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMLAlgorithmSelectionCriteriaContainer_Domainrequirementselectioncriteria(),
+				this.getSelectionCriteria(), null, "domainrequirementselectioncriteria", null, 1, -1,
+				MLAlgorithmSelectionCriteriaContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMLAlgorithmSelectionCriteriaContainer_Regle(), ecorePackage.getEString(), "Regle", null, 0, 1,
+				MLAlgorithmSelectionCriteriaContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
+				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(values1EEnum, Values1.class, "Values1");

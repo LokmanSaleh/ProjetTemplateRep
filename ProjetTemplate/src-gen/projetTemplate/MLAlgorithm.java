@@ -108,15 +108,25 @@ public interface MLAlgorithm extends EObject {
 	void setExtendedbpmnmodel(ExtendedBPMNModel value);
 
 	/**
-	 * Returns the value of the '<em><b>Criteriatochoosemlalgorithm</b></em>' reference list.
-	 * The list contents are of type {@link projetTemplate.CriteriaToChooseMLAlgorithm}.
+	 * Returns the value of the '<em><b>Criteriatochoosemlalgorithm</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Criteriatochoosemlalgorithm</em>' reference list.
+	 * @return the value of the '<em>Criteriatochoosemlalgorithm</em>' reference.
+	 * @see #setCriteriatochoosemlalgorithm(MLAlgorithmSelectionCriteriaContainer)
 	 * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithm_Criteriatochoosemlalgorithm()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
-	EList<CriteriaToChooseMLAlgorithm> getCriteriatochoosemlalgorithm();
+	MLAlgorithmSelectionCriteriaContainer getCriteriatochoosemlalgorithm();
+
+	/**
+	 * Sets the value of the '{@link projetTemplate.MLAlgorithm#getCriteriatochoosemlalgorithm <em>Criteriatochoosemlalgorithm</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Criteriatochoosemlalgorithm</em>' reference.
+	 * @see #getCriteriatochoosemlalgorithm()
+	 * @generated
+	 */
+	void setCriteriatochoosemlalgorithm(MLAlgorithmSelectionCriteriaContainer value);
 
 } // MLAlgorithm

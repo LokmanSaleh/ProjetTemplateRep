@@ -70,7 +70,7 @@ public interface DomainRequirementValue extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Domainrequirementselectioncriteria</b></em>' reference list.
-	 * The list contents are of type {@link projetTemplate.DomainRequirementSelectionCriteria}.
+	 * The list contents are of type {@link projetTemplate.SelectionCriteria}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Domainrequirementselectioncriteria</em>' reference list.
@@ -78,6 +78,6 @@ public interface DomainRequirementValue extends EObject {
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<DomainRequirementSelectionCriteria> getDomainrequirementselectioncriteria();
+	EList<SelectionCriteria> getDomainrequirementselectioncriteria();
 
 } // DomainRequirementValue

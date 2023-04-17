@@ -1269,7 +1269,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	int ML_ALGORITHM__EXTENDEDBPMNMODEL = 3;
 
 	/**
-	 * The feature id for the '<em><b>Criteriatochoosemlalgorithm</b></em>' reference list.
+	 * The feature id for the '<em><b>Criteriatochoosemlalgorithm</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -2318,14 +2318,14 @@ public interface ProjetTemplatePackage extends EPackage {
 	int MISSING_VALUE_TREATEMENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.DomainRequirementSelectionCriteriaImpl <em>Domain Requirement Selection Criteria</em>}' class.
+	 * The meta object id for the '{@link projetTemplate.impl.SelectionCriteriaImpl <em>Selection Criteria</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.DomainRequirementSelectionCriteriaImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDomainRequirementSelectionCriteria()
+	 * @see projetTemplate.impl.SelectionCriteriaImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getSelectionCriteria()
 	 * @generated
 	 */
-	int DOMAIN_REQUIREMENT_SELECTION_CRITERIA = 44;
+	int SELECTION_CRITERIA = 44;
 
 	/**
 	 * The feature id for the '<em><b>Criteria Name</b></em>' attribute.
@@ -2334,7 +2334,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_REQUIREMENT_SELECTION_CRITERIA__CRITERIA_NAME = 0;
+	int SELECTION_CRITERIA__CRITERIA_NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Criteria Value</b></em>' attribute.
@@ -2343,62 +2343,80 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_REQUIREMENT_SELECTION_CRITERIA__CRITERIA_VALUE = 1;
+	int SELECTION_CRITERIA__CRITERIA_VALUE = 1;
 
 	/**
-	 * The number of structural features of the '<em>Domain Requirement Selection Criteria</em>' class.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_REQUIREMENT_SELECTION_CRITERIA_FEATURE_COUNT = 2;
+	int SELECTION_CRITERIA__ID = 2;
 
 	/**
-	 * The number of operations of the '<em>Domain Requirement Selection Criteria</em>' class.
+	 * The number of structural features of the '<em>Selection Criteria</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOMAIN_REQUIREMENT_SELECTION_CRITERIA_OPERATION_COUNT = 0;
+	int SELECTION_CRITERIA_FEATURE_COUNT = 3;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.CriteriaToChooseMLAlgorithmImpl <em>Criteria To Choose ML Algorithm</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.CriteriaToChooseMLAlgorithmImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getCriteriaToChooseMLAlgorithm()
-	 * @generated
-	 */
-	int CRITERIA_TO_CHOOSE_ML_ALGORITHM = 45;
-
-	/**
-	 * The feature id for the '<em><b>Domainrequirementselectioncriteria</b></em>' reference.
+	 * The number of operations of the '<em>Selection Criteria</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CRITERIA_TO_CHOOSE_ML_ALGORITHM__DOMAINREQUIREMENTSELECTIONCRITERIA = 0;
+	int SELECTION_CRITERIA_OPERATION_COUNT = 0;
 
 	/**
-	 * The number of structural features of the '<em>Criteria To Choose ML Algorithm</em>' class.
+	 * The meta object id for the '{@link projetTemplate.impl.MLAlgorithmSelectionCriteriaContainerImpl <em>ML Algorithm Selection Criteria Container</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.MLAlgorithmSelectionCriteriaContainerImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMLAlgorithmSelectionCriteriaContainer()
+	 * @generated
+	 */
+	int ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER = 45;
+
+	/**
+	 * The feature id for the '<em><b>Domainrequirementselectioncriteria</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CRITERIA_TO_CHOOSE_ML_ALGORITHM_FEATURE_COUNT = 1;
+	int ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__DOMAINREQUIREMENTSELECTIONCRITERIA = 0;
 
 	/**
-	 * The number of operations of the '<em>Criteria To Choose ML Algorithm</em>' class.
+	 * The feature id for the '<em><b>Regle</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CRITERIA_TO_CHOOSE_ML_ALGORITHM_OPERATION_COUNT = 0;
+	int ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__REGLE = 1;
+
+	/**
+	 * The number of structural features of the '<em>ML Algorithm Selection Criteria Container</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>ML Algorithm Selection Criteria Container</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.Values1 <em>Values1</em>}' enum.
@@ -3510,10 +3528,10 @@ public interface ProjetTemplatePackage extends EPackage {
 	EReference getMLAlgorithm_Extendedbpmnmodel();
 
 	/**
-	 * Returns the meta object for the reference list '{@link projetTemplate.MLAlgorithm#getCriteriatochoosemlalgorithm <em>Criteriatochoosemlalgorithm</em>}'.
+	 * Returns the meta object for the reference '{@link projetTemplate.MLAlgorithm#getCriteriatochoosemlalgorithm <em>Criteriatochoosemlalgorithm</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Criteriatochoosemlalgorithm</em>'.
+	 * @return the meta object for the reference '<em>Criteriatochoosemlalgorithm</em>'.
 	 * @see projetTemplate.MLAlgorithm#getCriteriatochoosemlalgorithm()
 	 * @see #getMLAlgorithm()
 	 * @generated
@@ -4096,57 +4114,79 @@ public interface ProjetTemplatePackage extends EPackage {
 	EClass getMissingValueTreatement();
 
 	/**
-	 * Returns the meta object for class '{@link projetTemplate.DomainRequirementSelectionCriteria <em>Domain Requirement Selection Criteria</em>}'.
+	 * Returns the meta object for class '{@link projetTemplate.SelectionCriteria <em>Selection Criteria</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Domain Requirement Selection Criteria</em>'.
-	 * @see projetTemplate.DomainRequirementSelectionCriteria
+	 * @return the meta object for class '<em>Selection Criteria</em>'.
+	 * @see projetTemplate.SelectionCriteria
 	 * @generated
 	 */
-	EClass getDomainRequirementSelectionCriteria();
+	EClass getSelectionCriteria();
 
 	/**
-	 * Returns the meta object for the attribute '{@link projetTemplate.DomainRequirementSelectionCriteria#getCriteriaName <em>Criteria Name</em>}'.
+	 * Returns the meta object for the attribute '{@link projetTemplate.SelectionCriteria#getCriteriaName <em>Criteria Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Criteria Name</em>'.
-	 * @see projetTemplate.DomainRequirementSelectionCriteria#getCriteriaName()
-	 * @see #getDomainRequirementSelectionCriteria()
+	 * @see projetTemplate.SelectionCriteria#getCriteriaName()
+	 * @see #getSelectionCriteria()
 	 * @generated
 	 */
-	EAttribute getDomainRequirementSelectionCriteria_CriteriaName();
+	EAttribute getSelectionCriteria_CriteriaName();
 
 	/**
-	 * Returns the meta object for the attribute '{@link projetTemplate.DomainRequirementSelectionCriteria#getCriteriaValue <em>Criteria Value</em>}'.
+	 * Returns the meta object for the attribute '{@link projetTemplate.SelectionCriteria#getCriteriaValue <em>Criteria Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Criteria Value</em>'.
-	 * @see projetTemplate.DomainRequirementSelectionCriteria#getCriteriaValue()
-	 * @see #getDomainRequirementSelectionCriteria()
+	 * @see projetTemplate.SelectionCriteria#getCriteriaValue()
+	 * @see #getSelectionCriteria()
 	 * @generated
 	 */
-	EAttribute getDomainRequirementSelectionCriteria_CriteriaValue();
+	EAttribute getSelectionCriteria_CriteriaValue();
 
 	/**
-	 * Returns the meta object for class '{@link projetTemplate.CriteriaToChooseMLAlgorithm <em>Criteria To Choose ML Algorithm</em>}'.
+	 * Returns the meta object for the attribute '{@link projetTemplate.SelectionCriteria#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Criteria To Choose ML Algorithm</em>'.
-	 * @see projetTemplate.CriteriaToChooseMLAlgorithm
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see projetTemplate.SelectionCriteria#getId()
+	 * @see #getSelectionCriteria()
 	 * @generated
 	 */
-	EClass getCriteriaToChooseMLAlgorithm();
+	EAttribute getSelectionCriteria_Id();
 
 	/**
-	 * Returns the meta object for the reference '{@link projetTemplate.CriteriaToChooseMLAlgorithm#getDomainrequirementselectioncriteria <em>Domainrequirementselectioncriteria</em>}'.
+	 * Returns the meta object for class '{@link projetTemplate.MLAlgorithmSelectionCriteriaContainer <em>ML Algorithm Selection Criteria Container</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Domainrequirementselectioncriteria</em>'.
-	 * @see projetTemplate.CriteriaToChooseMLAlgorithm#getDomainrequirementselectioncriteria()
-	 * @see #getCriteriaToChooseMLAlgorithm()
+	 * @return the meta object for class '<em>ML Algorithm Selection Criteria Container</em>'.
+	 * @see projetTemplate.MLAlgorithmSelectionCriteriaContainer
 	 * @generated
 	 */
-	EReference getCriteriaToChooseMLAlgorithm_Domainrequirementselectioncriteria();
+	EClass getMLAlgorithmSelectionCriteriaContainer();
+
+	/**
+	 * Returns the meta object for the reference list '{@link projetTemplate.MLAlgorithmSelectionCriteriaContainer#getDomainrequirementselectioncriteria <em>Domainrequirementselectioncriteria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Domainrequirementselectioncriteria</em>'.
+	 * @see projetTemplate.MLAlgorithmSelectionCriteriaContainer#getDomainrequirementselectioncriteria()
+	 * @see #getMLAlgorithmSelectionCriteriaContainer()
+	 * @generated
+	 */
+	EReference getMLAlgorithmSelectionCriteriaContainer_Domainrequirementselectioncriteria();
+
+	/**
+	 * Returns the meta object for the attribute '{@link projetTemplate.MLAlgorithmSelectionCriteriaContainer#getRegle <em>Regle</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Regle</em>'.
+	 * @see projetTemplate.MLAlgorithmSelectionCriteriaContainer#getRegle()
+	 * @see #getMLAlgorithmSelectionCriteriaContainer()
+	 * @generated
+	 */
+	EAttribute getMLAlgorithmSelectionCriteriaContainer_Regle();
 
 	/**
 	 * Returns the meta object for enum '{@link projetTemplate.Values1 <em>Values1</em>}'.
@@ -5084,7 +5124,7 @@ public interface ProjetTemplatePackage extends EPackage {
 		EReference ML_ALGORITHM__EXTENDEDBPMNMODEL = eINSTANCE.getMLAlgorithm_Extendedbpmnmodel();
 
 		/**
-		 * The meta object literal for the '<em><b>Criteriatochoosemlalgorithm</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Criteriatochoosemlalgorithm</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -5588,14 +5628,14 @@ public interface ProjetTemplatePackage extends EPackage {
 		EClass MISSING_VALUE_TREATEMENT = eINSTANCE.getMissingValueTreatement();
 
 		/**
-		 * The meta object literal for the '{@link projetTemplate.impl.DomainRequirementSelectionCriteriaImpl <em>Domain Requirement Selection Criteria</em>}' class.
+		 * The meta object literal for the '{@link projetTemplate.impl.SelectionCriteriaImpl <em>Selection Criteria</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see projetTemplate.impl.DomainRequirementSelectionCriteriaImpl
-		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDomainRequirementSelectionCriteria()
+		 * @see projetTemplate.impl.SelectionCriteriaImpl
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getSelectionCriteria()
 		 * @generated
 		 */
-		EClass DOMAIN_REQUIREMENT_SELECTION_CRITERIA = eINSTANCE.getDomainRequirementSelectionCriteria();
+		EClass SELECTION_CRITERIA = eINSTANCE.getSelectionCriteria();
 
 		/**
 		 * The meta object literal for the '<em><b>Criteria Name</b></em>' attribute feature.
@@ -5603,8 +5643,7 @@ public interface ProjetTemplatePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DOMAIN_REQUIREMENT_SELECTION_CRITERIA__CRITERIA_NAME = eINSTANCE
-				.getDomainRequirementSelectionCriteria_CriteriaName();
+		EAttribute SELECTION_CRITERIA__CRITERIA_NAME = eINSTANCE.getSelectionCriteria_CriteriaName();
 
 		/**
 		 * The meta object literal for the '<em><b>Criteria Value</b></em>' attribute feature.
@@ -5612,27 +5651,43 @@ public interface ProjetTemplatePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DOMAIN_REQUIREMENT_SELECTION_CRITERIA__CRITERIA_VALUE = eINSTANCE
-				.getDomainRequirementSelectionCriteria_CriteriaValue();
+		EAttribute SELECTION_CRITERIA__CRITERIA_VALUE = eINSTANCE.getSelectionCriteria_CriteriaValue();
 
 		/**
-		 * The meta object literal for the '{@link projetTemplate.impl.CriteriaToChooseMLAlgorithmImpl <em>Criteria To Choose ML Algorithm</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see projetTemplate.impl.CriteriaToChooseMLAlgorithmImpl
-		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getCriteriaToChooseMLAlgorithm()
-		 * @generated
-		 */
-		EClass CRITERIA_TO_CHOOSE_ML_ALGORITHM = eINSTANCE.getCriteriaToChooseMLAlgorithm();
-
-		/**
-		 * The meta object literal for the '<em><b>Domainrequirementselectioncriteria</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CRITERIA_TO_CHOOSE_ML_ALGORITHM__DOMAINREQUIREMENTSELECTIONCRITERIA = eINSTANCE
-				.getCriteriaToChooseMLAlgorithm_Domainrequirementselectioncriteria();
+		EAttribute SELECTION_CRITERIA__ID = eINSTANCE.getSelectionCriteria_Id();
+
+		/**
+		 * The meta object literal for the '{@link projetTemplate.impl.MLAlgorithmSelectionCriteriaContainerImpl <em>ML Algorithm Selection Criteria Container</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projetTemplate.impl.MLAlgorithmSelectionCriteriaContainerImpl
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMLAlgorithmSelectionCriteriaContainer()
+		 * @generated
+		 */
+		EClass ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER = eINSTANCE.getMLAlgorithmSelectionCriteriaContainer();
+
+		/**
+		 * The meta object literal for the '<em><b>Domainrequirementselectioncriteria</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__DOMAINREQUIREMENTSELECTIONCRITERIA = eINSTANCE
+				.getMLAlgorithmSelectionCriteriaContainer_Domainrequirementselectioncriteria();
+
+		/**
+		 * The meta object literal for the '<em><b>Regle</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__REGLE = eINSTANCE
+				.getMLAlgorithmSelectionCriteriaContainer_Regle();
 
 		/**
 		 * The meta object literal for the '{@link projetTemplate.Values1 <em>Values1</em>}' enum.

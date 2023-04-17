@@ -447,16 +447,16 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_SELECTION_CRITERIA: {
-			DomainRequirementSelectionCriteria domainRequirementSelectionCriteria = (DomainRequirementSelectionCriteria) theEObject;
-			T result = caseDomainRequirementSelectionCriteria(domainRequirementSelectionCriteria);
+		case ProjetTemplatePackage.SELECTION_CRITERIA: {
+			SelectionCriteria selectionCriteria = (SelectionCriteria) theEObject;
+			T result = caseSelectionCriteria(selectionCriteria);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ProjetTemplatePackage.CRITERIA_TO_CHOOSE_ML_ALGORITHM: {
-			CriteriaToChooseMLAlgorithm criteriaToChooseMLAlgorithm = (CriteriaToChooseMLAlgorithm) theEObject;
-			T result = caseCriteriaToChooseMLAlgorithm(criteriaToChooseMLAlgorithm);
+		case ProjetTemplatePackage.ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER: {
+			MLAlgorithmSelectionCriteriaContainer mlAlgorithmSelectionCriteriaContainer = (MLAlgorithmSelectionCriteriaContainer) theEObject;
+			T result = caseMLAlgorithmSelectionCriteriaContainer(mlAlgorithmSelectionCriteriaContainer);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -1128,32 +1128,32 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Domain Requirement Selection Criteria</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Selection Criteria</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Domain Requirement Selection Criteria</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Selection Criteria</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDomainRequirementSelectionCriteria(DomainRequirementSelectionCriteria object) {
+	public T caseSelectionCriteria(SelectionCriteria object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Criteria To Choose ML Algorithm</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>ML Algorithm Selection Criteria Container</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Criteria To Choose ML Algorithm</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>ML Algorithm Selection Criteria Container</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseCriteriaToChooseMLAlgorithm(CriteriaToChooseMLAlgorithm object) {
+	public T caseMLAlgorithmSelectionCriteriaContainer(MLAlgorithmSelectionCriteriaContainer object) {
 		return null;
 	}
 

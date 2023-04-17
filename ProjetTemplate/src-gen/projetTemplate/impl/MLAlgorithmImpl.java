@@ -11,10 +11,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-
-import projetTemplate.CriteriaToChooseMLAlgorithm;
 import projetTemplate.ExtendedBPMNModel;
 import projetTemplate.MLAlgorithm;
+import projetTemplate.MLAlgorithmSelectionCriteriaContainer;
 import projetTemplate.MLAlgorithms;
 import projetTemplate.ProjetTemplatePackage;
 import projetTemplate.SelectionCriterionValue;
@@ -89,14 +88,14 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 	protected ExtendedBPMNModel extendedbpmnmodel;
 
 	/**
-	 * The cached value of the '{@link #getCriteriatochoosemlalgorithm() <em>Criteriatochoosemlalgorithm</em>}' reference list.
+	 * The cached value of the '{@link #getCriteriatochoosemlalgorithm() <em>Criteriatochoosemlalgorithm</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCriteriatochoosemlalgorithm()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<CriteriaToChooseMLAlgorithm> criteriatochoosemlalgorithm;
+	protected MLAlgorithmSelectionCriteriaContainer criteriatochoosemlalgorithm;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -240,13 +239,42 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<CriteriaToChooseMLAlgorithm> getCriteriatochoosemlalgorithm() {
-		if (criteriatochoosemlalgorithm == null) {
-			criteriatochoosemlalgorithm = new EObjectResolvingEList<CriteriaToChooseMLAlgorithm>(
-					CriteriaToChooseMLAlgorithm.class, this,
-					ProjetTemplatePackage.ML_ALGORITHM__CRITERIATOCHOOSEMLALGORITHM);
+	public MLAlgorithmSelectionCriteriaContainer getCriteriatochoosemlalgorithm() {
+		if (criteriatochoosemlalgorithm != null && criteriatochoosemlalgorithm.eIsProxy()) {
+			InternalEObject oldCriteriatochoosemlalgorithm = (InternalEObject) criteriatochoosemlalgorithm;
+			criteriatochoosemlalgorithm = (MLAlgorithmSelectionCriteriaContainer) eResolveProxy(
+					oldCriteriatochoosemlalgorithm);
+			if (criteriatochoosemlalgorithm != oldCriteriatochoosemlalgorithm) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
+							ProjetTemplatePackage.ML_ALGORITHM__CRITERIATOCHOOSEMLALGORITHM,
+							oldCriteriatochoosemlalgorithm, criteriatochoosemlalgorithm));
+			}
 		}
 		return criteriatochoosemlalgorithm;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MLAlgorithmSelectionCriteriaContainer basicGetCriteriatochoosemlalgorithm() {
+		return criteriatochoosemlalgorithm;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCriteriatochoosemlalgorithm(MLAlgorithmSelectionCriteriaContainer newCriteriatochoosemlalgorithm) {
+		MLAlgorithmSelectionCriteriaContainer oldCriteriatochoosemlalgorithm = criteriatochoosemlalgorithm;
+		criteriatochoosemlalgorithm = newCriteriatochoosemlalgorithm;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					ProjetTemplatePackage.ML_ALGORITHM__CRITERIATOCHOOSEMLALGORITHM, oldCriteriatochoosemlalgorithm,
+					criteriatochoosemlalgorithm));
 	}
 
 	/**
@@ -270,7 +298,9 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 				return getExtendedbpmnmodel();
 			return basicGetExtendedbpmnmodel();
 		case ProjetTemplatePackage.ML_ALGORITHM__CRITERIATOCHOOSEMLALGORITHM:
-			return getCriteriatochoosemlalgorithm();
+			if (resolve)
+				return getCriteriatochoosemlalgorithm();
+			return basicGetCriteriatochoosemlalgorithm();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -298,8 +328,7 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 			setExtendedbpmnmodel((ExtendedBPMNModel) newValue);
 			return;
 		case ProjetTemplatePackage.ML_ALGORITHM__CRITERIATOCHOOSEMLALGORITHM:
-			getCriteriatochoosemlalgorithm().clear();
-			getCriteriatochoosemlalgorithm().addAll((Collection<? extends CriteriaToChooseMLAlgorithm>) newValue);
+			setCriteriatochoosemlalgorithm((MLAlgorithmSelectionCriteriaContainer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -326,7 +355,7 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 			setExtendedbpmnmodel((ExtendedBPMNModel) null);
 			return;
 		case ProjetTemplatePackage.ML_ALGORITHM__CRITERIATOCHOOSEMLALGORITHM:
-			getCriteriatochoosemlalgorithm().clear();
+			setCriteriatochoosemlalgorithm((MLAlgorithmSelectionCriteriaContainer) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -349,7 +378,7 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 		case ProjetTemplatePackage.ML_ALGORITHM__EXTENDEDBPMNMODEL:
 			return extendedbpmnmodel != null;
 		case ProjetTemplatePackage.ML_ALGORITHM__CRITERIATOCHOOSEMLALGORITHM:
-			return criteriatochoosemlalgorithm != null && !criteriatochoosemlalgorithm.isEmpty();
+			return criteriatochoosemlalgorithm != null;
 		}
 		return super.eIsSet(featureID);
 	}

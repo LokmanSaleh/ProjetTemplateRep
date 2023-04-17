@@ -11,10 +11,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import projetTemplate.DomainRequirementSelectionCriteria;
 import projetTemplate.DomainRequirementValue;
 import projetTemplate.ProjetTemplatePackage;
 import projetTemplate.RequirementType;
+import projetTemplate.SelectionCriteria;
 
 /**
  * <!-- begin-user-doc -->
@@ -70,7 +70,7 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DomainRequirementSelectionCriteria> domainrequirementselectioncriteria;
+	protected EList<SelectionCriteria> domainrequirementselectioncriteria;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -160,11 +160,10 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DomainRequirementSelectionCriteria> getDomainrequirementselectioncriteria() {
+	public EList<SelectionCriteria> getDomainrequirementselectioncriteria() {
 		if (domainrequirementselectioncriteria == null) {
-			domainrequirementselectioncriteria = new EObjectResolvingEList<DomainRequirementSelectionCriteria>(
-					DomainRequirementSelectionCriteria.class, this,
-					ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__DOMAINREQUIREMENTSELECTIONCRITERIA);
+			domainrequirementselectioncriteria = new EObjectResolvingEList<SelectionCriteria>(SelectionCriteria.class,
+					this, ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__DOMAINREQUIREMENTSELECTIONCRITERIA);
 		}
 		return domainrequirementselectioncriteria;
 	}
@@ -206,8 +205,7 @@ public class DomainRequirementValueImpl extends MinimalEObjectImpl.Container imp
 			return;
 		case ProjetTemplatePackage.DOMAIN_REQUIREMENT_VALUE__DOMAINREQUIREMENTSELECTIONCRITERIA:
 			getDomainrequirementselectioncriteria().clear();
-			getDomainrequirementselectioncriteria()
-					.addAll((Collection<? extends DomainRequirementSelectionCriteria>) newValue);
+			getDomainrequirementselectioncriteria().addAll((Collection<? extends SelectionCriteria>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
