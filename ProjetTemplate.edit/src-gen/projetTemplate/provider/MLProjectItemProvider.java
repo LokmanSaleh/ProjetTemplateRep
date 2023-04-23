@@ -58,7 +58,7 @@ public class MLProjectItemProvider extends ItemProviderAdapter implements IEditi
 			addAuthorPropertyDescriptor(object);
 			addDataanalysisproblemPropertyDescriptor(object);
 			addDomainproblemPropertyDescriptor(object);
-			addDatabasePropertyDescriptor(object);
+			addDatabaseconnectionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -143,18 +143,19 @@ public class MLProjectItemProvider extends ItemProviderAdapter implements IEditi
 	}
 
 	/**
-	 * This adds a property descriptor for the Database feature.
+	 * This adds a property descriptor for the Databaseconnection feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDatabasePropertyDescriptor(Object object) {
+	protected void addDatabaseconnectionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_MLProject_database_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_MLProject_database_feature",
+						getResourceLocator(), getString("_UI_MLProject_databaseconnection_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_MLProject_databaseconnection_feature",
 								"_UI_MLProject_type"),
-						ProjetTemplatePackage.Literals.ML_PROJECT__DATABASE, true, false, true, null, null, null));
+						ProjetTemplatePackage.Literals.ML_PROJECT__DATABASECONNECTION, true, false, true, null, null,
+						null));
 	}
 
 	/**

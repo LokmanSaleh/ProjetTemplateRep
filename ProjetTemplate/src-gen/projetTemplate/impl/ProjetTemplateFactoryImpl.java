@@ -10,62 +10,6 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 import projetTemplate.*;
-import projetTemplate.Accuracy;
-import projetTemplate.CollectedDataKnowledgeAboutTemplateConstruction;
-import projetTemplate.Component;
-import projetTemplate.ComputationalRequirementValue;
-import projetTemplate.Condition;
-import projetTemplate.Conversion;
-import projetTemplate.ConversionEnum;
-import projetTemplate.Data;
-import projetTemplate.DataAnalysisProblem;
-import projetTemplate.DataAnalysisProblemType;
-import projetTemplate.DataCleaning;
-import projetTemplate.DataPretraitement;
-import projetTemplate.DataPropertyType;
-import projetTemplate.DataPropertyValue;
-import projetTemplate.DataPropertyValueSet;
-import projetTemplate.Database;
-import projetTemplate.Deployement;
-import projetTemplate.DomainProblem;
-import projetTemplate.DomainRequirementValue;
-import projetTemplate.EnumConnector;
-import projetTemplate.EnumDataAnalysisProblemType;
-import projetTemplate.Explainability;
-import projetTemplate.ExtendedBPMNModel;
-import projetTemplate.FeatureConstruction;
-import projetTemplate.FeatureSelection;
-import projetTemplate.MLAlgorithm;
-import projetTemplate.MLAlgorithmSolutionPattern;
-import projetTemplate.MLAlgorithms;
-import projetTemplate.MLProcChainSolutionPattern;
-import projetTemplate.MLProject;
-import projetTemplate.MissingValueTreatement;
-import projetTemplate.MissingValueTreatementEnum;
-import projetTemplate.ModelElement;
-import projetTemplate.NoiseTreatement;
-import projetTemplate.NoiseTreatementEnum;
-import projetTemplate.PostTreatement;
-import projetTemplate.ProcessingChain;
-import projetTemplate.ProcessingChainTemplate;
-import projetTemplate.ProjetTemplateFactory;
-import projetTemplate.ProjetTemplatePackage;
-import projetTemplate.RemoveUncessaryFileds;
-import projetTemplate.RemoveUncessaryFiledsEnum;
-import projetTemplate.RequirementMapping;
-import projetTemplate.RequirementType;
-import projetTemplate.RequirementTypeValues;
-import projetTemplate.Resultat;
-import projetTemplate.Rule;
-import projetTemplate.Schema;
-import projetTemplate.SelectionCriterion;
-import projetTemplate.SelectionCriterionValue;
-import projetTemplate.SelectionCriterionValueSet;
-import projetTemplate.Term;
-import projetTemplate.Values1;
-import projetTemplate.Values2;
-import projetTemplate.connector;
-import projetTemplate.variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -123,8 +67,8 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 			return createDataAnalysisProblem();
 		case ProjetTemplatePackage.COMPUTATIONAL_REQUIREMENT_VALUE:
 			return createComputationalRequirementValue();
-		case ProjetTemplatePackage.DATABASE:
-			return createDatabase();
+		case ProjetTemplatePackage.XDATABASE:
+			return createX_Database();
 		case ProjetTemplatePackage.SCHEMA:
 			return createSchema();
 		case ProjetTemplatePackage.DATA:
@@ -143,8 +87,8 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 			return createDataAnalysisProblemType();
 		case ProjetTemplatePackage.PROCESSING_CHAIN_TEMPLATE:
 			return createProcessingChainTemplate();
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN:
-			return createMLProcChainSolutionPattern();
+		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION:
+			return createMLProcChainSolution();
 		case ProjetTemplatePackage.PROCESSING_CHAIN:
 			return createProcessingChain();
 		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN:
@@ -199,10 +143,10 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 			return createNoiseTreatement();
 		case ProjetTemplatePackage.MISSING_VALUE_TREATEMENT:
 			return createMissingValueTreatement();
-		case ProjetTemplatePackage.SELECTION_CRITERIA:
-			return createSelectionCriteria();
 		case ProjetTemplatePackage.ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER:
 			return createMLAlgorithmSelectionCriteriaContainer();
+		case ProjetTemplatePackage.DATA_BASE_CONNECTION:
+			return createDataBaseConnection();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -236,6 +180,8 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 			return createMissingValueTreatementEnumFromString(eDataType, initialValue);
 		case ProjetTemplatePackage.ML_ALGORITHMS:
 			return createMLAlgorithmsFromString(eDataType, initialValue);
+		case ProjetTemplatePackage.COMPONENETS:
+			return createComponenetsFromString(eDataType, initialValue);
 		case ProjetTemplatePackage.NEW_DATA_TYPE10:
 			return createNewDataType10FromString(eDataType, initialValue);
 		default:
@@ -271,6 +217,8 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 			return convertMissingValueTreatementEnumToString(eDataType, instanceValue);
 		case ProjetTemplatePackage.ML_ALGORITHMS:
 			return convertMLAlgorithmsToString(eDataType, instanceValue);
+		case ProjetTemplatePackage.COMPONENETS:
+			return convertComponenetsToString(eDataType, instanceValue);
 		case ProjetTemplatePackage.NEW_DATA_TYPE10:
 			return convertNewDataType10ToString(eDataType, instanceValue);
 		default:
@@ -343,9 +291,9 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Database createDatabase() {
-		DatabaseImpl database = new DatabaseImpl();
-		return database;
+	public X_Database createX_Database() {
+		X_DatabaseImpl x_Database = new X_DatabaseImpl();
+		return x_Database;
 	}
 
 	/**
@@ -443,9 +391,9 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MLProcChainSolutionPattern createMLProcChainSolutionPattern() {
-		MLProcChainSolutionPatternImpl mlProcChainSolutionPattern = new MLProcChainSolutionPatternImpl();
-		return mlProcChainSolutionPattern;
+	public ProcessingChainTemplate createProcessingChainTemplate() {
+		ProcessingChainTemplateImpl processingChainTemplate = new ProcessingChainTemplateImpl();
+		return processingChainTemplate;
 	}
 
 	/**
@@ -453,9 +401,9 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProcessingChainTemplate createProcessingChainTemplate() {
-		ProcessingChainTemplateImpl processingChainTemplate = new ProcessingChainTemplateImpl();
-		return processingChainTemplate;
+	public MLProcChainSolution createMLProcChainSolution() {
+		MLProcChainSolutionImpl mlProcChainSolution = new MLProcChainSolutionImpl();
+		return mlProcChainSolution;
 	}
 
 	/**
@@ -723,9 +671,9 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SelectionCriteria createSelectionCriteria() {
-		SelectionCriteriaImpl selectionCriteria = new SelectionCriteriaImpl();
-		return selectionCriteria;
+	public MLAlgorithmSelectionCriteriaContainer createMLAlgorithmSelectionCriteriaContainer() {
+		MLAlgorithmSelectionCriteriaContainerImpl mlAlgorithmSelectionCriteriaContainer = new MLAlgorithmSelectionCriteriaContainerImpl();
+		return mlAlgorithmSelectionCriteriaContainer;
 	}
 
 	/**
@@ -733,9 +681,9 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MLAlgorithmSelectionCriteriaContainer createMLAlgorithmSelectionCriteriaContainer() {
-		MLAlgorithmSelectionCriteriaContainerImpl mlAlgorithmSelectionCriteriaContainer = new MLAlgorithmSelectionCriteriaContainerImpl();
-		return mlAlgorithmSelectionCriteriaContainer;
+	public DataBaseConnection createDataBaseConnection() {
+		DataBaseConnectionImpl dataBaseConnection = new DataBaseConnectionImpl();
+		return dataBaseConnection;
 	}
 
 	/**
@@ -958,6 +906,28 @@ public class ProjetTemplateFactoryImpl extends EFactoryImpl implements ProjetTem
 	 * @generated
 	 */
 	public String convertMLAlgorithmsToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Componenets createComponenetsFromString(EDataType eDataType, String initialValue) {
+		Componenets result = Componenets.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertComponenetsToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

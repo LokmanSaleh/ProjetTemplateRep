@@ -25,7 +25,7 @@ import projetTemplate.SelectionCriteria;
  *
  * @generated
  */
-public class SelectionCriteriaImpl extends MinimalEObjectImpl.Container implements SelectionCriteria {
+public abstract class SelectionCriteriaImpl extends MinimalEObjectImpl.Container implements SelectionCriteria {
 	/**
 	 * The default value of the '{@link #getCriteriaName() <em>Criteria Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

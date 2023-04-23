@@ -56,7 +56,7 @@ public class MLAlgorithmSolutionPatternItemProvider extends ItemProviderAdapter 
 			addNamePropertyDescriptor(object);
 			addExplanationPropertyDescriptor(object);
 			addMlalgorithmPropertyDescriptor(object);
-			addDatapropertyvaluesetPropertyDescriptor(object);
+			addX_datapropertyvaluesetPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -110,20 +110,20 @@ public class MLAlgorithmSolutionPatternItemProvider extends ItemProviderAdapter 
 	}
 
 	/**
-	 * This adds a property descriptor for the Datapropertyvalueset feature.
+	 * This adds a property descriptor for the Xdatapropertyvalueset feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDatapropertyvaluesetPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_MLAlgorithmSolutionPattern_datapropertyvalueset_feature"),
-						getString("_UI_PropertyDescriptor_description",
-								"_UI_MLAlgorithmSolutionPattern_datapropertyvalueset_feature",
-								"_UI_MLAlgorithmSolutionPattern_type"),
-						ProjetTemplatePackage.Literals.ML_ALGORITHM_SOLUTION_PATTERN__DATAPROPERTYVALUESET, true, false,
-						true, null, null, null));
+	protected void addX_datapropertyvaluesetPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_MLAlgorithmSolutionPattern_X_datapropertyvalueset_feature"),
+				getString("_UI_PropertyDescriptor_description",
+						"_UI_MLAlgorithmSolutionPattern_X_datapropertyvalueset_feature",
+						"_UI_MLAlgorithmSolutionPattern_type"),
+				ProjetTemplatePackage.Literals.ML_ALGORITHM_SOLUTION_PATTERN__XDATAPROPERTYVALUESET, true, false, true,
+				null, null, null));
 	}
 
 	/**

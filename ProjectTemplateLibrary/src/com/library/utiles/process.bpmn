@@ -341,15 +341,7 @@
         <bpmndi:BPMNLabel id="BPMNLabel_134" labelStyle="BPMNLabelStyle_1">
           <dc:Bounds height="34.0" width="70.0" x="2975.0" y="1038.0"/>
         </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_ParallelGateway_15" bpmnElement="ParallelGateway_15" isMarkerVisible="true">
-        <dc:Bounds height="50.0" width="50.0" x="2390.0" y="758.0"/>
-        <bpmndi:BPMNLabel id="BPMNLabel_139" labelStyle="BPMNLabelStyle_1"/>
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="BPMNShape_ParallelGateway_17" bpmnElement="ParallelGateway_17" isMarkerVisible="true">
-        <dc:Bounds height="50.0" width="50.0" x="2230.0" y="765.0"/>
-        <bpmndi:BPMNLabel id="BPMNLabel_147" labelStyle="BPMNLabelStyle_1"/>
-      </bpmndi:BPMNShape>
+      </bpmndi:BPMNShape> 
       <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_11" bpmnElement="SequenceFlow_11" sourceElement="BPMNShape_ParallelGateway_3" targetElement="BPMNShape_ServiceTask_1">
         <di:waypoint xsi:type="dc:Point" x="935.0" y="765.0"/>
         <di:waypoint xsi:type="dc:Point" x="935.0" y="605.0"/>

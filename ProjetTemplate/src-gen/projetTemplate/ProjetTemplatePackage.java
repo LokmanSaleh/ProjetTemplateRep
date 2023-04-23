@@ -116,51 +116,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	int DOMAIN_REQUIREMENT_VALUE = 1;
 
 	/**
-	 * The feature id for the '<em><b>Explanation</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_REQUIREMENT_VALUE__EXPLANATION = 0;
-
-	/**
-	 * The feature id for the '<em><b>Requirementtype</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Domainrequirementselectioncriteria</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_REQUIREMENT_VALUE__DOMAINREQUIREMENTSELECTIONCRITERIA = 2;
-
-	/**
-	 * The number of structural features of the '<em>Domain Requirement Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_REQUIREMENT_VALUE_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Domain Requirement Value</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int DOMAIN_REQUIREMENT_VALUE_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link projetTemplate.impl.RequirementTypeImpl <em>Requirement Type</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -169,6 +124,524 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 */
 	int REQUIREMENT_TYPE = 2;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.MLProjectImpl <em>ML Project</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.MLProjectImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMLProject()
+	 * @generated
+	 */
+	int ML_PROJECT = 3;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.DataAnalysisProblemImpl <em>Data Analysis Problem</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.DataAnalysisProblemImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDataAnalysisProblem()
+	 * @generated
+	 */
+	int DATA_ANALYSIS_PROBLEM = 4;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.ComputationalRequirementValueImpl <em>Computational Requirement Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.ComputationalRequirementValueImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getComputationalRequirementValue()
+	 * @generated
+	 */
+	int COMPUTATIONAL_REQUIREMENT_VALUE = 5;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.X_DatabaseImpl <em>XDatabase</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.X_DatabaseImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getX_Database()
+	 * @generated
+	 */
+	int XDATABASE = 6;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.SchemaImpl <em>Schema</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.SchemaImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getSchema()
+	 * @generated
+	 */
+	int SCHEMA = 7;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.DataImpl <em>Data</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.DataImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getData()
+	 * @generated
+	 */
+	int DATA = 8;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.RequirementMappingImpl <em>Requirement Mapping</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.RequirementMappingImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getRequirementMapping()
+	 * @generated
+	 */
+	int REQUIREMENT_MAPPING = 9;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.ModelElementImpl <em>Model Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.ModelElementImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getModelElement()
+	 * @generated
+	 */
+	int MODEL_ELEMENT = 10;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.DataPropertyValueSetImpl <em>Data Property Value Set</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.DataPropertyValueSetImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDataPropertyValueSet()
+	 * @generated
+	 */
+	int DATA_PROPERTY_VALUE_SET = 11;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.DataPropertyValueImpl <em>Data Property Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.DataPropertyValueImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDataPropertyValue()
+	 * @generated
+	 */
+	int DATA_PROPERTY_VALUE = 12;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.DataPropertyTypeImpl <em>Data Property Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.DataPropertyTypeImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDataPropertyType()
+	 * @generated
+	 */
+	int DATA_PROPERTY_TYPE = 13;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.DataAnalysisProblemTypeImpl <em>Data Analysis Problem Type</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.DataAnalysisProblemTypeImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDataAnalysisProblemType()
+	 * @generated
+	 */
+	int DATA_ANALYSIS_PROBLEM_TYPE = 14;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.ProcessingChainImpl <em>Processing Chain</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.ProcessingChainImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getProcessingChain()
+	 * @generated
+	 */
+	int PROCESSING_CHAIN = 17;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.ProcessingChainTemplateImpl <em>Processing Chain Template</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.ProcessingChainTemplateImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getProcessingChainTemplate()
+	 * @generated
+	 */
+	int PROCESSING_CHAIN_TEMPLATE = 15;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.MLAlgorithmSolutionPatternImpl <em>ML Algorithm Solution Pattern</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.MLAlgorithmSolutionPatternImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMLAlgorithmSolutionPattern()
+	 * @generated
+	 */
+	int ML_ALGORITHM_SOLUTION_PATTERN = 18;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.ComponentImpl <em>Component</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.ComponentImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getComponent()
+	 * @generated
+	 */
+	int COMPONENT = 33;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.MLAlgorithmImpl <em>ML Algorithm</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.MLAlgorithmImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMLAlgorithm()
+	 * @generated
+	 */
+	int ML_ALGORITHM = 19;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.SelectionCriterionValueSetImpl <em>Selection Criterion Value Set</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.SelectionCriterionValueSetImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getSelectionCriterionValueSet()
+	 * @generated
+	 */
+	int SELECTION_CRITERION_VALUE_SET = 20;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.SelectionCriterionValueImpl <em>Selection Criterion Value</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.SelectionCriterionValueImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getSelectionCriterionValue()
+	 * @generated
+	 */
+	int SELECTION_CRITERION_VALUE = 21;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.SelectionCriterionImpl <em>Selection Criterion</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.SelectionCriterionImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getSelectionCriterion()
+	 * @generated
+	 */
+	int SELECTION_CRITERION = 22;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.ExtendedBPMNModelImpl <em>Extended BPMN Model</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.ExtendedBPMNModelImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getExtendedBPMNModel()
+	 * @generated
+	 */
+	int EXTENDED_BPMN_MODEL = 23;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.ExplainabilityImpl <em>Explainability</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.ExplainabilityImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getExplainability()
+	 * @generated
+	 */
+	int EXPLAINABILITY = 24;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.AccuracyImpl <em>Accuracy</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.AccuracyImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getAccuracy()
+	 * @generated
+	 */
+	int ACCURACY = 25;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.CollectedDataKnowledgeAboutTemplateConstructionImpl <em>Collected Data Knowledge About Template Construction</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.CollectedDataKnowledgeAboutTemplateConstructionImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getCollectedDataKnowledgeAboutTemplateConstruction()
+	 * @generated
+	 */
+	int COLLECTED_DATA_KNOWLEDGE_ABOUT_TEMPLATE_CONSTRUCTION = 26;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.RuleImpl <em>Rule</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.RuleImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getRule()
+	 * @generated
+	 */
+	int RULE = 27;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.ConditionImpl <em>Condition</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.ConditionImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getCondition()
+	 * @generated
+	 */
+	int CONDITION = 28;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.ResultatImpl <em>Resultat</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.ResultatImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getResultat()
+	 * @generated
+	 */
+	int RESULTAT = 29;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.TermImpl <em>Term</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.TermImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getTerm()
+	 * @generated
+	 */
+	int TERM = 31;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.variableImpl <em>variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.variableImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getvariable()
+	 * @generated
+	 */
+	int VARIABLE = 30;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.connectorImpl <em>connector</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.connectorImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getconnector()
+	 * @generated
+	 */
+	int CONNECTOR = 32;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.DataCleaningImpl <em>Data Cleaning</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.DataCleaningImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDataCleaning()
+	 * @generated
+	 */
+	int DATA_CLEANING = 34;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.DataPretraitementImpl <em>Data Pretraitement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.DataPretraitementImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDataPretraitement()
+	 * @generated
+	 */
+	int DATA_PRETRAITEMENT = 35;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.FeatureSelectionImpl <em>Feature Selection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.FeatureSelectionImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getFeatureSelection()
+	 * @generated
+	 */
+	int FEATURE_SELECTION = 36;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.FeatureConstructionImpl <em>Feature Construction</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.FeatureConstructionImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getFeatureConstruction()
+	 * @generated
+	 */
+	int FEATURE_CONSTRUCTION = 37;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.PostTreatementImpl <em>Post Treatement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.PostTreatementImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getPostTreatement()
+	 * @generated
+	 */
+	int POST_TREATEMENT = 38;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.DeployementImpl <em>Deployement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.DeployementImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDeployement()
+	 * @generated
+	 */
+	int DEPLOYEMENT = 39;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.RemoveUncessaryFiledsImpl <em>Remove Uncessary Fileds</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.RemoveUncessaryFiledsImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getRemoveUncessaryFileds()
+	 * @generated
+	 */
+	int REMOVE_UNCESSARY_FILEDS = 40;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.ConversionImpl <em>Conversion</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.ConversionImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getConversion()
+	 * @generated
+	 */
+	int CONVERSION = 41;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.NoiseTreatementImpl <em>Noise Treatement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.NoiseTreatementImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getNoiseTreatement()
+	 * @generated
+	 */
+	int NOISE_TREATEMENT = 42;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.MissingValueTreatementImpl <em>Missing Value Treatement</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.MissingValueTreatementImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMissingValueTreatement()
+	 * @generated
+	 */
+	int MISSING_VALUE_TREATEMENT = 43;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.impl.SelectionCriteriaImpl <em>Selection Criteria</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.SelectionCriteriaImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getSelectionCriteria()
+	 * @generated
+	 */
+	int SELECTION_CRITERIA = 44;
+
+	/**
+	 * The feature id for the '<em><b>Criteria Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_CRITERIA__CRITERIA_NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Criteria Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_CRITERIA__CRITERIA_VALUE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_CRITERIA__ID = 2;
+
+	/**
+	 * The number of structural features of the '<em>Selection Criteria</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_CRITERIA_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Selection Criteria</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SELECTION_CRITERIA_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Criteria Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_REQUIREMENT_VALUE__CRITERIA_NAME = SELECTION_CRITERIA__CRITERIA_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Criteria Value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_REQUIREMENT_VALUE__CRITERIA_VALUE = SELECTION_CRITERIA__CRITERIA_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_REQUIREMENT_VALUE__ID = SELECTION_CRITERIA__ID;
+
+	/**
+	 * The feature id for the '<em><b>Explanation</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_REQUIREMENT_VALUE__EXPLANATION = SELECTION_CRITERIA_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Xrequirementtype</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_REQUIREMENT_VALUE__XREQUIREMENTTYPE = SELECTION_CRITERIA_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Domain Requirement Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_REQUIREMENT_VALUE_FEATURE_COUNT = SELECTION_CRITERIA_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>Domain Requirement Value</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOMAIN_REQUIREMENT_VALUE_OPERATION_COUNT = SELECTION_CRITERIA_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Requirementmapping</b></em>' reference.
@@ -234,16 +707,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	int REQUIREMENT_TYPE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.MLProjectImpl <em>ML Project</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.MLProjectImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMLProject()
-	 * @generated
-	 */
-	int ML_PROJECT = 3;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -289,13 +752,13 @@ public interface ProjetTemplatePackage extends EPackage {
 	int ML_PROJECT__DOMAINPROBLEM = 4;
 
 	/**
-	 * The feature id for the '<em><b>Database</b></em>' reference.
+	 * The feature id for the '<em><b>Databaseconnection</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ML_PROJECT__DATABASE = 5;
+	int ML_PROJECT__DATABASECONNECTION = 5;
 
 	/**
 	 * The number of structural features of the '<em>ML Project</em>' class.
@@ -314,16 +777,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @ordered
 	 */
 	int ML_PROJECT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.DataAnalysisProblemImpl <em>Data Analysis Problem</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.DataAnalysisProblemImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDataAnalysisProblem()
-	 * @generated
-	 */
-	int DATA_ANALYSIS_PROBLEM = 4;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -371,13 +824,13 @@ public interface ProjetTemplatePackage extends EPackage {
 	int DATA_ANALYSIS_PROBLEM__COMPUTATIONALREQUIREMENTVALUE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Mlprocchainsolutionpattern</b></em>' reference.
+	 * The feature id for the '<em><b>Mlprocchainsolution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATA_ANALYSIS_PROBLEM__MLPROCCHAINSOLUTIONPATTERN = 5;
+	int DATA_ANALYSIS_PROBLEM__MLPROCCHAINSOLUTION = 5;
 
 	/**
 	 * The number of structural features of the '<em>Data Analysis Problem</em>' class.
@@ -398,41 +851,49 @@ public interface ProjetTemplatePackage extends EPackage {
 	int DATA_ANALYSIS_PROBLEM_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.ComputationalRequirementValueImpl <em>Computational Requirement Value</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.ComputationalRequirementValueImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getComputationalRequirementValue()
-	 * @generated
-	 */
-	int COMPUTATIONAL_REQUIREMENT_VALUE = 5;
-
-	/**
-	 * The feature id for the '<em><b>Value</b></em>' attribute.
+	 * The feature id for the '<em><b>Criteria Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTATIONAL_REQUIREMENT_VALUE__VALUE = 0;
+	int COMPUTATIONAL_REQUIREMENT_VALUE__CRITERIA_NAME = SELECTION_CRITERIA__CRITERIA_NAME;
 
 	/**
-	 * The feature id for the '<em><b>Rationale</b></em>' attribute.
+	 * The feature id for the '<em><b>Criteria Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTATIONAL_REQUIREMENT_VALUE__RATIONALE = 1;
+	int COMPUTATIONAL_REQUIREMENT_VALUE__CRITERIA_VALUE = SELECTION_CRITERIA__CRITERIA_VALUE;
 
 	/**
-	 * The feature id for the '<em><b>Requirementtype</b></em>' reference.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTATIONAL_REQUIREMENT_VALUE__REQUIREMENTTYPE = 2;
+	int COMPUTATIONAL_REQUIREMENT_VALUE__ID = SELECTION_CRITERIA__ID;
+
+	/**
+	 * The feature id for the '<em><b>Formule</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTATIONAL_REQUIREMENT_VALUE__FORMULE = SELECTION_CRITERIA_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Xrequirementtype</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPUTATIONAL_REQUIREMENT_VALUE__XREQUIREMENTTYPE = SELECTION_CRITERIA_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Computational Requirement Value</em>' class.
@@ -441,7 +902,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTATIONAL_REQUIREMENT_VALUE_FEATURE_COUNT = 3;
+	int COMPUTATIONAL_REQUIREMENT_VALUE_FEATURE_COUNT = SELECTION_CRITERIA_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Computational Requirement Value</em>' class.
@@ -450,17 +911,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPUTATIONAL_REQUIREMENT_VALUE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.DatabaseImpl <em>Database</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.DatabaseImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDatabase()
-	 * @generated
-	 */
-	int DATABASE = 6;
+	int COMPUTATIONAL_REQUIREMENT_VALUE_OPERATION_COUNT = SELECTION_CRITERIA_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -469,7 +920,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE__VALUE = 0;
+	int XDATABASE__VALUE = 0;
 
 	/**
 	 * The feature id for the '<em><b>Credentias</b></em>' attribute.
@@ -478,7 +929,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE__CREDENTIAS = 1;
+	int XDATABASE__CREDENTIAS = 1;
 
 	/**
 	 * The feature id for the '<em><b>Schema</b></em>' reference.
@@ -487,7 +938,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE__SCHEMA = 2;
+	int XDATABASE__SCHEMA = 2;
 
 	/**
 	 * The feature id for the '<em><b>Data</b></em>' reference.
@@ -496,35 +947,25 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE__DATA = 3;
+	int XDATABASE__DATA = 3;
 
 	/**
-	 * The number of structural features of the '<em>Database</em>' class.
+	 * The number of structural features of the '<em>XDatabase</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE_FEATURE_COUNT = 4;
+	int XDATABASE_FEATURE_COUNT = 4;
 
 	/**
-	 * The number of operations of the '<em>Database</em>' class.
+	 * The number of operations of the '<em>XDatabase</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DATABASE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.SchemaImpl <em>Schema</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.SchemaImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getSchema()
-	 * @generated
-	 */
-	int SCHEMA = 7;
+	int XDATABASE_OPERATION_COUNT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Technology</b></em>' attribute.
@@ -563,16 +1004,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	int SCHEMA_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.DataImpl <em>Data</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.DataImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getData()
-	 * @generated
-	 */
-	int DATA = 8;
-
-	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -607,16 +1038,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @ordered
 	 */
 	int DATA_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.RequirementMappingImpl <em>Requirement Mapping</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.RequirementMappingImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getRequirementMapping()
-	 * @generated
-	 */
-	int REQUIREMENT_MAPPING = 9;
 
 	/**
 	 * The feature id for the '<em><b>Restrictions</b></em>' attribute.
@@ -673,16 +1094,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	int REQUIREMENT_MAPPING_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.ModelElementImpl <em>Model Element</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.ModelElementImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getModelElement()
-	 * @generated
-	 */
-	int MODEL_ELEMENT = 10;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -717,16 +1128,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @ordered
 	 */
 	int MODEL_ELEMENT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.DataPropertyValueSetImpl <em>Data Property Value Set</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.DataPropertyValueSetImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDataPropertyValueSet()
-	 * @generated
-	 */
-	int DATA_PROPERTY_VALUE_SET = 11;
 
 	/**
 	 * The feature id for the '<em><b>Set Type</b></em>' attribute.
@@ -783,16 +1184,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	int DATA_PROPERTY_VALUE_SET_OPERATION_COUNT = 1;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.DataPropertyValueImpl <em>Data Property Value</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.DataPropertyValueImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDataPropertyValue()
-	 * @generated
-	 */
-	int DATA_PROPERTY_VALUE = 12;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -827,16 +1218,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @ordered
 	 */
 	int DATA_PROPERTY_VALUE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.DataPropertyTypeImpl <em>Data Property Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.DataPropertyTypeImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDataPropertyType()
-	 * @generated
-	 */
-	int DATA_PROPERTY_TYPE = 13;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -875,16 +1256,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	int DATA_PROPERTY_TYPE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.DataAnalysisProblemTypeImpl <em>Data Analysis Problem Type</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.DataAnalysisProblemTypeImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDataAnalysisProblemType()
-	 * @generated
-	 */
-	int DATA_ANALYSIS_PROBLEM_TYPE = 14;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -919,36 +1290,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @ordered
 	 */
 	int DATA_ANALYSIS_PROBLEM_TYPE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.ProcessingChainImpl <em>Processing Chain</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.ProcessingChainImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getProcessingChain()
-	 * @generated
-	 */
-	int PROCESSING_CHAIN = 17;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.MLProcChainSolutionPatternImpl <em>ML Proc Chain Solution Pattern</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.MLProcChainSolutionPatternImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMLProcChainSolutionPattern()
-	 * @generated
-	 */
-	int ML_PROC_CHAIN_SOLUTION_PATTERN = 16;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.ProcessingChainTemplateImpl <em>Processing Chain Template</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.ProcessingChainTemplateImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getProcessingChainTemplate()
-	 * @generated
-	 */
-	int PROCESSING_CHAIN_TEMPLATE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1014,13 +1355,23 @@ public interface ProjetTemplatePackage extends EPackage {
 	int PROCESSING_CHAIN_TEMPLATE_OPERATION_COUNT = 1;
 
 	/**
+	 * The meta object id for the '{@link projetTemplate.impl.MLProcChainSolutionImpl <em>ML Proc Chain Solution</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.MLProcChainSolutionImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMLProcChainSolution()
+	 * @generated
+	 */
+	int ML_PROC_CHAIN_SOLUTION = 16;
+
+	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ML_PROC_CHAIN_SOLUTION_PATTERN__NAME = 0;
+	int ML_PROC_CHAIN_SOLUTION__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Datapropertyvalueset</b></em>' reference list.
@@ -1029,16 +1380,16 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET = 1;
+	int ML_PROC_CHAIN_SOLUTION__DATAPROPERTYVALUESET = 1;
 
 	/**
-	 * The feature id for the '<em><b>Processingchain</b></em>' reference list.
+	 * The feature id for the '<em><b>Xprocessingchain</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ML_PROC_CHAIN_SOLUTION_PATTERN__PROCESSINGCHAIN = 2;
+	int ML_PROC_CHAIN_SOLUTION__XPROCESSINGCHAIN = 2;
 
 	/**
 	 * The feature id for the '<em><b>Dataanalysisproblemtype</b></em>' reference.
@@ -1047,34 +1398,34 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE = 3;
+	int ML_PROC_CHAIN_SOLUTION__DATAANALYSISPROBLEMTYPE = 3;
 
 	/**
-	 * The feature id for the '<em><b>Executed Template</b></em>' reference.
+	 * The feature id for the '<em><b>Executed Template</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ML_PROC_CHAIN_SOLUTION_PATTERN__EXECUTED_TEMPLATE = 4;
+	int ML_PROC_CHAIN_SOLUTION__EXECUTED_TEMPLATE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Collecteddataknowledgeabouttemplateconstruction</b></em>' reference list.
+	 * The feature id for the '<em><b>Xcollecteddataknowledgeabouttemplateconstruction</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ML_PROC_CHAIN_SOLUTION_PATTERN__COLLECTEDDATAKNOWLEDGEABOUTTEMPLATECONSTRUCTION = 5;
+	int ML_PROC_CHAIN_SOLUTION__XCOLLECTEDDATAKNOWLEDGEABOUTTEMPLATECONSTRUCTION = 5;
 
 	/**
-	 * The number of structural features of the '<em>ML Proc Chain Solution Pattern</em>' class.
+	 * The number of structural features of the '<em>ML Proc Chain Solution</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ML_PROC_CHAIN_SOLUTION_PATTERN_FEATURE_COUNT = 6;
+	int ML_PROC_CHAIN_SOLUTION_FEATURE_COUNT = 6;
 
 	/**
 	 * The operation id for the '<em>Construire Une Chaine De Traitement Initiale</em>' operation.
@@ -1083,7 +1434,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ML_PROC_CHAIN_SOLUTION_PATTERN___CONSTRUIRE_UNE_CHAINE_DE_TRAITEMENT_INITIALE = 0;
+	int ML_PROC_CHAIN_SOLUTION___CONSTRUIRE_UNE_CHAINE_DE_TRAITEMENT_INITIALE = 0;
 
 	/**
 	 * The operation id for the '<em>Merge Processing Chain And Template</em>' operation.
@@ -1092,16 +1443,16 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ML_PROC_CHAIN_SOLUTION_PATTERN___MERGE_PROCESSING_CHAIN_AND_TEMPLATE = 1;
+	int ML_PROC_CHAIN_SOLUTION___MERGE_PROCESSING_CHAIN_AND_TEMPLATE = 1;
 
 	/**
-	 * The number of operations of the '<em>ML Proc Chain Solution Pattern</em>' class.
+	 * The number of operations of the '<em>ML Proc Chain Solution</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ML_PROC_CHAIN_SOLUTION_PATTERN_OPERATION_COUNT = 2;
+	int ML_PROC_CHAIN_SOLUTION_OPERATION_COUNT = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1149,16 +1500,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	int PROCESSING_CHAIN_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.MLAlgorithmSolutionPatternImpl <em>ML Algorithm Solution Pattern</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.MLAlgorithmSolutionPatternImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMLAlgorithmSolutionPattern()
-	 * @generated
-	 */
-	int ML_ALGORITHM_SOLUTION_PATTERN = 18;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1186,13 +1527,13 @@ public interface ProjetTemplatePackage extends EPackage {
 	int ML_ALGORITHM_SOLUTION_PATTERN__MLALGORITHM = 2;
 
 	/**
-	 * The feature id for the '<em><b>Datapropertyvalueset</b></em>' reference list.
+	 * The feature id for the '<em><b>Xdatapropertyvalueset</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ML_ALGORITHM_SOLUTION_PATTERN__DATAPROPERTYVALUESET = 3;
+	int ML_ALGORITHM_SOLUTION_PATTERN__XDATAPROPERTYVALUESET = 3;
 
 	/**
 	 * The number of structural features of the '<em>ML Algorithm Solution Pattern</em>' class.
@@ -1213,42 +1554,22 @@ public interface ProjetTemplatePackage extends EPackage {
 	int ML_ALGORITHM_SOLUTION_PATTERN_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.ComponentImpl <em>Component</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.ComponentImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getComponent()
-	 * @generated
-	 */
-	int COMPONENT = 33;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.MLAlgorithmImpl <em>ML Algorithm</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.MLAlgorithmImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMLAlgorithm()
-	 * @generated
-	 */
-	int ML_ALGORITHM = 19;
-
-	/**
-	 * The feature id for the '<em><b>Selectioncriterionvalueset</b></em>' reference.
+	 * The feature id for the '<em><b>Xselectioncriterionvalueset</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ML_ALGORITHM__SELECTIONCRITERIONVALUESET = 0;
+	int ML_ALGORITHM__XSELECTIONCRITERIONVALUESET = 0;
 
 	/**
-	 * The feature id for the '<em><b>Selectioncriterionvalue</b></em>' reference list.
+	 * The feature id for the '<em><b>Xselectioncriterionvalue</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ML_ALGORITHM__SELECTIONCRITERIONVALUE = 1;
+	int ML_ALGORITHM__XSELECTIONCRITERIONVALUE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1294,16 +1615,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @ordered
 	 */
 	int ML_ALGORITHM_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.SelectionCriterionValueSetImpl <em>Selection Criterion Value Set</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.SelectionCriterionValueSetImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getSelectionCriterionValueSet()
-	 * @generated
-	 */
-	int SELECTION_CRITERION_VALUE_SET = 20;
 
 	/**
 	 * The feature id for the '<em><b>Set Type</b></em>' attribute.
@@ -1360,16 +1671,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	int SELECTION_CRITERION_VALUE_SET_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.SelectionCriterionValueImpl <em>Selection Criterion Value</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.SelectionCriterionValueImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getSelectionCriterionValue()
-	 * @generated
-	 */
-	int SELECTION_CRITERION_VALUE = 21;
-
-	/**
 	 * The feature id for the '<em><b>Values</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1404,16 +1705,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @ordered
 	 */
 	int SELECTION_CRITERION_VALUE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.SelectionCriterionImpl <em>Selection Criterion</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.SelectionCriterionImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getSelectionCriterion()
-	 * @generated
-	 */
-	int SELECTION_CRITERION = 22;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1461,16 +1752,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	int SELECTION_CRITERION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.ExtendedBPMNModelImpl <em>Extended BPMN Model</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.ExtendedBPMNModelImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getExtendedBPMNModel()
-	 * @generated
-	 */
-	int EXTENDED_BPMN_MODEL = 23;
-
-	/**
 	 * The feature id for the '<em><b>Path</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1489,13 +1770,22 @@ public interface ProjetTemplatePackage extends EPackage {
 	int EXTENDED_BPMN_MODEL__AUTHOR = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EXTENDED_BPMN_MODEL__NAME = 2;
+
+	/**
 	 * The number of structural features of the '<em>Extended BPMN Model</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EXTENDED_BPMN_MODEL_FEATURE_COUNT = 2;
+	int EXTENDED_BPMN_MODEL_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Extended BPMN Model</em>' class.
@@ -1505,16 +1795,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @ordered
 	 */
 	int EXTENDED_BPMN_MODEL_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.ExplainabilityImpl <em>Explainability</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.ExplainabilityImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getExplainability()
-	 * @generated
-	 */
-	int EXPLAINABILITY = 24;
 
 	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -1544,16 +1824,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	int EXPLAINABILITY_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.AccuracyImpl <em>Accuracy</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.AccuracyImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getAccuracy()
-	 * @generated
-	 */
-	int ACCURACY = 25;
-
-	/**
 	 * The feature id for the '<em><b>Value</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1581,16 +1851,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	int ACCURACY_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.CollectedDataKnowledgeAboutTemplateConstructionImpl <em>Collected Data Knowledge About Template Construction</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.CollectedDataKnowledgeAboutTemplateConstructionImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getCollectedDataKnowledgeAboutTemplateConstruction()
-	 * @generated
-	 */
-	int COLLECTED_DATA_KNOWLEDGE_ABOUT_TEMPLATE_CONSTRUCTION = 26;
-
-	/**
 	 * The feature id for the '<em><b>Rule</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1616,16 +1876,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @ordered
 	 */
 	int COLLECTED_DATA_KNOWLEDGE_ABOUT_TEMPLATE_CONSTRUCTION_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.RuleImpl <em>Rule</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.RuleImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getRule()
-	 * @generated
-	 */
-	int RULE = 27;
 
 	/**
 	 * The feature id for the '<em><b>Condition</b></em>' reference.
@@ -1664,16 +1914,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	int RULE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.ConditionImpl <em>Condition</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.ConditionImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getCondition()
-	 * @generated
-	 */
-	int CONDITION = 28;
-
-	/**
 	 * The feature id for the '<em><b>Term</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1699,16 +1939,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @ordered
 	 */
 	int CONDITION_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.ResultatImpl <em>Resultat</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.ResultatImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getResultat()
-	 * @generated
-	 */
-	int RESULTAT = 29;
 
 	/**
 	 * The feature id for the '<em><b>Term</b></em>' reference list.
@@ -1738,16 +1968,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	int RESULTAT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.TermImpl <em>Term</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.TermImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getTerm()
-	 * @generated
-	 */
-	int TERM = 31;
-
-	/**
 	 * The number of structural features of the '<em>Term</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1764,16 +1984,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @ordered
 	 */
 	int TERM_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.variableImpl <em>variable</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.variableImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getvariable()
-	 * @generated
-	 */
-	int VARIABLE = 30;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1810,16 +2020,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @ordered
 	 */
 	int VARIABLE_OPERATION_COUNT = TERM_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.connectorImpl <em>connector</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.connectorImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getconnector()
-	 * @generated
-	 */
-	int CONNECTOR = 32;
 
 	/**
 	 * The feature id for the '<em><b>Conneteur</b></em>' attribute.
@@ -1876,16 +2076,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	int COMPONENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.DataCleaningImpl <em>Data Cleaning</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.DataCleaningImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDataCleaning()
-	 * @generated
-	 */
-	int DATA_CLEANING = 34;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1911,16 +2101,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @ordered
 	 */
 	int DATA_CLEANING_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.DataPretraitementImpl <em>Data Pretraitement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.DataPretraitementImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDataPretraitement()
-	 * @generated
-	 */
-	int DATA_PRETRAITEMENT = 35;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1950,16 +2130,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	int DATA_PRETRAITEMENT_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.FeatureSelectionImpl <em>Feature Selection</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.FeatureSelectionImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getFeatureSelection()
-	 * @generated
-	 */
-	int FEATURE_SELECTION = 36;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1985,16 +2155,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @ordered
 	 */
 	int FEATURE_SELECTION_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.FeatureConstructionImpl <em>Feature Construction</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.FeatureConstructionImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getFeatureConstruction()
-	 * @generated
-	 */
-	int FEATURE_CONSTRUCTION = 37;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2024,16 +2184,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	int FEATURE_CONSTRUCTION_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.PostTreatementImpl <em>Post Treatement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.PostTreatementImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getPostTreatement()
-	 * @generated
-	 */
-	int POST_TREATEMENT = 38;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2061,16 +2211,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	int POST_TREATEMENT_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.DeployementImpl <em>Deployement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.DeployementImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDeployement()
-	 * @generated
-	 */
-	int DEPLOYEMENT = 39;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2096,16 +2236,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @ordered
 	 */
 	int DEPLOYEMENT_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.RemoveUncessaryFiledsImpl <em>Remove Uncessary Fileds</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.RemoveUncessaryFiledsImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getRemoveUncessaryFileds()
-	 * @generated
-	 */
-	int REMOVE_UNCESSARY_FILEDS = 40;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2160,16 +2290,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @ordered
 	 */
 	int REMOVE_UNCESSARY_FILEDS_OPERATION_COUNT = DATA_CLEANING_OPERATION_COUNT + 2;
-
-	/**
-	 * The meta object id for the '{@link projetTemplate.impl.ConversionImpl <em>Conversion</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.ConversionImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getConversion()
-	 * @generated
-	 */
-	int CONVERSION = 41;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2235,16 +2355,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	int CONVERSION_OPERATION_COUNT = DATA_PRETRAITEMENT_OPERATION_COUNT + 3;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.NoiseTreatementImpl <em>Noise Treatement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.NoiseTreatementImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getNoiseTreatement()
-	 * @generated
-	 */
-	int NOISE_TREATEMENT = 42;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2290,16 +2400,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	int NOISE_TREATEMENT_OPERATION_COUNT = DATA_PRETRAITEMENT_OPERATION_COUNT + 1;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.MissingValueTreatementImpl <em>Missing Value Treatement</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.MissingValueTreatementImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMissingValueTreatement()
-	 * @generated
-	 */
-	int MISSING_VALUE_TREATEMENT = 43;
-
-	/**
 	 * The number of structural features of the '<em>Missing Value Treatement</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2318,61 +2418,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	int MISSING_VALUE_TREATEMENT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link projetTemplate.impl.SelectionCriteriaImpl <em>Selection Criteria</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see projetTemplate.impl.SelectionCriteriaImpl
-	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getSelectionCriteria()
-	 * @generated
-	 */
-	int SELECTION_CRITERIA = 44;
-
-	/**
-	 * The feature id for the '<em><b>Criteria Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION_CRITERIA__CRITERIA_NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Criteria Value</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION_CRITERIA__CRITERIA_VALUE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION_CRITERIA__ID = 2;
-
-	/**
-	 * The number of structural features of the '<em>Selection Criteria</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION_CRITERIA_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Selection Criteria</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SELECTION_CRITERIA_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link projetTemplate.impl.MLAlgorithmSelectionCriteriaContainerImpl <em>ML Algorithm Selection Criteria Container</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2383,13 +2428,13 @@ public interface ProjetTemplatePackage extends EPackage {
 	int ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER = 45;
 
 	/**
-	 * The feature id for the '<em><b>Domainrequirementselectioncriteria</b></em>' reference list.
+	 * The feature id for the '<em><b>Selection Criteria</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__DOMAINREQUIREMENTSELECTIONCRITERIA = 0;
+	int ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__SELECTION_CRITERIA = 0;
 
 	/**
 	 * The feature id for the '<em><b>Regle</b></em>' attribute.
@@ -2401,13 +2446,22 @@ public interface ProjetTemplatePackage extends EPackage {
 	int ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__REGLE = 1;
 
 	/**
+	 * The feature id for the '<em><b>Componenet</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__COMPONENET = 2;
+
+	/**
 	 * The number of structural features of the '<em>ML Algorithm Selection Criteria Container</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER_FEATURE_COUNT = 2;
+	int ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>ML Algorithm Selection Criteria Container</em>' class.
@@ -2419,6 +2473,61 @@ public interface ProjetTemplatePackage extends EPackage {
 	int ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link projetTemplate.impl.DataBaseConnectionImpl <em>Data Base Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.impl.DataBaseConnectionImpl
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDataBaseConnection()
+	 * @generated
+	 */
+	int DATA_BASE_CONNECTION = 46;
+
+	/**
+	 * The feature id for the '<em><b>URL</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_BASE_CONNECTION__URL = 0;
+
+	/**
+	 * The feature id for the '<em><b>User</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_BASE_CONNECTION__USER = 1;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_BASE_CONNECTION__PASSWORD = 2;
+
+	/**
+	 * The number of structural features of the '<em>Data Base Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_BASE_CONNECTION_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Data Base Connection</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DATA_BASE_CONNECTION_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link projetTemplate.Values1 <em>Values1</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2426,7 +2535,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getValues1()
 	 * @generated
 	 */
-	int VALUES1 = 46;
+	int VALUES1 = 47;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.Values2 <em>Values2</em>}' enum.
@@ -2436,7 +2545,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getValues2()
 	 * @generated
 	 */
-	int VALUES2 = 47;
+	int VALUES2 = 48;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.RequirementTypeValues <em>Requirement Type Values</em>}' enum.
@@ -2446,7 +2555,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getRequirementTypeValues()
 	 * @generated
 	 */
-	int REQUIREMENT_TYPE_VALUES = 48;
+	int REQUIREMENT_TYPE_VALUES = 49;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.EnumDataAnalysisProblemType <em>Enum Data Analysis Problem Type</em>}' enum.
@@ -2456,7 +2565,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getEnumDataAnalysisProblemType()
 	 * @generated
 	 */
-	int ENUM_DATA_ANALYSIS_PROBLEM_TYPE = 49;
+	int ENUM_DATA_ANALYSIS_PROBLEM_TYPE = 50;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.EnumConnector <em>Enum Connector</em>}' enum.
@@ -2466,7 +2575,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getEnumConnector()
 	 * @generated
 	 */
-	int ENUM_CONNECTOR = 50;
+	int ENUM_CONNECTOR = 51;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.ConversionEnum <em>Conversion Enum</em>}' enum.
@@ -2476,7 +2585,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getConversionEnum()
 	 * @generated
 	 */
-	int CONVERSION_ENUM = 51;
+	int CONVERSION_ENUM = 52;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.RemoveUncessaryFiledsEnum <em>Remove Uncessary Fileds Enum</em>}' enum.
@@ -2486,7 +2595,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getRemoveUncessaryFiledsEnum()
 	 * @generated
 	 */
-	int REMOVE_UNCESSARY_FILEDS_ENUM = 52;
+	int REMOVE_UNCESSARY_FILEDS_ENUM = 53;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.NoiseTreatementEnum <em>Noise Treatement Enum</em>}' enum.
@@ -2496,7 +2605,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getNoiseTreatementEnum()
 	 * @generated
 	 */
-	int NOISE_TREATEMENT_ENUM = 53;
+	int NOISE_TREATEMENT_ENUM = 54;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.MissingValueTreatementEnum <em>Missing Value Treatement Enum</em>}' enum.
@@ -2506,7 +2615,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMissingValueTreatementEnum()
 	 * @generated
 	 */
-	int MISSING_VALUE_TREATEMENT_ENUM = 54;
+	int MISSING_VALUE_TREATEMENT_ENUM = 55;
 
 	/**
 	 * The meta object id for the '{@link projetTemplate.MLAlgorithms <em>ML Algorithms</em>}' enum.
@@ -2516,7 +2625,17 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMLAlgorithms()
 	 * @generated
 	 */
-	int ML_ALGORITHMS = 55;
+	int ML_ALGORITHMS = 56;
+
+	/**
+	 * The meta object id for the '{@link projetTemplate.Componenets <em>Componenets</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see projetTemplate.Componenets
+	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getComponenets()
+	 * @generated
+	 */
+	int COMPONENETS = 57;
 
 	/**
 	 * The meta object id for the '<em>New Data Type10</em>' data type.
@@ -2526,7 +2645,7 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getNewDataType10()
 	 * @generated
 	 */
-	int NEW_DATA_TYPE10 = 56;
+	int NEW_DATA_TYPE10 = 58;
 
 	/**
 	 * Returns the meta object for class '{@link projetTemplate.DomainProblem <em>Domain Problem</em>}'.
@@ -2582,26 +2701,15 @@ public interface ProjetTemplatePackage extends EPackage {
 	EAttribute getDomainRequirementValue_Explanation();
 
 	/**
-	 * Returns the meta object for the reference '{@link projetTemplate.DomainRequirementValue#getRequirementtype <em>Requirementtype</em>}'.
+	 * Returns the meta object for the reference '{@link projetTemplate.DomainRequirementValue#getX_requirementtype <em>Xrequirementtype</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Requirementtype</em>'.
-	 * @see projetTemplate.DomainRequirementValue#getRequirementtype()
+	 * @return the meta object for the reference '<em>Xrequirementtype</em>'.
+	 * @see projetTemplate.DomainRequirementValue#getX_requirementtype()
 	 * @see #getDomainRequirementValue()
 	 * @generated
 	 */
-	EReference getDomainRequirementValue_Requirementtype();
-
-	/**
-	 * Returns the meta object for the reference list '{@link projetTemplate.DomainRequirementValue#getDomainrequirementselectioncriteria <em>Domainrequirementselectioncriteria</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Domainrequirementselectioncriteria</em>'.
-	 * @see projetTemplate.DomainRequirementValue#getDomainrequirementselectioncriteria()
-	 * @see #getDomainRequirementValue()
-	 * @generated
-	 */
-	EReference getDomainRequirementValue_Domainrequirementselectioncriteria();
+	EReference getDomainRequirementValue_X_requirementtype();
 
 	/**
 	 * Returns the meta object for class '{@link projetTemplate.RequirementType <em>Requirement Type</em>}'.
@@ -2734,15 +2842,15 @@ public interface ProjetTemplatePackage extends EPackage {
 	EReference getMLProject_Domainproblem();
 
 	/**
-	 * Returns the meta object for the reference '{@link projetTemplate.MLProject#getDatabase <em>Database</em>}'.
+	 * Returns the meta object for the reference '{@link projetTemplate.MLProject#getDatabaseconnection <em>Databaseconnection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Database</em>'.
-	 * @see projetTemplate.MLProject#getDatabase()
+	 * @return the meta object for the reference '<em>Databaseconnection</em>'.
+	 * @see projetTemplate.MLProject#getDatabaseconnection()
 	 * @see #getMLProject()
 	 * @generated
 	 */
-	EReference getMLProject_Database();
+	EReference getMLProject_Databaseconnection();
 
 	/**
 	 * Returns the meta object for class '{@link projetTemplate.DataAnalysisProblem <em>Data Analysis Problem</em>}'.
@@ -2810,15 +2918,15 @@ public interface ProjetTemplatePackage extends EPackage {
 	EReference getDataAnalysisProblem_Computationalrequirementvalue();
 
 	/**
-	 * Returns the meta object for the reference '{@link projetTemplate.DataAnalysisProblem#getMlprocchainsolutionpattern <em>Mlprocchainsolutionpattern</em>}'.
+	 * Returns the meta object for the reference '{@link projetTemplate.DataAnalysisProblem#getMlprocchainsolution <em>Mlprocchainsolution</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Mlprocchainsolutionpattern</em>'.
-	 * @see projetTemplate.DataAnalysisProblem#getMlprocchainsolutionpattern()
+	 * @return the meta object for the reference '<em>Mlprocchainsolution</em>'.
+	 * @see projetTemplate.DataAnalysisProblem#getMlprocchainsolution()
 	 * @see #getDataAnalysisProblem()
 	 * @generated
 	 */
-	EReference getDataAnalysisProblem_Mlprocchainsolutionpattern();
+	EReference getDataAnalysisProblem_Mlprocchainsolution();
 
 	/**
 	 * Returns the meta object for class '{@link projetTemplate.ComputationalRequirementValue <em>Computational Requirement Value</em>}'.
@@ -2831,91 +2939,80 @@ public interface ProjetTemplatePackage extends EPackage {
 	EClass getComputationalRequirementValue();
 
 	/**
-	 * Returns the meta object for the attribute '{@link projetTemplate.ComputationalRequirementValue#getValue <em>Value</em>}'.
+	 * Returns the meta object for the attribute '{@link projetTemplate.ComputationalRequirementValue#getFormule <em>Formule</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Formule</em>'.
+	 * @see projetTemplate.ComputationalRequirementValue#getFormule()
+	 * @see #getComputationalRequirementValue()
+	 * @generated
+	 */
+	EAttribute getComputationalRequirementValue_Formule();
+
+	/**
+	 * Returns the meta object for the reference '{@link projetTemplate.ComputationalRequirementValue#getX_requirementtype <em>Xrequirementtype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Xrequirementtype</em>'.
+	 * @see projetTemplate.ComputationalRequirementValue#getX_requirementtype()
+	 * @see #getComputationalRequirementValue()
+	 * @generated
+	 */
+	EReference getComputationalRequirementValue_X_requirementtype();
+
+	/**
+	 * Returns the meta object for class '{@link projetTemplate.X_Database <em>XDatabase</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>XDatabase</em>'.
+	 * @see projetTemplate.X_Database
+	 * @generated
+	 */
+	EClass getX_Database();
+
+	/**
+	 * Returns the meta object for the attribute '{@link projetTemplate.X_Database#getValue <em>Value</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see projetTemplate.ComputationalRequirementValue#getValue()
-	 * @see #getComputationalRequirementValue()
+	 * @see projetTemplate.X_Database#getValue()
+	 * @see #getX_Database()
 	 * @generated
 	 */
-	EAttribute getComputationalRequirementValue_Value();
+	EAttribute getX_Database_Value();
 
 	/**
-	 * Returns the meta object for the attribute '{@link projetTemplate.ComputationalRequirementValue#getRationale <em>Rationale</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Rationale</em>'.
-	 * @see projetTemplate.ComputationalRequirementValue#getRationale()
-	 * @see #getComputationalRequirementValue()
-	 * @generated
-	 */
-	EAttribute getComputationalRequirementValue_Rationale();
-
-	/**
-	 * Returns the meta object for the reference '{@link projetTemplate.ComputationalRequirementValue#getRequirementtype <em>Requirementtype</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Requirementtype</em>'.
-	 * @see projetTemplate.ComputationalRequirementValue#getRequirementtype()
-	 * @see #getComputationalRequirementValue()
-	 * @generated
-	 */
-	EReference getComputationalRequirementValue_Requirementtype();
-
-	/**
-	 * Returns the meta object for class '{@link projetTemplate.Database <em>Database</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Database</em>'.
-	 * @see projetTemplate.Database
-	 * @generated
-	 */
-	EClass getDatabase();
-
-	/**
-	 * Returns the meta object for the attribute '{@link projetTemplate.Database#getValue <em>Value</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Value</em>'.
-	 * @see projetTemplate.Database#getValue()
-	 * @see #getDatabase()
-	 * @generated
-	 */
-	EAttribute getDatabase_Value();
-
-	/**
-	 * Returns the meta object for the attribute '{@link projetTemplate.Database#getCredentias <em>Credentias</em>}'.
+	 * Returns the meta object for the attribute '{@link projetTemplate.X_Database#getCredentias <em>Credentias</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Credentias</em>'.
-	 * @see projetTemplate.Database#getCredentias()
-	 * @see #getDatabase()
+	 * @see projetTemplate.X_Database#getCredentias()
+	 * @see #getX_Database()
 	 * @generated
 	 */
-	EAttribute getDatabase_Credentias();
+	EAttribute getX_Database_Credentias();
 
 	/**
-	 * Returns the meta object for the reference '{@link projetTemplate.Database#getSchema <em>Schema</em>}'.
+	 * Returns the meta object for the reference '{@link projetTemplate.X_Database#getSchema <em>Schema</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Schema</em>'.
-	 * @see projetTemplate.Database#getSchema()
-	 * @see #getDatabase()
+	 * @see projetTemplate.X_Database#getSchema()
+	 * @see #getX_Database()
 	 * @generated
 	 */
-	EReference getDatabase_Schema();
+	EReference getX_Database_Schema();
 
 	/**
-	 * Returns the meta object for the reference '{@link projetTemplate.Database#getData <em>Data</em>}'.
+	 * Returns the meta object for the reference '{@link projetTemplate.X_Database#getData <em>Data</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Data</em>'.
-	 * @see projetTemplate.Database#getData()
-	 * @see #getDatabase()
+	 * @see projetTemplate.X_Database#getData()
+	 * @see #getX_Database()
 	 * @generated
 	 */
-	EReference getDatabase_Data();
+	EReference getX_Database_Data();
 
 	/**
 	 * Returns the meta object for class '{@link projetTemplate.Schema <em>Schema</em>}'.
@@ -3260,102 +3357,6 @@ public interface ProjetTemplatePackage extends EPackage {
 	EReference getProcessingChain_Mlalgorithm();
 
 	/**
-	 * Returns the meta object for class '{@link projetTemplate.MLProcChainSolutionPattern <em>ML Proc Chain Solution Pattern</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>ML Proc Chain Solution Pattern</em>'.
-	 * @see projetTemplate.MLProcChainSolutionPattern
-	 * @generated
-	 */
-	EClass getMLProcChainSolutionPattern();
-
-	/**
-	 * Returns the meta object for the attribute '{@link projetTemplate.MLProcChainSolutionPattern#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see projetTemplate.MLProcChainSolutionPattern#getName()
-	 * @see #getMLProcChainSolutionPattern()
-	 * @generated
-	 */
-	EAttribute getMLProcChainSolutionPattern_Name();
-
-	/**
-	 * Returns the meta object for the reference list '{@link projetTemplate.MLProcChainSolutionPattern#getDatapropertyvalueset <em>Datapropertyvalueset</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Datapropertyvalueset</em>'.
-	 * @see projetTemplate.MLProcChainSolutionPattern#getDatapropertyvalueset()
-	 * @see #getMLProcChainSolutionPattern()
-	 * @generated
-	 */
-	EReference getMLProcChainSolutionPattern_Datapropertyvalueset();
-
-	/**
-	 * Returns the meta object for the reference list '{@link projetTemplate.MLProcChainSolutionPattern#getProcessingchain <em>Processingchain</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Processingchain</em>'.
-	 * @see projetTemplate.MLProcChainSolutionPattern#getProcessingchain()
-	 * @see #getMLProcChainSolutionPattern()
-	 * @generated
-	 */
-	EReference getMLProcChainSolutionPattern_Processingchain();
-
-	/**
-	 * Returns the meta object for the reference '{@link projetTemplate.MLProcChainSolutionPattern#getDataanalysisproblemtype <em>Dataanalysisproblemtype</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Dataanalysisproblemtype</em>'.
-	 * @see projetTemplate.MLProcChainSolutionPattern#getDataanalysisproblemtype()
-	 * @see #getMLProcChainSolutionPattern()
-	 * @generated
-	 */
-	EReference getMLProcChainSolutionPattern_Dataanalysisproblemtype();
-
-	/**
-	 * Returns the meta object for the reference '{@link projetTemplate.MLProcChainSolutionPattern#getExecutedTemplate <em>Executed Template</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Executed Template</em>'.
-	 * @see projetTemplate.MLProcChainSolutionPattern#getExecutedTemplate()
-	 * @see #getMLProcChainSolutionPattern()
-	 * @generated
-	 */
-	EReference getMLProcChainSolutionPattern_ExecutedTemplate();
-
-	/**
-	 * Returns the meta object for the reference list '{@link projetTemplate.MLProcChainSolutionPattern#getCollecteddataknowledgeabouttemplateconstruction <em>Collecteddataknowledgeabouttemplateconstruction</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Collecteddataknowledgeabouttemplateconstruction</em>'.
-	 * @see projetTemplate.MLProcChainSolutionPattern#getCollecteddataknowledgeabouttemplateconstruction()
-	 * @see #getMLProcChainSolutionPattern()
-	 * @generated
-	 */
-	EReference getMLProcChainSolutionPattern_Collecteddataknowledgeabouttemplateconstruction();
-
-	/**
-	 * Returns the meta object for the '{@link projetTemplate.MLProcChainSolutionPattern#ConstruireUneChaineDeTraitementInitiale() <em>Construire Une Chaine De Traitement Initiale</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Construire Une Chaine De Traitement Initiale</em>' operation.
-	 * @see projetTemplate.MLProcChainSolutionPattern#ConstruireUneChaineDeTraitementInitiale()
-	 * @generated
-	 */
-	EOperation getMLProcChainSolutionPattern__ConstruireUneChaineDeTraitementInitiale();
-
-	/**
-	 * Returns the meta object for the '{@link projetTemplate.MLProcChainSolutionPattern#MergeProcessingChainAndTemplate() <em>Merge Processing Chain And Template</em>}' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the '<em>Merge Processing Chain And Template</em>' operation.
-	 * @see projetTemplate.MLProcChainSolutionPattern#MergeProcessingChainAndTemplate()
-	 * @generated
-	 */
-	EOperation getMLProcChainSolutionPattern__MergeProcessingChainAndTemplate();
-
-	/**
 	 * Returns the meta object for class '{@link projetTemplate.ProcessingChainTemplate <em>Processing Chain Template</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3420,6 +3421,102 @@ public interface ProjetTemplatePackage extends EPackage {
 	EOperation getProcessingChainTemplate__SelectTheRightMLAlgroithm();
 
 	/**
+	 * Returns the meta object for class '{@link projetTemplate.MLProcChainSolution <em>ML Proc Chain Solution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>ML Proc Chain Solution</em>'.
+	 * @see projetTemplate.MLProcChainSolution
+	 * @generated
+	 */
+	EClass getMLProcChainSolution();
+
+	/**
+	 * Returns the meta object for the attribute '{@link projetTemplate.MLProcChainSolution#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see projetTemplate.MLProcChainSolution#getName()
+	 * @see #getMLProcChainSolution()
+	 * @generated
+	 */
+	EAttribute getMLProcChainSolution_Name();
+
+	/**
+	 * Returns the meta object for the reference list '{@link projetTemplate.MLProcChainSolution#getDatapropertyvalueset <em>Datapropertyvalueset</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Datapropertyvalueset</em>'.
+	 * @see projetTemplate.MLProcChainSolution#getDatapropertyvalueset()
+	 * @see #getMLProcChainSolution()
+	 * @generated
+	 */
+	EReference getMLProcChainSolution_Datapropertyvalueset();
+
+	/**
+	 * Returns the meta object for the reference list '{@link projetTemplate.MLProcChainSolution#getX_processingchain <em>Xprocessingchain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Xprocessingchain</em>'.
+	 * @see projetTemplate.MLProcChainSolution#getX_processingchain()
+	 * @see #getMLProcChainSolution()
+	 * @generated
+	 */
+	EReference getMLProcChainSolution_X_processingchain();
+
+	/**
+	 * Returns the meta object for the reference '{@link projetTemplate.MLProcChainSolution#getDataanalysisproblemtype <em>Dataanalysisproblemtype</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Dataanalysisproblemtype</em>'.
+	 * @see projetTemplate.MLProcChainSolution#getDataanalysisproblemtype()
+	 * @see #getMLProcChainSolution()
+	 * @generated
+	 */
+	EReference getMLProcChainSolution_Dataanalysisproblemtype();
+
+	/**
+	 * Returns the meta object for the reference list '{@link projetTemplate.MLProcChainSolution#getExecutedTemplate <em>Executed Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Executed Template</em>'.
+	 * @see projetTemplate.MLProcChainSolution#getExecutedTemplate()
+	 * @see #getMLProcChainSolution()
+	 * @generated
+	 */
+	EReference getMLProcChainSolution_ExecutedTemplate();
+
+	/**
+	 * Returns the meta object for the reference list '{@link projetTemplate.MLProcChainSolution#getX_collecteddataknowledgeabouttemplateconstruction <em>Xcollecteddataknowledgeabouttemplateconstruction</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Xcollecteddataknowledgeabouttemplateconstruction</em>'.
+	 * @see projetTemplate.MLProcChainSolution#getX_collecteddataknowledgeabouttemplateconstruction()
+	 * @see #getMLProcChainSolution()
+	 * @generated
+	 */
+	EReference getMLProcChainSolution_X_collecteddataknowledgeabouttemplateconstruction();
+
+	/**
+	 * Returns the meta object for the '{@link projetTemplate.MLProcChainSolution#ConstruireUneChaineDeTraitementInitiale() <em>Construire Une Chaine De Traitement Initiale</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Construire Une Chaine De Traitement Initiale</em>' operation.
+	 * @see projetTemplate.MLProcChainSolution#ConstruireUneChaineDeTraitementInitiale()
+	 * @generated
+	 */
+	EOperation getMLProcChainSolution__ConstruireUneChaineDeTraitementInitiale();
+
+	/**
+	 * Returns the meta object for the '{@link projetTemplate.MLProcChainSolution#MergeProcessingChainAndTemplate() <em>Merge Processing Chain And Template</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Merge Processing Chain And Template</em>' operation.
+	 * @see projetTemplate.MLProcChainSolution#MergeProcessingChainAndTemplate()
+	 * @generated
+	 */
+	EOperation getMLProcChainSolution__MergeProcessingChainAndTemplate();
+
+	/**
 	 * Returns the meta object for class '{@link projetTemplate.MLAlgorithmSolutionPattern <em>ML Algorithm Solution Pattern</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3463,15 +3560,15 @@ public interface ProjetTemplatePackage extends EPackage {
 	EReference getMLAlgorithmSolutionPattern_Mlalgorithm();
 
 	/**
-	 * Returns the meta object for the reference list '{@link projetTemplate.MLAlgorithmSolutionPattern#getDatapropertyvalueset <em>Datapropertyvalueset</em>}'.
+	 * Returns the meta object for the reference list '{@link projetTemplate.MLAlgorithmSolutionPattern#getX_datapropertyvalueset <em>Xdatapropertyvalueset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Datapropertyvalueset</em>'.
-	 * @see projetTemplate.MLAlgorithmSolutionPattern#getDatapropertyvalueset()
+	 * @return the meta object for the reference list '<em>Xdatapropertyvalueset</em>'.
+	 * @see projetTemplate.MLAlgorithmSolutionPattern#getX_datapropertyvalueset()
 	 * @see #getMLAlgorithmSolutionPattern()
 	 * @generated
 	 */
-	EReference getMLAlgorithmSolutionPattern_Datapropertyvalueset();
+	EReference getMLAlgorithmSolutionPattern_X_datapropertyvalueset();
 
 	/**
 	 * Returns the meta object for class '{@link projetTemplate.MLAlgorithm <em>ML Algorithm</em>}'.
@@ -3484,26 +3581,26 @@ public interface ProjetTemplatePackage extends EPackage {
 	EClass getMLAlgorithm();
 
 	/**
-	 * Returns the meta object for the reference '{@link projetTemplate.MLAlgorithm#getSelectioncriterionvalueset <em>Selectioncriterionvalueset</em>}'.
+	 * Returns the meta object for the reference '{@link projetTemplate.MLAlgorithm#getX_selectioncriterionvalueset <em>Xselectioncriterionvalueset</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Selectioncriterionvalueset</em>'.
-	 * @see projetTemplate.MLAlgorithm#getSelectioncriterionvalueset()
+	 * @return the meta object for the reference '<em>Xselectioncriterionvalueset</em>'.
+	 * @see projetTemplate.MLAlgorithm#getX_selectioncriterionvalueset()
 	 * @see #getMLAlgorithm()
 	 * @generated
 	 */
-	EReference getMLAlgorithm_Selectioncriterionvalueset();
+	EReference getMLAlgorithm_X_selectioncriterionvalueset();
 
 	/**
-	 * Returns the meta object for the reference list '{@link projetTemplate.MLAlgorithm#getSelectioncriterionvalue <em>Selectioncriterionvalue</em>}'.
+	 * Returns the meta object for the reference list '{@link projetTemplate.MLAlgorithm#getX_selectioncriterionvalue <em>Xselectioncriterionvalue</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Selectioncriterionvalue</em>'.
-	 * @see projetTemplate.MLAlgorithm#getSelectioncriterionvalue()
+	 * @return the meta object for the reference list '<em>Xselectioncriterionvalue</em>'.
+	 * @see projetTemplate.MLAlgorithm#getX_selectioncriterionvalue()
 	 * @see #getMLAlgorithm()
 	 * @generated
 	 */
-	EReference getMLAlgorithm_Selectioncriterionvalue();
+	EReference getMLAlgorithm_X_selectioncriterionvalue();
 
 	/**
 	 * Returns the meta object for the attribute '{@link projetTemplate.MLAlgorithm#getName <em>Name</em>}'.
@@ -3698,6 +3795,17 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getExtendedBPMNModel_Author();
+
+	/**
+	 * Returns the meta object for the attribute '{@link projetTemplate.ExtendedBPMNModel#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see projetTemplate.ExtendedBPMNModel#getName()
+	 * @see #getExtendedBPMNModel()
+	 * @generated
+	 */
+	EAttribute getExtendedBPMNModel_Name();
 
 	/**
 	 * Returns the meta object for class '{@link projetTemplate.Explainability <em>Explainability</em>}'.
@@ -4167,15 +4275,15 @@ public interface ProjetTemplatePackage extends EPackage {
 	EClass getMLAlgorithmSelectionCriteriaContainer();
 
 	/**
-	 * Returns the meta object for the reference list '{@link projetTemplate.MLAlgorithmSelectionCriteriaContainer#getDomainrequirementselectioncriteria <em>Domainrequirementselectioncriteria</em>}'.
+	 * Returns the meta object for the reference list '{@link projetTemplate.MLAlgorithmSelectionCriteriaContainer#getSelectionCriteria <em>Selection Criteria</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Domainrequirementselectioncriteria</em>'.
-	 * @see projetTemplate.MLAlgorithmSelectionCriteriaContainer#getDomainrequirementselectioncriteria()
+	 * @return the meta object for the reference list '<em>Selection Criteria</em>'.
+	 * @see projetTemplate.MLAlgorithmSelectionCriteriaContainer#getSelectionCriteria()
 	 * @see #getMLAlgorithmSelectionCriteriaContainer()
 	 * @generated
 	 */
-	EReference getMLAlgorithmSelectionCriteriaContainer_Domainrequirementselectioncriteria();
+	EReference getMLAlgorithmSelectionCriteriaContainer_SelectionCriteria();
 
 	/**
 	 * Returns the meta object for the attribute '{@link projetTemplate.MLAlgorithmSelectionCriteriaContainer#getRegle <em>Regle</em>}'.
@@ -4187,6 +4295,60 @@ public interface ProjetTemplatePackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getMLAlgorithmSelectionCriteriaContainer_Regle();
+
+	/**
+	 * Returns the meta object for the attribute '{@link projetTemplate.MLAlgorithmSelectionCriteriaContainer#getComponenet <em>Componenet</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Componenet</em>'.
+	 * @see projetTemplate.MLAlgorithmSelectionCriteriaContainer#getComponenet()
+	 * @see #getMLAlgorithmSelectionCriteriaContainer()
+	 * @generated
+	 */
+	EAttribute getMLAlgorithmSelectionCriteriaContainer_Componenet();
+
+	/**
+	 * Returns the meta object for class '{@link projetTemplate.DataBaseConnection <em>Data Base Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Data Base Connection</em>'.
+	 * @see projetTemplate.DataBaseConnection
+	 * @generated
+	 */
+	EClass getDataBaseConnection();
+
+	/**
+	 * Returns the meta object for the attribute '{@link projetTemplate.DataBaseConnection#getURL <em>URL</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>URL</em>'.
+	 * @see projetTemplate.DataBaseConnection#getURL()
+	 * @see #getDataBaseConnection()
+	 * @generated
+	 */
+	EAttribute getDataBaseConnection_URL();
+
+	/**
+	 * Returns the meta object for the attribute '{@link projetTemplate.DataBaseConnection#getUser <em>User</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>User</em>'.
+	 * @see projetTemplate.DataBaseConnection#getUser()
+	 * @see #getDataBaseConnection()
+	 * @generated
+	 */
+	EAttribute getDataBaseConnection_User();
+
+	/**
+	 * Returns the meta object for the attribute '{@link projetTemplate.DataBaseConnection#getPassword <em>Password</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Password</em>'.
+	 * @see projetTemplate.DataBaseConnection#getPassword()
+	 * @see #getDataBaseConnection()
+	 * @generated
+	 */
+	EAttribute getDataBaseConnection_Password();
 
 	/**
 	 * Returns the meta object for enum '{@link projetTemplate.Values1 <em>Values1</em>}'.
@@ -4289,6 +4451,16 @@ public interface ProjetTemplatePackage extends EPackage {
 	EEnum getMLAlgorithms();
 
 	/**
+	 * Returns the meta object for enum '{@link projetTemplate.Componenets <em>Componenets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Componenets</em>'.
+	 * @see projetTemplate.Componenets
+	 * @generated
+	 */
+	EEnum getComponenets();
+
+	/**
 	 * Returns the meta object for data type '{@link java.lang.Object <em>New Data Type10</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4367,21 +4539,12 @@ public interface ProjetTemplatePackage extends EPackage {
 		EAttribute DOMAIN_REQUIREMENT_VALUE__EXPLANATION = eINSTANCE.getDomainRequirementValue_Explanation();
 
 		/**
-		 * The meta object literal for the '<em><b>Requirementtype</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Xrequirementtype</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE = eINSTANCE.getDomainRequirementValue_Requirementtype();
-
-		/**
-		 * The meta object literal for the '<em><b>Domainrequirementselectioncriteria</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference DOMAIN_REQUIREMENT_VALUE__DOMAINREQUIREMENTSELECTIONCRITERIA = eINSTANCE
-				.getDomainRequirementValue_Domainrequirementselectioncriteria();
+		EReference DOMAIN_REQUIREMENT_VALUE__XREQUIREMENTTYPE = eINSTANCE.getDomainRequirementValue_X_requirementtype();
 
 		/**
 		 * The meta object literal for the '{@link projetTemplate.impl.RequirementTypeImpl <em>Requirement Type</em>}' class.
@@ -4484,12 +4647,12 @@ public interface ProjetTemplatePackage extends EPackage {
 		EReference ML_PROJECT__DOMAINPROBLEM = eINSTANCE.getMLProject_Domainproblem();
 
 		/**
-		 * The meta object literal for the '<em><b>Database</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Databaseconnection</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ML_PROJECT__DATABASE = eINSTANCE.getMLProject_Database();
+		EReference ML_PROJECT__DATABASECONNECTION = eINSTANCE.getMLProject_Databaseconnection();
 
 		/**
 		 * The meta object literal for the '{@link projetTemplate.impl.DataAnalysisProblemImpl <em>Data Analysis Problem</em>}' class.
@@ -4544,13 +4707,12 @@ public interface ProjetTemplatePackage extends EPackage {
 				.getDataAnalysisProblem_Computationalrequirementvalue();
 
 		/**
-		 * The meta object literal for the '<em><b>Mlprocchainsolutionpattern</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Mlprocchainsolution</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATA_ANALYSIS_PROBLEM__MLPROCCHAINSOLUTIONPATTERN = eINSTANCE
-				.getDataAnalysisProblem_Mlprocchainsolutionpattern();
+		EReference DATA_ANALYSIS_PROBLEM__MLPROCCHAINSOLUTION = eINSTANCE.getDataAnalysisProblem_Mlprocchainsolution();
 
 		/**
 		 * The meta object literal for the '{@link projetTemplate.impl.ComputationalRequirementValueImpl <em>Computational Requirement Value</em>}' class.
@@ -4563,39 +4725,31 @@ public interface ProjetTemplatePackage extends EPackage {
 		EClass COMPUTATIONAL_REQUIREMENT_VALUE = eINSTANCE.getComputationalRequirementValue();
 
 		/**
-		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Formule</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COMPUTATIONAL_REQUIREMENT_VALUE__VALUE = eINSTANCE.getComputationalRequirementValue_Value();
+		EAttribute COMPUTATIONAL_REQUIREMENT_VALUE__FORMULE = eINSTANCE.getComputationalRequirementValue_Formule();
 
 		/**
-		 * The meta object literal for the '<em><b>Rationale</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Xrequirementtype</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute COMPUTATIONAL_REQUIREMENT_VALUE__RATIONALE = eINSTANCE.getComputationalRequirementValue_Rationale();
+		EReference COMPUTATIONAL_REQUIREMENT_VALUE__XREQUIREMENTTYPE = eINSTANCE
+				.getComputationalRequirementValue_X_requirementtype();
 
 		/**
-		 * The meta object literal for the '<em><b>Requirementtype</b></em>' reference feature.
+		 * The meta object literal for the '{@link projetTemplate.impl.X_DatabaseImpl <em>XDatabase</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
+		 * @see projetTemplate.impl.X_DatabaseImpl
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getX_Database()
 		 * @generated
 		 */
-		EReference COMPUTATIONAL_REQUIREMENT_VALUE__REQUIREMENTTYPE = eINSTANCE
-				.getComputationalRequirementValue_Requirementtype();
-
-		/**
-		 * The meta object literal for the '{@link projetTemplate.impl.DatabaseImpl <em>Database</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see projetTemplate.impl.DatabaseImpl
-		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDatabase()
-		 * @generated
-		 */
-		EClass DATABASE = eINSTANCE.getDatabase();
+		EClass XDATABASE = eINSTANCE.getX_Database();
 
 		/**
 		 * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
@@ -4603,7 +4757,7 @@ public interface ProjetTemplatePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATABASE__VALUE = eINSTANCE.getDatabase_Value();
+		EAttribute XDATABASE__VALUE = eINSTANCE.getX_Database_Value();
 
 		/**
 		 * The meta object literal for the '<em><b>Credentias</b></em>' attribute feature.
@@ -4611,7 +4765,7 @@ public interface ProjetTemplatePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute DATABASE__CREDENTIAS = eINSTANCE.getDatabase_Credentias();
+		EAttribute XDATABASE__CREDENTIAS = eINSTANCE.getX_Database_Credentias();
 
 		/**
 		 * The meta object literal for the '<em><b>Schema</b></em>' reference feature.
@@ -4619,7 +4773,7 @@ public interface ProjetTemplatePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATABASE__SCHEMA = eINSTANCE.getDatabase_Schema();
+		EReference XDATABASE__SCHEMA = eINSTANCE.getX_Database_Schema();
 
 		/**
 		 * The meta object literal for the '<em><b>Data</b></em>' reference feature.
@@ -4627,7 +4781,7 @@ public interface ProjetTemplatePackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DATABASE__DATA = eINSTANCE.getDatabase_Data();
+		EReference XDATABASE__DATA = eINSTANCE.getX_Database_Data();
 
 		/**
 		 * The meta object literal for the '{@link projetTemplate.impl.SchemaImpl <em>Schema</em>}' class.
@@ -4905,87 +5059,6 @@ public interface ProjetTemplatePackage extends EPackage {
 		EReference PROCESSING_CHAIN__MLALGORITHM = eINSTANCE.getProcessingChain_Mlalgorithm();
 
 		/**
-		 * The meta object literal for the '{@link projetTemplate.impl.MLProcChainSolutionPatternImpl <em>ML Proc Chain Solution Pattern</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see projetTemplate.impl.MLProcChainSolutionPatternImpl
-		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMLProcChainSolutionPattern()
-		 * @generated
-		 */
-		EClass ML_PROC_CHAIN_SOLUTION_PATTERN = eINSTANCE.getMLProcChainSolutionPattern();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ML_PROC_CHAIN_SOLUTION_PATTERN__NAME = eINSTANCE.getMLProcChainSolutionPattern_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Datapropertyvalueset</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET = eINSTANCE
-				.getMLProcChainSolutionPattern_Datapropertyvalueset();
-
-		/**
-		 * The meta object literal for the '<em><b>Processingchain</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ML_PROC_CHAIN_SOLUTION_PATTERN__PROCESSINGCHAIN = eINSTANCE
-				.getMLProcChainSolutionPattern_Processingchain();
-
-		/**
-		 * The meta object literal for the '<em><b>Dataanalysisproblemtype</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE = eINSTANCE
-				.getMLProcChainSolutionPattern_Dataanalysisproblemtype();
-
-		/**
-		 * The meta object literal for the '<em><b>Executed Template</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ML_PROC_CHAIN_SOLUTION_PATTERN__EXECUTED_TEMPLATE = eINSTANCE
-				.getMLProcChainSolutionPattern_ExecutedTemplate();
-
-		/**
-		 * The meta object literal for the '<em><b>Collecteddataknowledgeabouttemplateconstruction</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ML_PROC_CHAIN_SOLUTION_PATTERN__COLLECTEDDATAKNOWLEDGEABOUTTEMPLATECONSTRUCTION = eINSTANCE
-				.getMLProcChainSolutionPattern_Collecteddataknowledgeabouttemplateconstruction();
-
-		/**
-		 * The meta object literal for the '<em><b>Construire Une Chaine De Traitement Initiale</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ML_PROC_CHAIN_SOLUTION_PATTERN___CONSTRUIRE_UNE_CHAINE_DE_TRAITEMENT_INITIALE = eINSTANCE
-				.getMLProcChainSolutionPattern__ConstruireUneChaineDeTraitementInitiale();
-
-		/**
-		 * The meta object literal for the '<em><b>Merge Processing Chain And Template</b></em>' operation.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EOperation ML_PROC_CHAIN_SOLUTION_PATTERN___MERGE_PROCESSING_CHAIN_AND_TEMPLATE = eINSTANCE
-				.getMLProcChainSolutionPattern__MergeProcessingChainAndTemplate();
-
-		/**
 		 * The meta object literal for the '{@link projetTemplate.impl.ProcessingChainTemplateImpl <em>Processing Chain Template</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5039,6 +5112,85 @@ public interface ProjetTemplatePackage extends EPackage {
 				.getProcessingChainTemplate__SelectTheRightMLAlgroithm();
 
 		/**
+		 * The meta object literal for the '{@link projetTemplate.impl.MLProcChainSolutionImpl <em>ML Proc Chain Solution</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projetTemplate.impl.MLProcChainSolutionImpl
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getMLProcChainSolution()
+		 * @generated
+		 */
+		EClass ML_PROC_CHAIN_SOLUTION = eINSTANCE.getMLProcChainSolution();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ML_PROC_CHAIN_SOLUTION__NAME = eINSTANCE.getMLProcChainSolution_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Datapropertyvalueset</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ML_PROC_CHAIN_SOLUTION__DATAPROPERTYVALUESET = eINSTANCE
+				.getMLProcChainSolution_Datapropertyvalueset();
+
+		/**
+		 * The meta object literal for the '<em><b>Xprocessingchain</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ML_PROC_CHAIN_SOLUTION__XPROCESSINGCHAIN = eINSTANCE.getMLProcChainSolution_X_processingchain();
+
+		/**
+		 * The meta object literal for the '<em><b>Dataanalysisproblemtype</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ML_PROC_CHAIN_SOLUTION__DATAANALYSISPROBLEMTYPE = eINSTANCE
+				.getMLProcChainSolution_Dataanalysisproblemtype();
+
+		/**
+		 * The meta object literal for the '<em><b>Executed Template</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ML_PROC_CHAIN_SOLUTION__EXECUTED_TEMPLATE = eINSTANCE.getMLProcChainSolution_ExecutedTemplate();
+
+		/**
+		 * The meta object literal for the '<em><b>Xcollecteddataknowledgeabouttemplateconstruction</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ML_PROC_CHAIN_SOLUTION__XCOLLECTEDDATAKNOWLEDGEABOUTTEMPLATECONSTRUCTION = eINSTANCE
+				.getMLProcChainSolution_X_collecteddataknowledgeabouttemplateconstruction();
+
+		/**
+		 * The meta object literal for the '<em><b>Construire Une Chaine De Traitement Initiale</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ML_PROC_CHAIN_SOLUTION___CONSTRUIRE_UNE_CHAINE_DE_TRAITEMENT_INITIALE = eINSTANCE
+				.getMLProcChainSolution__ConstruireUneChaineDeTraitementInitiale();
+
+		/**
+		 * The meta object literal for the '<em><b>Merge Processing Chain And Template</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation ML_PROC_CHAIN_SOLUTION___MERGE_PROCESSING_CHAIN_AND_TEMPLATE = eINSTANCE
+				.getMLProcChainSolution__MergeProcessingChainAndTemplate();
+
+		/**
 		 * The meta object literal for the '{@link projetTemplate.impl.MLAlgorithmSolutionPatternImpl <em>ML Algorithm Solution Pattern</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5073,13 +5225,13 @@ public interface ProjetTemplatePackage extends EPackage {
 		EReference ML_ALGORITHM_SOLUTION_PATTERN__MLALGORITHM = eINSTANCE.getMLAlgorithmSolutionPattern_Mlalgorithm();
 
 		/**
-		 * The meta object literal for the '<em><b>Datapropertyvalueset</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Xdatapropertyvalueset</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ML_ALGORITHM_SOLUTION_PATTERN__DATAPROPERTYVALUESET = eINSTANCE
-				.getMLAlgorithmSolutionPattern_Datapropertyvalueset();
+		EReference ML_ALGORITHM_SOLUTION_PATTERN__XDATAPROPERTYVALUESET = eINSTANCE
+				.getMLAlgorithmSolutionPattern_X_datapropertyvalueset();
 
 		/**
 		 * The meta object literal for the '{@link projetTemplate.impl.MLAlgorithmImpl <em>ML Algorithm</em>}' class.
@@ -5092,20 +5244,20 @@ public interface ProjetTemplatePackage extends EPackage {
 		EClass ML_ALGORITHM = eINSTANCE.getMLAlgorithm();
 
 		/**
-		 * The meta object literal for the '<em><b>Selectioncriterionvalueset</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Xselectioncriterionvalueset</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ML_ALGORITHM__SELECTIONCRITERIONVALUESET = eINSTANCE.getMLAlgorithm_Selectioncriterionvalueset();
+		EReference ML_ALGORITHM__XSELECTIONCRITERIONVALUESET = eINSTANCE.getMLAlgorithm_X_selectioncriterionvalueset();
 
 		/**
-		 * The meta object literal for the '<em><b>Selectioncriterionvalue</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Xselectioncriterionvalue</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ML_ALGORITHM__SELECTIONCRITERIONVALUE = eINSTANCE.getMLAlgorithm_Selectioncriterionvalue();
+		EReference ML_ALGORITHM__XSELECTIONCRITERIONVALUE = eINSTANCE.getMLAlgorithm_X_selectioncriterionvalue();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -5261,6 +5413,14 @@ public interface ProjetTemplatePackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute EXTENDED_BPMN_MODEL__AUTHOR = eINSTANCE.getExtendedBPMNModel_Author();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute EXTENDED_BPMN_MODEL__NAME = eINSTANCE.getExtendedBPMNModel_Name();
 
 		/**
 		 * The meta object literal for the '{@link projetTemplate.impl.ExplainabilityImpl <em>Explainability</em>}' class.
@@ -5672,13 +5832,13 @@ public interface ProjetTemplatePackage extends EPackage {
 		EClass ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER = eINSTANCE.getMLAlgorithmSelectionCriteriaContainer();
 
 		/**
-		 * The meta object literal for the '<em><b>Domainrequirementselectioncriteria</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Selection Criteria</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__DOMAINREQUIREMENTSELECTIONCRITERIA = eINSTANCE
-				.getMLAlgorithmSelectionCriteriaContainer_Domainrequirementselectioncriteria();
+		EReference ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__SELECTION_CRITERIA = eINSTANCE
+				.getMLAlgorithmSelectionCriteriaContainer_SelectionCriteria();
 
 		/**
 		 * The meta object literal for the '<em><b>Regle</b></em>' attribute feature.
@@ -5688,6 +5848,49 @@ public interface ProjetTemplatePackage extends EPackage {
 		 */
 		EAttribute ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__REGLE = eINSTANCE
 				.getMLAlgorithmSelectionCriteriaContainer_Regle();
+
+		/**
+		 * The meta object literal for the '<em><b>Componenet</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__COMPONENET = eINSTANCE
+				.getMLAlgorithmSelectionCriteriaContainer_Componenet();
+
+		/**
+		 * The meta object literal for the '{@link projetTemplate.impl.DataBaseConnectionImpl <em>Data Base Connection</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projetTemplate.impl.DataBaseConnectionImpl
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getDataBaseConnection()
+		 * @generated
+		 */
+		EClass DATA_BASE_CONNECTION = eINSTANCE.getDataBaseConnection();
+
+		/**
+		 * The meta object literal for the '<em><b>URL</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATA_BASE_CONNECTION__URL = eINSTANCE.getDataBaseConnection_URL();
+
+		/**
+		 * The meta object literal for the '<em><b>User</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATA_BASE_CONNECTION__USER = eINSTANCE.getDataBaseConnection_User();
+
+		/**
+		 * The meta object literal for the '<em><b>Password</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute DATA_BASE_CONNECTION__PASSWORD = eINSTANCE.getDataBaseConnection_Password();
 
 		/**
 		 * The meta object literal for the '{@link projetTemplate.Values1 <em>Values1</em>}' enum.
@@ -5788,6 +5991,16 @@ public interface ProjetTemplatePackage extends EPackage {
 		 * @generated
 		 */
 		EEnum ML_ALGORITHMS = eINSTANCE.getMLAlgorithms();
+
+		/**
+		 * The meta object literal for the '{@link projetTemplate.Componenets <em>Componenets</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see projetTemplate.Componenets
+		 * @see projetTemplate.impl.ProjetTemplatePackageImpl#getComponenets()
+		 * @generated
+		 */
+		EEnum COMPONENETS = eINSTANCE.getComponenets();
 
 		/**
 		 * The meta object literal for the '<em>New Data Type10</em>' data type.

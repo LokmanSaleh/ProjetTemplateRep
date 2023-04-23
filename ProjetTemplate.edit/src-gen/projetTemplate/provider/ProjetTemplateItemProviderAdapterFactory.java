@@ -211,26 +211,26 @@ public class ProjetTemplateItemProviderAdapterFactory extends ProjetTemplateAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link projetTemplate.Database} instances.
+	 * This keeps track of the one adapter used for all {@link projetTemplate.X_Database} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected DatabaseItemProvider databaseItemProvider;
+	protected X_DatabaseItemProvider x_DatabaseItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link projetTemplate.Database}.
+	 * This creates an adapter for a {@link projetTemplate.X_Database}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createDatabaseAdapter() {
-		if (databaseItemProvider == null) {
-			databaseItemProvider = new DatabaseItemProvider(this);
+	public Adapter createX_DatabaseAdapter() {
+		if (x_DatabaseItemProvider == null) {
+			x_DatabaseItemProvider = new X_DatabaseItemProvider(this);
 		}
 
-		return databaseItemProvider;
+		return x_DatabaseItemProvider;
 	}
 
 	/**
@@ -441,29 +441,6 @@ public class ProjetTemplateItemProviderAdapterFactory extends ProjetTemplateAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link projetTemplate.MLProcChainSolutionPattern} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected MLProcChainSolutionPatternItemProvider mlProcChainSolutionPatternItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link projetTemplate.MLProcChainSolutionPattern}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createMLProcChainSolutionPatternAdapter() {
-		if (mlProcChainSolutionPatternItemProvider == null) {
-			mlProcChainSolutionPatternItemProvider = new MLProcChainSolutionPatternItemProvider(this);
-		}
-
-		return mlProcChainSolutionPatternItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link projetTemplate.ProcessingChainTemplate} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -484,6 +461,29 @@ public class ProjetTemplateItemProviderAdapterFactory extends ProjetTemplateAdap
 		}
 
 		return processingChainTemplateItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.MLProcChainSolution} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MLProcChainSolutionItemProvider mlProcChainSolutionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.MLProcChainSolution}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMLProcChainSolutionAdapter() {
+		if (mlProcChainSolutionItemProvider == null) {
+			mlProcChainSolutionItemProvider = new MLProcChainSolutionItemProvider(this);
+		}
+
+		return mlProcChainSolutionItemProvider;
 	}
 
 	/**
@@ -1086,29 +1086,6 @@ public class ProjetTemplateItemProviderAdapterFactory extends ProjetTemplateAdap
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link projetTemplate.SelectionCriteria} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SelectionCriteriaItemProvider selectionCriteriaItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link projetTemplate.SelectionCriteria}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSelectionCriteriaAdapter() {
-		if (selectionCriteriaItemProvider == null) {
-			selectionCriteriaItemProvider = new SelectionCriteriaItemProvider(this);
-		}
-
-		return selectionCriteriaItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link projetTemplate.MLAlgorithmSelectionCriteriaContainer} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1130,6 +1107,29 @@ public class ProjetTemplateItemProviderAdapterFactory extends ProjetTemplateAdap
 		}
 
 		return mlAlgorithmSelectionCriteriaContainerItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link projetTemplate.DataBaseConnection} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected DataBaseConnectionItemProvider dataBaseConnectionItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link projetTemplate.DataBaseConnection}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createDataBaseConnectionAdapter() {
+		if (dataBaseConnectionItemProvider == null) {
+			dataBaseConnectionItemProvider = new DataBaseConnectionItemProvider(this);
+		}
+
+		return dataBaseConnectionItemProvider;
 	}
 
 	/**
@@ -1243,8 +1243,8 @@ public class ProjetTemplateItemProviderAdapterFactory extends ProjetTemplateAdap
 			dataAnalysisProblemItemProvider.dispose();
 		if (computationalRequirementValueItemProvider != null)
 			computationalRequirementValueItemProvider.dispose();
-		if (databaseItemProvider != null)
-			databaseItemProvider.dispose();
+		if (x_DatabaseItemProvider != null)
+			x_DatabaseItemProvider.dispose();
 		if (schemaItemProvider != null)
 			schemaItemProvider.dispose();
 		if (dataItemProvider != null)
@@ -1263,8 +1263,8 @@ public class ProjetTemplateItemProviderAdapterFactory extends ProjetTemplateAdap
 			dataAnalysisProblemTypeItemProvider.dispose();
 		if (processingChainTemplateItemProvider != null)
 			processingChainTemplateItemProvider.dispose();
-		if (mlProcChainSolutionPatternItemProvider != null)
-			mlProcChainSolutionPatternItemProvider.dispose();
+		if (mlProcChainSolutionItemProvider != null)
+			mlProcChainSolutionItemProvider.dispose();
 		if (processingChainItemProvider != null)
 			processingChainItemProvider.dispose();
 		if (mlAlgorithmSolutionPatternItemProvider != null)
@@ -1319,10 +1319,10 @@ public class ProjetTemplateItemProviderAdapterFactory extends ProjetTemplateAdap
 			noiseTreatementItemProvider.dispose();
 		if (missingValueTreatementItemProvider != null)
 			missingValueTreatementItemProvider.dispose();
-		if (selectionCriteriaItemProvider != null)
-			selectionCriteriaItemProvider.dispose();
 		if (mlAlgorithmSelectionCriteriaContainerItemProvider != null)
 			mlAlgorithmSelectionCriteriaContainerItemProvider.dispose();
+		if (dataBaseConnectionItemProvider != null)
+			dataBaseConnectionItemProvider.dispose();
 	}
 
 }

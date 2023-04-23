@@ -54,27 +54,28 @@ public class MLAlgorithmSelectionCriteriaContainerItemProvider extends ItemProvi
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addDomainrequirementselectioncriteriaPropertyDescriptor(object);
+			addSelectionCriteriaPropertyDescriptor(object);
 			addReglePropertyDescriptor(object);
+			addComponenetPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Domainrequirementselectioncriteria feature.
+	 * This adds a property descriptor for the Selection Criteria feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addDomainrequirementselectioncriteriaPropertyDescriptor(Object object) {
+	protected void addSelectionCriteriaPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_MLAlgorithmSelectionCriteriaContainer_domainrequirementselectioncriteria_feature"),
+				getString("_UI_MLAlgorithmSelectionCriteriaContainer_SelectionCriteria_feature"),
 				getString("_UI_PropertyDescriptor_description",
-						"_UI_MLAlgorithmSelectionCriteriaContainer_domainrequirementselectioncriteria_feature",
+						"_UI_MLAlgorithmSelectionCriteriaContainer_SelectionCriteria_feature",
 						"_UI_MLAlgorithmSelectionCriteriaContainer_type"),
-				ProjetTemplatePackage.Literals.ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__DOMAINREQUIREMENTSELECTIONCRITERIA,
-				true, false, true, null, null, null));
+				ProjetTemplatePackage.Literals.ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__SELECTION_CRITERIA, true,
+				false, true, null, null, null));
 	}
 
 	/**
@@ -92,6 +93,23 @@ public class MLAlgorithmSelectionCriteriaContainerItemProvider extends ItemProvi
 								"_UI_MLAlgorithmSelectionCriteriaContainer_type"),
 						ProjetTemplatePackage.Literals.ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__REGLE, true, true,
 						false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Componenet feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addComponenetPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_MLAlgorithmSelectionCriteriaContainer_Componenet_feature"),
+						getString("_UI_PropertyDescriptor_description",
+								"_UI_MLAlgorithmSelectionCriteriaContainer_Componenet_feature",
+								"_UI_MLAlgorithmSelectionCriteriaContainer_type"),
+						ProjetTemplatePackage.Literals.ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__COMPONENET, true,
+						false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -141,6 +159,7 @@ public class MLAlgorithmSelectionCriteriaContainerItemProvider extends ItemProvi
 
 		switch (notification.getFeatureID(MLAlgorithmSelectionCriteriaContainer.class)) {
 		case ProjetTemplatePackage.ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__REGLE:
+		case ProjetTemplatePackage.ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__COMPONENET:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

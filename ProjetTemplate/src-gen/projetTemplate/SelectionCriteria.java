@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getSelectionCriteria()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface SelectionCriteria extends EObject {

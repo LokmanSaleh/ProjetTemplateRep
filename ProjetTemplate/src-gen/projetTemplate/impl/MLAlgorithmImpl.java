@@ -14,7 +14,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import projetTemplate.ExtendedBPMNModel;
 import projetTemplate.MLAlgorithm;
 import projetTemplate.MLAlgorithmSelectionCriteriaContainer;
-import projetTemplate.MLAlgorithms;
 import projetTemplate.ProjetTemplatePackage;
 import projetTemplate.SelectionCriterionValue;
 import projetTemplate.SelectionCriterionValueSet;
@@ -27,8 +26,8 @@ import projetTemplate.SelectionCriterionValueSet;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link projetTemplate.impl.MLAlgorithmImpl#getSelectioncriterionvalueset <em>Selectioncriterionvalueset</em>}</li>
- *   <li>{@link projetTemplate.impl.MLAlgorithmImpl#getSelectioncriterionvalue <em>Selectioncriterionvalue</em>}</li>
+ *   <li>{@link projetTemplate.impl.MLAlgorithmImpl#getX_selectioncriterionvalueset <em>Xselectioncriterionvalueset</em>}</li>
+ *   <li>{@link projetTemplate.impl.MLAlgorithmImpl#getX_selectioncriterionvalue <em>Xselectioncriterionvalue</em>}</li>
  *   <li>{@link projetTemplate.impl.MLAlgorithmImpl#getName <em>Name</em>}</li>
  *   <li>{@link projetTemplate.impl.MLAlgorithmImpl#getExtendedbpmnmodel <em>Extendedbpmnmodel</em>}</li>
  *   <li>{@link projetTemplate.impl.MLAlgorithmImpl#getCriteriatochoosemlalgorithm <em>Criteriatochoosemlalgorithm</em>}</li>
@@ -38,24 +37,24 @@ import projetTemplate.SelectionCriterionValueSet;
  */
 public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLAlgorithm {
 	/**
-	 * The cached value of the '{@link #getSelectioncriterionvalueset() <em>Selectioncriterionvalueset</em>}' reference.
+	 * The cached value of the '{@link #getX_selectioncriterionvalueset() <em>Xselectioncriterionvalueset</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSelectioncriterionvalueset()
+	 * @see #getX_selectioncriterionvalueset()
 	 * @generated
 	 * @ordered
 	 */
-	protected SelectionCriterionValueSet selectioncriterionvalueset;
+	protected SelectionCriterionValueSet x_selectioncriterionvalueset;
 
 	/**
-	 * The cached value of the '{@link #getSelectioncriterionvalue() <em>Selectioncriterionvalue</em>}' reference list.
+	 * The cached value of the '{@link #getX_selectioncriterionvalue() <em>Xselectioncriterionvalue</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSelectioncriterionvalue()
+	 * @see #getX_selectioncriterionvalue()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<SelectionCriterionValue> selectioncriterionvalue;
+	protected EList<SelectionCriterionValue> x_selectioncriterionvalue;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -65,7 +64,7 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 	 * @generated
 	 * @ordered
 	 */
-	protected static final MLAlgorithms NAME_EDEFAULT = MLAlgorithms.NAIVE_BAYES;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -75,7 +74,7 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 	 * @generated
 	 * @ordered
 	 */
-	protected MLAlgorithms name = NAME_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getExtendedbpmnmodel() <em>Extendedbpmnmodel</em>}' reference.
@@ -121,18 +120,18 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SelectionCriterionValueSet getSelectioncriterionvalueset() {
-		if (selectioncriterionvalueset != null && selectioncriterionvalueset.eIsProxy()) {
-			InternalEObject oldSelectioncriterionvalueset = (InternalEObject) selectioncriterionvalueset;
-			selectioncriterionvalueset = (SelectionCriterionValueSet) eResolveProxy(oldSelectioncriterionvalueset);
-			if (selectioncriterionvalueset != oldSelectioncriterionvalueset) {
+	public SelectionCriterionValueSet getX_selectioncriterionvalueset() {
+		if (x_selectioncriterionvalueset != null && x_selectioncriterionvalueset.eIsProxy()) {
+			InternalEObject oldX_selectioncriterionvalueset = (InternalEObject) x_selectioncriterionvalueset;
+			x_selectioncriterionvalueset = (SelectionCriterionValueSet) eResolveProxy(oldX_selectioncriterionvalueset);
+			if (x_selectioncriterionvalueset != oldX_selectioncriterionvalueset) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUESET,
-							oldSelectioncriterionvalueset, selectioncriterionvalueset));
+							ProjetTemplatePackage.ML_ALGORITHM__XSELECTIONCRITERIONVALUESET,
+							oldX_selectioncriterionvalueset, x_selectioncriterionvalueset));
 			}
 		}
-		return selectioncriterionvalueset;
+		return x_selectioncriterionvalueset;
 	}
 
 	/**
@@ -140,8 +139,8 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SelectionCriterionValueSet basicGetSelectioncriterionvalueset() {
-		return selectioncriterionvalueset;
+	public SelectionCriterionValueSet basicGetX_selectioncriterionvalueset() {
+		return x_selectioncriterionvalueset;
 	}
 
 	/**
@@ -149,13 +148,13 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSelectioncriterionvalueset(SelectionCriterionValueSet newSelectioncriterionvalueset) {
-		SelectionCriterionValueSet oldSelectioncriterionvalueset = selectioncriterionvalueset;
-		selectioncriterionvalueset = newSelectioncriterionvalueset;
+	public void setX_selectioncriterionvalueset(SelectionCriterionValueSet newX_selectioncriterionvalueset) {
+		SelectionCriterionValueSet oldX_selectioncriterionvalueset = x_selectioncriterionvalueset;
+		x_selectioncriterionvalueset = newX_selectioncriterionvalueset;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUESET, oldSelectioncriterionvalueset,
-					selectioncriterionvalueset));
+					ProjetTemplatePackage.ML_ALGORITHM__XSELECTIONCRITERIONVALUESET, oldX_selectioncriterionvalueset,
+					x_selectioncriterionvalueset));
 	}
 
 	/**
@@ -163,12 +162,12 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<SelectionCriterionValue> getSelectioncriterionvalue() {
-		if (selectioncriterionvalue == null) {
-			selectioncriterionvalue = new EObjectResolvingEList<SelectionCriterionValue>(SelectionCriterionValue.class,
-					this, ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUE);
+	public EList<SelectionCriterionValue> getX_selectioncriterionvalue() {
+		if (x_selectioncriterionvalue == null) {
+			x_selectioncriterionvalue = new EObjectResolvingEList<SelectionCriterionValue>(
+					SelectionCriterionValue.class, this, ProjetTemplatePackage.ML_ALGORITHM__XSELECTIONCRITERIONVALUE);
 		}
-		return selectioncriterionvalue;
+		return x_selectioncriterionvalue;
 	}
 
 	/**
@@ -176,7 +175,7 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MLAlgorithms getName() {
+	public String getName() {
 		return name;
 	}
 
@@ -185,9 +184,9 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(MLAlgorithms newName) {
-		MLAlgorithms oldName = name;
-		name = newName == null ? NAME_EDEFAULT : newName;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ProjetTemplatePackage.ML_ALGORITHM__NAME, oldName,
 					name));
@@ -285,12 +284,12 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUESET:
+		case ProjetTemplatePackage.ML_ALGORITHM__XSELECTIONCRITERIONVALUESET:
 			if (resolve)
-				return getSelectioncriterionvalueset();
-			return basicGetSelectioncriterionvalueset();
-		case ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUE:
-			return getSelectioncriterionvalue();
+				return getX_selectioncriterionvalueset();
+			return basicGetX_selectioncriterionvalueset();
+		case ProjetTemplatePackage.ML_ALGORITHM__XSELECTIONCRITERIONVALUE:
+			return getX_selectioncriterionvalue();
 		case ProjetTemplatePackage.ML_ALGORITHM__NAME:
 			return getName();
 		case ProjetTemplatePackage.ML_ALGORITHM__EXTENDEDBPMNMODEL:
@@ -314,15 +313,15 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUESET:
-			setSelectioncriterionvalueset((SelectionCriterionValueSet) newValue);
+		case ProjetTemplatePackage.ML_ALGORITHM__XSELECTIONCRITERIONVALUESET:
+			setX_selectioncriterionvalueset((SelectionCriterionValueSet) newValue);
 			return;
-		case ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUE:
-			getSelectioncriterionvalue().clear();
-			getSelectioncriterionvalue().addAll((Collection<? extends SelectionCriterionValue>) newValue);
+		case ProjetTemplatePackage.ML_ALGORITHM__XSELECTIONCRITERIONVALUE:
+			getX_selectioncriterionvalue().clear();
+			getX_selectioncriterionvalue().addAll((Collection<? extends SelectionCriterionValue>) newValue);
 			return;
 		case ProjetTemplatePackage.ML_ALGORITHM__NAME:
-			setName((MLAlgorithms) newValue);
+			setName((String) newValue);
 			return;
 		case ProjetTemplatePackage.ML_ALGORITHM__EXTENDEDBPMNMODEL:
 			setExtendedbpmnmodel((ExtendedBPMNModel) newValue);
@@ -342,11 +341,11 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUESET:
-			setSelectioncriterionvalueset((SelectionCriterionValueSet) null);
+		case ProjetTemplatePackage.ML_ALGORITHM__XSELECTIONCRITERIONVALUESET:
+			setX_selectioncriterionvalueset((SelectionCriterionValueSet) null);
 			return;
-		case ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUE:
-			getSelectioncriterionvalue().clear();
+		case ProjetTemplatePackage.ML_ALGORITHM__XSELECTIONCRITERIONVALUE:
+			getX_selectioncriterionvalue().clear();
 			return;
 		case ProjetTemplatePackage.ML_ALGORITHM__NAME:
 			setName(NAME_EDEFAULT);
@@ -369,12 +368,12 @@ public class MLAlgorithmImpl extends MinimalEObjectImpl.Container implements MLA
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUESET:
-			return selectioncriterionvalueset != null;
-		case ProjetTemplatePackage.ML_ALGORITHM__SELECTIONCRITERIONVALUE:
-			return selectioncriterionvalue != null && !selectioncriterionvalue.isEmpty();
+		case ProjetTemplatePackage.ML_ALGORITHM__XSELECTIONCRITERIONVALUESET:
+			return x_selectioncriterionvalueset != null;
+		case ProjetTemplatePackage.ML_ALGORITHM__XSELECTIONCRITERIONVALUE:
+			return x_selectioncriterionvalue != null && !x_selectioncriterionvalue.isEmpty();
 		case ProjetTemplatePackage.ML_ALGORITHM__NAME:
-			return name != NAME_EDEFAULT;
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case ProjetTemplatePackage.ML_ALGORITHM__EXTENDEDBPMNMODEL:
 			return extendedbpmnmodel != null;
 		case ProjetTemplatePackage.ML_ALGORITHM__CRITERIATOCHOOSEMLALGORITHM:

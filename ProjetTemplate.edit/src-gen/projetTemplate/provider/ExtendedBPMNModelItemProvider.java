@@ -54,6 +54,7 @@ public class ExtendedBPMNModelItemProvider extends ItemProviderAdapter implement
 
 			addPathPropertyDescriptor(object);
 			addAuthorPropertyDescriptor(object);
+			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -91,6 +92,22 @@ public class ExtendedBPMNModelItemProvider extends ItemProviderAdapter implement
 	}
 
 	/**
+	 * This adds a property descriptor for the Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_ExtendedBPMNModel_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ExtendedBPMNModel_name_feature",
+								"_UI_ExtendedBPMNModel_type"),
+						ProjetTemplatePackage.Literals.EXTENDED_BPMN_MODEL__NAME, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
 	 * This returns ExtendedBPMNModel.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -119,7 +136,7 @@ public class ExtendedBPMNModelItemProvider extends ItemProviderAdapter implement
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ExtendedBPMNModel) object).getPath();
+		String label = ((ExtendedBPMNModel) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_ExtendedBPMNModel_type")
 				: getString("_UI_ExtendedBPMNModel_type") + " " + label;
 	}
@@ -138,6 +155,7 @@ public class ExtendedBPMNModelItemProvider extends ItemProviderAdapter implement
 		switch (notification.getFeatureID(ExtendedBPMNModel.class)) {
 		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__PATH:
 		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__AUTHOR:
+		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__NAME:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

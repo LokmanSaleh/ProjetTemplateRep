@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link projetTemplate.MLAlgorithmSolutionPattern#getName <em>Name</em>}</li>
  *   <li>{@link projetTemplate.MLAlgorithmSolutionPattern#getExplanation <em>Explanation</em>}</li>
  *   <li>{@link projetTemplate.MLAlgorithmSolutionPattern#getMlalgorithm <em>Mlalgorithm</em>}</li>
- *   <li>{@link projetTemplate.MLAlgorithmSolutionPattern#getDatapropertyvalueset <em>Datapropertyvalueset</em>}</li>
+ *   <li>{@link projetTemplate.MLAlgorithmSolutionPattern#getX_datapropertyvalueset <em>Xdatapropertyvalueset</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithmSolutionPattern()
@@ -92,15 +92,15 @@ public interface MLAlgorithmSolutionPattern extends EObject {
 	void setMlalgorithm(MLAlgorithm value);
 
 	/**
-	 * Returns the value of the '<em><b>Datapropertyvalueset</b></em>' reference list.
+	 * Returns the value of the '<em><b>Xdatapropertyvalueset</b></em>' reference list.
 	 * The list contents are of type {@link projetTemplate.DataPropertyValueSet}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Datapropertyvalueset</em>' reference list.
-	 * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithmSolutionPattern_Datapropertyvalueset()
+	 * @return the value of the '<em>Xdatapropertyvalueset</em>' reference list.
+	 * @see projetTemplate.ProjetTemplatePackage#getMLAlgorithmSolutionPattern_X_datapropertyvalueset()
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<DataPropertyValueSet> getDatapropertyvalueset();
+	EList<DataPropertyValueSet> getX_datapropertyvalueset();
 
 } // MLAlgorithmSolutionPattern

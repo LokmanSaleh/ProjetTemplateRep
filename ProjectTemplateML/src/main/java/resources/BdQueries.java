@@ -10,8 +10,23 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+import projetTemplate.Componenets;
+import projetTemplate.ComputationalRequirementValue;
+import projetTemplate.DataAnalysisProblem;
+import projetTemplate.DataAnalysisProblemType;
+import projetTemplate.MLAlgorithm;
+import projetTemplate.MLAlgorithmSelectionCriteriaContainer;
+import projetTemplate.MLAlgorithmSolutionPattern;
+import projetTemplate.MLProject;
+import projetTemplate.ProjetTemplateFactory;
+import projetTemplate.SelectionCriteria;
+import projetTemplate.SelectionCriterion;
+
 public class BdQueries {
 
+	public BdQueries () {
+		int i = 0;
+	}
 	public static String SQL_LAST_ID = "SELECT AUTO_INCREMENT as id \r\n"
 										+ "FROM  INFORMATION_SCHEMA.TABLES\r\n"
 										+ "WHERE TABLE_SCHEMA = 'templateproject' \r\n"
@@ -51,6 +66,43 @@ public class BdQueries {
 	public static String SQL_DELETE_CHAINE = " UPDATE chaines  " + 
 											"SET isDeleted = 1 " +
 											"WHERE id = ? AND isDeleted = 0";
+	
+	public static String SQL_INSERT_SELECTION_CRITERIA = " INSERT INTO criteria (name, value, type, formula, id_name_value, templateName) \r\n " + 
+			 											" VALUES (?, ?, ?, ?, ?, ?)" ;
+	
+	public static String SQL_INSERT_ML_ALGORITHM = " INSERT INTO algorithms (name, category, templateName) \r\n " + 
+														" VALUES (?, ?, ?)" ;
+	
+	public static String SQL_INSERT_ML_ALGORITHM_CRITERIA = " INSERT INTO algorithmscriterias (algorithmId, criteriaId, templateName) \r\n " + 
+													" VALUES (?, ?, ?)" ;
+	
+	public static String SQL_ALGORITHM_ID_BY_NAME = " SELECT * "
+													+ "FROM algorithms "
+													+ "WHERE name=? and isDeleted = 0" ;
+	
+	public static String SQL_CRITERIA_ID_BY_ID_NAME_VALUE = " SELECT * "
+														+ "FROM criteria "
+														+ "WHERE id_name_value=? and isDeleted = 0" ;
+	
+	public static String SQL_ALGORITHM_ID_BY_CATEGOPRY = " SELECT * "
+														+ "FROM algorithms "
+														+ "WHERE category=? and isDeleted = 0" ;
+	
+	public static String SQL_CRITERIA_FOR_ALGORITM = "SELECT * "
+														+ "FROM algorithmscriterias as algorCriter, criteria as crit "
+														+ "WHERE algorCriter.algorithmId = ? AND crit.id = algorCriter.criteriaId AND algorCriter.isDeleted = 0 AND crit.isDeleted = 0" ;
+	
+	public static String SQL_DELETE_CRITERIA_FOR_TEMPLAET = " UPDATE criteria  " + 
+														"SET isDeleted = 1 " +
+														"WHERE templateName = ?";
+	
+	public static String SQL_DELETE_ALGORITHMSCRITERIAS_FOR_TEMPLAET = " UPDATE algorithmscriterias  " + 
+																	"SET isDeleted = 1 " +
+																	"WHERE templateName = ?";
+	
+	public static String SQL_DELETE_ALGORITHMS_FOR_TEMPLAET = " UPDATE algorithms  " + 
+															"SET isDeleted = 1 " +
+															"WHERE templateName = ?";
 	
 	
 	public static void deleteChaine(int key) {
@@ -376,6 +428,367 @@ public class BdQueries {
 			}
 		}
 	}
+	
+	/**
+	 * Insert the chaine
+	 * @param chaine
+	 */
+	public static int deleteAllProjectTemplateInformations(String templateName) {
+ 
+			
+			ConnectionClass connClass = new ConnectionClass();
+			Connection con = connClass.getFileFromResources();
+			ResultSet resultSet = null;
+			Statement statement = null; 
+			 
+			try {
+	
+				PreparedStatement preparedStatement;
+	
+				preparedStatement = con.prepareStatement(SQL_DELETE_ALGORITHMS_FOR_TEMPLAET);
+				preparedStatement.setString(1, templateName);
+				preparedStatement.executeUpdate();
+				
+				preparedStatement = con.prepareStatement(SQL_DELETE_ALGORITHMSCRITERIAS_FOR_TEMPLAET);
+				preparedStatement.setString(1, templateName);
+				preparedStatement.executeUpdate();
+				
+				preparedStatement = con.prepareStatement(SQL_DELETE_CRITERIA_FOR_TEMPLAET);
+				preparedStatement.setString(1, templateName);
+				preparedStatement.executeUpdate();
+				
+				
+				 
+	            try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
+	                if (generatedKeys.next()) {
+	                    int id = generatedKeys.getInt(1);
+	                    System.out.println("Inserted user with ID: " + id);
+	                    
+	                    return id;
+	                } else {
+	                    throw new SQLException("Creating user failed, no ID obtained.");
+	                }
+	            }
+	             
+	            
+			} catch (Exception  e) { 
+				 
+				return 0;
+				
+			} finally {
+				connClass.close(con);
+				connClass.close(statement);
+				connClass.close(resultSet);
+			} 
+	}
+	
+	/**
+	 * Insert the chaine
+	 * @param chaine
+	 */
+	public static int insertCriteria(SelectionCriteria selectionCriteria, String type, String formula, String templateName) {
+ 
+			
+			ConnectionClass connClass = new ConnectionClass();
+			Connection con = connClass.getFileFromResources();
+			ResultSet resultSet = null;
+			Statement statement = null; 
+			 
+			try {
+	
+				PreparedStatement preparedStatement;
+	
+				preparedStatement = con.prepareStatement(SQL_INSERT_SELECTION_CRITERIA);
+				preparedStatement.setString(1, selectionCriteria.getCriteriaName());
+				preparedStatement.setString(2, selectionCriteria.getCriteriaValue()); 
+				preparedStatement.setString(3, type); 
+				preparedStatement.setString(4, formula); 
+				preparedStatement.setString(5, selectionCriteria.getId()); 
+				preparedStatement.setString(6, templateName); 
+ 
+				// on duplicate chaine with the same name throw exception 
+				preparedStatement.executeUpdate();
+				 
+	            try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
+	                if (generatedKeys.next()) {
+	                    int id = generatedKeys.getInt(1);
+	                    System.out.println("Inserted user with ID: " + id);
+	                    
+	                    return id;
+	                } else {
+	                    throw new SQLException("Creating user failed, no ID obtained.");
+	                }
+	            }
+	             
+	            
+			} catch (Exception  e) { 
+				 
+				return 0;
+				
+			} finally {
+				connClass.close(con);
+				connClass.close(statement);
+				connClass.close(resultSet);
+			} 
+	}
+	
+	
+	
+	
+	/**
+	 * Insert the chaine
+	 * @param chaine
+	 */
+	public static int insertAlgorithm(String name, String category, String templateName) {
+ 
+			
+			ConnectionClass connClass = new ConnectionClass();
+			Connection con = connClass.getFileFromResources();
+			ResultSet resultSet = null;
+			Statement statement = null; 
+			 
+			try {
+	
+				PreparedStatement preparedStatement;
+	
+				preparedStatement = con.prepareStatement(SQL_INSERT_ML_ALGORITHM);
+				preparedStatement.setString(1, name);
+				preparedStatement.setString(2, category);  
+				preparedStatement.setString(3, templateName);  
+
+				// on duplicate chaine with the same name throw exception 
+				preparedStatement.executeUpdate();
+				 
+	            try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
+	                if (generatedKeys.next()) {
+	                    int id = generatedKeys.getInt(1);
+	                    System.out.println("Inserted user with ID: " + id);
+	                    
+	                    return id;
+	                } else {
+	                    throw new SQLException("Creating user failed, no ID obtained.");
+	                }
+	            }
+	            
+			} catch (Exception  e) { 
+				 
+				return 0;
+				
+			} finally {
+				connClass.close(con);
+				connClass.close(statement);
+				connClass.close(resultSet);
+			} 
+	}
+	
+	
+	public static int GetIdAlgorithm(String nameAlgorithm) {
+		
+		ConnectionClass connClass = new ConnectionClass();
+		Connection con = connClass.getFileFromResources();
+		PreparedStatement preparedStatement = null;
+
+		ResultSet resultSet = null;
+		Statement statement = null; 
+		 
+		int id = 0 ;
+		try {
+			preparedStatement = con.prepareStatement(SQL_ALGORITHM_ID_BY_NAME);
+			preparedStatement.setString(1, nameAlgorithm);
+
+			resultSet = preparedStatement.executeQuery();
+			
+			resultSet.next();
+			id =  resultSet.getInt("id"); 
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+			
+		} finally {
+			connClass.close(con);
+			connClass.close(statement);
+			connClass.close(resultSet);
+		} 
+		
+		return id;
+	} 
+	
+	
+	public static DataAnalysisProblemType GetdAlgorithmsByCategory(String caetgory) {
+		
+		ConnectionClass connClass = new ConnectionClass();
+		Connection con = connClass.getFileFromResources();
+		PreparedStatement preparedStatement = null;
+		
+		
+		DataAnalysisProblemType dataAnalysisProblemType = ProjetTemplateFactory.eINSTANCE.createDataAnalysisProblemType();
+
+
+		
+		ResultSet resultSet = null;
+		Statement statement = null; 
+		 
+		int id = 0 ;
+		try {
+			preparedStatement = con.prepareStatement(SQL_ALGORITHM_ID_BY_CATEGOPRY);
+			preparedStatement.setString(1, caetgory);
+
+			resultSet = preparedStatement.executeQuery();
+			
+			while(resultSet.next()) {
+				
+				int algorithmId = resultSet.getInt("id"); 
+				
+				MLAlgorithm mlalgorithm = GetCriteriasByIdAlgorithm(algorithmId, caetgory);
+				
+				mlalgorithm.setName(resultSet.getString("name"));
+
+				MLAlgorithmSolutionPattern mlAlgorithmSolutionPattern = ProjetTemplateFactory.eINSTANCE.createMLAlgorithmSolutionPattern(); 
+				mlAlgorithmSolutionPattern.setMlalgorithm(mlalgorithm);
+				
+				dataAnalysisProblemType.getMlalgorithmsolutionpattern().add(mlAlgorithmSolutionPattern);
+				
+			}
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+			
+		} finally {
+			connClass.close(con);
+			connClass.close(statement);
+			connClass.close(resultSet);
+		} 
+		
+		return dataAnalysisProblemType;
+	} 
+	
+	
+	public static MLAlgorithm GetCriteriasByIdAlgorithm(int algorithmId, String category) {
+		
+		ConnectionClass connClass = new ConnectionClass();
+		Connection con = connClass.getFileFromResources();
+		PreparedStatement preparedStatement = null;
+		
+		
+		MLAlgorithm mlAlgroithm = ProjetTemplateFactory.eINSTANCE.createMLAlgorithm();
+		mlAlgroithm.setCriteriatochoosemlalgorithm( ProjetTemplateFactory.eINSTANCE.createMLAlgorithmSelectionCriteriaContainer());
+		//mlAlgroithm.getCriteriatochoosemlalgorithm().setComponenet(Componenets(category));
+		ResultSet resultSet = null;
+		Statement statement = null; 
+		 
+		int id = 0 ;
+		try {
+			preparedStatement = con.prepareStatement(SQL_CRITERIA_FOR_ALGORITM);
+			preparedStatement.setInt(1, algorithmId);
+
+			resultSet = preparedStatement.executeQuery();
+			
+			while(resultSet.next()) {
+				
+				ComputationalRequirementValue selectionCriteria = ProjetTemplateFactory.eINSTANCE.createComputationalRequirementValue();
+
+				selectionCriteria.setCriteriaName(resultSet.getString("name"));
+				selectionCriteria.setCriteriaValue(resultSet.getString("value"));
+				selectionCriteria.setFormule(resultSet.getString("formula"));
+				selectionCriteria.setId(resultSet.getString("id_name_value"));
+				 
+				mlAlgroithm.getCriteriatochoosemlalgorithm().getSelectionCriteria().add(selectionCriteria);
+				
+			}
+
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+			
+		} finally {
+			connClass.close(con);
+			connClass.close(statement);
+			connClass.close(resultSet);
+		} 
+		
+		return mlAlgroithm;
+	} 
+	
+	
+	public static int GetIdCriteria(String IdCriteriaNameValue) {
+		
+		ConnectionClass connClass = new ConnectionClass();
+		Connection con = connClass.getFileFromResources();
+		PreparedStatement preparedStatement = null;
+
+		ResultSet resultSet = null;
+		Statement statement = null; 
+		 
+		int id = 0 ;
+		try {
+			preparedStatement = con.prepareStatement(SQL_CRITERIA_ID_BY_ID_NAME_VALUE);
+			preparedStatement.setString(1, IdCriteriaNameValue);
+
+			resultSet = preparedStatement.executeQuery();
+			
+			resultSet.next();
+			id =  resultSet.getInt("id"); 
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+			
+		} finally {
+			connClass.close(con);
+			connClass.close(statement);
+			connClass.close(resultSet);
+		} 
+		
+		return id;
+	} 
+	
+	public static int insertAlgorithmCriteria(String nameAlgorithm, String IdCriteriaNameValue, String templateName) {
+		 
+		
+		ConnectionClass connClass = new ConnectionClass();
+		Connection con = connClass.getFileFromResources();
+		ResultSet resultSet = null;
+		Statement statement = null; 
+		 
+		int algorithmId = GetIdAlgorithm(nameAlgorithm);
+		int criteriaId = GetIdCriteria(IdCriteriaNameValue);
+		
+		try {
+
+			PreparedStatement preparedStatement;
+
+			preparedStatement = con.prepareStatement(SQL_INSERT_ML_ALGORITHM_CRITERIA);
+			preparedStatement.setInt(1, algorithmId);
+			preparedStatement.setInt(2, criteriaId); 
+			preparedStatement.setString(3, templateName);  
+ 
+			// on duplicate chaine with the same name throw exception 
+			preparedStatement.executeUpdate();
+			 
+            try (ResultSet generatedKeys = statement.getGeneratedKeys()) {
+                if (generatedKeys.next()) {
+                    int id = generatedKeys.getInt(1);
+                    System.out.println("Inserted user with ID: " + id);
+                    
+                    return id;
+                } else {
+                    throw new SQLException("Creating user failed, no ID obtained.");
+                }
+            }
+            
+		} catch (Exception  e) { 
+			 
+			return 0;
+			
+		} finally {
+			connClass.close(con);
+			connClass.close(statement);
+			connClass.close(resultSet);
+		} 
+}
+	
 	
 	public static boolean isChaineExist(String name) {
 		

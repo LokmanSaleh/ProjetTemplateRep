@@ -8,51 +8,6 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 
 import projetTemplate.*;
-import projetTemplate.Accuracy;
-import projetTemplate.CollectedDataKnowledgeAboutTemplateConstruction;
-import projetTemplate.Component;
-import projetTemplate.ComputationalRequirementValue;
-import projetTemplate.Condition;
-import projetTemplate.Conversion;
-import projetTemplate.Data;
-import projetTemplate.DataAnalysisProblem;
-import projetTemplate.DataAnalysisProblemType;
-import projetTemplate.DataCleaning;
-import projetTemplate.DataPretraitement;
-import projetTemplate.DataPropertyType;
-import projetTemplate.DataPropertyValue;
-import projetTemplate.DataPropertyValueSet;
-import projetTemplate.Database;
-import projetTemplate.Deployement;
-import projetTemplate.DomainProblem;
-import projetTemplate.DomainRequirementValue;
-import projetTemplate.Explainability;
-import projetTemplate.ExtendedBPMNModel;
-import projetTemplate.FeatureConstruction;
-import projetTemplate.FeatureSelection;
-import projetTemplate.MLAlgorithm;
-import projetTemplate.MLAlgorithmSolutionPattern;
-import projetTemplate.MLProcChainSolutionPattern;
-import projetTemplate.MLProject;
-import projetTemplate.MissingValueTreatement;
-import projetTemplate.ModelElement;
-import projetTemplate.NoiseTreatement;
-import projetTemplate.PostTreatement;
-import projetTemplate.ProcessingChain;
-import projetTemplate.ProcessingChainTemplate;
-import projetTemplate.ProjetTemplatePackage;
-import projetTemplate.RemoveUncessaryFileds;
-import projetTemplate.RequirementMapping;
-import projetTemplate.RequirementType;
-import projetTemplate.Resultat;
-import projetTemplate.Rule;
-import projetTemplate.Schema;
-import projetTemplate.SelectionCriterion;
-import projetTemplate.SelectionCriterionValue;
-import projetTemplate.SelectionCriterionValueSet;
-import projetTemplate.Term;
-import projetTemplate.connector;
-import projetTemplate.variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -140,8 +95,8 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseDatabase(Database object) {
-			return createDatabaseAdapter();
+		public Adapter caseX_Database(X_Database object) {
+			return createX_DatabaseAdapter();
 		}
 
 		@Override
@@ -190,8 +145,8 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseMLProcChainSolutionPattern(MLProcChainSolutionPattern object) {
-			return createMLProcChainSolutionPatternAdapter();
+		public Adapter caseMLProcChainSolution(MLProcChainSolution object) {
+			return createMLProcChainSolutionAdapter();
 		}
 
 		@Override
@@ -341,6 +296,11 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseDataBaseConnection(DataBaseConnection object) {
+			return createDataBaseConnectionAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -444,16 +404,16 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link projetTemplate.Database <em>Database</em>}'.
+	 * Creates a new adapter for an object of class '{@link projetTemplate.X_Database <em>XDatabase</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see projetTemplate.Database
+	 * @see projetTemplate.X_Database
 	 * @generated
 	 */
-	public Adapter createDatabaseAdapter() {
+	public Adapter createX_DatabaseAdapter() {
 		return null;
 	}
 
@@ -584,20 +544,6 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link projetTemplate.MLProcChainSolutionPattern <em>ML Proc Chain Solution Pattern</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see projetTemplate.MLProcChainSolutionPattern
-	 * @generated
-	 */
-	public Adapter createMLProcChainSolutionPatternAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link projetTemplate.ProcessingChainTemplate <em>Processing Chain Template</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -608,6 +554,20 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createProcessingChainTemplateAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.MLProcChainSolution <em>ML Proc Chain Solution</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.MLProcChainSolution
+	 * @generated
+	 */
+	public Adapter createMLProcChainSolutionAdapter() {
 		return null;
 	}
 
@@ -1000,6 +960,20 @@ public class ProjetTemplateAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMLAlgorithmSelectionCriteriaContainerAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link projetTemplate.DataBaseConnection <em>Data Base Connection</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see projetTemplate.DataBaseConnection
+	 * @generated
+	 */
+	public Adapter createDataBaseConnectionAdapter() {
 		return null;
 	}
 

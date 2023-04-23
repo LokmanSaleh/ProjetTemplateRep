@@ -531,24 +531,7 @@
                   
         </bpmndi:BPMNLabel>
               
-      </bpmndi:BPMNShape>
-            
-      <bpmndi:BPMNShape bpmnElement="ParallelGateway_15" id="BPMNShape_ParallelGateway_15" isMarkerVisible="true">
-                
-        <dc:Bounds height="50.0" width="50.0" x="2390.0" y="758.0"/>
-                
-        <bpmndi:BPMNLabel id="BPMNLabel_139" labelStyle="BPMNLabelStyle_1"/>
-              
-      </bpmndi:BPMNShape>
-            
-      <bpmndi:BPMNShape bpmnElement="ParallelGateway_17" id="BPMNShape_ParallelGateway_17" isMarkerVisible="true">
-                
-        <dc:Bounds height="50.0" width="50.0" x="2230.0" y="765.0"/>
-                
-        <bpmndi:BPMNLabel id="BPMNLabel_147" labelStyle="BPMNLabelStyle_1"/>
-              
-      </bpmndi:BPMNShape>
-            
+      </bpmndi:BPMNShape> 
       
       <bpmndi:BPMNEdge bpmnElement="SequenceFlow_12" id="BPMNEdge_SequenceFlow_12" sourceElement="BPMNShape_ParallelGateway_3" targetElement="BPMNShape_ServiceTask_2">
                 

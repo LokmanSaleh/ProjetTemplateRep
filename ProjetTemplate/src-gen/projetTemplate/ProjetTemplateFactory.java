@@ -76,13 +76,13 @@ public interface ProjetTemplateFactory extends EFactory {
 	ComputationalRequirementValue createComputationalRequirementValue();
 
 	/**
-	 * Returns a new object of class '<em>Database</em>'.
+	 * Returns a new object of class '<em>XDatabase</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Database</em>'.
+	 * @return a new object of class '<em>XDatabase</em>'.
 	 * @generated
 	 */
-	Database createDatabase();
+	X_Database createX_Database();
 
 	/**
 	 * Returns a new object of class '<em>Schema</em>'.
@@ -166,15 +166,6 @@ public interface ProjetTemplateFactory extends EFactory {
 	ProcessingChain createProcessingChain();
 
 	/**
-	 * Returns a new object of class '<em>ML Proc Chain Solution Pattern</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>ML Proc Chain Solution Pattern</em>'.
-	 * @generated
-	 */
-	MLProcChainSolutionPattern createMLProcChainSolutionPattern();
-
-	/**
 	 * Returns a new object of class '<em>Processing Chain Template</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -182,6 +173,15 @@ public interface ProjetTemplateFactory extends EFactory {
 	 * @generated
 	 */
 	ProcessingChainTemplate createProcessingChainTemplate();
+
+	/**
+	 * Returns a new object of class '<em>ML Proc Chain Solution</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>ML Proc Chain Solution</em>'.
+	 * @generated
+	 */
+	MLProcChainSolution createMLProcChainSolution();
 
 	/**
 	 * Returns a new object of class '<em>ML Algorithm Solution Pattern</em>'.
@@ -418,15 +418,6 @@ public interface ProjetTemplateFactory extends EFactory {
 	MissingValueTreatement createMissingValueTreatement();
 
 	/**
-	 * Returns a new object of class '<em>Selection Criteria</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Selection Criteria</em>'.
-	 * @generated
-	 */
-	SelectionCriteria createSelectionCriteria();
-
-	/**
 	 * Returns a new object of class '<em>ML Algorithm Selection Criteria Container</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -434,6 +425,15 @@ public interface ProjetTemplateFactory extends EFactory {
 	 * @generated
 	 */
 	MLAlgorithmSelectionCriteriaContainer createMLAlgorithmSelectionCriteriaContainer();
+
+	/**
+	 * Returns a new object of class '<em>Data Base Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Data Base Connection</em>'.
+	 * @generated
+	 */
+	DataBaseConnection createDataBaseConnection();
 
 	/**
 	 * Returns the package supported by this factory.

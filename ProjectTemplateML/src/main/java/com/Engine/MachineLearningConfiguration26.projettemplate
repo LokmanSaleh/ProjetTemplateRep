@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:projetTemplate="http://www.example.org/projetTemplate">
+  <projetTemplate:MLProject dataanalysisproblem="/7" domainproblem="/1"/>
+  <projetTemplate:DomainProblem DomainRequirementValue="/2 /3 /4 /5 /6"/>
+  <projetTemplate:DomainRequirementValue criteriaName="Accuracy" criteriaValue="Low" Id="Accuracy_Low"/>
+  <projetTemplate:DomainRequirementValue criteriaName="Accuracy" criteriaValue="Middle" Id="Accuracy_Middle"/>
+  <projetTemplate:DomainRequirementValue criteriaName="Accuracy" criteriaValue="High" Id="Accuracy_High"/>
+  <projetTemplate:DomainRequirementValue criteriaName="Explaination" criteriaValue="Yes" Id="Explaination_Yes"/>
+  <projetTemplate:DomainRequirementValue criteriaName="Explaination" criteriaValue="No" Id="Explaination_No"/>
+  <projetTemplate:DataAnalysisProblem dataanalysisproblemtype="/8" computationalrequirementvalue="/11 /12"/>
+  <projetTemplate:DataAnalysisProblemType>
+    <mlalgorithmsolutionpattern name="NaiveBayes" mlalgorithm="/9"/>
+    <mlalgorithmsolutionpattern mlalgorithm="/14"/>
+  </projetTemplate:DataAnalysisProblemType>
+  <projetTemplate:MLAlgorithm name="NaiveBayes" criteriatochoosemlalgorithm="/10"/>
+  <projetTemplate:MLAlgorithmSelectionCriteriaContainer SelectionCriteria="/4 /6" Componenet="ModelConstruction"/>
+  <projetTemplate:ComputationalRequirementValue criteriaName="DataType" criteriaValue="Categorial" Id="DataType_Categorial" formule="formule"/>
+  <projetTemplate:ComputationalRequirementValue criteriaName="DataType" criteriaValue="Continue" Id="DataType_Continue" formule="formule"/>
+  <projetTemplate:MLAlgorithm/>
+  <projetTemplate:MLAlgorithm name="DecisionTree" criteriatochoosemlalgorithm="/15"/>
+  <projetTemplate:MLAlgorithmSelectionCriteriaContainer SelectionCriteria="/3 /5" Componenet="ModelConstruction"/>
+</xmi:XMI>

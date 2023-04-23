@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link projetTemplate.DataAnalysisProblem#getAuthor <em>Author</em>}</li>
  *   <li>{@link projetTemplate.DataAnalysisProblem#getDataanalysisproblemtype <em>Dataanalysisproblemtype</em>}</li>
  *   <li>{@link projetTemplate.DataAnalysisProblem#getComputationalrequirementvalue <em>Computationalrequirementvalue</em>}</li>
- *   <li>{@link projetTemplate.DataAnalysisProblem#getMlprocchainsolutionpattern <em>Mlprocchainsolutionpattern</em>}</li>
+ *   <li>{@link projetTemplate.DataAnalysisProblem#getMlprocchainsolution <em>Mlprocchainsolution</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getDataAnalysisProblem()
@@ -128,25 +128,25 @@ public interface DataAnalysisProblem extends EObject {
 	EList<ComputationalRequirementValue> getComputationalrequirementvalue();
 
 	/**
-	 * Returns the value of the '<em><b>Mlprocchainsolutionpattern</b></em>' reference.
+	 * Returns the value of the '<em><b>Mlprocchainsolution</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mlprocchainsolutionpattern</em>' reference.
-	 * @see #setMlprocchainsolutionpattern(MLProcChainSolutionPattern)
-	 * @see projetTemplate.ProjetTemplatePackage#getDataAnalysisProblem_Mlprocchainsolutionpattern()
+	 * @return the value of the '<em>Mlprocchainsolution</em>' reference.
+	 * @see #setMlprocchainsolution(MLProcChainSolution)
+	 * @see projetTemplate.ProjetTemplatePackage#getDataAnalysisProblem_Mlprocchainsolution()
 	 * @model
 	 * @generated
 	 */
-	MLProcChainSolutionPattern getMlprocchainsolutionpattern();
+	MLProcChainSolution getMlprocchainsolution();
 
 	/**
-	 * Sets the value of the '{@link projetTemplate.DataAnalysisProblem#getMlprocchainsolutionpattern <em>Mlprocchainsolutionpattern</em>}' reference.
+	 * Sets the value of the '{@link projetTemplate.DataAnalysisProblem#getMlprocchainsolution <em>Mlprocchainsolution</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Mlprocchainsolutionpattern</em>' reference.
-	 * @see #getMlprocchainsolutionpattern()
+	 * @param value the new value of the '<em>Mlprocchainsolution</em>' reference.
+	 * @see #getMlprocchainsolution()
 	 * @generated
 	 */
-	void setMlprocchainsolutionpattern(MLProcChainSolutionPattern value);
+	void setMlprocchainsolution(MLProcChainSolution value);
 
 } // DataAnalysisProblem

@@ -7,18 +7,9 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import projetTemplate.DomainRequirementValue;
@@ -30,8 +21,7 @@ import projetTemplate.ProjetTemplatePackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class DomainRequirementValueItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
-		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
+public class DomainRequirementValueItemProvider extends SelectionCriteriaItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -54,8 +44,7 @@ public class DomainRequirementValueItemProvider extends ItemProviderAdapter impl
 			super.getPropertyDescriptors(object);
 
 			addExplanationPropertyDescriptor(object);
-			addRequirementtypePropertyDescriptor(object);
-			addDomainrequirementselectioncriteriaPropertyDescriptor(object);
+			addX_requirementtypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -77,36 +66,19 @@ public class DomainRequirementValueItemProvider extends ItemProviderAdapter impl
 	}
 
 	/**
-	 * This adds a property descriptor for the Requirementtype feature.
+	 * This adds a property descriptor for the Xrequirementtype feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRequirementtypePropertyDescriptor(Object object) {
+	protected void addX_requirementtypePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_DomainRequirementValue_requirementtype_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_DomainRequirementValue_requirementtype_feature",
+				getString("_UI_DomainRequirementValue_X_requirementtype_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_DomainRequirementValue_X_requirementtype_feature",
 						"_UI_DomainRequirementValue_type"),
-				ProjetTemplatePackage.Literals.DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE, true, false, true, null, null,
-				null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Domainrequirementselectioncriteria feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addDomainrequirementselectioncriteriaPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_DomainRequirementValue_domainrequirementselectioncriteria_feature"),
-				getString("_UI_PropertyDescriptor_description",
-						"_UI_DomainRequirementValue_domainrequirementselectioncriteria_feature",
-						"_UI_DomainRequirementValue_type"),
-				ProjetTemplatePackage.Literals.DOMAIN_REQUIREMENT_VALUE__DOMAINREQUIREMENTSELECTIONCRITERIA, true,
-				false, true, null, null, null));
+				ProjetTemplatePackage.Literals.DOMAIN_REQUIREMENT_VALUE__XREQUIREMENTTYPE, true, false, true, null,
+				null, null));
 	}
 
 	/**
@@ -138,7 +110,7 @@ public class DomainRequirementValueItemProvider extends ItemProviderAdapter impl
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = crop(((DomainRequirementValue) object).getExplanation());
+		String label = ((DomainRequirementValue) object).getId();
 		return label == null || label.length() == 0 ? getString("_UI_DomainRequirementValue_type")
 				: getString("_UI_DomainRequirementValue_type") + " " + label;
 	}
@@ -172,17 +144,6 @@ public class DomainRequirementValueItemProvider extends ItemProviderAdapter impl
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return ProjetTemplateEditPlugin.INSTANCE;
 	}
 
 }

@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link projetTemplate.MLProject#getAuthor <em>Author</em>}</li>
  *   <li>{@link projetTemplate.MLProject#getDataanalysisproblem <em>Dataanalysisproblem</em>}</li>
  *   <li>{@link projetTemplate.MLProject#getDomainproblem <em>Domainproblem</em>}</li>
- *   <li>{@link projetTemplate.MLProject#getDatabase <em>Database</em>}</li>
+ *   <li>{@link projetTemplate.MLProject#getDatabaseconnection <em>Databaseconnection</em>}</li>
  * </ul>
  *
  * @see projetTemplate.ProjetTemplatePackage#getMLProject()
@@ -137,25 +137,25 @@ public interface MLProject extends EObject {
 	void setDomainproblem(DomainProblem value);
 
 	/**
-	 * Returns the value of the '<em><b>Database</b></em>' reference.
+	 * Returns the value of the '<em><b>Databaseconnection</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Database</em>' reference.
-	 * @see #setDatabase(Database)
-	 * @see projetTemplate.ProjetTemplatePackage#getMLProject_Database()
+	 * @return the value of the '<em>Databaseconnection</em>' reference.
+	 * @see #setDatabaseconnection(DataBaseConnection)
+	 * @see projetTemplate.ProjetTemplatePackage#getMLProject_Databaseconnection()
 	 * @model
 	 * @generated
 	 */
-	Database getDatabase();
+	DataBaseConnection getDatabaseconnection();
 
 	/**
-	 * Sets the value of the '{@link projetTemplate.MLProject#getDatabase <em>Database</em>}' reference.
+	 * Sets the value of the '{@link projetTemplate.MLProject#getDatabaseconnection <em>Databaseconnection</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Database</em>' reference.
-	 * @see #getDatabase()
+	 * @param value the new value of the '<em>Databaseconnection</em>' reference.
+	 * @see #getDatabaseconnection()
 	 * @generated
 	 */
-	void setDatabase(Database value);
+	void setDatabaseconnection(DataBaseConnection value);
 
 } // MLProject

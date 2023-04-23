@@ -28,7 +28,7 @@ import projetTemplate.ProjetTemplatePackage;
  *   <li>{@link projetTemplate.impl.MLAlgorithmSolutionPatternImpl#getName <em>Name</em>}</li>
  *   <li>{@link projetTemplate.impl.MLAlgorithmSolutionPatternImpl#getExplanation <em>Explanation</em>}</li>
  *   <li>{@link projetTemplate.impl.MLAlgorithmSolutionPatternImpl#getMlalgorithm <em>Mlalgorithm</em>}</li>
- *   <li>{@link projetTemplate.impl.MLAlgorithmSolutionPatternImpl#getDatapropertyvalueset <em>Datapropertyvalueset</em>}</li>
+ *   <li>{@link projetTemplate.impl.MLAlgorithmSolutionPatternImpl#getX_datapropertyvalueset <em>Xdatapropertyvalueset</em>}</li>
  * </ul>
  *
  * @generated
@@ -85,14 +85,14 @@ public class MLAlgorithmSolutionPatternImpl extends MinimalEObjectImpl.Container
 	protected MLAlgorithm mlalgorithm;
 
 	/**
-	 * The cached value of the '{@link #getDatapropertyvalueset() <em>Datapropertyvalueset</em>}' reference list.
+	 * The cached value of the '{@link #getX_datapropertyvalueset() <em>Xdatapropertyvalueset</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDatapropertyvalueset()
+	 * @see #getX_datapropertyvalueset()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DataPropertyValueSet> datapropertyvalueset;
+	protected EList<DataPropertyValueSet> x_datapropertyvalueset;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -203,12 +203,12 @@ public class MLAlgorithmSolutionPatternImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DataPropertyValueSet> getDatapropertyvalueset() {
-		if (datapropertyvalueset == null) {
-			datapropertyvalueset = new EObjectResolvingEList<DataPropertyValueSet>(DataPropertyValueSet.class, this,
-					ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__DATAPROPERTYVALUESET);
+	public EList<DataPropertyValueSet> getX_datapropertyvalueset() {
+		if (x_datapropertyvalueset == null) {
+			x_datapropertyvalueset = new EObjectResolvingEList<DataPropertyValueSet>(DataPropertyValueSet.class, this,
+					ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__XDATAPROPERTYVALUESET);
 		}
-		return datapropertyvalueset;
+		return x_datapropertyvalueset;
 	}
 
 	/**
@@ -227,8 +227,8 @@ public class MLAlgorithmSolutionPatternImpl extends MinimalEObjectImpl.Container
 			if (resolve)
 				return getMlalgorithm();
 			return basicGetMlalgorithm();
-		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__DATAPROPERTYVALUESET:
-			return getDatapropertyvalueset();
+		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__XDATAPROPERTYVALUESET:
+			return getX_datapropertyvalueset();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -251,9 +251,9 @@ public class MLAlgorithmSolutionPatternImpl extends MinimalEObjectImpl.Container
 		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__MLALGORITHM:
 			setMlalgorithm((MLAlgorithm) newValue);
 			return;
-		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__DATAPROPERTYVALUESET:
-			getDatapropertyvalueset().clear();
-			getDatapropertyvalueset().addAll((Collection<? extends DataPropertyValueSet>) newValue);
+		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__XDATAPROPERTYVALUESET:
+			getX_datapropertyvalueset().clear();
+			getX_datapropertyvalueset().addAll((Collection<? extends DataPropertyValueSet>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -276,8 +276,8 @@ public class MLAlgorithmSolutionPatternImpl extends MinimalEObjectImpl.Container
 		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__MLALGORITHM:
 			setMlalgorithm((MLAlgorithm) null);
 			return;
-		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__DATAPROPERTYVALUESET:
-			getDatapropertyvalueset().clear();
+		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__XDATAPROPERTYVALUESET:
+			getX_datapropertyvalueset().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -297,8 +297,8 @@ public class MLAlgorithmSolutionPatternImpl extends MinimalEObjectImpl.Container
 			return EXPLANATION_EDEFAULT == null ? explanation != null : !EXPLANATION_EDEFAULT.equals(explanation);
 		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__MLALGORITHM:
 			return mlalgorithm != null;
-		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__DATAPROPERTYVALUESET:
-			return datapropertyvalueset != null && !datapropertyvalueset.isEmpty();
+		case ProjetTemplatePackage.ML_ALGORITHM_SOLUTION_PATTERN__XDATAPROPERTYVALUESET:
+			return x_datapropertyvalueset != null && !x_datapropertyvalueset.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

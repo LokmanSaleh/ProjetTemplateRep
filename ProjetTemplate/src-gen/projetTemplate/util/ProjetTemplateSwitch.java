@@ -7,51 +7,6 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 
 import projetTemplate.*;
-import projetTemplate.Accuracy;
-import projetTemplate.CollectedDataKnowledgeAboutTemplateConstruction;
-import projetTemplate.Component;
-import projetTemplate.ComputationalRequirementValue;
-import projetTemplate.Condition;
-import projetTemplate.Conversion;
-import projetTemplate.Data;
-import projetTemplate.DataAnalysisProblem;
-import projetTemplate.DataAnalysisProblemType;
-import projetTemplate.DataCleaning;
-import projetTemplate.DataPretraitement;
-import projetTemplate.DataPropertyType;
-import projetTemplate.DataPropertyValue;
-import projetTemplate.DataPropertyValueSet;
-import projetTemplate.Database;
-import projetTemplate.Deployement;
-import projetTemplate.DomainProblem;
-import projetTemplate.DomainRequirementValue;
-import projetTemplate.Explainability;
-import projetTemplate.ExtendedBPMNModel;
-import projetTemplate.FeatureConstruction;
-import projetTemplate.FeatureSelection;
-import projetTemplate.MLAlgorithm;
-import projetTemplate.MLAlgorithmSolutionPattern;
-import projetTemplate.MLProcChainSolutionPattern;
-import projetTemplate.MLProject;
-import projetTemplate.MissingValueTreatement;
-import projetTemplate.ModelElement;
-import projetTemplate.NoiseTreatement;
-import projetTemplate.PostTreatement;
-import projetTemplate.ProcessingChain;
-import projetTemplate.ProcessingChainTemplate;
-import projetTemplate.ProjetTemplatePackage;
-import projetTemplate.RemoveUncessaryFileds;
-import projetTemplate.RequirementMapping;
-import projetTemplate.RequirementType;
-import projetTemplate.Resultat;
-import projetTemplate.Rule;
-import projetTemplate.Schema;
-import projetTemplate.SelectionCriterion;
-import projetTemplate.SelectionCriterionValue;
-import projetTemplate.SelectionCriterionValueSet;
-import projetTemplate.Term;
-import projetTemplate.connector;
-import projetTemplate.variable;
 
 /**
  * <!-- begin-user-doc -->
@@ -121,6 +76,8 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 			DomainRequirementValue domainRequirementValue = (DomainRequirementValue) theEObject;
 			T result = caseDomainRequirementValue(domainRequirementValue);
 			if (result == null)
+				result = caseSelectionCriteria(domainRequirementValue);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
@@ -149,12 +106,14 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 			ComputationalRequirementValue computationalRequirementValue = (ComputationalRequirementValue) theEObject;
 			T result = caseComputationalRequirementValue(computationalRequirementValue);
 			if (result == null)
+				result = caseSelectionCriteria(computationalRequirementValue);
+			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ProjetTemplatePackage.DATABASE: {
-			Database database = (Database) theEObject;
-			T result = caseDatabase(database);
+		case ProjetTemplatePackage.XDATABASE: {
+			X_Database x_Database = (X_Database) theEObject;
+			T result = caseX_Database(x_Database);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -222,9 +181,9 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION_PATTERN: {
-			MLProcChainSolutionPattern mlProcChainSolutionPattern = (MLProcChainSolutionPattern) theEObject;
-			T result = caseMLProcChainSolutionPattern(mlProcChainSolutionPattern);
+		case ProjetTemplatePackage.ML_PROC_CHAIN_SOLUTION: {
+			MLProcChainSolution mlProcChainSolution = (MLProcChainSolution) theEObject;
+			T result = caseMLProcChainSolution(mlProcChainSolution);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -461,6 +420,13 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case ProjetTemplatePackage.DATA_BASE_CONNECTION: {
+			DataBaseConnection dataBaseConnection = (DataBaseConnection) theEObject;
+			T result = caseDataBaseConnection(dataBaseConnection);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -557,17 +523,17 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Database</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>XDatabase</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Database</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>XDatabase</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDatabase(Database object) {
+	public T caseX_Database(X_Database object) {
 		return null;
 	}
 
@@ -707,21 +673,6 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>ML Proc Chain Solution Pattern</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>ML Proc Chain Solution Pattern</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMLProcChainSolutionPattern(MLProcChainSolutionPattern object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Processing Chain Template</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -733,6 +684,21 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseProcessingChainTemplate(ProcessingChainTemplate object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>ML Proc Chain Solution</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>ML Proc Chain Solution</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMLProcChainSolution(MLProcChainSolution object) {
 		return null;
 	}
 
@@ -1154,6 +1120,21 @@ public class ProjetTemplateSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMLAlgorithmSelectionCriteriaContainer(MLAlgorithmSelectionCriteriaContainer object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Data Base Connection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Data Base Connection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDataBaseConnection(DataBaseConnection object) {
 		return null;
 	}
 

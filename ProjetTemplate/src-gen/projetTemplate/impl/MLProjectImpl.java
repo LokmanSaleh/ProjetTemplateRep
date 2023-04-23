@@ -9,7 +9,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import projetTemplate.DataAnalysisProblem;
-import projetTemplate.Database;
+import projetTemplate.DataBaseConnection;
 import projetTemplate.DomainProblem;
 import projetTemplate.MLProject;
 import projetTemplate.ProjetTemplatePackage;
@@ -27,7 +27,7 @@ import projetTemplate.ProjetTemplatePackage;
  *   <li>{@link projetTemplate.impl.MLProjectImpl#getAuthor <em>Author</em>}</li>
  *   <li>{@link projetTemplate.impl.MLProjectImpl#getDataanalysisproblem <em>Dataanalysisproblem</em>}</li>
  *   <li>{@link projetTemplate.impl.MLProjectImpl#getDomainproblem <em>Domainproblem</em>}</li>
- *   <li>{@link projetTemplate.impl.MLProjectImpl#getDatabase <em>Database</em>}</li>
+ *   <li>{@link projetTemplate.impl.MLProjectImpl#getDatabaseconnection <em>Databaseconnection</em>}</li>
  * </ul>
  *
  * @generated
@@ -114,14 +114,14 @@ public class MLProjectImpl extends MinimalEObjectImpl.Container implements MLPro
 	protected DomainProblem domainproblem;
 
 	/**
-	 * The cached value of the '{@link #getDatabase() <em>Database</em>}' reference.
+	 * The cached value of the '{@link #getDatabaseconnection() <em>Databaseconnection</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getDatabase()
+	 * @see #getDatabaseconnection()
 	 * @generated
 	 * @ordered
 	 */
-	protected Database database;
+	protected DataBaseConnection databaseconnection;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -294,17 +294,18 @@ public class MLProjectImpl extends MinimalEObjectImpl.Container implements MLPro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Database getDatabase() {
-		if (database != null && database.eIsProxy()) {
-			InternalEObject oldDatabase = (InternalEObject) database;
-			database = (Database) eResolveProxy(oldDatabase);
-			if (database != oldDatabase) {
+	public DataBaseConnection getDatabaseconnection() {
+		if (databaseconnection != null && databaseconnection.eIsProxy()) {
+			InternalEObject oldDatabaseconnection = (InternalEObject) databaseconnection;
+			databaseconnection = (DataBaseConnection) eResolveProxy(oldDatabaseconnection);
+			if (databaseconnection != oldDatabaseconnection) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ProjetTemplatePackage.ML_PROJECT__DATABASE, oldDatabase, database));
+							ProjetTemplatePackage.ML_PROJECT__DATABASECONNECTION, oldDatabaseconnection,
+							databaseconnection));
 			}
 		}
-		return database;
+		return databaseconnection;
 	}
 
 	/**
@@ -312,8 +313,8 @@ public class MLProjectImpl extends MinimalEObjectImpl.Container implements MLPro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Database basicGetDatabase() {
-		return database;
+	public DataBaseConnection basicGetDatabaseconnection() {
+		return databaseconnection;
 	}
 
 	/**
@@ -321,12 +322,12 @@ public class MLProjectImpl extends MinimalEObjectImpl.Container implements MLPro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDatabase(Database newDatabase) {
-		Database oldDatabase = database;
-		database = newDatabase;
+	public void setDatabaseconnection(DataBaseConnection newDatabaseconnection) {
+		DataBaseConnection oldDatabaseconnection = databaseconnection;
+		databaseconnection = newDatabaseconnection;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ProjetTemplatePackage.ML_PROJECT__DATABASE,
-					oldDatabase, database));
+			eNotify(new ENotificationImpl(this, Notification.SET, ProjetTemplatePackage.ML_PROJECT__DATABASECONNECTION,
+					oldDatabaseconnection, databaseconnection));
 	}
 
 	/**
@@ -351,10 +352,10 @@ public class MLProjectImpl extends MinimalEObjectImpl.Container implements MLPro
 			if (resolve)
 				return getDomainproblem();
 			return basicGetDomainproblem();
-		case ProjetTemplatePackage.ML_PROJECT__DATABASE:
+		case ProjetTemplatePackage.ML_PROJECT__DATABASECONNECTION:
 			if (resolve)
-				return getDatabase();
-			return basicGetDatabase();
+				return getDatabaseconnection();
+			return basicGetDatabaseconnection();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -382,8 +383,8 @@ public class MLProjectImpl extends MinimalEObjectImpl.Container implements MLPro
 		case ProjetTemplatePackage.ML_PROJECT__DOMAINPROBLEM:
 			setDomainproblem((DomainProblem) newValue);
 			return;
-		case ProjetTemplatePackage.ML_PROJECT__DATABASE:
-			setDatabase((Database) newValue);
+		case ProjetTemplatePackage.ML_PROJECT__DATABASECONNECTION:
+			setDatabaseconnection((DataBaseConnection) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -412,8 +413,8 @@ public class MLProjectImpl extends MinimalEObjectImpl.Container implements MLPro
 		case ProjetTemplatePackage.ML_PROJECT__DOMAINPROBLEM:
 			setDomainproblem((DomainProblem) null);
 			return;
-		case ProjetTemplatePackage.ML_PROJECT__DATABASE:
-			setDatabase((Database) null);
+		case ProjetTemplatePackage.ML_PROJECT__DATABASECONNECTION:
+			setDatabaseconnection((DataBaseConnection) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -437,8 +438,8 @@ public class MLProjectImpl extends MinimalEObjectImpl.Container implements MLPro
 			return dataanalysisproblem != null;
 		case ProjetTemplatePackage.ML_PROJECT__DOMAINPROBLEM:
 			return domainproblem != null;
-		case ProjetTemplatePackage.ML_PROJECT__DATABASE:
-			return database != null;
+		case ProjetTemplatePackage.ML_PROJECT__DATABASECONNECTION:
+			return databaseconnection != null;
 		}
 		return super.eIsSet(featureID);
 	}

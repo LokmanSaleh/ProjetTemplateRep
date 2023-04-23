@@ -36,6 +36,7 @@ import org.eclipse.ui.PlatformUI;
  * <ul>
  *   <li>{@link projetTemplate.impl.ExtendedBPMNModelImpl#getPath <em>Path</em>}</li>
  *   <li>{@link projetTemplate.impl.ExtendedBPMNModelImpl#getAuthor <em>Author</em>}</li>
+ *   <li>{@link projetTemplate.impl.ExtendedBPMNModelImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -80,6 +81,26 @@ public class ExtendedBPMNModelImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected String author = AUTHOR_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -270,6 +291,28 @@ public class ExtendedBPMNModelImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ProjetTemplatePackage.EXTENDED_BPMN_MODEL__NAME,
+					oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -277,6 +320,8 @@ public class ExtendedBPMNModelImpl extends MinimalEObjectImpl.Container implemen
 			return getPath();
 		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__AUTHOR:
 			return getAuthor();
+		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -294,6 +339,9 @@ public class ExtendedBPMNModelImpl extends MinimalEObjectImpl.Container implemen
 			return;
 		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__AUTHOR:
 			setAuthor((String) newValue);
+			return;
+		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__NAME:
+			setName((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -313,6 +361,9 @@ public class ExtendedBPMNModelImpl extends MinimalEObjectImpl.Container implemen
 		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__AUTHOR:
 			setAuthor(AUTHOR_EDEFAULT);
 			return;
+		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__NAME:
+			setName(NAME_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -329,6 +380,8 @@ public class ExtendedBPMNModelImpl extends MinimalEObjectImpl.Container implemen
 			return PATH_EDEFAULT == null ? path != null : !PATH_EDEFAULT.equals(path);
 		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__AUTHOR:
 			return AUTHOR_EDEFAULT == null ? author != null : !AUTHOR_EDEFAULT.equals(author);
+		case ProjetTemplatePackage.EXTENDED_BPMN_MODEL__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -348,6 +401,8 @@ public class ExtendedBPMNModelImpl extends MinimalEObjectImpl.Container implemen
 		result.append(path);
 		result.append(", author: ");
 		result.append(author);
+		result.append(", name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

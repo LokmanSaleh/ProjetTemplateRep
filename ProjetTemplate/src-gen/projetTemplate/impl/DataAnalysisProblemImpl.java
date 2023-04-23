@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import projetTemplate.ComputationalRequirementValue;
 import projetTemplate.DataAnalysisProblem;
 import projetTemplate.DataAnalysisProblemType;
-import projetTemplate.MLProcChainSolutionPattern;
+import projetTemplate.MLProcChainSolution;
 import projetTemplate.ProjetTemplatePackage;
 
 /**
@@ -31,7 +31,7 @@ import projetTemplate.ProjetTemplatePackage;
  *   <li>{@link projetTemplate.impl.DataAnalysisProblemImpl#getAuthor <em>Author</em>}</li>
  *   <li>{@link projetTemplate.impl.DataAnalysisProblemImpl#getDataanalysisproblemtype <em>Dataanalysisproblemtype</em>}</li>
  *   <li>{@link projetTemplate.impl.DataAnalysisProblemImpl#getComputationalrequirementvalue <em>Computationalrequirementvalue</em>}</li>
- *   <li>{@link projetTemplate.impl.DataAnalysisProblemImpl#getMlprocchainsolutionpattern <em>Mlprocchainsolutionpattern</em>}</li>
+ *   <li>{@link projetTemplate.impl.DataAnalysisProblemImpl#getMlprocchainsolution <em>Mlprocchainsolution</em>}</li>
  * </ul>
  *
  * @generated
@@ -118,14 +118,14 @@ public class DataAnalysisProblemImpl extends MinimalEObjectImpl.Container implem
 	protected EList<ComputationalRequirementValue> computationalrequirementvalue;
 
 	/**
-	 * The cached value of the '{@link #getMlprocchainsolutionpattern() <em>Mlprocchainsolutionpattern</em>}' reference.
+	 * The cached value of the '{@link #getMlprocchainsolution() <em>Mlprocchainsolution</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMlprocchainsolutionpattern()
+	 * @see #getMlprocchainsolution()
 	 * @generated
 	 * @ordered
 	 */
-	protected MLProcChainSolutionPattern mlprocchainsolutionpattern;
+	protected MLProcChainSolution mlprocchainsolution;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -273,18 +273,18 @@ public class DataAnalysisProblemImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MLProcChainSolutionPattern getMlprocchainsolutionpattern() {
-		if (mlprocchainsolutionpattern != null && mlprocchainsolutionpattern.eIsProxy()) {
-			InternalEObject oldMlprocchainsolutionpattern = (InternalEObject) mlprocchainsolutionpattern;
-			mlprocchainsolutionpattern = (MLProcChainSolutionPattern) eResolveProxy(oldMlprocchainsolutionpattern);
-			if (mlprocchainsolutionpattern != oldMlprocchainsolutionpattern) {
+	public MLProcChainSolution getMlprocchainsolution() {
+		if (mlprocchainsolution != null && mlprocchainsolution.eIsProxy()) {
+			InternalEObject oldMlprocchainsolution = (InternalEObject) mlprocchainsolution;
+			mlprocchainsolution = (MLProcChainSolution) eResolveProxy(oldMlprocchainsolution);
+			if (mlprocchainsolution != oldMlprocchainsolution) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM__MLPROCCHAINSOLUTIONPATTERN,
-							oldMlprocchainsolutionpattern, mlprocchainsolutionpattern));
+							ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM__MLPROCCHAINSOLUTION, oldMlprocchainsolution,
+							mlprocchainsolution));
 			}
 		}
-		return mlprocchainsolutionpattern;
+		return mlprocchainsolution;
 	}
 
 	/**
@@ -292,8 +292,8 @@ public class DataAnalysisProblemImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public MLProcChainSolutionPattern basicGetMlprocchainsolutionpattern() {
-		return mlprocchainsolutionpattern;
+	public MLProcChainSolution basicGetMlprocchainsolution() {
+		return mlprocchainsolution;
 	}
 
 	/**
@@ -301,13 +301,13 @@ public class DataAnalysisProblemImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setMlprocchainsolutionpattern(MLProcChainSolutionPattern newMlprocchainsolutionpattern) {
-		MLProcChainSolutionPattern oldMlprocchainsolutionpattern = mlprocchainsolutionpattern;
-		mlprocchainsolutionpattern = newMlprocchainsolutionpattern;
+	public void setMlprocchainsolution(MLProcChainSolution newMlprocchainsolution) {
+		MLProcChainSolution oldMlprocchainsolution = mlprocchainsolution;
+		mlprocchainsolution = newMlprocchainsolution;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET,
-					ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM__MLPROCCHAINSOLUTIONPATTERN,
-					oldMlprocchainsolutionpattern, mlprocchainsolutionpattern));
+					ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM__MLPROCCHAINSOLUTION, oldMlprocchainsolution,
+					mlprocchainsolution));
 	}
 
 	/**
@@ -330,10 +330,10 @@ public class DataAnalysisProblemImpl extends MinimalEObjectImpl.Container implem
 			return basicGetDataanalysisproblemtype();
 		case ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM__COMPUTATIONALREQUIREMENTVALUE:
 			return getComputationalrequirementvalue();
-		case ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM__MLPROCCHAINSOLUTIONPATTERN:
+		case ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM__MLPROCCHAINSOLUTION:
 			if (resolve)
-				return getMlprocchainsolutionpattern();
-			return basicGetMlprocchainsolutionpattern();
+				return getMlprocchainsolution();
+			return basicGetMlprocchainsolution();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -363,8 +363,8 @@ public class DataAnalysisProblemImpl extends MinimalEObjectImpl.Container implem
 			getComputationalrequirementvalue().clear();
 			getComputationalrequirementvalue().addAll((Collection<? extends ComputationalRequirementValue>) newValue);
 			return;
-		case ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM__MLPROCCHAINSOLUTIONPATTERN:
-			setMlprocchainsolutionpattern((MLProcChainSolutionPattern) newValue);
+		case ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM__MLPROCCHAINSOLUTION:
+			setMlprocchainsolution((MLProcChainSolution) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -393,8 +393,8 @@ public class DataAnalysisProblemImpl extends MinimalEObjectImpl.Container implem
 		case ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM__COMPUTATIONALREQUIREMENTVALUE:
 			getComputationalrequirementvalue().clear();
 			return;
-		case ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM__MLPROCCHAINSOLUTIONPATTERN:
-			setMlprocchainsolutionpattern((MLProcChainSolutionPattern) null);
+		case ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM__MLPROCCHAINSOLUTION:
+			setMlprocchainsolution((MLProcChainSolution) null);
 			return;
 		}
 		super.eUnset(featureID);
@@ -418,8 +418,8 @@ public class DataAnalysisProblemImpl extends MinimalEObjectImpl.Container implem
 			return dataanalysisproblemtype != null;
 		case ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM__COMPUTATIONALREQUIREMENTVALUE:
 			return computationalrequirementvalue != null && !computationalrequirementvalue.isEmpty();
-		case ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM__MLPROCCHAINSOLUTIONPATTERN:
-			return mlprocchainsolutionpattern != null;
+		case ProjetTemplatePackage.DATA_ANALYSIS_PROBLEM__MLPROCCHAINSOLUTION:
+			return mlprocchainsolution != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -19,7 +19,6 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 import projetTemplate.MLAlgorithm;
-import projetTemplate.MLAlgorithms;
 import projetTemplate.ProjetTemplatePackage;
 
 /**
@@ -51,8 +50,8 @@ public class MLAlgorithmItemProvider extends ItemProviderAdapter implements IEdi
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSelectioncriterionvaluesetPropertyDescriptor(object);
-			addSelectioncriterionvaluePropertyDescriptor(object);
+			addX_selectioncriterionvaluesetPropertyDescriptor(object);
+			addX_selectioncriterionvaluePropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addExtendedbpmnmodelPropertyDescriptor(object);
 			addCriteriatochoosemlalgorithmPropertyDescriptor(object);
@@ -61,34 +60,34 @@ public class MLAlgorithmItemProvider extends ItemProviderAdapter implements IEdi
 	}
 
 	/**
-	 * This adds a property descriptor for the Selectioncriterionvalueset feature.
+	 * This adds a property descriptor for the Xselectioncriterionvalueset feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSelectioncriterionvaluesetPropertyDescriptor(Object object) {
+	protected void addX_selectioncriterionvaluesetPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_MLAlgorithm_selectioncriterionvalueset_feature"),
+						getResourceLocator(), getString("_UI_MLAlgorithm_X_selectioncriterionvalueset_feature"),
 						getString("_UI_PropertyDescriptor_description",
-								"_UI_MLAlgorithm_selectioncriterionvalueset_feature", "_UI_MLAlgorithm_type"),
-						ProjetTemplatePackage.Literals.ML_ALGORITHM__SELECTIONCRITERIONVALUESET, true, false, true,
+								"_UI_MLAlgorithm_X_selectioncriterionvalueset_feature", "_UI_MLAlgorithm_type"),
+						ProjetTemplatePackage.Literals.ML_ALGORITHM__XSELECTIONCRITERIONVALUESET, true, false, true,
 						null, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Selectioncriterionvalue feature.
+	 * This adds a property descriptor for the Xselectioncriterionvalue feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addSelectioncriterionvaluePropertyDescriptor(Object object) {
+	protected void addX_selectioncriterionvaluePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_MLAlgorithm_selectioncriterionvalue_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_MLAlgorithm_selectioncriterionvalue_feature",
+				getString("_UI_MLAlgorithm_X_selectioncriterionvalue_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_MLAlgorithm_X_selectioncriterionvalue_feature",
 						"_UI_MLAlgorithm_type"),
-				ProjetTemplatePackage.Literals.ML_ALGORITHM__SELECTIONCRITERIONVALUE, true, false, true, null, null,
+				ProjetTemplatePackage.Literals.ML_ALGORITHM__XSELECTIONCRITERIONVALUE, true, false, true, null, null,
 				null));
 	}
 
@@ -169,8 +168,7 @@ public class MLAlgorithmItemProvider extends ItemProviderAdapter implements IEdi
 	 */
 	@Override
 	public String getText(Object object) {
-		MLAlgorithms labelValue = ((MLAlgorithm) object).getName();
-		String label = labelValue == null ? null : labelValue.toString();
+		String label = ((MLAlgorithm) object).getName();
 		return label == null || label.length() == 0 ? getString("_UI_MLAlgorithm_type")
 				: getString("_UI_MLAlgorithm_type") + " " + label;
 	}

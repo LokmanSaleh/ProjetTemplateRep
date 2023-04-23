@@ -7,18 +7,9 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import projetTemplate.ComputationalRequirementValue;
@@ -30,9 +21,7 @@ import projetTemplate.ProjetTemplatePackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ComputationalRequirementValueItemProvider extends ItemProviderAdapter
-		implements IEditingDomainItemProvider, IStructuredItemContentProvider, ITreeItemContentProvider,
-		IItemLabelProvider, IItemPropertySource {
+public class ComputationalRequirementValueItemProvider extends SelectionCriteriaItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -54,59 +43,42 @@ public class ComputationalRequirementValueItemProvider extends ItemProviderAdapt
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addValuePropertyDescriptor(object);
-			addRationalePropertyDescriptor(object);
-			addRequirementtypePropertyDescriptor(object);
+			addFormulePropertyDescriptor(object);
+			addX_requirementtypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Value feature.
+	 * This adds a property descriptor for the Formule feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addValuePropertyDescriptor(Object object) {
+	protected void addFormulePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add(createItemPropertyDescriptor(
 				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_ComputationalRequirementValue_value_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ComputationalRequirementValue_value_feature",
+				getString("_UI_ComputationalRequirementValue_formule_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_ComputationalRequirementValue_formule_feature",
 						"_UI_ComputationalRequirementValue_type"),
-				ProjetTemplatePackage.Literals.COMPUTATIONAL_REQUIREMENT_VALUE__VALUE, true, false, false,
+				ProjetTemplatePackage.Literals.COMPUTATIONAL_REQUIREMENT_VALUE__FORMULE, true, false, false,
 				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Rationale feature.
+	 * This adds a property descriptor for the Xrequirementtype feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRationalePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add(createItemPropertyDescriptor(
-				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
-				getString("_UI_ComputationalRequirementValue_rationale_feature"),
-				getString("_UI_PropertyDescriptor_description", "_UI_ComputationalRequirementValue_rationale_feature",
-						"_UI_ComputationalRequirementValue_type"),
-				ProjetTemplatePackage.Literals.COMPUTATIONAL_REQUIREMENT_VALUE__RATIONALE, true, false, false,
-				ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Requirementtype feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addRequirementtypePropertyDescriptor(Object object) {
+	protected void addX_requirementtypePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ComputationalRequirementValue_requirementtype_feature"),
+						getResourceLocator(), getString("_UI_ComputationalRequirementValue_X_requirementtype_feature"),
 						getString("_UI_PropertyDescriptor_description",
-								"_UI_ComputationalRequirementValue_requirementtype_feature",
+								"_UI_ComputationalRequirementValue_X_requirementtype_feature",
 								"_UI_ComputationalRequirementValue_type"),
-						ProjetTemplatePackage.Literals.COMPUTATIONAL_REQUIREMENT_VALUE__REQUIREMENTTYPE, true, false,
+						ProjetTemplatePackage.Literals.COMPUTATIONAL_REQUIREMENT_VALUE__XREQUIREMENTTYPE, true, false,
 						true, null, null, null));
 	}
 
@@ -139,7 +111,7 @@ public class ComputationalRequirementValueItemProvider extends ItemProviderAdapt
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ComputationalRequirementValue) object).getValue();
+		String label = ((ComputationalRequirementValue) object).getId();
 		return label == null || label.length() == 0 ? getString("_UI_ComputationalRequirementValue_type")
 				: getString("_UI_ComputationalRequirementValue_type") + " " + label;
 	}
@@ -156,8 +128,7 @@ public class ComputationalRequirementValueItemProvider extends ItemProviderAdapt
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ComputationalRequirementValue.class)) {
-		case ProjetTemplatePackage.COMPUTATIONAL_REQUIREMENT_VALUE__VALUE:
-		case ProjetTemplatePackage.COMPUTATIONAL_REQUIREMENT_VALUE__RATIONALE:
+		case ProjetTemplatePackage.COMPUTATIONAL_REQUIREMENT_VALUE__FORMULE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
@@ -174,17 +145,6 @@ public class ComputationalRequirementValueItemProvider extends ItemProviderAdapt
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return ProjetTemplateEditPlugin.INSTANCE;
 	}
 
 }

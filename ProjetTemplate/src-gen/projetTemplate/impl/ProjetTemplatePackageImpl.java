@@ -10,10 +10,12 @@ import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+import org.eclipse.emf.ecore.xml.type.XMLTypePackage;
 import genmodel.GenmodelPackage;
 import genmodel.impl.GenmodelPackageImpl;
 import projetTemplate.Accuracy;
 import projetTemplate.CollectedDataKnowledgeAboutTemplateConstruction;
+import projetTemplate.Componenets;
 import projetTemplate.Component;
 import projetTemplate.ComputationalRequirementValue;
 import projetTemplate.Condition;
@@ -22,12 +24,12 @@ import projetTemplate.ConversionEnum;
 import projetTemplate.Data;
 import projetTemplate.DataAnalysisProblem;
 import projetTemplate.DataAnalysisProblemType;
+import projetTemplate.DataBaseConnection;
 import projetTemplate.DataCleaning;
 import projetTemplate.DataPretraitement;
 import projetTemplate.DataPropertyType;
 import projetTemplate.DataPropertyValue;
 import projetTemplate.DataPropertyValueSet;
-import projetTemplate.Database;
 import projetTemplate.Deployement;
 import projetTemplate.DomainProblem;
 import projetTemplate.DomainRequirementValue;
@@ -41,7 +43,7 @@ import projetTemplate.MLAlgorithm;
 import projetTemplate.MLAlgorithmSelectionCriteriaContainer;
 import projetTemplate.MLAlgorithmSolutionPattern;
 import projetTemplate.MLAlgorithms;
-import projetTemplate.MLProcChainSolutionPattern;
+import projetTemplate.MLProcChainSolution;
 import projetTemplate.MLProject;
 import projetTemplate.MissingValueTreatement;
 import projetTemplate.MissingValueTreatementEnum;
@@ -68,6 +70,7 @@ import projetTemplate.SelectionCriterionValueSet;
 import projetTemplate.Term;
 import projetTemplate.Values1;
 import projetTemplate.Values2;
+import projetTemplate.X_Database;
 import projetTemplate.connector;
 import projetTemplate.variable;
 
@@ -125,7 +128,7 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass databaseEClass = null;
+	private EClass x_DatabaseEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -195,14 +198,14 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass mlProcChainSolutionPatternEClass = null;
+	private EClass processingChainTemplateEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass processingChainTemplateEClass = null;
+	private EClass mlProcChainSolutionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -405,6 +408,13 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass dataBaseConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EEnum values1EEnum = null;
 
 	/**
@@ -475,6 +485,13 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EEnum componenetsEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EDataType newDataType10EDataType = null;
 
 	/**
@@ -526,6 +543,9 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 				: new ProjetTemplatePackageImpl();
 
 		isInited = true;
+
+		// Initialize simple dependencies
+		XMLTypePackage.eINSTANCE.eClass();
 
 		// Obtain or create and register interdependencies
 		Object registeredPackage = EPackage.Registry.INSTANCE.getEPackage(GenmodelPackage.eNS_URI);
@@ -599,17 +619,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDomainRequirementValue_Requirementtype() {
+	public EReference getDomainRequirementValue_X_requirementtype() {
 		return (EReference) domainRequirementValueEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDomainRequirementValue_Domainrequirementselectioncriteria() {
-		return (EReference) domainRequirementValueEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -725,7 +736,7 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMLProject_Database() {
+	public EReference getMLProject_Databaseconnection() {
 		return (EReference) mlProjectEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -788,7 +799,7 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDataAnalysisProblem_Mlprocchainsolutionpattern() {
+	public EReference getDataAnalysisProblem_Mlprocchainsolution() {
 		return (EReference) dataAnalysisProblemEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -806,7 +817,7 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getComputationalRequirementValue_Value() {
+	public EAttribute getComputationalRequirementValue_Formule() {
 		return (EAttribute) computationalRequirementValueEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -815,8 +826,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getComputationalRequirementValue_Rationale() {
-		return (EAttribute) computationalRequirementValueEClass.getEStructuralFeatures().get(1);
+	public EReference getComputationalRequirementValue_X_requirementtype() {
+		return (EReference) computationalRequirementValueEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -824,8 +835,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getComputationalRequirementValue_Requirementtype() {
-		return (EReference) computationalRequirementValueEClass.getEStructuralFeatures().get(2);
+	public EClass getX_Database() {
+		return x_DatabaseEClass;
 	}
 
 	/**
@@ -833,8 +844,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getDatabase() {
-		return databaseEClass;
+	public EAttribute getX_Database_Value() {
+		return (EAttribute) x_DatabaseEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -842,8 +853,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDatabase_Value() {
-		return (EAttribute) databaseEClass.getEStructuralFeatures().get(0);
+	public EAttribute getX_Database_Credentias() {
+		return (EAttribute) x_DatabaseEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -851,8 +862,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getDatabase_Credentias() {
-		return (EAttribute) databaseEClass.getEStructuralFeatures().get(1);
+	public EReference getX_Database_Schema() {
+		return (EReference) x_DatabaseEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -860,17 +871,8 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDatabase_Schema() {
-		return (EReference) databaseEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getDatabase_Data() {
-		return (EReference) databaseEClass.getEStructuralFeatures().get(3);
+	public EReference getX_Database_Data() {
+		return (EReference) x_DatabaseEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -1166,87 +1168,6 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMLProcChainSolutionPattern() {
-		return mlProcChainSolutionPatternEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getMLProcChainSolutionPattern_Name() {
-		return (EAttribute) mlProcChainSolutionPatternEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMLProcChainSolutionPattern_Datapropertyvalueset() {
-		return (EReference) mlProcChainSolutionPatternEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMLProcChainSolutionPattern_Processingchain() {
-		return (EReference) mlProcChainSolutionPatternEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMLProcChainSolutionPattern_Dataanalysisproblemtype() {
-		return (EReference) mlProcChainSolutionPatternEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMLProcChainSolutionPattern_ExecutedTemplate() {
-		return (EReference) mlProcChainSolutionPatternEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMLProcChainSolutionPattern_Collecteddataknowledgeabouttemplateconstruction() {
-		return (EReference) mlProcChainSolutionPatternEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getMLProcChainSolutionPattern__ConstruireUneChaineDeTraitementInitiale() {
-		return mlProcChainSolutionPatternEClass.getEOperations().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EOperation getMLProcChainSolutionPattern__MergeProcessingChainAndTemplate() {
-		return mlProcChainSolutionPatternEClass.getEOperations().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getProcessingChainTemplate() {
 		return processingChainTemplateEClass;
 	}
@@ -1301,6 +1222,87 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMLProcChainSolution() {
+		return mlProcChainSolutionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMLProcChainSolution_Name() {
+		return (EAttribute) mlProcChainSolutionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMLProcChainSolution_Datapropertyvalueset() {
+		return (EReference) mlProcChainSolutionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMLProcChainSolution_X_processingchain() {
+		return (EReference) mlProcChainSolutionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMLProcChainSolution_Dataanalysisproblemtype() {
+		return (EReference) mlProcChainSolutionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMLProcChainSolution_ExecutedTemplate() {
+		return (EReference) mlProcChainSolutionEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMLProcChainSolution_X_collecteddataknowledgeabouttemplateconstruction() {
+		return (EReference) mlProcChainSolutionEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getMLProcChainSolution__ConstruireUneChaineDeTraitementInitiale() {
+		return mlProcChainSolutionEClass.getEOperations().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EOperation getMLProcChainSolution__MergeProcessingChainAndTemplate() {
+		return mlProcChainSolutionEClass.getEOperations().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMLAlgorithmSolutionPattern() {
 		return mlAlgorithmSolutionPatternEClass;
 	}
@@ -1337,7 +1339,7 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMLAlgorithmSolutionPattern_Datapropertyvalueset() {
+	public EReference getMLAlgorithmSolutionPattern_X_datapropertyvalueset() {
 		return (EReference) mlAlgorithmSolutionPatternEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -1355,7 +1357,7 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMLAlgorithm_Selectioncriterionvalueset() {
+	public EReference getMLAlgorithm_X_selectioncriterionvalueset() {
 		return (EReference) mlAlgorithmEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1364,7 +1366,7 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMLAlgorithm_Selectioncriterionvalue() {
+	public EReference getMLAlgorithm_X_selectioncriterionvalue() {
 		return (EReference) mlAlgorithmEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -1528,6 +1530,15 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 */
 	public EAttribute getExtendedBPMNModel_Author() {
 		return (EAttribute) extendedBPMNModelEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getExtendedBPMNModel_Name() {
+		return (EAttribute) extendedBPMNModelEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -1940,7 +1951,7 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getMLAlgorithmSelectionCriteriaContainer_Domainrequirementselectioncriteria() {
+	public EReference getMLAlgorithmSelectionCriteriaContainer_SelectionCriteria() {
 		return (EReference) mlAlgorithmSelectionCriteriaContainerEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1951,6 +1962,51 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 */
 	public EAttribute getMLAlgorithmSelectionCriteriaContainer_Regle() {
 		return (EAttribute) mlAlgorithmSelectionCriteriaContainerEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getMLAlgorithmSelectionCriteriaContainer_Componenet() {
+		return (EAttribute) mlAlgorithmSelectionCriteriaContainerEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDataBaseConnection() {
+		return dataBaseConnectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDataBaseConnection_URL() {
+		return (EAttribute) dataBaseConnectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDataBaseConnection_User() {
+		return (EAttribute) dataBaseConnectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getDataBaseConnection_Password() {
+		return (EAttribute) dataBaseConnectionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2048,6 +2104,15 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EEnum getComponenets() {
+		return componenetsEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EDataType getNewDataType10() {
 		return newDataType10EDataType;
 	}
@@ -2087,8 +2152,7 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 		domainRequirementValueEClass = createEClass(DOMAIN_REQUIREMENT_VALUE);
 		createEAttribute(domainRequirementValueEClass, DOMAIN_REQUIREMENT_VALUE__EXPLANATION);
-		createEReference(domainRequirementValueEClass, DOMAIN_REQUIREMENT_VALUE__REQUIREMENTTYPE);
-		createEReference(domainRequirementValueEClass, DOMAIN_REQUIREMENT_VALUE__DOMAINREQUIREMENTSELECTIONCRITERIA);
+		createEReference(domainRequirementValueEClass, DOMAIN_REQUIREMENT_VALUE__XREQUIREMENTTYPE);
 
 		requirementTypeEClass = createEClass(REQUIREMENT_TYPE);
 		createEReference(requirementTypeEClass, REQUIREMENT_TYPE__REQUIREMENTMAPPING);
@@ -2103,7 +2167,7 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		createEAttribute(mlProjectEClass, ML_PROJECT__AUTHOR);
 		createEReference(mlProjectEClass, ML_PROJECT__DATAANALYSISPROBLEM);
 		createEReference(mlProjectEClass, ML_PROJECT__DOMAINPROBLEM);
-		createEReference(mlProjectEClass, ML_PROJECT__DATABASE);
+		createEReference(mlProjectEClass, ML_PROJECT__DATABASECONNECTION);
 
 		dataAnalysisProblemEClass = createEClass(DATA_ANALYSIS_PROBLEM);
 		createEAttribute(dataAnalysisProblemEClass, DATA_ANALYSIS_PROBLEM__NAME);
@@ -2111,18 +2175,17 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		createEAttribute(dataAnalysisProblemEClass, DATA_ANALYSIS_PROBLEM__AUTHOR);
 		createEReference(dataAnalysisProblemEClass, DATA_ANALYSIS_PROBLEM__DATAANALYSISPROBLEMTYPE);
 		createEReference(dataAnalysisProblemEClass, DATA_ANALYSIS_PROBLEM__COMPUTATIONALREQUIREMENTVALUE);
-		createEReference(dataAnalysisProblemEClass, DATA_ANALYSIS_PROBLEM__MLPROCCHAINSOLUTIONPATTERN);
+		createEReference(dataAnalysisProblemEClass, DATA_ANALYSIS_PROBLEM__MLPROCCHAINSOLUTION);
 
 		computationalRequirementValueEClass = createEClass(COMPUTATIONAL_REQUIREMENT_VALUE);
-		createEAttribute(computationalRequirementValueEClass, COMPUTATIONAL_REQUIREMENT_VALUE__VALUE);
-		createEAttribute(computationalRequirementValueEClass, COMPUTATIONAL_REQUIREMENT_VALUE__RATIONALE);
-		createEReference(computationalRequirementValueEClass, COMPUTATIONAL_REQUIREMENT_VALUE__REQUIREMENTTYPE);
+		createEAttribute(computationalRequirementValueEClass, COMPUTATIONAL_REQUIREMENT_VALUE__FORMULE);
+		createEReference(computationalRequirementValueEClass, COMPUTATIONAL_REQUIREMENT_VALUE__XREQUIREMENTTYPE);
 
-		databaseEClass = createEClass(DATABASE);
-		createEAttribute(databaseEClass, DATABASE__VALUE);
-		createEAttribute(databaseEClass, DATABASE__CREDENTIAS);
-		createEReference(databaseEClass, DATABASE__SCHEMA);
-		createEReference(databaseEClass, DATABASE__DATA);
+		x_DatabaseEClass = createEClass(XDATABASE);
+		createEAttribute(x_DatabaseEClass, XDATABASE__VALUE);
+		createEAttribute(x_DatabaseEClass, XDATABASE__CREDENTIAS);
+		createEReference(x_DatabaseEClass, XDATABASE__SCHEMA);
+		createEReference(x_DatabaseEClass, XDATABASE__DATA);
 
 		schemaEClass = createEClass(SCHEMA);
 		createEAttribute(schemaEClass, SCHEMA__TECHNOLOGY);
@@ -2167,18 +2230,17 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		createEReference(processingChainTemplateEClass, PROCESSING_CHAIN_TEMPLATE__PROCESSINGCHAINTEMPLATE);
 		createEOperation(processingChainTemplateEClass, PROCESSING_CHAIN_TEMPLATE___SELECT_THE_RIGHT_ML_ALGROITHM);
 
-		mlProcChainSolutionPatternEClass = createEClass(ML_PROC_CHAIN_SOLUTION_PATTERN);
-		createEAttribute(mlProcChainSolutionPatternEClass, ML_PROC_CHAIN_SOLUTION_PATTERN__NAME);
-		createEReference(mlProcChainSolutionPatternEClass, ML_PROC_CHAIN_SOLUTION_PATTERN__DATAPROPERTYVALUESET);
-		createEReference(mlProcChainSolutionPatternEClass, ML_PROC_CHAIN_SOLUTION_PATTERN__PROCESSINGCHAIN);
-		createEReference(mlProcChainSolutionPatternEClass, ML_PROC_CHAIN_SOLUTION_PATTERN__DATAANALYSISPROBLEMTYPE);
-		createEReference(mlProcChainSolutionPatternEClass, ML_PROC_CHAIN_SOLUTION_PATTERN__EXECUTED_TEMPLATE);
-		createEReference(mlProcChainSolutionPatternEClass,
-				ML_PROC_CHAIN_SOLUTION_PATTERN__COLLECTEDDATAKNOWLEDGEABOUTTEMPLATECONSTRUCTION);
-		createEOperation(mlProcChainSolutionPatternEClass,
-				ML_PROC_CHAIN_SOLUTION_PATTERN___CONSTRUIRE_UNE_CHAINE_DE_TRAITEMENT_INITIALE);
-		createEOperation(mlProcChainSolutionPatternEClass,
-				ML_PROC_CHAIN_SOLUTION_PATTERN___MERGE_PROCESSING_CHAIN_AND_TEMPLATE);
+		mlProcChainSolutionEClass = createEClass(ML_PROC_CHAIN_SOLUTION);
+		createEAttribute(mlProcChainSolutionEClass, ML_PROC_CHAIN_SOLUTION__NAME);
+		createEReference(mlProcChainSolutionEClass, ML_PROC_CHAIN_SOLUTION__DATAPROPERTYVALUESET);
+		createEReference(mlProcChainSolutionEClass, ML_PROC_CHAIN_SOLUTION__XPROCESSINGCHAIN);
+		createEReference(mlProcChainSolutionEClass, ML_PROC_CHAIN_SOLUTION__DATAANALYSISPROBLEMTYPE);
+		createEReference(mlProcChainSolutionEClass, ML_PROC_CHAIN_SOLUTION__EXECUTED_TEMPLATE);
+		createEReference(mlProcChainSolutionEClass,
+				ML_PROC_CHAIN_SOLUTION__XCOLLECTEDDATAKNOWLEDGEABOUTTEMPLATECONSTRUCTION);
+		createEOperation(mlProcChainSolutionEClass,
+				ML_PROC_CHAIN_SOLUTION___CONSTRUIRE_UNE_CHAINE_DE_TRAITEMENT_INITIALE);
+		createEOperation(mlProcChainSolutionEClass, ML_PROC_CHAIN_SOLUTION___MERGE_PROCESSING_CHAIN_AND_TEMPLATE);
 
 		processingChainEClass = createEClass(PROCESSING_CHAIN);
 		createEAttribute(processingChainEClass, PROCESSING_CHAIN__NAME);
@@ -2189,11 +2251,11 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		createEAttribute(mlAlgorithmSolutionPatternEClass, ML_ALGORITHM_SOLUTION_PATTERN__NAME);
 		createEAttribute(mlAlgorithmSolutionPatternEClass, ML_ALGORITHM_SOLUTION_PATTERN__EXPLANATION);
 		createEReference(mlAlgorithmSolutionPatternEClass, ML_ALGORITHM_SOLUTION_PATTERN__MLALGORITHM);
-		createEReference(mlAlgorithmSolutionPatternEClass, ML_ALGORITHM_SOLUTION_PATTERN__DATAPROPERTYVALUESET);
+		createEReference(mlAlgorithmSolutionPatternEClass, ML_ALGORITHM_SOLUTION_PATTERN__XDATAPROPERTYVALUESET);
 
 		mlAlgorithmEClass = createEClass(ML_ALGORITHM);
-		createEReference(mlAlgorithmEClass, ML_ALGORITHM__SELECTIONCRITERIONVALUESET);
-		createEReference(mlAlgorithmEClass, ML_ALGORITHM__SELECTIONCRITERIONVALUE);
+		createEReference(mlAlgorithmEClass, ML_ALGORITHM__XSELECTIONCRITERIONVALUESET);
+		createEReference(mlAlgorithmEClass, ML_ALGORITHM__XSELECTIONCRITERIONVALUE);
 		createEAttribute(mlAlgorithmEClass, ML_ALGORITHM__NAME);
 		createEReference(mlAlgorithmEClass, ML_ALGORITHM__EXTENDEDBPMNMODEL);
 		createEReference(mlAlgorithmEClass, ML_ALGORITHM__CRITERIATOCHOOSEMLALGORITHM);
@@ -2216,6 +2278,7 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		extendedBPMNModelEClass = createEClass(EXTENDED_BPMN_MODEL);
 		createEAttribute(extendedBPMNModelEClass, EXTENDED_BPMN_MODEL__PATH);
 		createEAttribute(extendedBPMNModelEClass, EXTENDED_BPMN_MODEL__AUTHOR);
+		createEAttribute(extendedBPMNModelEClass, EXTENDED_BPMN_MODEL__NAME);
 
 		explainabilityEClass = createEClass(EXPLAINABILITY);
 		createEAttribute(explainabilityEClass, EXPLAINABILITY__VALUE);
@@ -2286,8 +2349,15 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 		mlAlgorithmSelectionCriteriaContainerEClass = createEClass(ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER);
 		createEReference(mlAlgorithmSelectionCriteriaContainerEClass,
-				ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__DOMAINREQUIREMENTSELECTIONCRITERIA);
+				ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__SELECTION_CRITERIA);
 		createEAttribute(mlAlgorithmSelectionCriteriaContainerEClass, ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__REGLE);
+		createEAttribute(mlAlgorithmSelectionCriteriaContainerEClass,
+				ML_ALGORITHM_SELECTION_CRITERIA_CONTAINER__COMPONENET);
+
+		dataBaseConnectionEClass = createEClass(DATA_BASE_CONNECTION);
+		createEAttribute(dataBaseConnectionEClass, DATA_BASE_CONNECTION__URL);
+		createEAttribute(dataBaseConnectionEClass, DATA_BASE_CONNECTION__USER);
+		createEAttribute(dataBaseConnectionEClass, DATA_BASE_CONNECTION__PASSWORD);
 
 		// Create enums
 		values1EEnum = createEEnum(VALUES1);
@@ -2300,6 +2370,7 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		noiseTreatementEnumEEnum = createEEnum(NOISE_TREATEMENT_ENUM);
 		missingValueTreatementEnumEEnum = createEEnum(MISSING_VALUE_TREATEMENT_ENUM);
 		mlAlgorithmsEEnum = createEEnum(ML_ALGORITHMS);
+		componenetsEEnum = createEEnum(COMPONENETS);
 
 		// Create data types
 		newDataType10EDataType = createEDataType(NEW_DATA_TYPE10);
@@ -2329,11 +2400,17 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		XMLTypePackage theXMLTypePackage = (XMLTypePackage) EPackage.Registry.INSTANCE
+				.getEPackage(XMLTypePackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		domainRequirementValueEClass.getESuperTypes().add(this.getSelectionCriteria());
+		computationalRequirementValueEClass.getESuperTypes().add(this.getSelectionCriteria());
 		variableEClass.getESuperTypes().add(this.getTerm());
 		connectorEClass.getESuperTypes().add(this.getTerm());
 		dataCleaningEClass.getESuperTypes().add(this.getComponent());
@@ -2360,13 +2437,9 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEAttribute(getDomainRequirementValue_Explanation(), ecorePackage.getEString(), "explanation", null, 0, 1,
 				DomainRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomainRequirementValue_Requirementtype(), this.getRequirementType(), null, "requirementtype",
-				null, 1, 1, DomainRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDomainRequirementValue_Domainrequirementselectioncriteria(), this.getSelectionCriteria(),
-				null, "domainrequirementselectioncriteria", null, 1, -1, DomainRequirementValue.class, !IS_TRANSIENT,
-				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
+		initEReference(getDomainRequirementValue_X_requirementtype(), this.getRequirementType(), null,
+				"X_requirementtype", null, 1, 1, DomainRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(requirementTypeEClass, RequirementType.class, "RequirementType", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -2399,9 +2472,9 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEReference(getMLProject_Domainproblem(), this.getDomainProblem(), null, "domainproblem", null, 1, 1,
 				MLProject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMLProject_Database(), this.getDatabase(), null, "database", null, 0, 1, MLProject.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMLProject_Databaseconnection(), this.getDataBaseConnection(), null, "databaseconnection",
+				null, 0, 1, MLProject.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(dataAnalysisProblemEClass, DataAnalysisProblem.class, "DataAnalysisProblem", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2421,32 +2494,30 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 				null, "computationalrequirementvalue", null, 0, -1, DataAnalysisProblem.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
-		initEReference(getDataAnalysisProblem_Mlprocchainsolutionpattern(), this.getMLProcChainSolutionPattern(), null,
-				"mlprocchainsolutionpattern", null, 0, 1, DataAnalysisProblem.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEReference(getDataAnalysisProblem_Mlprocchainsolution(), this.getMLProcChainSolution(), null,
+				"mlprocchainsolution", null, 0, 1, DataAnalysisProblem.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(computationalRequirementValueEClass, ComputationalRequirementValue.class,
 				"ComputationalRequirementValue", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getComputationalRequirementValue_Value(), ecorePackage.getEString(), "value", null, 0, 1,
+		initEAttribute(getComputationalRequirementValue_Formule(), ecorePackage.getEString(), "formule", null, 0, 1,
 				ComputationalRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getComputationalRequirementValue_Rationale(), ecorePackage.getEString(), "rationale", null, 0, 1,
-				ComputationalRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
-				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComputationalRequirementValue_Requirementtype(), this.getRequirementType(), null,
-				"requirementtype", null, 0, 1, ComputationalRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEReference(getComputationalRequirementValue_X_requirementtype(), this.getRequirementType(), null,
+				"X_requirementtype", null, 0, 1, ComputationalRequirementValue.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(databaseEClass, Database.class, "Database", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(x_DatabaseEClass, X_Database.class, "X_Database", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getDatabase_Value(), ecorePackage.getEString(), "value", null, 0, 1, Database.class,
+		initEAttribute(getX_Database_Value(), ecorePackage.getEString(), "value", null, 0, 1, X_Database.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getDatabase_Credentias(), ecorePackage.getEString(), "credentias", null, 0, 1, Database.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDatabase_Schema(), this.getSchema(), null, "schema", null, 1, 1, Database.class,
+		initEAttribute(getX_Database_Credentias(), ecorePackage.getEString(), "credentias", null, 0, 1,
+				X_Database.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEReference(getX_Database_Schema(), this.getSchema(), null, "schema", null, 1, 1, X_Database.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDatabase_Data(), this.getData(), null, "data", null, 1, 1, Database.class, !IS_TRANSIENT,
+		initEReference(getX_Database_Data(), this.getData(), null, "data", null, 1, 1, X_Database.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
@@ -2546,34 +2617,34 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEOperation(getProcessingChainTemplate__SelectTheRightMLAlgroithm(), null, "SelectTheRightMLAlgroithm", 0, 1,
 				IS_UNIQUE, IS_ORDERED);
 
-		initEClass(mlProcChainSolutionPatternEClass, MLProcChainSolutionPattern.class, "MLProcChainSolutionPattern",
-				!IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getMLProcChainSolutionPattern_Name(), ecorePackage.getEString(), "name", null, 0, 1,
-				MLProcChainSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
+		initEClass(mlProcChainSolutionEClass, MLProcChainSolution.class, "MLProcChainSolution", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getMLProcChainSolution_Name(), ecorePackage.getEString(), "name", null, 0, 1,
+				MLProcChainSolution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMLProcChainSolutionPattern_Datapropertyvalueset(), this.getDataPropertyValueSet(), null,
-				"datapropertyvalueset", null, 1, -1, MLProcChainSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEReference(getMLProcChainSolution_Datapropertyvalueset(), this.getDataPropertyValueSet(), null,
+				"datapropertyvalueset", null, 1, -1, MLProcChainSolution.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMLProcChainSolutionPattern_Processingchain(), this.getProcessingChainTemplate(), null,
-				"processingchain", null, 1, -1, MLProcChainSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEReference(getMLProcChainSolution_X_processingchain(), this.getProcessingChainTemplate(), null,
+				"X_processingchain", null, 1, -1, MLProcChainSolution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMLProcChainSolution_Dataanalysisproblemtype(), this.getDataAnalysisProblemType(), null,
+				"dataanalysisproblemtype", null, 0, 1, MLProcChainSolution.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMLProcChainSolutionPattern_Dataanalysisproblemtype(), this.getDataAnalysisProblemType(), null,
-				"dataanalysisproblemtype", null, 0, 1, MLProcChainSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMLProcChainSolutionPattern_ExecutedTemplate(), this.getExtendedBPMNModel(), null,
-				"ExecutedTemplate", null, 0, 1, MLProcChainSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE,
-				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMLProcChainSolutionPattern_Collecteddataknowledgeabouttemplateconstruction(),
+		initEReference(getMLProcChainSolution_ExecutedTemplate(), this.getExtendedBPMNModel(), null, "ExecutedTemplate",
+				null, 1, -1, MLProcChainSolution.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMLProcChainSolution_X_collecteddataknowledgeabouttemplateconstruction(),
 				this.getCollectedDataKnowledgeAboutTemplateConstruction(), null,
-				"collecteddataknowledgeabouttemplateconstruction", null, 1, -1, MLProcChainSolutionPattern.class,
+				"X_collecteddataknowledgeabouttemplateconstruction", null, 1, -1, MLProcChainSolution.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEOperation(getMLProcChainSolutionPattern__ConstruireUneChaineDeTraitementInitiale(),
+		initEOperation(getMLProcChainSolution__ConstruireUneChaineDeTraitementInitiale(),
 				this.getProcessingChainTemplate(), "ConstruireUneChaineDeTraitementInitiale", 0, 1, IS_UNIQUE,
 				IS_ORDERED);
 
-		initEOperation(getMLProcChainSolutionPattern__MergeProcessingChainAndTemplate(), this.getExtendedBPMNModel(),
+		initEOperation(getMLProcChainSolution__MergeProcessingChainAndTemplate(), this.getExtendedBPMNModel(),
 				"MergeProcessingChainAndTemplate", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(processingChainEClass, ProcessingChain.class, "ProcessingChain", !IS_ABSTRACT, !IS_INTERFACE,
@@ -2598,19 +2669,19 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEReference(getMLAlgorithmSolutionPattern_Mlalgorithm(), this.getMLAlgorithm(), null, "mlalgorithm", null, 1,
 				1, MLAlgorithmSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
 				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMLAlgorithmSolutionPattern_Datapropertyvalueset(), this.getDataPropertyValueSet(), null,
-				"datapropertyvalueset", null, 1, -1, MLAlgorithmSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE,
+		initEReference(getMLAlgorithmSolutionPattern_X_datapropertyvalueset(), this.getDataPropertyValueSet(), null,
+				"X_datapropertyvalueset", null, 1, -1, MLAlgorithmSolutionPattern.class, !IS_TRANSIENT, !IS_VOLATILE,
 				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mlAlgorithmEClass, MLAlgorithm.class, "MLAlgorithm", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMLAlgorithm_Selectioncriterionvalueset(), this.getSelectionCriterionValueSet(), null,
-				"selectioncriterionvalueset", null, 0, 1, MLAlgorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+		initEReference(getMLAlgorithm_X_selectioncriterionvalueset(), this.getSelectionCriterionValueSet(), null,
+				"X_selectioncriterionvalueset", null, 0, 1, MLAlgorithm.class, !IS_TRANSIENT, !IS_VOLATILE,
+				IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMLAlgorithm_X_selectioncriterionvalue(), this.getSelectionCriterionValue(), null,
+				"X_selectioncriterionvalue", null, 0, -1, MLAlgorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMLAlgorithm_Selectioncriterionvalue(), this.getSelectionCriterionValue(), null,
-				"selectioncriterionvalue", null, 0, -1, MLAlgorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
-				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getMLAlgorithm_Name(), this.getMLAlgorithms(), "name", null, 0, 1, MLAlgorithm.class,
+		initEAttribute(getMLAlgorithm_Name(), ecorePackage.getEString(), "name", null, 0, 1, MLAlgorithm.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMLAlgorithm_Extendedbpmnmodel(), this.getExtendedBPMNModel(), null, "extendedbpmnmodel", null,
 				1, 1, MLAlgorithm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
@@ -2661,6 +2732,9 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 				ExtendedBPMNModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 		initEAttribute(getExtendedBPMNModel_Author(), ecorePackage.getEString(), "author", null, 0, 1,
+				ExtendedBPMNModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getExtendedBPMNModel_Name(), ecorePackage.getEString(), "name", null, 0, 1,
 				ExtendedBPMNModel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
@@ -2775,7 +2849,7 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		initEClass(missingValueTreatementEClass, MissingValueTreatement.class, "MissingValueTreatement", !IS_ABSTRACT,
 				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(selectionCriteriaEClass, SelectionCriteria.class, "SelectionCriteria", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(selectionCriteriaEClass, SelectionCriteria.class, "SelectionCriteria", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getSelectionCriteria_CriteriaName(), ecorePackage.getEString(), "criteriaName", null, 0, 1,
 				SelectionCriteria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
@@ -2788,13 +2862,28 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 
 		initEClass(mlAlgorithmSelectionCriteriaContainerEClass, MLAlgorithmSelectionCriteriaContainer.class,
 				"MLAlgorithmSelectionCriteriaContainer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMLAlgorithmSelectionCriteriaContainer_Domainrequirementselectioncriteria(),
-				this.getSelectionCriteria(), null, "domainrequirementselectioncriteria", null, 1, -1,
-				MLAlgorithmSelectionCriteriaContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
-				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMLAlgorithmSelectionCriteriaContainer_SelectionCriteria(), this.getSelectionCriteria(), null,
+				"SelectionCriteria", null, 1, -1, MLAlgorithmSelectionCriteriaContainer.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 		initEAttribute(getMLAlgorithmSelectionCriteriaContainer_Regle(), ecorePackage.getEString(), "Regle", null, 0, 1,
 				MLAlgorithmSelectionCriteriaContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE,
 				!IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getMLAlgorithmSelectionCriteriaContainer_Componenet(), this.getComponenets(), "Componenet", null,
+				0, 1, MLAlgorithmSelectionCriteriaContainer.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(dataBaseConnectionEClass, DataBaseConnection.class, "DataBaseConnection", !IS_ABSTRACT,
+				!IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getDataBaseConnection_URL(), theXMLTypePackage.getString(), "URL", null, 0, 1,
+				DataBaseConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDataBaseConnection_User(), theXMLTypePackage.getString(), "user", null, 0, 1,
+				DataBaseConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getDataBaseConnection_Password(), theXMLTypePackage.getString(), "password", null, 0, 1,
+				DataBaseConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(values1EEnum, Values1.class, "Values1");
@@ -2845,6 +2934,13 @@ public class ProjetTemplatePackageImpl extends EPackageImpl implements ProjetTem
 		addEEnumLiteral(mlAlgorithmsEEnum, MLAlgorithms.BAYESIAN_NETWORK);
 		addEEnumLiteral(mlAlgorithmsEEnum, MLAlgorithms.NEURAL_NETROWK);
 		addEEnumLiteral(mlAlgorithmsEEnum, MLAlgorithms.SVM);
+
+		initEEnum(componenetsEEnum, Componenets.class, "Componenets");
+		addEEnumLiteral(componenetsEEnum, Componenets.DATA_PRE_PROCESSING);
+		addEEnumLiteral(componenetsEEnum, Componenets.DATA_SEPARATION);
+		addEEnumLiteral(componenetsEEnum, Componenets.MODEL_CONSTRUCTION);
+		addEEnumLiteral(componenetsEEnum, Componenets.FEATURE_SELECTION);
+		addEEnumLiteral(componenetsEEnum, Componenets.FEATURE_CONSTRUCTION);
 
 		// Initialize data types
 		initEDataType(newDataType10EDataType, Object.class, "NewDataType10", IS_SERIALIZABLE,
