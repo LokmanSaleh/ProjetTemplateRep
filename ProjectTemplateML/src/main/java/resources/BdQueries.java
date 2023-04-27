@@ -88,6 +88,10 @@ public class BdQueries {
 														+ "FROM algorithms "
 														+ "WHERE category=? and isDeleted = 0" ;
 	
+	public static String SQL_ALGORITHMS_BY_CATEGOPRY = " SELECT * "
+														+ "FROM algorithms "
+														+ "WHERE isDeleted = 0" ;
+	
 	public static String SQL_CRITERIA_FOR_ALGORITM = "SELECT * "
 														+ "FROM algorithmscriterias as algorCriter, criteria as crit "
 														+ "WHERE algorCriter.algorithmId = ? AND crit.id = algorCriter.criteriaId AND algorCriter.isDeleted = 0 AND crit.isDeleted = 0" ;
@@ -103,6 +107,10 @@ public class BdQueries {
 	public static String SQL_DELETE_ALGORITHMS_FOR_TEMPLAET = " UPDATE algorithms  " + 
 															"SET isDeleted = 1 " +
 															"WHERE templateName = ?";
+	public static String SQL_ALLCriteria = " SELECT * "
+											+ "FROM criteria "
+											+ "WHERE isDeleted = 0 "
+											+ " order by name asc" ;
 	
 	
 	public static void deleteChaine(int key) {
@@ -615,6 +623,115 @@ public class BdQueries {
 	} 
 	
 	
+	public static DataAnalysisProblemType GetALLAlgorithms() {
+		
+		ConnectionClass connClass = new ConnectionClass();
+		Connection con = connClass.getFileFromResources();
+		PreparedStatement preparedStatement = null;
+		
+		
+		DataAnalysisProblemType dataAnalysisProblemType = ProjetTemplateFactory.eINSTANCE.createDataAnalysisProblemType();
+
+
+		
+		ResultSet resultSet = null;
+		Statement statement = null; 
+		 
+		int id = 0 ;
+		try {
+			preparedStatement = con.prepareStatement(SQL_ALGORITHMS_BY_CATEGOPRY); 
+
+			resultSet = preparedStatement.executeQuery();
+			
+			while(resultSet.next()) {
+				
+				int algorithmId = resultSet.getInt("id"); 
+				String category = resultSet.getString("category");
+				
+				MLAlgorithm mlalgorithm = GetCriteriasByIdAlgorithm(algorithmId);
+				
+				mlalgorithm.setName(resultSet.getString("name"));
+				 
+				mlalgorithm.getCriteriatochoosemlalgorithm().setComponenet(SwitchForModelSelection(category));
+				
+				MLAlgorithmSolutionPattern mlAlgorithmSolutionPattern = ProjetTemplateFactory.eINSTANCE.createMLAlgorithmSolutionPattern(); 
+				mlAlgorithmSolutionPattern.setMlalgorithm(mlalgorithm);
+				
+				dataAnalysisProblemType.getMlalgorithmsolutionpattern().add(mlAlgorithmSolutionPattern);
+				
+			}
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+			
+		} finally {
+			connClass.close(con);
+			connClass.close(statement);
+			connClass.close(resultSet);
+		} 
+		
+		return dataAnalysisProblemType;
+	} 
+	
+	
+	public static List<List<Item>> GetALLCriteria() {
+		
+		List<List<Item>> result = new ArrayList<List<Item>>();
+		List<Item> sousList = new ArrayList<Item>();
+
+		ConnectionClass connClass = new ConnectionClass();
+		Connection con = connClass.getFileFromResources();
+		PreparedStatement preparedStatement = null; 
+
+		
+		ResultSet resultSet = null;
+		Statement statement = null; 
+		 
+		int id = 0 ;
+		try {
+			preparedStatement = con.prepareStatement(SQL_ALLCriteria); 
+
+			resultSet = preparedStatement.executeQuery();
+			
+			String oldName="";
+			while(resultSet.next()) {
+				
+				String name = resultSet.getString("name"); 
+				
+				// add le sous liste dans la liste
+				if (!name.equals(oldName)) {
+					oldName= name;
+					result.add(sousList);
+					sousList= new ArrayList<Item>();
+					
+				}
+					
+				String value = resultSet.getString("value");
+				
+				sousList.add(new Item(name, value));
+				 
+			}
+			
+			result.add(sousList);
+			
+			if (result.size()> 0) result.remove(0);
+			
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+			
+		} finally {
+			connClass.close(con);
+			connClass.close(statement);
+			connClass.close(resultSet);
+		} 
+		
+		return result;
+	} 
+	
+	
+	
 	public static DataAnalysisProblemType GetdAlgorithmsByCategory(String caetgory) {
 		
 		ConnectionClass connClass = new ConnectionClass();
@@ -640,10 +757,12 @@ public class BdQueries {
 				
 				int algorithmId = resultSet.getInt("id"); 
 				
-				MLAlgorithm mlalgorithm = GetCriteriasByIdAlgorithm(algorithmId, caetgory);
+				MLAlgorithm mlalgorithm = GetCriteriasByIdAlgorithm(algorithmId);
 				
 				mlalgorithm.setName(resultSet.getString("name"));
-
+				 
+				mlalgorithm.getCriteriatochoosemlalgorithm().setComponenet(SwitchForModelSelection(caetgory));
+				
 				MLAlgorithmSolutionPattern mlAlgorithmSolutionPattern = ProjetTemplateFactory.eINSTANCE.createMLAlgorithmSolutionPattern(); 
 				mlAlgorithmSolutionPattern.setMlalgorithm(mlalgorithm);
 				
@@ -664,8 +783,28 @@ public class BdQueries {
 		return dataAnalysisProblemType;
 	} 
 	
+	private static Componenets SwitchForModelSelection (String categ) {
+		
+		if (categ.equals(Componenets.MODEL_CONSTRUCTION.toString())) {
+			return Componenets.MODEL_CONSTRUCTION;
+		}
+		if (categ.equals(Componenets.DATA_PRE_PROCESSING.toString())) {
+			return Componenets.DATA_PRE_PROCESSING;
+		}
+		if (categ.equals(Componenets.DATA_SEPARATION.toString())) {
+			return Componenets.DATA_SEPARATION;
+		}
+		if (categ.equals(Componenets.FEATURE_SELECTION.toString())) {
+			return Componenets.FEATURE_SELECTION;
+		}
+		if (categ.equals(Componenets.FEATURE_CONSTRUCTION.toString())) {
+			return Componenets.FEATURE_CONSTRUCTION;
+		} 
+		
+		return Componenets.MODEL_CONSTRUCTION;
+	}
 	
-	public static MLAlgorithm GetCriteriasByIdAlgorithm(int algorithmId, String category) {
+	public static MLAlgorithm GetCriteriasByIdAlgorithm(int algorithmId) {
 		
 		ConnectionClass connClass = new ConnectionClass();
 		Connection con = connClass.getFileFromResources();

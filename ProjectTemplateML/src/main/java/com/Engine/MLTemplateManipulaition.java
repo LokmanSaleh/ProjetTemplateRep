@@ -5,17 +5,21 @@ import java.io.File;
 import org.camunda.bpm.model.bpmn.Bpmn;
 import org.camunda.bpm.model.bpmn.BpmnModelInstance;
 import org.eclipse.emf.common.util.EList;
+import org.hibernate.Criteria;
 
 import com.library.utiles.EMFUtiles;
 
 import projetTemplate.ComputationalRequirementValue;
 import projetTemplate.DomainRequirementValue;
+import projetTemplate.MLAlgorithm;
+import projetTemplate.MLAlgorithmSelectionCriteriaContainer;
 import projetTemplate.MLAlgorithmSolutionPattern;
 import projetTemplate.MLProject;
 import projetTemplate.SelectionCriteria;
 import projetTemplate.Componenets;
 
-import resources.BdQueries; 
+import resources.BdQueries;
+import resources.Item;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -34,7 +38,8 @@ public class MLTemplateManipulaition {
         String templateName = "MachineLearningConfiguration26";
          
         saveDataInDataBaseFromTempalete(mlProject,templateName );
-  
+        //ConnserveTheDataToBeReadableByBPMN();
+
         
         //TODO : it's possible to parse the bpmn file into java object 
 //        File file = new File("C:\\Users\\lookm\\git\\ProjetTemplateRep\\ProjectTemplateML\\src\\main\\java\\com\\ProjectTemplateML\\NaiveBayesChaine.bpmn");
@@ -82,7 +87,8 @@ public class MLTemplateManipulaition {
         		
         		BdQueries.insertAlgorithm(mLAlgorithmSolutionPattern.getMlalgorithm().getName(), mLAlgorithmSolutionPattern.getMlalgorithm().getCriteriatochoosemlalgorithm().getComponenet().toString(), templateName);
             	
-        		for (SelectionCriteria selectionCriteria : mLAlgorithmSolutionPattern.getMlalgorithm().getCriteriatochoosemlalgorithm().getSelectionCriteria()) {
+        		MLAlgorithmSelectionCriteriaContainer container = mLAlgorithmSolutionPattern.getMlalgorithm().getCriteriatochoosemlalgorithm();
+        		for (SelectionCriteria selectionCriteria : container.getSelectionCriteria()) {
  
         			BdQueries.insertAlgorithmCriteria(mLAlgorithmSolutionPattern.getMlalgorithm().getName(), selectionCriteria.getId(), templateName);
         		}
@@ -94,26 +100,68 @@ public class MLTemplateManipulaition {
         
 	}
 
-	
+	/**
+	 * Conserve the data to be readable by BPMN
+	 */
 	private static void ConnserveTheDataToBeReadableByBPMN() {
 		// TODO Auto-generated method stub
 		
-		List<String> listl = new ArrayList<>();
-		
+		List<List<String>> listOutPut = new ArrayList<List<String>>();
+
         BdQueries bdquery = new BdQueries();
         
-        EList<MLAlgorithmSolutionPattern>  list = BdQueries.GetdAlgorithmsByCategory(Componenets.MODEL_CONSTRUCTION.toString()).getMlalgorithmsolutionpattern();
+        
+        // Conserve les Algorithms avec leurs crieteres de selection dans le fichier 
+        EList<MLAlgorithmSolutionPattern>  list = BdQueries.GetALLAlgorithms().getMlalgorithmsolutionpattern();
     
 	      for (MLAlgorithmSolutionPattern mlsolutionAlgorithmSolutionPattern : list) {
-	    	  listl.add(mlsolutionAlgorithmSolutionPattern.getMlalgorithm().getName());
+
+	    	  MLAlgorithm mlalgorithm =  mlsolutionAlgorithmSolutionPattern.getMlalgorithm();
+	  		
+	    	  List<String> listOutPutMember = new ArrayList<String>(); 
+	    	  listOutPutMember.add(mlalgorithm.getCriteriatochoosemlalgorithm().getComponenet().toString());
+	    	  listOutPutMember.add(mlalgorithm.getName());
+
+		      for (SelectionCriteria selectionCriteria : mlalgorithm.getCriteriatochoosemlalgorithm().getSelectionCriteria()) {
+		    	  
+		    	  // TODO : add the type of the criteria, Data analysis or user demande 
+		    	  listOutPutMember.add(selectionCriteria.getCriteriaName());
+		    	  listOutPutMember.add(selectionCriteria.getCriteriaValue());
+
+		      } 
+		      
+		      listOutPut.add(listOutPutMember);
 	      }
+	      
+	      
+	      // conserve les criteres de selection dans le fichier. 
+	      List<List<Item>> allCriteria = BdQueries.GetALLCriteria();
+	      
+	      	for (List<Item> criteria : allCriteria) {
+	      		
+		    	  List<String> listOutPutMember = new ArrayList<String>(); 
+		    	  listOutPutMember.add("SelectionCriteria");
+		    	  listOutPutMember.add(criteria.get(0).getCritere());
+		    	  
+		    	  for (Item item: criteria) {
+		    		  
+			    	  listOutPutMember.add(item.getValue());
+
+		    	  }
+	      		
+		    	  listOutPut.add(listOutPutMember);
+	      	}
       
+	      	
 	        try {
+	        	
 	            File file = new File("C:\\Users\\lookm\\git\\EtendreBPMNCriteresEtChoixDynamique\\org.eclipse.bpmn2-modeler\\examples\\plugins\\data.txt");
 	            FileWriter fw = new FileWriter(file);
 	            BufferedWriter bw = new BufferedWriter(fw);
 	              
-	            bw.write(String.join(";", listl));
+	            for (List<String> ele :  listOutPut) { 
+		            bw.write(String.join(";", ele)+"\n"); 
+	            }
 	            
 	            bw.close();
 	            
@@ -123,10 +171,5 @@ public class MLTemplateManipulaition {
 	        }
 	        
 	}
-	
-	
-	
-	
-	
-	
+	 
 }
