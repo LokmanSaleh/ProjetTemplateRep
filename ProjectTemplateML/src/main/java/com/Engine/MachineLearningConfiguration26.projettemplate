@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:projetTemplate="http://www.example.org/projetTemplate">
-  <projetTemplate:MLProject dataanalysisproblem="/7" domainproblem="/1"/>
-  <projetTemplate:DomainProblem DomainRequirementValue="/2 /3 /4 /5 /6"/>
+  <projetTemplate:MLProject name="MLProjectConfiguration" date="27-05-2023" author="Lokman" dataanalysisproblem="/7" domainproblem="/1"/>
+  <projetTemplate:DomainProblem DomainRequirementValue="/2 /3 /4 /5 /6 /18 /19 /20 /21"/>
   <projetTemplate:DomainRequirementValue criteriaName="Accuracy" criteriaValue="Low" Id="Accuracy_Low"/>
   <projetTemplate:DomainRequirementValue criteriaName="Accuracy" criteriaValue="Middle" Id="Accuracy_Middle"/>
   <projetTemplate:DomainRequirementValue criteriaName="Accuracy" criteriaValue="High" Id="Accuracy_High"/>
@@ -10,7 +10,8 @@
   <projetTemplate:DataAnalysisProblem dataanalysisproblemtype="/8" computationalrequirementvalue="/11 /12"/>
   <projetTemplate:DataAnalysisProblemType>
     <mlalgorithmsolutionpattern name="NaiveBayes" mlalgorithm="/9"/>
-    <mlalgorithmsolutionpattern mlalgorithm="/14"/>
+    <mlalgorithmsolutionpattern name="DecisionTree" mlalgorithm="/14"/>
+    <mlalgorithmsolutionpattern name="SeperateData" mlalgorithm="/16"/>
   </projetTemplate:DataAnalysisProblemType>
   <projetTemplate:MLAlgorithm name="NaiveBayes" criteriatochoosemlalgorithm="/10"/>
   <projetTemplate:MLAlgorithmSelectionCriteriaContainer SelectionCriteria="/4 /6" Componenet="ModelConstruction"/>
@@ -19,4 +20,10 @@
   <projetTemplate:MLAlgorithm/>
   <projetTemplate:MLAlgorithm name="DecisionTree" criteriatochoosemlalgorithm="/15"/>
   <projetTemplate:MLAlgorithmSelectionCriteriaContainer SelectionCriteria="/3 /5" Componenet="ModelConstruction"/>
+  <projetTemplate:MLAlgorithm name="SeparateDataForTwoPart" criteriatochoosemlalgorithm="/17"/>
+  <projetTemplate:MLAlgorithmSelectionCriteriaContainer SelectionCriteria="/6 /2" Componenet="DataSeparation"/>
+  <projetTemplate:DomainRequirementValue criteriaName="MissingValue" criteriaValue="Yes" Id="MissingValue_Yes"/>
+  <projetTemplate:DomainRequirementValue criteriaName="MissingValue" criteriaValue="No" Id="MissingValue_No"/>
+  <projetTemplate:DomainRequirementValue criteriaName="ComputationalTime" criteriaValue="Fast" Id="ComputationalTime_Fast"/>
+  <projetTemplate:DomainRequirementValue criteriaName="ComputationalTime" criteriaValue="Low" Id="ComputationalTime_Low"/>
 </xmi:XMI>
