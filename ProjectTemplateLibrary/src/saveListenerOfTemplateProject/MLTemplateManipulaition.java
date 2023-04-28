@@ -1,11 +1,10 @@
-package com.B.Engine;
+package saveListenerOfTemplateProject;
  
 import java.io.File;
 
 import org.camunda.bpm.model.bpmn.Bpmn;
 import org.camunda.bpm.model.bpmn.BpmnModelInstance;
-import org.eclipse.emf.common.util.EList;
-import org.hibernate.Criteria;
+import org.eclipse.emf.common.util.EList; 
 
 import com.library.utiles.EMFUtiles;
 
@@ -30,7 +29,7 @@ public class MLTemplateManipulaition {
 	
 	final static String TEMPLATE_PATH = "C:\\Users\\lookm\\git\\ProjetTemplateRep\\ProjectTemplateML\\src\\main\\java\\com\\A\\ProjectTemplateML\\MachineLearningConfiguration.projettemplate";
 
-    public static void main(String args[]) {
+    public static void main() {
 
     	// Get the ml Data from template 
         MLProject mlProject =  EMFUtiles.load(TEMPLATE_PATH);
@@ -151,7 +150,7 @@ public class MLTemplateManipulaition {
 	      		
 		    	  listOutPut.add(listOutPutMember);
 	      	}
-       
+      
 	      	
 	        try {
 	        	

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- origin at X=-150.0 Y=0.0 -->
+<bpmn2:definitions xmlns:tl="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:mm="http://org.eclipse.bpmn2.modeler.examples.customtask" id="Definitions_1" exporter="org.eclipse.bpmn2.modeler.core" exporterVersion="1.5.4" targetNamespace="http://org.eclipse.bpmn2.modeler.examples.customtask">
+  <bpmn2:process id="process_1" name="Default Process" isExecutable="false">
+    <bpmn2:startEvent id="StartEvent_1" name="Start Event 1">
+      <bpmn2:outgoing>SequenceFlow_2</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="EndEvent_1" name="End Event 1">
+      <bpmn2:incoming>SequenceFlow_5</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:task id="Task_1" mm:type="MyTask" name="Construire un modèle">
+      <bpmn2:incoming>SequenceFlow_4</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_5</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="Task_2" mm:type="DataPreProcessing" name="Pre-Traitement de données">
+      <bpmn2:incoming>SequenceFlow_3</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_4</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:task id="Task_3" mm:type="SeparateData" name="Séparez les données">
+      <bpmn2:incoming>SequenceFlow_2</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_3</bpmn2:outgoing>
+    </bpmn2:task>
+    <bpmn2:sequenceFlow id="SequenceFlow_2" sourceRef="StartEvent_1" targetRef="Task_3"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_3" sourceRef="Task_3" targetRef="Task_2"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_4" sourceRef="Task_2" targetRef="Task_1"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_5" sourceRef="Task_1" targetRef="EndEvent_1"/>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Process Diagram">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="process_1">
+      <bpmndi:BPMNShape id="BPMNShape_1" bpmnElement="StartEvent_1">
+        <dc:Bounds height="36.0" width="36.0" x="0.0" y="342.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_1">
+          <dc:Bounds height="15.0" width="68.0" x="-16.0" y="378.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_2" bpmnElement="EndEvent_1">
+        <dc:Bounds height="36.0" width="36.0" x="831.0" y="342.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_3">
+          <dc:Bounds height="15.0" width="65.0" x="817.0" y="378.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_1" bpmnElement="Task_1" isExpanded="true">
+        <dc:Bounds height="50.0" width="170.0" x="600.0" y="335.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_4">
+          <dc:Bounds height="15.0" width="120.0" x="625.0" y="352.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_2" bpmnElement="Task_2" isExpanded="true">
+        <dc:Bounds height="50.0" width="201.0" x="360.0" y="335.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_5">
+          <dc:Bounds height="15.0" width="151.0" x="385.0" y="352.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_3" bpmnElement="Task_3" isExpanded="true">
+        <dc:Bounds height="50.0" width="171.0" x="130.0" y="335.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_6">
+          <dc:Bounds height="15.0" width="117.0" x="157.0" y="352.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_2" bpmnElement="SequenceFlow_2" sourceElement="BPMNShape_1" targetElement="BPMNShape_Task_3">
+        <di:waypoint xsi:type="dc:Point" x="36.0" y="360.0"/>
+        <di:waypoint xsi:type="dc:Point" x="83.0" y="360.0"/>
+        <di:waypoint xsi:type="dc:Point" x="130.0" y="360.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_7"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_3" bpmnElement="SequenceFlow_3" sourceElement="BPMNShape_Task_3" targetElement="BPMNShape_Task_2">
+        <di:waypoint xsi:type="dc:Point" x="301.0" y="360.0"/>
+        <di:waypoint xsi:type="dc:Point" x="330.0" y="360.0"/>
+        <di:waypoint xsi:type="dc:Point" x="360.0" y="360.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_8"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_4" bpmnElement="SequenceFlow_4" sourceElement="BPMNShape_Task_2" targetElement="BPMNShape_Task_1">
+        <di:waypoint xsi:type="dc:Point" x="561.0" y="360.0"/>
+        <di:waypoint xsi:type="dc:Point" x="580.0" y="360.0"/>
+        <di:waypoint xsi:type="dc:Point" x="600.0" y="360.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_9"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_5" bpmnElement="SequenceFlow_5" sourceElement="BPMNShape_Task_1" targetElement="BPMNShape_2">
+        <di:waypoint xsi:type="dc:Point" x="770.0" y="360.0"/>
+        <di:waypoint xsi:type="dc:Point" x="800.0" y="360.0"/>
+        <di:waypoint xsi:type="dc:Point" x="831.0" y="360.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_10"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn2:definitions>
