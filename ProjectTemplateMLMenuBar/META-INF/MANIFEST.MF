@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ProjectTemplateMLMenuBar
+Bundle-SymbolicName: ProjectTemplateMLMenuBar;singleton:=true
+Bundle-Version: 1.0.0.qualifier 
+Bundle-ClassPath: .,
+ library.jar,
+ src/resources/mysql-connector-j-8.0.32.jar
+Import-Package: projetTemplate
+Require-Bundle: org.eclipse.core.runtime;bundle-version="3.26.100",
+ org.eclipse.ui;bundle-version="3.201.200",
+ org.eclipse.emf.common,
+ ProjectTemplateLibrary;bundle-version="1.0.0",
+ ProjetTemplate;bundle-version="0.1.0"
+Automatic-Module-Name: ProjectTemplateMLMenuBar
+Bundle-RequiredExecutionEnvironment: JavaSE-19

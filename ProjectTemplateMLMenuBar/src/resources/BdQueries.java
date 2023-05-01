@@ -12,11 +12,15 @@ import java.util.List;
 
 import projetTemplate.Componenets;
 import projetTemplate.ComputationalRequirementValue;
+import projetTemplate.DataAnalysisProblem;
 import projetTemplate.DataAnalysisProblemType;
 import projetTemplate.MLAlgorithm;
+import projetTemplate.MLAlgorithmSelectionCriteriaContainer;
 import projetTemplate.MLAlgorithmSolutionPattern;
+import projetTemplate.MLProject;
 import projetTemplate.ProjetTemplateFactory;
 import projetTemplate.SelectionCriteria;
+import projetTemplate.SelectionCriterion;
 
 public class BdQueries {
 
