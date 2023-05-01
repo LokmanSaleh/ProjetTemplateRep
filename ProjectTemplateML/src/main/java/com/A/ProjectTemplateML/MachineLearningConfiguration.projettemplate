@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:projetTemplate="http://www.example.org/projetTemplate">
   <projetTemplate:MLProject name="MLProjectConfiguration" date="27-05-2023" author="Lokman" dataanalysisproblem="/7" domainproblem="/1"/>
-  <projetTemplate:DomainProblem DomainRequirementValue="/2 /3 /4 /5 /6 /18 /19 /20 /21"/>
+  <projetTemplate:DomainProblem DomainRequirementValue="/2 /3 /4 /5 /6 /18 /19 /20 /21 /25"/>
   <projetTemplate:DomainRequirementValue criteriaName="Accuracy" criteriaValue="Low" Id="Accuracy_Low"/>
   <projetTemplate:DomainRequirementValue criteriaName="Accuracy" criteriaValue="Middle" Id="Accuracy_Middle"/>
   <projetTemplate:DomainRequirementValue criteriaName="Accuracy" criteriaValue="High" Id="Accuracy_High"/>
@@ -28,4 +28,6 @@
   <projetTemplate:DomainRequirementValue criteriaName="ComputationalTime" criteriaValue="Low" Id="ComputationalTime_Low"/>
   <projetTemplate:DataBaseConnection URL="url" user="l" password="s"/>
   <projetTemplate:DataBaseConnection URL="url" user="root"/>
+  <projetTemplate:DomainRequirementValue criteriaName="Accuracy_X" criteriaValue="Valuex" Id="Accuracyx_Valuex"/>
+  <projetTemplate:DomainRequirementValue criteriaName="ComputationalTime" criteriaValue="Middle" Id="ComputationalTime_Middle"/>
 </xmi:XMI>
