@@ -13,6 +13,12 @@
 	              style="push"
 	              tooltip="My Command Tooltip">
 	        </command>
+	       	<command
+	              commandId="MLmenu.ConnectDataBase"
+	              label="Connect to the data base"
+	              style="push"
+	              tooltip="My Command Tooltip">
+	        </command>
 	     </menu>
 	  </menuContribution>
 	</extension>
@@ -23,6 +29,10 @@
 	        id="MLmenu.command"
 	        name="Let the Configuration available for BPMN">
 	  </command>
+	  <command
+	        id="MLmenu.ConnectDataBase"
+	        name="Connect to the data base">
+	  </command>
 	</extension>
 
 
@@ -31,6 +41,10 @@
 	  <handler
 	        class="MyCommandHandler"
 	        commandId="MLmenu.command">
+	  </handler>
+	   <handler
+	        class="ConnectToTheDataBaseHandler"
+	        commandId="MLmenu.ConnectDataBase">
 	  </handler>
 	</extension>
 

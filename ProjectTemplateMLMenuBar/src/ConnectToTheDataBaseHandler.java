@@ -4,15 +4,16 @@ import org.eclipse.core.commands.ExecutionException;
 
 import com.B.Engine.MLTemplateManipulaition;
 
-public class MyCommandHandler extends AbstractHandler {
+import Utiles.UserInterfaceAPI;
+
+public class ConnectToTheDataBaseHandler extends AbstractHandler {
 	 
   public Object execute(ExecutionEvent event) throws ExecutionException {
     // Perform your desired action here
 	  
-	  System.out.println("HEllo ");
+	  System.out.println("ConnectToTheDataBaseHandler ");
 
-	  MLTemplateManipulaition mLTemplateManipulaition = new MLTemplateManipulaition();
-	  mLTemplateManipulaition.main();
+	  UserInterfaceAPI.main();
 	  
     return null;
   }
